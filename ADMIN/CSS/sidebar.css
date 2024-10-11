@@ -1,119 +1,13 @@
-* {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    outline: 0;
-    text-decoration: none;
-    list-style: none;
-    box-sizing: border-box;
-}
+@import url(style.css);
 
-:root {
-    --color-primary: #FD5B32;
-    --color-light-primary: #FFE1E1;
-    --color-dark-blue: #03045E;
-    --color-bg: #F1F1F1;
-    --color-red: #FF0000;
-    --color-light-red: #FFCCCC;
-    --color-green: #00F000;
-    --color-light-green: #99FFCC;
-    --color-charcoal-gray: #36454F;
-    --color-white: #FFFFFF;
-    --color-ash: #F5F5F5;
-    --color-black: #000000;
-
-    --font-size: 0.9rem;
-
-    --transition: all 300ms ease;
-
-    --container-width-lg: 74%;
-    --container-width-mg: 88%;
-    --form-width: 100%;
-
-    --card-border-radius-1: 0.3rem;
-    --card-border-radius-2: 0.5rem;
-    --card-border-radius-3: 0.8rem;
-    --card-border-radius-4: 2rem;
-    --card-border-radius-5: 5rem;
-}
-
-body {
-    font-family: "Montserrat", sans-serif;
-    line-height: 1.7;
-    background: var(--color-ash);
-    min-height: 100vh;
-    min-height: 100dvh;
-    display: grid;
-    grid-template-columns: auto 1fr;
-}
-
-.container {
-    width: var(--container-width-lg);
-    margin: 0 auto;
-}
-
-section {
-    padding: 6rem 0;
-    flex: 1;
-}
-
-h1, h2, h3, h4, h5 {
-    line-height: 1.2;
-}
-
-h1 {
-    font-size: 2.4rem;
-}
-
-h2 {
-    font-size: 2rem;
-}
-
-h3 {
-    font-size: 1.6rem;
-}
-
-h4 {
-    font-size: 1rem;
-}
-
-a {
-    color: var(--color-black);
-}
-
-img {
-    width: 100%;
-    display: block;
-    object-fit: cover;
-}
-
-.btn {
-    display: inline-block;
-    padding: 1rem 2rem;
-    border-radius: var(--card-border-radius-2);
-    background-color: var(--color-primary);
-    color: var(--color-white);
-    border: 1px solid transparent;
-    font-weight: 500;
-    transition: var(--transition);
-}
-
-.btn:hover {
-    background: transparent;
-    color: var(--color-primary);
-    border-color: var(--color-primary);
-}
-
-
-/* ADMIN SIDEBAR */
 #sidebar {
     font-weight: 550;
     box-sizing: border-box;
-    height: 100vh;
     width: 250px;
+    height: 100vh;
     padding: 5px;
     padding: 5px 1em;
-    background-color: var(--color-white);
+    background-color: var(--color-charcoal-gray);
     border-right: 2px solid var(--color-light-primary);
 
     position: sticky;
@@ -134,9 +28,9 @@ img {
 }
 
 #sidebar > ul > li:first-child {
-    background: var(--color-light-primary);
+    background: var(--color-primary);
     border-radius: 0.5rem;
-    color: var(--color-primary);
+    color: var(--color-light-primary);
     display: flex;
     justify-content: flex-end;
     margin-bottom: 0.2rem;
@@ -153,6 +47,10 @@ img {
     }
 }
 
+#sidebar ul li.active a:hover {
+    background: var(--color-light-primary);
+}
+
 #sidebar a, #sidebar .dropdown-btn, #sidebar .logo {
     border-radius: .5em;
     padding: .85em;
@@ -161,6 +59,7 @@ img {
     align-items: center;
     align-items: center;
     gap: 1em;
+    color: var(--color-white);
 }
 
 .dropdown-btn {
@@ -174,7 +73,7 @@ img {
 
 #sidebar svg {
     flex-shrink: 0;
-    fill: var(--color-primary);
+    fill: var(--color-white);
 }
 
 #sidebar a span, #sidebar .dropdown-btn span {
@@ -182,7 +81,7 @@ img {
 }
 
 #sidebar a:hover, #sidebar .dropdown-btn:hover {
-    background-color: var(--color-light-primary);
+    background-color: var(--color-primary);
 }
 
 #sidebar .sub-menu {
