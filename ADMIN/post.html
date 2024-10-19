@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ADMIN'S LOGIN | BARANGAY-WBA</title>
+    <title>ADMIN Post | BARANGAY-WBA</title>
 
     <!-- MONTSERRAT GOOGLE FONTS -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -12,19 +12,17 @@
 
     <!-- CSS STYLESHEET LINK -->
      <link rel="stylesheet" href="CSS/style.css">
-     <link rel="stylesheet" href="CSS/dashboard.css">
+     <link rel="stylesheet" href="CSS/sidebar.css">
 
      <!-- ICONSCOUT CDN -->
     <link href="https://unicons.iconscout.com/release/v4.0.8/css/line.css" rel="stylesheet">
 
-    <!-- BOXICONS CDN -->
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-
     <!-- SIDEBAR JS LINK -->
     <script type="text/javascript" src="./JS/app.js" defer></script>
+
 </head>
 <body>
-   <aside id="sidebar">
+    <aside id="sidebar">
         <ul>
             <li>
                 <span class="logo">BarangayCare</span>
@@ -33,7 +31,7 @@
                 </button>
             </li>
 
-            <li class="active">
+            <li >
                 <a href="dashboard.html">
                     <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M120-200q-33 0-56.5-23.5T40-280v-400q0-33 23.5-56.5T120-760h400q33 0 56.5 23.5T600-680v400q0 33-23.5 56.5T520-200H120Zm0-80h400v-400H120v400Zm560 80v-560h80v560h-80Zm160 0v-560h80v560h-80Zm-720-80v-400 400Z"/></svg>
                     <span>Dashboard</span>
@@ -66,16 +64,16 @@
                 </button>
                 <ul class="sub-menu">
                     <div>
-                        <li><a href="index.html">Community Development</a></li>
-                        <li><a href="index.html">Disaster Preparedness</a></li>
-                        <li><a href="index.html">Education</a></li>
-                        <li><a href="index.html">Elderly</a></li>
-                        <li><a href="index.html">Health</a></li>
-                        <li><a href="index.html">Justice</a></li>
-                        <li><a href="index.html">Livelihood & Employment</a></li>
-                        <li><a href="index.html">Social</a></li>
-                        <li><a href="index.html">Women's Welfare</a></li>
-                        <li><a href="index.html">Youth & Sports</a></li>
+                        <li><a href="community_development.html">Community Development</a></li>
+                        <li><a href="disaster_preparedness.html">Disaster Preparedness</a></li>
+                        <li><a href="education.html">Education</a></li>
+                        <li><a href="elderly.html">Elderly</a></li>
+                        <li><a href="health.html">Health</a></li>
+                        <li><a href="justice.html">Justice</a></li>
+                        <li><a href="livelihood_employment.html">Livelihood & Employment</a></li>
+                        <li><a href="social.html">Social</a></li>
+                        <li><a href="women_welfare.html">Women's Welfare</a></li>
+                        <li><a href="youth_sports.html">Youth & Sports</a></li>
                     </div>
                 </ul>
             </li>
@@ -88,9 +86,9 @@
                 </button>
                 <ul class="sub-menu">
                     <div>
-                        <li><a href="#">Residents</a></li>
-                        <li><a href="#">Staffs</a></li>
-                        <li><a href="#">SK</a></li>
+                        <li><a href="residents.html">Residents</a></li>
+                        <li><a href="staffs.html">Staffs</a></li>
+                        <li><a href="sangguniang_kabataan.html">SK</a></li>
                     </div>
                 </ul>
             </li>
@@ -103,25 +101,83 @@
                 </button>
                 <ul class="sub-menu">
                     <div>
-                        <li><a href="#">Profile</a></li>
-                        <li><a href="#">Logout</a></li>
+                        <li><a href="profile.html">Profile</a></li>
+                        <li><a href="logout.html">Logout</a></li>
                     </div>
                 </ul>
             </li>
 
         </ul>
    </aside>
+<!-------------- END OF SIDEBAR SECTION -------------->
    <main>
-    <main>
-        <div class="remarks_banner-container">
-            <p>
-                Admin
-            </p>
-       </div>
-    <!-------------- END OF ADMIN BANNER SECTION -------------->
+    <div class="remarks_banner-container">
+        <p>
+            Admin
+        </p>
+   </div>
+<!-------------- END OF ADMIN BANNER SECTION -------------->
 
+   <section class="singlepost">
+    <div class="container singlepost_container">
+        <h2>Lorem ipsum dolor consectutur elit impedit, dicta.</h2>
+        <div class="post_author">
+            <div class="post_author-avatar">
+                <img src="IMAGES/pamplona_logo.JPG" alt="">
+            </div>
+            <div class="post_author-info">
+                <h5>By: Barangay Staff Jane</h5>
+                <small>October 18, 2022 - 03:51PM</small>
+            </div>
+        </div>
+        <div class="singlepost_thumbnail">
+            <img src="IMAGES/pamplona_header.jpg" alt="">
+            <button class="upload_button-reusable">
+                Upload New 
+                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FD5B32"><path d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h357l-80 80H200v560h560v-278l80-80v358q0 33-23.5 56.5T760-120H200Zm280-360ZM360-360v-170l367-367q12-12 27-18t30-6q16 0 30.5 6t26.5 18l56 57q11 12 17 26.5t6 29.5q0 15-5.5 29.5T897-728L530-360H360Zm481-424-56-56 56 56ZM440-440h56l232-232-28-28-29-28-231 231v57Zm260-260-29-28 29 28 28 28-28-28Z"/></svg>
+            </button>
+        </div>
+        <p>
+            Lorem ipsum dolor consectutur elit impedit, dicta.
+            Lorem ipsum dolor consectutur elit impedit, dicta.
+            Lorem ipsum dolor consectutur elit impedit, dicta.
+            Lorem ipsum dolor consectutur elit impedit, dicta.
+            Lorem ipsum dolor consectutur elit impedit, dicta.
+        </p>
+        <p>
+            Lorem ipsum dolor consectutur elit impedit, dicta.
+            Lorem ipsum dolor consectutur elit impedit, dicta.
+            Lorem ipsum dolor consectutur elit impedit, dicta.
+            Lorem ipsum dolor consectutur elit impedit, dicta.
+            Lorem ipsum dolor consectutur elit impedit, dicta.
+        </p>
+        <p>
+            Lorem ipsum dolor consectutur elit impedit, dicta.
+            Lorem ipsum dolor consectutur elit impedit, dicta.
+            Lorem ipsum dolor consectutur elit impedit, dicta.
+            Lorem ipsum dolor consectutur elit impedit, dicta.
+            Lorem ipsum dolor consectutur elit impedit, dicta.
+        </p>
+        <p>
+            Lorem ipsum dolor consectutur elit impedit, dicta.
+            Lorem ipsum dolor consectutur elit impedit, dicta.
+            Lorem ipsum dolor consectutur elit impedit, dicta.
+            Lorem ipsum dolor consectutur elit impedit, dicta.
+            Lorem ipsum dolor consectutur elit impedit, dicta.
+        </p>
+
+        <div class="edit-container">
+            <button class="edit_button">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FD5B32"><path d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h357l-80 80H200v560h560v-278l80-80v358q0 33-23.5 56.5T760-120H200Zm280-360ZM360-360v-170l367-367q12-12 27-18t30-6q16 0 30.5 6t26.5 18l56 57q11 12 17 26.5t6 29.5q0 15-5.5 29.5T897-728L530-360H360Zm481-424-56-56 56 56ZM440-440h56l232-232-28-28-29-28-231 231v57Zm260-260-29-28 29 28 28 28-28-28Z"/></svg>
+            </button>
+
+            <button class="delete_button">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FD5B32"><path d="M280-120q-33 0-56.5-23.5T200-200v-520h-40v-80h200v-40h240v40h200v80h-40v520q0 33-23.5 56.5T680-120H280Zm400-600H280v520h400v-520ZM360-280h80v-360h-80v360Zm160 0h80v-360h-80v360ZM280-720v520-520Z"/></svg>
+            </button>
+        </div>
+    </div>
+    
+   </section>
 
    </main>
-
-
 </body>
