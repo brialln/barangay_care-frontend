@@ -1,18 +1,17 @@
 @import url(style.css);
+
 .mensahe_section-container {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
-
-
     background-color: var(--color-white);
     border-radius: var(--card-border-radius-1);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     width: 100%;
     overflow: hidden;
     margin-top: 1rem;
-    padding: 1rem;
+    padding: 1.5rem;
     gap: 2rem;
 }
 
@@ -37,13 +36,17 @@
     justify-content: center;
     align-items: center;
     background-color: white;
+    width: 100%;
+    max-width: 100%; /* Ensures the container takes up the full width of its parent */
+    height: 350px; /* Fixed height */
+    border-radius: var(--card-border-radius-2);
+    overflow: hidden;
 }
 
 .image img {
     width: 100%;
-    height: auto;
+    height: 100%;
     object-fit: cover;
-    border-radius: var(--card-border-radius-2);
 }
 
 
@@ -54,7 +57,6 @@
     background: var(--color-primary);
     padding: 0.5rem;
     border-radius: var(--card-border-radius-1);
-
 }
 
 .sangguniang_barangay-container {
@@ -69,9 +71,8 @@
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
     justify-content: center;
     align-content: center;
-    gap: 2rem;
+    gap: 1.5rem;
     cursor: pointer;
-  
 }
 
 .team_member {
@@ -85,8 +86,18 @@
     background: transparent;
 }
 
+.team_member-image {
+    width: 100%;
+    height: 15rem;
+    max-width: 100%;
+}
+
 .team_member-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
     filter: saturate(0);
+    transition: var(--transition);
 }
 
 .team_member:hover img {
@@ -130,8 +141,7 @@
 
 .contact-info {
     max-width: 70%; /* Limit the width of the text block */
-  word-wrap: break-word; /* Break long words onto the next line */
-  overflow-wrap: break-word; /* Ensure text doesn't overflow the container */
+    word-wrap: break-word; /* Break long words onto the next line */
+    overflow-wrap: break-word; /* Ensure text doesn't overflow the container */
 }
-
 

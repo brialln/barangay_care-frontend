@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ADMIN Edit News & Updates (Posts) | BARANGAY-WBA</title>
+    <title>ADMIN Edit Contact | BARANGAY-WBA</title>
 
     <!-- MONTSERRAT GOOGLE FONTS -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -13,6 +13,7 @@
     <!-- CSS STYLESHEET LINK -->
      <link rel="stylesheet" href="CSS/style.css">
      <link rel="stylesheet" href="CSS/sidebar.css">
+     <link rel="stylesheet" href="CSS/contact.css">
 
      <!-- ICONSCOUT CDN -->
     <link href="https://unicons.iconscout.com/release/v4.0.8/css/line.css" rel="stylesheet">
@@ -47,11 +48,11 @@
                 <ul class="sub-menu">
                     <div>
                         <li><a href="home.html">Home</a></li>
-                        <li class="active"><a href="news_updates.html">News & Updates</a></li>
+                        <li><a href="news_updates.html">News & Updates</a></li>
                         <li><a href="services.html">Services</a></li>
                         <li><a href="publications.html">Publications</a></li>
                         <li><a href="about.html">About</a></li>
-                        <li><a href="contact.html">Contact</a></li>
+                        <li class="active"><a href="contact.html">Contact</a></li>
                     </div>
                 </ul>
             </li>
@@ -64,6 +65,7 @@
                 </button>
                 <ul class="sub-menu">
                     <div>
+                        <li><a href="central_request.html">Request Document</a></li>
                         <li><a href="community_development.html">Community Development</a></li>
                         <li><a href="disaster_preparedness.html">Disaster Preparedness</a></li>
                         <li><a href="education.html">Education</a></li>
@@ -110,6 +112,7 @@
         </ul>
    </aside>
 <!-------------- END OF SIDEBAR SECTION -------------->
+   
    <main>
     <div class="remarks_banner-container">
         <p>
@@ -118,71 +121,81 @@
    </div>
 <!-------------- END OF ADMIN BANNER SECTION -------------->
 
-    <div class="container back_button-container">
-        <a href="news_updates.html"><button><i class="uil uil-arrow-circle-left"></i></button></a>
-    </div>
-<!-------------- END OF BACK BUTTON -------------->
-
-   <section class="singlepost">
-    <div class="container singlepost_container">
-        <h2>Lorem ipsum dolor consectutur elit impedit, dicta.</h2>
-        <div class="post_author">
-            <div class="post_author-avatar">
-                <img src="IMAGES/pamplona_sample-profile.jpg" alt="">
+    <div class="container contact_form">
+        <h3>Edit Contact</h3>
+        <div class="contact_form-container">
+            <div class="contact_form">
+                <h4>Send us your concern.</h4>
+                <form>
+                    <input type="text" placeholder="First Name" required>
+                    <input type="text" placeholder="Last Name" required>
+                    <input type="email" placeholder="Email Address" required>
+                    <textarea placeholder="Message" rows="10"></textarea>
+                    <button type="submit" class="btn">Submit</button>
+                </form>
             </div>
-            <div class="post_author-info">
-                <h5>By: Barangay Staff Jane</h5>
-                <small>October 18, 2022 - 03:51PM</small>
+
+            <div class="contact_aside">
+                <div class="contact_aside-image">
+                    <img src="IMAGES/pamplona_logo.JPG">
+                </div>
+                <h3>Barangay Pamplona Uno, Las Piñas City</h3>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nobis esse possimus fugit iusto facilis ipsum corporis quae repudiandae maiores amet sit sint, culpa animi iste, ratione maxime neque omnis consectetur?
+                </p>
+                <ul class="contact_details">
+                    <li>
+                        <i class="uil uil-phone"></i>
+                        <h5>1221332343</h5>
+                        <div class="edit-container">
+                            <button class="edit_button">
+                                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FD5B32"><path d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h357l-80 80H200v560h560v-278l80-80v358q0 33-23.5 56.5T760-120H200Zm280-360ZM360-360v-170l367-367q12-12 27-18t30-6q16 0 30.5 6t26.5 18l56 57q11 12 17 26.5t6 29.5q0 15-5.5 29.5T897-728L530-360H360Zm481-424-56-56 56 56ZM440-440h56l232-232-28-28-29-28-231 231v57Zm260-260-29-28 29 28 28 28-28-28Z"/></svg>
+                            </button>
+                        </div>
+                    </li>
+                    <li>
+                        <i class="uil uil-envelope"></i>
+                        <h5>pamplonasupport@gmail.com</h5>
+                        <div class="edit-container">
+                            <button class="edit_button">
+                                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FD5B32"><path d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h357l-80 80H200v560h560v-278l80-80v358q0 33-23.5 56.5T760-120H200Zm280-360ZM360-360v-170l367-367q12-12 27-18t30-6q16 0 30.5 6t26.5 18l56 57q11 12 17 26.5t6 29.5q0 15-5.5 29.5T897-728L530-360H360Zm481-424-56-56 56 56ZM440-440h56l232-232-28-28-29-28-231 231v57Zm260-260-29-28 29 28 28 28-28-28Z"/></svg>
+                            </button>
+                        </div>
+                    </li>
+                    <li>
+                        <i class="uil uil-location-point"></i>
+                        <h5>Las Piñas City, Metro Manila</h5>
+                        <div class="edit-container">
+                            <button class="edit_button">
+                                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FD5B32"><path d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h357l-80 80H200v560h560v-278l80-80v358q0 33-23.5 56.5T760-120H200Zm280-360ZM360-360v-170l367-367q12-12 27-18t30-6q16 0 30.5 6t26.5 18l56 57q11 12 17 26.5t6 29.5q0 15-5.5 29.5T897-728L530-360H360Zm481-424-56-56 56 56ZM440-440h56l232-232-28-28-29-28-231 231v57Zm260-260-29-28 29 28 28 28-28-28Z"/></svg>
+                            </button>
+                        </div>
+                    </li>
+                    <li>
+                        <i class="uil uil-facebook-f"></i>
+                        <h5>Barangay Pamplona Uno</h5>
+                        <div class="edit-container">
+                            <button class="edit_button">
+                                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FD5B32"><path d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h357l-80 80H200v560h560v-278l80-80v358q0 33-23.5 56.5T760-120H200Zm280-360ZM360-360v-170l367-367q12-12 27-18t30-6q16 0 30.5 6t26.5 18l56 57q11 12 17 26.5t6 29.5q0 15-5.5 29.5T897-728L530-360H360Zm481-424-56-56 56 56ZM440-440h56l232-232-28-28-29-28-231 231v57Zm260-260-29-28 29 28 28 28-28-28Z"/></svg>
+                            </button>
+                        </div>
+                    </li>   
+                   
+                </ul>
             </div>
+           
         </div>
-        <div class="singlepost_thumbnail">
-            <img src="IMAGES/pamplona_sample-profile.jpg" alt="">
-            <button class="upload_button-reusable">
-                Upload New 
-                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FD5B32"><path d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h357l-80 80H200v560h560v-278l80-80v358q0 33-23.5 56.5T760-120H200Zm280-360ZM360-360v-170l367-367q12-12 27-18t30-6q16 0 30.5 6t26.5 18l56 57q11 12 17 26.5t6 29.5q0 15-5.5 29.5T897-728L530-360H360Zm481-424-56-56 56 56ZM440-440h56l232-232-28-28-29-28-231 231v57Zm260-260-29-28 29 28 28 28-28-28Z"/></svg>
-            </button>
-        </div>
-        <p>
-            Lorem ipsum dolor consectutur elit impedit, dicta.
-            Lorem ipsum dolor consectutur elit impedit, dicta.
-            Lorem ipsum dolor consectutur elit impedit, dicta.
-            Lorem ipsum dolor consectutur elit impedit, dicta.
-            Lorem ipsum dolor consectutur elit impedit, dicta.
-        </p>
-        <p>
-            Lorem ipsum dolor consectutur elit impedit, dicta.
-            Lorem ipsum dolor consectutur elit impedit, dicta.
-            Lorem ipsum dolor consectutur elit impedit, dicta.
-            Lorem ipsum dolor consectutur elit impedit, dicta.
-            Lorem ipsum dolor consectutur elit impedit, dicta.
-        </p>
-        <p>
-            Lorem ipsum dolor consectutur elit impedit, dicta.
-            Lorem ipsum dolor consectutur elit impedit, dicta.
-            Lorem ipsum dolor consectutur elit impedit, dicta.
-            Lorem ipsum dolor consectutur elit impedit, dicta.
-            Lorem ipsum dolor consectutur elit impedit, dicta.
-        </p>
-        <p>
-            Lorem ipsum dolor consectutur elit impedit, dicta.
-            Lorem ipsum dolor consectutur elit impedit, dicta.
-            Lorem ipsum dolor consectutur elit impedit, dicta.
-            Lorem ipsum dolor consectutur elit impedit, dicta.
-            Lorem ipsum dolor consectutur elit impedit, dicta.
-        </p>
 
-        <div class="edit-container">
-            <button class="edit_button">
-                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FD5B32"><path d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h357l-80 80H200v560h560v-278l80-80v358q0 33-23.5 56.5T760-120H200Zm280-360ZM360-360v-170l367-367q12-12 27-18t30-6q16 0 30.5 6t26.5 18l56 57q11 12 17 26.5t6 29.5q0 15-5.5 29.5T897-728L530-360H360Zm481-424-56-56 56 56ZM440-440h56l232-232-28-28-29-28-231 231v57Zm260-260-29-28 29 28 28 28-28-28Z"/></svg>
-            </button>
+        <h3>We are located here:</h3>
+        <div class="location_container">
+    
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d482.931841442269!2d120.96995888136628!3d14.45855830110773!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397cdedde49cc91%3A0xeaef723322dfd85b!2sPamplona%20Uno%20Barangay%20Hall!5e0!3m2!1sen!2sph!4v1729609277468!5m2!1sen!2sph" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
 
-            <button class="delete_button">
-                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FD5B32"><path d="M280-120q-33 0-56.5-23.5T200-200v-520h-40v-80h200v-40h240v40h200v80h-40v520q0 33-23.5 56.5T680-120H280Zm400-600H280v520h400v-520ZM360-280h80v-360h-80v360Zm160 0h80v-360h-80v360ZM280-720v520-520Z"/></svg>
-            </button>
+            </iframe>
         </div>
+
     </div>
-   </section>
-<!-------------- END OF NEWS AND UPDATES (POSTS) SECTION -------------->
+<!-------------- END OF CONTACT FORM SECTION -------------->
 
    </main>
 </body>

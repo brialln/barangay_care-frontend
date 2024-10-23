@@ -21,6 +21,8 @@
     --color-white: #FFFFFF;
     --color-ash: #F5F5F5;
     --color-black: #000000;
+    --color-dark-gray: #D9D9D9;
+    --color-navy-blue: #001F3F;
 
     --font-size: 0.9rem;
 
@@ -42,6 +44,7 @@ body {
     line-height: 1.7;
     background: var(--color-ash);
     min-height: 100vh;
+    min-height: 100dvh;
 }
 
 .container {
@@ -50,7 +53,7 @@ body {
 }
 
 section {
-    padding: 6rem 0;
+    padding: 4rem 0;
     flex: 1;
 }
 
@@ -104,29 +107,39 @@ img {
 /* LOGIN FORM-CONTAINER */
 .form_section {
     width: 48%;
+    height: 45rem;
     margin: 0 auto;
-    height: 100vh;
     display: flex;
+    justify-content: center;
     flex-direction: row;
+    align-items: stretch;
 }
 
-.side_section-container img {
-    height:100%;
-    width: 25rem;
+.side_section-container {
+    height: auto;
+    width: 100%;
     border: 2px solid var(--color-primary);
     border-top-left-radius: 1rem;
     border-bottom-left-radius: 1rem;
+    overflow: hidden;
+}
+
+.side_section-container img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
 }
 
 .form_section-container {
+    height: auto;
     width: var(--form-width);
     border: 2px solid var(--color-primary);
+    background-color: var(--color-white);
     border-top-right-radius: 1rem;
     border-bottom-right-radius: 1rem;
-    padding-left: 2rem;
-    padding-right: 2rem;
-    padding-top: 4rem;
-    background-color: var(--color-white);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .form_logo {
@@ -181,6 +194,7 @@ form {
 }
 
 input, textarea, select {
+    width: 100%;
     border: 2px solid var(--color-primary);
     padding: 0.8rem 1.4rem;
     background-color: var(--color-white);
@@ -198,12 +212,20 @@ input, textarea, select {
     color: var(--color-primary);
 }
 
+.form_section-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
 /* FOOTER */
 footer {
     background: var(--color-primary);
     padding-top: 4rem;
     font-size: 0.9rem;
     color: var(--color-white);
+    margin-top: 3rem;
 }
 
 .footer_container {
