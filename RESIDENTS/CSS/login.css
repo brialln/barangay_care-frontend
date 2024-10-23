@@ -93,9 +93,11 @@ img {
     border-radius: var(--card-border-radius-2);
     background-color: var(--color-primary);
     color: var(--color-white);
-    border: 1px solid transparent;
+    font-size: 0.9rem;
+    border: 2px solid transparent;
     font-weight: 500;
     transition: var(--transition);
+    cursor: pointer;
 }
 
 .btn:hover {
