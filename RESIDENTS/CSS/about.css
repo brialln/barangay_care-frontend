@@ -1,0 +1,154 @@
+@import url(style.css);
+
+.mensahe_section-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-white);
+    border-radius: var(--card-border-radius-1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    overflow: hidden;
+    margin-top: 1rem;
+    padding: 1.5rem;
+    gap: 2rem;
+    transition: var(--transition);
+}
+
+.mensahe_section-container:hover {
+    transform: scale(1.1);
+}
+
+.message {
+    flex: 1;
+}
+
+.message h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: var(--color-navy-blue);
+}
+
+.message p {
+    margin-bottom: 15px;
+    line-height: 1.5;
+}
+
+.image {
+    position: relative;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    width: 100%;
+    max-width: 100%; /* Ensures the container takes up the full width of its parent */
+    height: 400px; /* Fixed height */
+    border-radius: var(--card-border-radius-2);
+    overflow: hidden;
+}
+
+.image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+/* SANGGUNIANG BARANGAY */
+.sangguniang_barangay-container h3 {
+    text-align: center;
+    color: var(--color-white);
+    background: var(--color-primary);
+    padding: 0.5rem;
+    border-radius: var(--card-border-radius-1);
+
+}
+
+.sangguniang_barangay-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.sangguniang_container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+    justify-content: center;
+    align-content: center;
+    gap: 1.5rem;
+    cursor: pointer;
+  
+}
+
+.team_member {
+    background: var(--color-white);
+    padding: 1.5rem;
+    border: 2px solid var(--color-primary);
+    border-radius: var(--card-border-radius-1);
+}
+
+.team_member:hover {
+    background: transparent;
+}
+
+.team_member-image {
+    width: 100%;
+    height: 15rem;
+    max-width: 100%;
+}
+
+.team_member-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: saturate(0);
+    transition: var(--transition);
+}
+
+.team_member:hover img {
+    filter: saturate(1);
+}
+
+.team_member-info {
+    text-align: center;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.team_member-info p {
+    color: var(--dark-charcoal-gray);
+}
+
+.member-pos {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    gap: 1rem;
+}
+
+.team_member-contact {
+    border: 1px solid var(--color-primary);
+    border-radius: var(--card-border-radius-1);
+    padding: 1rem;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.team_member-contact p {
+    font-size: 0.9rem;
+}
+
+.contact {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+}
+
+.contact-info {
+    max-width: 100%; /* Limit the width of the text block */
+    word-wrap: break-word; /* Break long words onto the next line */
+    overflow-wrap: break-word; /* Ensure text doesn't overflow the container */
+}

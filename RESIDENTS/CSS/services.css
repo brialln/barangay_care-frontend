@@ -1,0 +1,59 @@
+@import url(style.css);
+
+/* SERVICES CSS */
+.edit_services_section-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.edit_services_section-container h4 {
+    align-self: flex-start;
+    color: var(--color-primary);
+}
+
+.services_section-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 2rem;
+    padding: 1.3rem;
+    max-width: 1200px;
+}
+
+.service_card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 0.2rem solid var(--color-navy-blue);
+    border-radius: var(--card-border-radius-4);
+    text-align: center;
+    padding: 1.2rem;
+    background-color: #fff;
+    text-decoration: none;
+    color: inherit;
+    transition: var(--transition);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Add hover effect for the card */
+.service_card:hover {
+    border: 0.2rem solid var(--color-primary);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Card title */
+.service_card h3 {
+    font-size: 1rem;
+    font-weight: bold;
+    color: var(--color-primary);
+    margin-bottom: 0.6rem;
+}
+
+/* Card description */
+.service_card p {
+    font-size: 0.8rem;
+    color: var(--color-navy-blue);
+}

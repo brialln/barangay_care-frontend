@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RESIDENT Home | BARANGAY-WBA</title>
+    <title>RESIDENT Contact | BARANGAY-WBA</title>
 
     <!-- MONTSERRAT GOOGLE FONTS -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -12,6 +12,7 @@
 
     <!-- CSS STYLESHEET LINK -->
      <link rel="stylesheet" href="CSS/style.css">
+     <link rel="stylesheet" href="CSS/contact.css">
 
      <!-- ICONSCOUT CDN -->
     <link href="https://unicons.iconscout.com/release/v4.0.8/css/line.css" rel="stylesheet">
@@ -24,7 +25,7 @@
         <div class="container nav_container">
             <a href="home.html" class="nav_logo"><img src="IMAGES/pamplona_logo.JPG" alt=""></a>
             <ul class="nav_items">
-                <li class="active"><a href="home.html">Home</a></li>
+                <li><a href="home.html">Home</a></li>
                 <li><a href="news_updates.html">News & Updates</a></li>
                 <li class="nav_services">
                     <a href="services.html">Services</a>
@@ -44,7 +45,7 @@
                 </li>
                 <li><a href="publications.html">Publications</a></li>
                 <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li class="active"><a href="contact.html">Contact</a></li>
                 <li><a href="login.html">Login</a></li>
                 <li class="nav_profile">
                     <div class="avatar">
@@ -63,118 +64,60 @@
     </nav>
     <!------------------------------------ END OF NAV ------------------------------------>
 
-    <div class="container header_section-container">
-        <h3>The Official Website of Barangay Pamplona Uno, Las Piñas City</h3>
-        <div class="img_section-container">
-            <img src="IMAGES/pamplona_logo.JPG">
-        </div>
-       </div>
-    <!-------------- END OF HEADER SECTION -------------->
+    <div class="container contact_form">
+        <h3>Contact Us</h3>
+        <div class="contact_form-container">
+            <div class="contact_form">
+                <h4>Send us your concern.</h4>
+                <form>
+                    <input type="text" placeholder="First Name" required>
+                    <input type="text" placeholder="Last Name" required>
+                    <input type="email" placeholder="Email Address" required>
+                    <textarea placeholder="Message" rows="10"></textarea>
+                    <button type="submit" class="btn">Submit</button>
+                </form>
+            </div>
 
-    <div class="container reusable_section-container">
-        <h3>Barangay Announcements</h3>
-        <div class="barangay_section-container">
-            <div class="reusable-card">
-                <div class="reusable_image-container">
-                    <img src="IMAGES/pamplona_logo.JPG" alt="Barangay Hall">
+            <div class="contact_aside">
+                <div class="contact_aside-image">
+                    <img src="IMAGES/pamplona_logo.JPG">
                 </div>
-                
-                <div class="reusable_content-container">
-                    <h4>Announcement #1</h4>
-                    <p>Announcement details or description can go here.</p>
-                </div>
+                <h3>Barangay Pamplona Uno, Las Piñas City</h3>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nobis esse possimus fugit iusto facilis ipsum corporis quae repudiandae maiores amet sit sint, culpa animi iste, ratione maxime neque omnis consectetur?
+                </p>
+                <ul class="contact_details">
+                    <li>
+                        <i class="uil uil-phone"></i>
+                        <h5>1221332343</h5>
+                    </li>
+                    <li>
+                        <i class="uil uil-envelope"></i>
+                        <h5>pamplonasupport@gmail.com</h5>
+                    </li>
+                    <li>
+                        <i class="uil uil-location-point"></i>
+                        <h5>Las Piñas City, Metro Manila</h5>
+                    </li>
+                    <li>
+                        <i class="uil uil-facebook-f"></i>
+                        <h5>Barangay Pamplona Uno</h5>
+                    </li>   
+                   
+                </ul>
             </div>
-    
-            <div class="reusable-card">
-                <div class="reusable_image-container">
-                    <img src="IMAGES/pamplona_side-section.png" alt="Barangay Hall">
-                </div>
-                
-                <div class="reusable_content-container">
-                    <h4>Announcement #1</h4>
-                    <p>Announcement details or description can go here.</p>
-                </div>
-            </div>
-    
-            <div class="reusable-card">
-                <div class="reusable_image-container">
-                    <img src="IMAGES/pamplona_side-section.png" alt="Barangay Hall">
-                </div>
-                
-                <div class="reusable_content-container">
-                    <h4>Announcement #1</h4>
-                    <p>Announcement details or description can go here.</p>
-                </div>
-            </div>
+           
         </div>
-      </div>
-    <!-------------- END OF BARANGAY ANNOUNCEMENTS SECTION -------------->
+
+        <h3>We are located here:</h3>
+        <div class="location_container">
     
-    <div class="container reusable_section-container">
-        <h3>Barangay Facilities</h3>
-        <div class="barangay_section-container">
-            <div class="reusable-card">
-                <div class="reusable_image-container">
-                    <img src="IMAGES/pamplona_side-section.png" alt="Barangay Hall">
-                </div>
-                
-                <div class="reusable_content-container">
-                    <h4>Facility #1</h4>
-                </div>
-            </div>
-    
-            <div class="reusable-card">
-                <div class="reusable_image-container">
-                    <img src="IMAGES/pamplona_side-section.png" alt="Barangay Hall">
-                </div>
-                
-                <div class="reusable_content-container">
-                    <h4>Facility #2</h4>
-                </div>
-            </div>
-    
-            <div class="reusable-card">
-                <div class="reusable_image-container">
-                    <img src="IMAGES/pamplona_side-section.png" alt="Barangay Hall">
-                </div>
-                
-                <div class="reusable_content-container">
-                    <h4>Facility #3</h4>
-                </div>
-            </div>
-    
-            <div class="reusable-card">
-                <div class="reusable_image-container">
-                    <img src="IMAGES/pamplona_side-section.png" alt="Barangay Hall">
-                </div>
-                
-                <div class="reusable_content-container">
-                    <h4>Facility #4</h4>
-                </div>
-            </div>
-    
-            <div class="reusable-card">
-                <div class="reusable_image-container">
-                    <img src="IMAGES/pamplona_side-section.png" alt="Barangay Hall">
-                </div>
-                
-                <div class="reusable_content-container">
-                    <h4>Facility #5</h4>
-                </div>
-            </div>
-    
-            <div class="reusable-card">
-                <div class="reusable_image-container">
-                    <img src="IMAGES/pamplona_side-section.png" alt="Barangay Hall">
-                </div>
-                
-                <div class="reusable_content-container">
-                    <h4>Facility #6</h4>
-                </div>
-            </div>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d482.931841442269!2d120.96995888136628!3d14.45855830110773!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397cdedde49cc91%3A0xeaef723322dfd85b!2sPamplona%20Uno%20Barangay%20Hall!5e0!3m2!1sen!2sph!4v1729609277468!5m2!1sen!2sph" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+
+            </iframe>
         </div>
-      </div>
-    <!-------------- END OF BARANGAY FACILTIES SECTION -------------->
+    </div>
+    <!-------------- END OF CONTACT US SECTION -------------->
 
     <footer>
         <div class="container footer_container">
@@ -248,4 +191,6 @@
             <small>Copyright &copy; Barangay Pamplona Uno | Las Pinas City</small>
         </div>
     </footer>
+    <!-------------- END OF FOOTER SECTION -------------->
+
 </body>
