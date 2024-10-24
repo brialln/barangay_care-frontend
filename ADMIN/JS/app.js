@@ -1,32 +1,13 @@
-const toggleButton = document.getElementById('toggle-btn')
-const sidebar = document.getElementById('sidebar')
+// GENERAL JS FUNCTION
 
-function toggleSidebar(){
-    sidebar.classList.toggle('close')
-    toggleButton.classList.toggle('rotate')
-
-    closeAllSubMenus()
-}
-
-function toggleSubMenu(button){
-
-    if(!button.nextElementSibling.classList.contains('show')){
-     closeAllSubMenus()
+// Page refresh once
+window.onload = function() {
+    // Check if the page was refreshed before
+    if (!sessionStorage.getItem('refreshed')) {
+      // If not, set a delay before refreshing the page
+      setTimeout(function() {
+        sessionStorage.setItem('refreshed', 'true');
+        location.reload();
+      }, 2500); // Refresh after 2500 milliseconds (2.5 seconds)
     }
-    
-
-    button.nextElementSibling.classList.toggle('show')
-    button.classList.toggle('rotate')
-
-    if(sidebar.classList.contains('close')){
-        sidebar.classList.toggle('close')
-        toggleButton.classList.toggle('rotate')
-    }
-}
-
-function closeAllSubMenus(){
-    Array.from(sidebar.getElementsByClassName('show')).forEach(ul =>{
-        ul.classList.remove('show')
-        ul.previousElementSibling.classList.remove('rotate')
-    })
-}
+  }

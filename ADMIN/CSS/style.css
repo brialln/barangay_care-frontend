@@ -22,6 +22,7 @@
     --color-ash: #F5F5F5;
     --color-black: #000000;
     --color-dark-gray: #D9D9D9;
+    --color-navy-blue: #001F3F;
 
     --font-size: 0.9rem;
 
@@ -223,7 +224,7 @@ input, textarea, select {
     height: 100vh;
     padding: 5px;
     padding: 5px 1em;
-    background-color: var(--color-charcoal-gray);
+    background-color: var(--color-navy-blue);
     border-right: 2px solid var(--color-light-primary);
 
     position: sticky;
@@ -339,7 +340,7 @@ input, textarea, select {
         height: 60px;
         width: 100%;
         border-right: none;
-        border-top: 1px solid var(--color-charcoal-gray);
+        border-top: 1px solid var(--color-navy-blue);
         padding: 0;
         position: fixed;
         top: unset;
@@ -406,7 +407,7 @@ input, textarea, select {
     max-width: 100%; /* Ensures the container takes up the full width of its parent */
     height: 250px; /* Fixed height */
     border-radius: var(--card-border-radius-3);
-    border: 0.3rem solid var(--color-charcoal-gray);
+    border: 0.3rem solid var(--color-navy-blue);
     overflow: hidden;
     margin-bottom: 1.6rem;
     transition: var(--transition);
@@ -510,7 +511,7 @@ input, textarea, select {
 }
 
 .reusable_section-container h4 {
-    color: var(--color-charcoal-gray);
+    color: var(--color-navy-blue);
 }
 
 .reusable_section-container button{
