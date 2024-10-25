@@ -52,13 +52,6 @@
     color: var(--color-green);
 }
 
-/* CUSTOM PHONE NUMBER SPINNER */
-.no-spinner::-webkit-outer-spin-button,
-.no-spinner::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
-}
-
 /* CHECKBOX CSS */
 /* Hide the default checkbox */
 .checkbox_container {

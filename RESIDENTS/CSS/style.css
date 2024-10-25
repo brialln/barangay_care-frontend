@@ -408,6 +408,13 @@ input, textarea, select {
     color: var(--color-black-font);
 }
 
+/* CUSTOM PHONE NUMBER SPINNER */
+.no-spinner::-webkit-outer-spin-button,
+.no-spinner::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
 .form_section-container {
     display: flex;
     flex-direction: column;
@@ -685,12 +692,12 @@ input, textarea, select {
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    transition: var(--transition);
     cursor: pointer;
+    transition: var(--transition)
 }
 
 .reusable-card:hover {
-    transform: scale(1.05); /* Slightly enlarge the card */
+    transform: scale(1.1); /* Slightly enlarge the card */
     box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15); 
 }
 
@@ -713,6 +720,49 @@ input, textarea, select {
     padding: 1rem;
     text-align: center;
     gap: 0.5rem;
+}
+
+/* LIGHTBOX STYLES FOR IMAGE EXPAND */
+.lightbox {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* Dark background */
+    justify-content: center; /* Align horizontally */
+    align-items: center; /* Align vertically */
+    z-index: 1000;
+    display: flex; /* Use flexbox to center the content */
+    padding: 1rem;
+}
+
+.lightbox img {
+    width: auto; /* Keep original width */
+    height: auto; /* Keep original height */
+    max-width: 90%; /* Make sure the image doesn’t overflow the screen */
+    max-height: 90%; /* Make sure the image doesn’t overflow vertically */
+    margin: auto;
+    display: block;
+    padding: 1rem; /* Add padding around the image */
+    background-color: var(--color-white); /* Optional: make padding more visible with a background */
+    border-radius: var(--card-border-radius-1); /* Optional: add a rounded border for aesthetics */
+}
+
+/* Close Button */
+.lightbox .close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: var(--color-white);
+    font-size: 40px;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.lightbox .close:hover {
+    color: var(--color-dark-gray);
 }
 
 .upload_button-reusable {

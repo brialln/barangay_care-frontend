@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RESIDENT Disaster & Preparedness | BARANGAY-WBA</title>
+
+    <!-- MONTSERRAT GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <!-- CSS STYLESHEET LINK -->
+     <link rel="stylesheet" href="CSS/style.css">
+     <link rel="stylesheet" href="CSS/contact.css">
+     <link rel="stylesheet" href="CSS/disaster_preparedness.css">
+
+     <!-- ICONSCOUT CDN -->
+    <link href="https://unicons.iconscout.com/release/v4.0.8/css/line.css" rel="stylesheet">
+
+    <!-- GENERAL JS LINK -->
+    <script src="JS/app.js"></script>
+
+</head>
+<body>
+    <nav>
+        <div class="container nav_container">
+            <a href="home.html" class="nav_logo"><img src="IMAGES/pamplona_logo.JPG" alt=""></a>
+            <ul class="nav_items">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="news_updates.html">News & Updates</a></li>
+                <li class="nav_services">
+                    <a href="services.html" class="services_active">Services</a>
+                    <ul>
+                        <li><a href="central_request.html">Request Document</a></li>
+                        <li><a href="community_development.html">Community Development</a></li>
+                        <li><a href="disaster_preparedness.html">Disaster Preparedness</a></li>
+                        <li><a href="education.html">Education</a></li>
+                        <li><a href="elderly.html">Elderly</a></li>
+                        <li><a href="health.html">Health</a></li>
+                        <li><a href="justice.html">Justice</a></li>
+                        <li><a href="livelihood_employment.html">Livelihood & Employment</a></li>
+                        <li><a href="social.html">Social</a></li>
+                        <li><a href="women_welfare.html">Women's Welfare</a></li>
+                        <li><a href="youth_sports.html">Youth & Sports</a></li>
+                    </ul>
+                </li>
+                <li><a href="publications.html">Publications</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li class="nav_profile">
+                    <div class="avatar">
+                        <img src="IMAGES/pamplona_sample-profile.jpg">
+                    </div>
+                    <ul>
+                        <li><a href="profile.html">Profile</a></li>
+                        <li><a href="logout.html">Logout</a></li>
+                    </ul>
+                </li>
+            </ul>
+
+            <button id="open_nav-btn"><i class="uil uil-bars"></i></button>
+            <button id="close_nav-btn"><i class="uil uil-multiply"></i></button>
+        </div>
+    </nav>
+    <!------------------------------------ END OF NAV ------------------------------------>
+
+    <div class="container back_button-container">
+        <a href="services.html"><button><i class="uil uil-arrow-circle-left"></i></button></a>
+    </div>
+    <!-------------- END OF BACK BUTTON -------------->
+
+    <div class="container contact_form">
+        <h3>Disaster Preparedness</h3>
+        <div class="contact_form-container">
+            <div class="contact_form">
+                <h4>Send us your disaster-related concerns.</h4>
+                <form>
+                    <input type="text" placeholder="First Name" required>
+                    <input type="text" placeholder="Last Name" required>
+                    <select required>
+                        <option value="1">Select</option>
+                        <option value="1">Flood o Baha</option>
+                        <option value="1">Fire o Sunog</option>
+                        <option value="1">Others</option>
+                    </select>
+                    <input type="number" placeholder="Contact Number" class="no-spinner" required>
+                    <textarea placeholder="Details" rows="10" required></textarea>
+                    <button type="submit" class="btn">Submit</button>
+                </form>
+            </div>
+
+            <div class="emergency_hotline-container">
+                <h3>Emergency Hotlines</h3>
+                <div class="emergency_hotline">
+                    <div class="hotline">
+                        <p>Emergency Medical Services (EMS) / Ambulance:</p>
+                        <p>0999-000-9999</p>
+                    </div>
+    
+                    <div class="hotline">
+                        <p>Emergency Medical Services (EMS) / Ambulance:</p>
+                        <p>0999-000-9999</p>
+                    </div>
+
+                    <div class="hotline">
+                        <p>Emergency Medical Services (EMS) / Ambulance:</p>
+                        <p>0999-000-9999</p>
+                    </div>
+
+                    <div class="hotline">
+                        <p>Emergency Medical Services (EMS) / Ambulance:</p>
+                        <p>0999-000-9999</p>
+                    </div>
+
+                    <div class="hotline">
+                        <p>Emergency Medical Services (EMS) / Ambulance:</p>
+                        <p>0999-000-9999</p>
+                    </div>
+
+                    <div class="hotline">
+                        <p>Emergency Medical Services (EMS) / Ambulance:</p>
+                        <p>0999-000-9999</p>
+                    </div>
+
+                    <div class="hotline">
+                        <p>Emergency Medical Services (EMS) / Ambulance:</p>
+                        <p>0999-000-9999</p>
+                    </div>
+
+                    <div class="hotline">
+                        <p>Emergency Medical Services (EMS) / Ambulance:</p>
+                        <p>0999-000-9999</p>
+                    </div>
+                </div>
+        
+            </div>
+        </div>
+    </div>
+    <!-------------- END OF DISASTER & PREPAREDNESS FORM SECTION -------------->
+    
+    <div class="container reusable_section-container">
+        <h3>SAFETY GUIDES</h3>
+        <div class="barangay_section-container">
+            <div class="reusable-card" onclick="toggleExpand(this)">
+                <div class="reusable_image-container">
+                    <img src="IMAGES/pamplona_logo.JPG" alt="Barangay Hall" onclick="handleImageClick(this.src)">
+                </div>
+                
+                <div class="reusable_content-container">
+                    <h4>Safety #1</h4>
+                    <p>Description can go here.</p>
+                </div>
+            </div>
+    
+            <div class="reusable-card">
+                <div class="reusable_image-container">
+                    <img src="IMAGES/pamplona_side-section.png" alt="Barangay Hall" onclick="handleImageClick(this.src)">                
+                </div>
+                
+                <div class="reusable_content-container">
+                    <h4>Safety #1</h4>
+                    <p>Description can go here.</p>
+                </div>
+            </div>
+    
+            <div class="reusable-card">
+                <div class="reusable_image-container">
+                    <img src="IMAGES/pamplona_side-section.png" alt="Barangay Hall" onclick="handleImageClick(this.src)">
+                </div>
+                
+                <div class="reusable_content-container"> 
+                    <h4>Safety #1</h4>
+                    <p>Description can go here.</p>
+                </div>
+            </div>
+        </div>
+      </div>
+    <!-------------- END OF SAFETY GUIDES SECTION -------------->
+
+    <div id="lightbox" class="lightbox">
+        <span class="close" onclick="closeLightbox()">&times;</span>
+        <img id="lightbox-img" src="" alt="Large View">
+    </div>
+    <!-------------- END OF LIGHTBOX FOR IMAGE EXPAND -------------->
+
+    <footer>
+        <div class="container footer_container">
+                <div class="footer_1">
+                    <img class="footer_logo" src="IMAGES/pamplona_logo.JPG">
+                    <p>Pamplona Uno</p>
+                    <p>Las Pinas City</p>
+                    <p>Metro Manila</p>
+                    <div>
+                        <i class="uil uil-facebook"></i>
+                        <a class="pamplona_logo" href="facebook.com">Barangay Pamplona Uno</a>
+                    </div>
+                </div>
+
+                <div class="footer_2">
+                    <a href="home.html"><h4>Home</h4></a>
+                    <ul class="permalinks">
+                        <li><a href="home.html">Announcement</a></li>
+                        <li><a href="home.html">Barangay Facilities</a></li>
+                    </ul>
+
+                    <a href="publications.html"><h4>Publications</h4></a>
+                    <ul class="permalinks">
+                        <li><a href="publications.html">Executive Order</a></li>
+                        <li><a href="publications.html">Barangay Ordinance</a></li>
+                        <li><a href="publications.html">Barangay Resolution</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer_3">
+                    <a href="news_updates.html"><h4>News & Updates</h4></a>
+
+                    <a href="services.html"><h4>Services</h4></a>
+                    <ul class="permalinks">
+                        <li><a href="central_request.html">Request Document</a></li>
+                        <li><a href="community_development.html">Community Development</a></li>
+                        <li><a href="disaster_preparedness.html">Disaster Preparedness</a></li>
+                        <li><a href="education.html">Education</a></li>
+                        <li><a href="elderly.html">Elderly</a></li>
+                        <li><a href="health.html">Health</a></li>
+                        <li><a href="justice.html">Justice</a></li>
+                        <li><a href="livelihood_employment.html">Livelihood & Employment</a></li>
+                        <li><a href="social.html">Social</a></li>
+                        <li><a href="women_welfare.html">Women's Welfare</a></li>
+                        <li><a href="youth_sports.html">Youth & Sports</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer_4">
+                    <a href="about.html"><h4>About</h4></a>
+                    <ul class="permalinks">
+                        <li><a href="home.html">Home</a></li>
+                        <li><a href="news_updates.html">News & Updates</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="publications.html">Publications</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+
+                    <a href="contact.html"><h4>Contact Us</h4></a>
+                    <ul class="permalinks">
+                        <li><a href="index.html">+63-945-999-1000</a></li>
+                        <li><a href="index.html">+63-945-999-1000</a></li>
+                        <li><a href="index.html">BarangayPamplonaUno@gmail.com </a></li>
+                        <li><a href="index.html">PamplonaSecretary@gmail.com</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer_copyright">
+            <small>Copyright &copy; Barangay Pamplona Uno | Las Pinas City</small>
+        </div>
+    </footer>
+</body>
