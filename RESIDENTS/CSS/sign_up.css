@@ -35,6 +35,10 @@
     color: var(--color-black);
 }
 
+.form_section small a {
+    color: var(--color-primary);
+}
+
 /* ALERT MESSAGE */
 .alert_message.error {
     background: var(--color-light-red);
