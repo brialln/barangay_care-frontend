@@ -15,7 +15,7 @@
     --color-bg: #F1F1F1;
     --color-red: #FF0000;
     --color-light-red: #FFCCCC;
-    --color-green: #00F000;
+    --color-green: #088108;
     --color-light-green: #99FFCC;
     --color-charcoal-gray: #36454F;
     --color-white: #FFFFFF;
@@ -81,7 +81,7 @@ h4 {
 }
 
 a {
-    color: var(--color-white);
+    color: inherit;
     cursor: pointer;
 }
 

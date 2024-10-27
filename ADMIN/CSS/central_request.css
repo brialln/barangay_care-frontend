@@ -1,0 +1,331 @@
+@import url(style.css);
+
+.barangay_request-container{
+    background: var(--color-white);
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 2rem;
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15); 
+    border-radius: var(--card-border-radius-3);
+    margin: 1rem 0 3rem 0;
+}
+
+.barangay_request-container h3 {
+    color: var(--color-navy-blue);
+}
+
+/* SEARCH BAR CONTAINER */
+.search-filter-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+/* Search bar styles */
+.search-bar {
+    display: flex;
+    align-items: center;
+    border: 2px solid var(--color-dark-gray);
+    border-radius: 5px;
+    padding: 8px 12px;
+    background: var(--color-white);
+    width: 300px;
+}
+
+.search-bar svg {
+    margin-right: 8px;
+}
+
+.search-bar input {
+    border: none;
+    outline: none;
+    flex: 1;
+    font-size: 0.9rem;
+    padding: 0.3rem;
+    color: var(--color-black);
+}
+
+.search-bar input::placeholder {
+    color: var(--color-charcoal-gray);
+}
+
+.search-bar .search-button {
+    background: var(--color-primary);
+    color: var(--color-white);
+    border: 1px solid transparent;
+    padding: 0.4rem 0.5rem;
+    border-radius: 0.2rem;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.search-bar .search-button:hover {
+    background: var(--color-white);
+    color: var(--color-primary);
+    border: 1px solid var(--color-primary);
+}
+
+/* Container for Dropdown Button and Content */
+.filter-dropdown {
+    position: relative;
+}
+
+.filter-btn {
+    width: 7rem;
+    background: var(--color-white);
+    border: 2px solid var(--color-primary);
+    color: var(--color-primary);
+    padding: 0.6rem 1rem;
+    font-size: 0.9rem;
+    cursor: pointer;
+    border-radius: var(--card-border-radius-1);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.filter-btn:hover {
+    background-color: var(--color-primary-light);
+    color: var(--color-primary);
+}
+/* Dropdown Content Styling */
+.dropdown-content {
+    position: absolute;
+    top: 125%;
+    left: 0;
+    flex-direction: column;
+    width: 100%;
+    padding: 0.7rem;
+    background: var(--color-white);
+    border: 1px solid var(--color-primary);
+    border-radius: var(--card-border-radius-1);
+    box-shadow: 0 0.3rem 1rem rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transform: translateY(-10px);
+    pointer-events: none;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    z-index: 5;
+}
+
+.dropdown-content.open {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+/* Show dropdown when 'open' class is added */
+.filter-dropdown.open .dropdown-content {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+}
+
+/* List Item Styling with Checkbox */
+.dropdown-content li {
+    list-style: none;
+    display: grid;
+    grid-template-columns: 10% 90%;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem;
+    font-size: 14px;
+    overflow: hidden;
+    
+}
+
+.dropdown-content li:hover {
+    background-color: #f5f5f5;
+    border-radius: 5px;
+    
+}
+
+/* Checkbox and Label Styling */
+.dropdown-content input[type="checkbox"] {
+    margin: 0;
+    cursor: pointer;
+    transform: scale(1.8);
+}
+
+.dropdown-content label {
+    color: var(--color-black);
+    white-space: nowrap;
+}
+
+/* TAB BOX CONTAINER */
+.header_request-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.trash_button {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5rem;
+    background: var(--color-ash);
+    color: var(--color-black);
+    font-size: 0.9rem;
+    font-weight: 500;
+    padding: 0.5rem 0.7rem; 
+    border: 2px solid transparent;
+    border-radius: var(--card-border-radius-2);
+    cursor: pointer;
+    box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.15); 
+    opacity: 1;
+    transition: var(--transition);
+}
+
+.trash_button:hover {
+    opacity: 0.6;
+}
+
+.request_buttons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+}
+
+.tab_box-container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+    border-bottom: 2px solid var(--color-primary);
+    font-size: 1.2rem;
+    font-weight: 600;
+
+}
+
+.tab_box-container .tab_btn {
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 550;
+    color: var(--color-charcoal-gray);
+    background: none;
+    border: none;
+    margin-bottom: 1rem;
+    padding: 0.5rem 1rem;
+    transition: var(--transition);
+}
+
+.tab_box-container .tab_btn.active{
+    color: var(--color-white);
+    background: var(--color-primary);
+    padding: 0.5rem 1rem;
+    border-radius: var(--card-border-radius-4);
+}
+
+
+
+/* TOP LABELS CONTAINER */
+.label_request-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 2fr 1fr 1fr 1fr;
+    text-align: center;
+    font-size: 0.9rem;
+    padding: 0 0.8rem 0.6rem;
+}
+
+/* REQUEST CONTAINER */
+.request_container {
+    max-height: 350px; /* Set the maximum height of the container */
+    overflow-y: auto; /* Allows vertical scrolling */
+    overflow-x: hidden; /* Hides horizontal scrollbar */
+    padding-right: 0.2rem; /* Optional: Add padding to prevent scrollbar overlap with content */
+}
+
+.request_container .request {
+    display: none;
+    animation: moving .5s ease;
+}
+
+@keyframes moving {
+    from{transform: translate(50px);opacity: 0;}
+    to{transform: translate(0px);opacity: 1;}
+}
+
+.request_container .request.active {
+    display: block;
+}
+
+.request_container .request h2 {
+    margin-bottom: 0.8rem;
+}
+
+/* USER REQUESTS CONTAINER */
+.user_request {
+    display: grid;
+    grid-template-columns: 1fr 1fr 2fr 1fr 1fr 1fr;
+    align-items: center;
+    text-align: center;
+    font-size: 0.9rem;
+    background: var(--color-ash);
+    padding: 0.8rem 0.6rem;
+    border-radius: var(--card-border-radius-2);
+    box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.15); 
+    margin-bottom: 0.2rem;
+}
+
+.user_request button {
+    background: var(--color-navy-blue);
+    color: var(--color-white);
+    padding: 0.5rem 1rem; 
+    margin: 0 auto; 
+    display: block; 
+    border: 2px solid var(--color-navy-blue);
+    border-radius: var(--card-border-radius-2);
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.user_request button:hover {
+    background: var(--color-ash);
+    border: 2px solid var(--color-navy-blue);
+    color: var(--color-navy-blue);
+}
+
+/* STATUS STYLES */
+.request_pending {
+    color: var(--color-charcoal-gray);
+    font-weight: 600;
+}
+
+.request_approved {
+    color: var(--color-green);
+    font-weight: 600;
+}
+
+.request_declined {
+    color: var(--color-red);
+    font-weight: 600;
+}
+
+
+/* Scrollbar container */
+.request_container::-webkit-scrollbar {
+    width: 0.6rem;  /* Width of the vertical scrollbar */
+    height: 0.6rem; /* Height of the horizontal scrollbar (if needed) */
+}
+
+/* Scrollbar track */
+.request_container::-webkit-scrollbar-track {
+    background: var(--color-ash);  /* Background of the scrollbar track */
+    border-radius: 0.6rem;  /* Round edges for the track */
+}
+
+/* Scrollbar handle */
+.request_container::-webkit-scrollbar-thumb {
+    background-color: var(--color-primary); /* Color of the scrollbar thumb */
+    border-radius: 10px;  /* Round edges for the thumb */
+    border: 2px solid var(--color-ash);
+    cursor: pointer;
+}
+
+/* Hover effect on the scrollbar thumb */
+.request_container::-webkit-scrollbar-thumb:hover {
+    background-color: var(--color-navy-blue); /* Darken color on hover */
+}

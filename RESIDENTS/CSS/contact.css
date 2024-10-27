@@ -4,7 +4,6 @@
 .contact_form-container {
     display: grid;
     grid-template-columns: 50% 50%;
-
     background: var(--color-white);
     border-radius: var(--card-border-radius-3);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
