@@ -63,4 +63,18 @@
     border-top-left-radius: var(--card-border-radius-4);
 }
 
+.disaster_section-container {
+    border: 3px solid var(--color-red);
+    padding: 1rem;
+    border-bottom-right-radius: var(--card-border-radius-3);
+    border-bottom-left-radius: var(--card-border-radius-3);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); 
+    justify-content: center; 
+    align-content: center; 
+    gap: 1.5rem; 
+}
 
+.disaster_section-container h4 {
+    color: var(--color-red);
+}
