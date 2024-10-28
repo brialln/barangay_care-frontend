@@ -18,8 +18,7 @@
     grid-template-columns: 1fr 1fr;
     justify-content: flex-start;
     background: var(--color-white);
-    border-top: 2px solid var(--color-navy-blue);
-    border-bottom: 2px solid var(--color-navy-blue);
+    border-top: 5px solid var(--color-navy-blue);
     border-bottom-left-radius: var(--card-border-radius-3);
     border-bottom-right-radius: var(--card-border-radius-3);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);

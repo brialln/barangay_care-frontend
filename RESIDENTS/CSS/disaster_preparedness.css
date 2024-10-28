@@ -57,7 +57,7 @@
 .reusable_section-container h3 {
     text-align: center;
     color: var(--color-white);
-    background: var(--color-primary);
+    background: var(--color-red);
     padding: 0.5rem;
     border-top-right-radius: var(--card-border-radius-4);
     border-top-left-radius: var(--card-border-radius-4);
