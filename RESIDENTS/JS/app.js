@@ -38,6 +38,7 @@ function openLightbox(imageSrc) {
     lightboxImg.src = imageSrc;
     lightbox.style.display = 'flex'; // Show the lightbox
     document.body.style.overflow = 'hidden'; // Disable scroll on body
+    document.body.style.overflowX = 'hidden'; // Disable scroll on body
 }
 
 function closeLightbox() {
@@ -46,12 +47,10 @@ function closeLightbox() {
     
     lightbox.style.display = 'none'; // Hide the lightbox
     document.body.style.overflow = 'auto'; // Re-enable scroll on body
+    document.body.style.overflowX = 'hidden'; // Disable scroll on body
 }
 
 function handleImageClick(imageSrc) {
     // Make sure the lightbox is opened through a user interaction (click)
     openLightbox(imageSrc);
 }
-
-
-

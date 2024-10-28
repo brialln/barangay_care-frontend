@@ -736,6 +736,7 @@ input, textarea, select {
     z-index: 1000;
     display: flex; /* Use flexbox to center the content */
     padding: 1rem;
+    overflow-x: hidden;
 }
 
 .lightbox img {
