@@ -46,12 +46,17 @@
 }
 
 /* SAFETY GUIDES */
-.safety_guide-container {
+.disaster_section-container {
+    border: 3px solid var(--color-red);
+    padding: 1rem;
+    border-bottom-right-radius: var(--card-border-radius-3);
+    border-bottom-left-radius: var(--card-border-radius-3);
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); 
+    grid-template-columns: repeat(3, minmax(350px, 1fr));  
     justify-content: center; 
     align-content: center; 
     gap: 1.5rem; 
+    overflow: hidden;
 }
 
 .reusable_section-container h3 {
@@ -69,7 +74,7 @@
     border-bottom-right-radius: var(--card-border-radius-3);
     border-bottom-left-radius: var(--card-border-radius-3);
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); 
+    grid-template-columns: repeat(3, minmax(350px, 1fr));  
     justify-content: center; 
     align-content: center; 
     gap: 1.5rem; 
