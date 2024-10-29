@@ -142,12 +142,15 @@
                             <i class="uil uil-search"></i>
                         </button>
                     </div>
+
                 <!-- Filter Dropdown -->
                 <div class="filter-dropdown">
-                    <button class="filter-btn" onclick="toggleDropdown(this)">Sort</button>
+                    <button class="filter-btn" onclick="toggleDropdown(this)">
+                        Sort: <span class="selected-filter">Select</span>
+                    </button>
                     <ul class="dropdown-content">
-                        <li><input type="checkbox"><label>Earliest</label></li>
-                        <li><input type="checkbox"><label>Latest</label></li>
+                        <li><input type="checkbox" onclick="selectOption(this, 'filter')" /><label>Earliest</label></li>
+                        <li><input type="checkbox" onclick="selectOption(this, 'filter')" /><label>Latest</label></li>
                     </ul>
                 </div>
 
@@ -225,15 +228,16 @@
                     </button>
                 </div>
             
-
-            <!-- Filter Dropdown -->
-            <div class="filter-dropdown">
-                <button class="filter-btn" onclick="toggleDropdown(this)">Sort</button>
-                <ul class="dropdown-content">
-                    <li><input type="checkbox"><label>Earliest</label></li>
-                    <li><input type="checkbox"><label>Latest</label></li>
-                </ul>
-            </div>
+                <!-- Filter Dropdown -->
+                <div class="filter-dropdown">
+                    <button class="filter-btn" onclick="toggleDropdown(this)">
+                        Sort: <span class="selected-filter">Select</span>
+                    </button>
+                    <ul class="dropdown-content">
+                        <li><input type="checkbox" onclick="selectOption(this, 'filter')" /><label>Earliest</label></li>
+                        <li><input type="checkbox" onclick="selectOption(this, 'filter')" /><label>Latest</label></li>
+                    </ul>
+                </div>
 
             </div>
             <div class="tab_box-container">
@@ -306,15 +310,17 @@
                             <i class="uil uil-search"></i>
                         </button>
                     </div>
+
                 <!-- Filter Dropdown -->
                 <div class="filter-dropdown">
-                    <button class="filter-btn" onclick="toggleDropdown(this)">Sort</button>
+                    <button class="filter-btn" onclick="toggleDropdown(this)">
+                        Sort: <span class="selected-filter">Select</span>
+                    </button>
                     <ul class="dropdown-content">
-                        <li><input type="checkbox"><label>Earliest</label></li>
-                        <li><input type="checkbox"><label>Latest</label></li>
+                        <li><input type="checkbox" onclick="selectOption(this, 'filter')" /><label>Earliest</label></li>
+                        <li><input type="checkbox" onclick="selectOption(this, 'filter')" /><label>Latest</label></li>
                     </ul>
                 </div>
-
             </div>
 
             <div class="tab_box-container">
