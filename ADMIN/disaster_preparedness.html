@@ -134,69 +134,108 @@
             </div>
 
             <div class="search-filter-container">
-                <!-- Search Bar -->
                 <div class="search-bar">
                     <input type="text" placeholder="Search">
                     <button type="button" class="search-button">
                         <i class="uil uil-search"></i>
                     </button>
                 </div>
-            
 
-            <!-- Filter Dropdown -->
-            <div class="filter-dropdown">
-                <button class="filter-btn" onclick="toggleDropdown(this)">Sort</button>
-                <ul class="dropdown-content">
-                    <li><input type="checkbox"><label>Earliest</label></li>
-                    <li><input type="checkbox"><label>Latest</label></li>
-                </ul>
+                <div class="dropdown_button-container">
+                    <!-- Priority Dropdown -->
+                    <div class="priority-dropdown">
+                        <button class="priority-btn" onclick="toggleDropdown(this)">
+                            Priority: <span class="selected-priority">Select</span>
+                        </button>
+                        <ul class="priority_dropdown-content">
+                            <li><input type="checkbox" onclick="selectOption(this, 'priority')" /><label>High</label></li>
+                            <li><input type="checkbox" onclick="selectOption(this, 'priority')" /><label>Medium</label></li>
+                            <li><input type="checkbox" onclick="selectOption(this, 'priority')" /><label>Low</label></li>
+                        </ul>
+                    </div>
+                
+                    <!-- Filter Dropdown -->
+                    <div class="filter-dropdown">
+                        <button class="filter-btn" onclick="toggleDropdown(this)">
+                            Sort: <span class="selected-filter">Select</span>
+                        </button>
+                        <ul class="dropdown-content">
+                            <li><input type="checkbox" onclick="selectOption(this, 'filter')" /><label>Earliest</label></li>
+                            <li><input type="checkbox" onclick="selectOption(this, 'filter')" /><label>Latest</label></li>
+                        </ul>
+                    </div>
+                </div>
+                
             </div>
 
-            </div>
             <div class="tab_box-container">
-                <button class="tab_btn active">Pending</button>
-                <button class="tab_btn">Approved</button>
-                <button class="tab_btn">Declined</button>
+                <button class="tab_btn active">Reported</button>
+                <button class="tab_btn">In-Progress</button>
+                <button class="tab_btn">Resolved</button>
             </div>
-            <div class="label_request-container">
+            <div class="disaser_label-container">
                 <p>No.</p>
                 <p>Barangay ID</p>
                 <p>Name</p>
                 <p>Date & Time</p>
+                <p>Priority Level</p>
                 <p>Status</p>
                 <p>Details</p>
             </div>
             <div class="request_container">
                 <div class="request active">
-                    <div class="user_request">
+                    <div class="disaster_request-container">
                         <p>1</p>
                         <p>01</p>
-                        <p>21 Savage</p>
+                        <p>Uvuvwevwevwe Ossas</p>
                         <p>2024-10-12 13:02</p>
-                        <p class="request_pending">Pending</p>
+                        <p class="priority_level" data-priority="High">High</p>
+                        <p class="request_pending">Reported</p>
+                        <button><a href="brgy_disaster-responses.html">View Details</button></a>
+                    </div>
+
+                    <div class="disaster_request-container">
+                        <p>2</p>
+                        <p>20</p>
+                        <p>Uvuvwevwevwe Ossas</p>
+                        <p>2024-10-12 13:02</p>
+                        <p class="priority_level" data-priority="Medium">Medium</p>
+                        <p class="request_pending">Reported</p>
+                        <button><a href="brgy_disaster-responses.html">View Details</button></a>
+                    </div>
+
+                    <div class="disaster_request-container">
+                        <p>3</p>
+                        <p>10</p>
+                        <p>Uvuvwevwevwe Ossas</p>
+                        <p>2024-10-12 13:02</p>
+                        <p class="priority_level" data-priority="Low">Low</p>
+                        <p class="request_pending">Reported</p>
                         <button><a href="brgy_disaster-responses.html">View Details</button></a>
                     </div>
                 </div>
 
                 <div class="request">
-                    <div class="user_request">
+                    <div class="disaster_request-container">
                         <p>1</p>
                         <p>01</p>
-                        <p>21 Savage</p>
+                        <p>Uvuvwevwevwe Ossas</p>
                         <p>2024-10-12 13:02</p>
-                        <p class="request_approved">Approved</p>
-                        <button><a href="brgy_disaster-responses.html">View Details</a></button>
+                        <p class="priority_level" data-priority="High">High</p>
+                        <p class="request_pending">In-Progress</p>
+                        <button><a href="brgy_disaster-responses.html">View Details</button></a>
                     </div>
                 </div>
 
                 <div class="request">
-                    <div class="user_request">
+                    <div class="disaster_request-container">
                         <p>1</p>
                         <p>01</p>
-                        <p>21 Savage</p>
+                        <p>Uvuvwevwevwe Ossas</p>
                         <p>2024-10-12 13:02</p>
-                        <p class="request_declined">Declined</p>
-                        <button><a href="brgy_disaster-responses.html">View Details</a></button>
+                        <p class="priority_level" data-priority="High">High</p>
+                        <p class="request_approved">Resolved</p>
+                        <button><a href="brgy_disaster-responses.html">View Details</button></a>
                     </div>
                 </div>
             </div>

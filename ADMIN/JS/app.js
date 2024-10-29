@@ -68,11 +68,65 @@ barangayDisasterTabs.forEach((tab, index) => {
     });
 });
 
-
-// Function for Filter Dropdown in Document Requests
+// Function for Dropdown Sort and Filter
+// Toggle dropdown visibility
 function toggleDropdown(button) {
     const dropdownContent = button.nextElementSibling; // Target the next sibling .dropdown-content
     dropdownContent.classList.toggle('open'); // Toggle the 'open' class
 }
 
+// Change the button text based on selected option
+function selectOption(checkbox, type) {
+    const checkboxes = checkbox.closest('ul').querySelectorAll('input[type="checkbox"]');
+    checkboxes.forEach(cb => cb.checked = false);
+    checkbox.checked = true;
 
+    const selectedText = checkbox.nextElementSibling.innerText;
+
+    if (type === 'priority') {
+        const prioritySpan = document.querySelector('.priority-btn .selected-priority');
+        prioritySpan.innerText = selectedText;
+        prioritySpan.className = `selected-priority ${selectedText.toLowerCase()}`;
+    } else if (type === 'filter') {
+        const filterSpan = document.querySelector('.filter-btn .selected-filter');
+        filterSpan.innerText = selectedText;
+        filterSpan.className = `selected-filter ${selectedText.toLowerCase()}`;
+    }
+
+    checkbox.closest('ul').classList.remove('open');
+}
+
+
+// Close dropdown when clicking outside
+document.addEventListener('click', function(event) {
+    const dropdowns = document.querySelectorAll('.priority_dropdown-content, .dropdown-content');
+    dropdowns.forEach(dropdown => {
+        if (!dropdown.contains(event.target) && !dropdown.previousElementSibling.contains(event.target)) {
+            dropdown.classList.remove('open');
+        }
+    });
+});
+
+
+
+// Get modal elements
+const modal = document.getElementById('responseModal');
+const respondButton = document.querySelector('.approve_button');
+const closeButton = document.querySelector('.close_button');
+
+// Open the modal when "Respond" button is clicked
+respondButton.addEventListener('click', () => {
+    modal.classList.add('show');
+});
+
+// Close the modal when the "x" button is clicked
+closeButton.addEventListener('click', () => {
+    modal.classList.remove('show');
+});
+
+// Close the modal when clicking outside the modal content
+window.addEventListener('click', (event) => {
+    if (event.target === modal) {
+        modal.classList.remove('show');
+    }
+});
