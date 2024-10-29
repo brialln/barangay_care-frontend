@@ -191,7 +191,7 @@ textarea {
     top: 5px;
     right: 15px;
     font-size: 2rem;
-    color: var(--color-red);
+    color: var(--color-navy-blue);
     cursor: pointer;
 }
 
@@ -204,4 +204,26 @@ textarea {
 .modal.show .modal_content {
     opacity: 1; /* Make the content visible */
     transform: scale(1); /* Scale to full size */
+}
+
+#responseModal button {
+    background: var(--color-green);
+    border: 2px solid transparent;
+}
+
+#responseModal button:hover {
+    background: var(--color-white);
+    border: 2px solid var(--color-green);
+    color: var(--color-green);
+}
+
+#declineModal button {
+    background: var(--color-red);
+    border: 2px solid transparent;
+}
+
+#declineModal button:hover {
+    background: var(--color-white);
+    border: 2px solid var(--color-red);
+    color: var(--color-red);
 }
