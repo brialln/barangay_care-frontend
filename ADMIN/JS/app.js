@@ -69,37 +69,44 @@ barangayDisasterTabs.forEach((tab, index) => {
 });
 
 // Function for Dropdown Sort and Filter
-// Toggle dropdown visibility
+// Toggle dropdown visibility for each button individually
 function toggleDropdown(button) {
-    const dropdownContent = button.nextElementSibling; // Target the next sibling .dropdown-content
-    dropdownContent.classList.toggle('open'); // Toggle the 'open' class
+    const dropdownContent = button.nextElementSibling; // Target the specific dropdown next to the clicked button
+    document.querySelectorAll('.dropdown-content').forEach(dropdown => {
+        if (dropdown !== dropdownContent) dropdown.classList.remove('open');
+    });
+    dropdownContent.classList.toggle('open');
 }
 
 // Change the button text based on selected option
 function selectOption(checkbox, type) {
-    const checkboxes = checkbox.closest('ul').querySelectorAll('input[type="checkbox"]');
+    const dropdown = checkbox.closest('ul'); // Get the specific dropdown
+    const checkboxes = dropdown.querySelectorAll('input[type="checkbox"]');
+    
+    // Uncheck other checkboxes within the same dropdown
     checkboxes.forEach(cb => cb.checked = false);
-    checkbox.checked = true;
+    checkbox.checked = true; // Check the selected one
 
     const selectedText = checkbox.nextElementSibling.innerText;
-
+    
+    // Update only the specific button related to the dropdown type
     if (type === 'priority') {
-        const prioritySpan = document.querySelector('.priority-btn .selected-priority');
-        prioritySpan.innerText = selectedText;
-        prioritySpan.className = `selected-priority ${selectedText.toLowerCase()}`;
+        const priorityBtn = dropdown.closest('.priority-dropdown').querySelector('.priority-btn .selected-priority');
+        priorityBtn.innerText = selectedText;
+        priorityBtn.className = `selected-priority ${selectedText.toLowerCase()}`;
     } else if (type === 'filter') {
-        const filterSpan = document.querySelector('.filter-btn .selected-filter');
-        filterSpan.innerText = selectedText;
-        filterSpan.className = `selected-filter ${selectedText.toLowerCase()}`;
+        const filterBtn = dropdown.closest('.filter-dropdown').querySelector('.filter-btn .selected-filter');
+        filterBtn.innerText = selectedText;
+        filterBtn.className = `selected-filter ${selectedText.toLowerCase()}`;
     }
-
-    checkbox.closest('ul').classList.remove('open');
+    
+    // Close the dropdown after selection
+    dropdown.classList.remove('open');
 }
 
-
-// Close dropdown when clicking outside
+// Close dropdowns when clicking outside
 document.addEventListener('click', function(event) {
-    const dropdowns = document.querySelectorAll('.priority_dropdown-content, .dropdown-content');
+    const dropdowns = document.querySelectorAll('.dropdown-content');
     dropdowns.forEach(dropdown => {
         if (!dropdown.contains(event.target) && !dropdown.previousElementSibling.contains(event.target)) {
             dropdown.classList.remove('open');
@@ -107,8 +114,7 @@ document.addEventListener('click', function(event) {
     });
 });
 
-
-
+// Approve/Respond Modal Functionality
 // Get modal elements
 const modal = document.getElementById('responseModal');
 const respondButton = document.querySelector('.approve_button');
@@ -128,5 +134,25 @@ closeButton.addEventListener('click', () => {
 window.addEventListener('click', (event) => {
     if (event.target === modal) {
         modal.classList.remove('show');
+    }
+});
+
+
+// Decline Modal Functionality
+const declineModal = document.getElementById('declineModal');
+const declineButton = document.querySelector('.decline_button');
+const closeDeclineButton = declineModal.querySelector('.decline_close_button');
+
+declineButton.addEventListener('click', () => {
+    declineModal.classList.add('show');
+});
+
+closeDeclineButton.addEventListener('click', () => {
+    declineModal.classList.remove('show');
+});
+
+window.addEventListener('click', (event) => {
+    if (event.target === declineModal) {
+        declineModal.classList.remove('show');
     }
 });
