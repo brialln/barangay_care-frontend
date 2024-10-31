@@ -13,6 +13,8 @@
     <!-- CSS STYLESHEET LINK -->
      <link rel="stylesheet" href="CSS/style.css">
      <link rel="stylesheet" href="CSS/sidebar.css">
+     <link rel="stylesheet" href="CSS/contact.css">
+     <link rel="stylesheet" href="CSS/disaster_preparedness.css">
      <link rel="stylesheet" href="CSS/central_request.css">
 
      <!-- ICONSCOUT CDN -->
@@ -241,8 +243,107 @@
             </div>
         </div>
     </div>
-</main>
-<script>
+<!-------------- END OF DISASTER & RESPONSES -------------->
 
-</script>
+    <div class="container contact_form">
+            <div class="emergency_hotline-container">
+                <h3>Edit Emergency Hotlines</h3>
+                <div class="emergency_hotline">
+                        <div class="hotline">
+                            <input type="text" placeholder="Enter Emergecy Department">
+                            <input type="tel" placeholder="Enter Contact Number">
+                            <button class="btn">Submit</button>
+                        </div>
+        
+                        <div class="hotline">
+                            <input type="text" placeholder="Enter Emergecy Department">
+                            <input type="tel" placeholder="Enter Contact Number">
+                            <button class="btn">Submit</button>
+                        </div>
+    
+                        <div class="hotline">
+                            <input type="text" placeholder="Enter Emergecy Department">
+                            <input type="tel" placeholder="Enter Contact Number">
+                            <button class="btn">Submit</button>
+                        </div>
+    
+                        <div class="hotline">
+                            <input type="text" placeholder="Enter Emergecy Department">
+                            <input type="tel" placeholder="Enter Contact Number">
+                            <button class="btn">Submit</button>
+                        </div>
+
+                        <div class="hotline">
+                            <input type="text" placeholder="Enter Emergecy Department">
+                            <input type="tel" placeholder="Enter Contact Number">
+                            <button class="btn">Submit</button>
+                        </div>
+        
+                        <div class="hotline">
+                            <input type="text" placeholder="Enter Emergecy Department">
+                            <input type="tel" placeholder="Enter Contact Number">
+                            <button class="btn">Submit</button>
+                        </div>
+    
+                        <div class="hotline">
+                            <input type="text" placeholder="Enter Emergecy Department">
+                            <input type="tel" placeholder="Enter Contact Number">
+                            <button class="btn">Submit</button>
+                        </div>
+    
+                        <div class="hotline">
+                            <input type="text" placeholder="Enter Emergecy Department">
+                            <input type="tel" placeholder="Enter Contact Number">
+                            <button class="btn">Submit</button>
+                        </div>
+                </div>
+            </div>
+    </div>
+<!-------------- END OF DISASTER & PREPAREDNESS FORM SECTION -------------->
+
+    <div class="container reusable_section-container">
+        <h3>SAFETY GUIDES</h3>
+        <div class="disaster_section-container">
+            <div class="reusable-card" onclick="toggleExpand(this)">
+                <div class="reusable_image-container">
+                    <img src="IMAGES/pamplona_logo.JPG" alt="Barangay Hall" onclick="handleImageClick(this.src)">
+                </div>
+                
+                <div class="reusable_content-container">
+                    <h4>Safety #1</h4>
+                    <p>Description can go here.</p>
+                </div>
+            </div>
+
+            <div class="reusable-card" onclick="toggleExpand(this)">
+                <div class="reusable_image-container">
+                    <img src="IMAGES/pamplona_logo.JPG" alt="Barangay Hall" onclick="handleImageClick(this.src)">
+                </div>
+                
+                <div class="reusable_content-container">
+                    <h4>Safety #1</h4>
+                    <p>Description can go here.</p>
+                </div>
+            </div>
+    
+        </div>
+      </div>
+    <!-------------- END OF SAFETY GUIDES SECTION -------------->
+
+    <div class="form_section">
+        <div class="container form_section-container">
+            <h2>Add Safety Guide</h2>
+            <form action="" enctype="multipart/form-data">
+                <input type="text" placeholder="Title">
+                <div class="form_control">
+                    <label for="thumbnail">Add Thumbnail</label>
+                    <input type="file" id="thumbnail">
+                </div>
+                <textarea rows="10" name="Description" placeholder="Description"></textarea>
+                <button type="submit" class="btn">Add Safety Guide</button>
+            </form>
+        </div>
+    </div>
+    <!-------------- END OF ADD SAFETY GUIDE -------------->
+</main>
 </body>
