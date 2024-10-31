@@ -1,12 +1,13 @@
 @import url(style.css);
 
-/* CONTACT FORM STYLES */
+/* ==================== Contact Form ==================== */
 .contact_form-container {
-    display: grid;
-    grid-template-columns: 50% 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
     background: var(--color-white);
-    border-radius: var(--card-border-radius-2);
+    border-radius: var(--card-border-radius-3);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     width: 100%;
     overflow: hidden;
@@ -16,9 +17,8 @@
 }
 
 .contact_aside {
-    display: flex;
-    flex-direction: column;
-    padding: 0 2rem 0 0;
+    width: 50%;
+    padding: 0 0 1rem 0;
 }
 
 .contact_aside-image  {
@@ -47,33 +47,21 @@
     width: 100%;
 }
 
-.form_group-parent {
-    display: flex;
-    flex-direction: column; 
-    gap: 1.5rem;
-}
 
-.form_group {
+.contact_edit{
     display: flex;
     flex-direction: column; 
     gap: 0.5rem;
     width: 100%;
 }
 
-.contact_details li {
-    display: flex;
-    gap: 1rem;
-    align-items: center;
-    margin-bottom: 1rem;
-}
-
-/* LOCATION MAP STYLES */
+/* ==================== Location Map Styles ==================== */
 .location_container {
     margin-top: 1rem;
     flex: 1 1 100%;
     overflow: hidden;
     border: 5px solid var(--color-navy-blue);
-    border-radius: var(--card-border-radius-2);
+    border-radius: var(--card-border-radius-3);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow */
     max-width: 100%; /* Responsive width */
     position: relative; /* For the responsiveness */
