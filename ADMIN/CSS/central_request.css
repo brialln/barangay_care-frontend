@@ -460,6 +460,63 @@
     color: var(--color-navy-blue);
 }
 
+/* ================ For Idea Submissions & Volunteer Requests ================ */
+.community_section-container{
+    padding: 3rem 2rem 1rem 2rem;
+    background: var(--color-light-primary);
+    border-radius: var(--card-border-radius-3);
+    box-shadow: inset 0px 6px 8px 6px rgba(0, 0, 0, 0.1);
+}
+
+.community_request-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    align-items: center;
+    text-align: center;
+    font-size: 0.9rem;
+    background: var(--color-ash);
+    padding: 0.8rem 0.6rem;
+    border-radius: var(--card-border-radius-2);
+    box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.15); 
+    margin-bottom: 0.2rem;
+}
+
+.community_request-container button {
+    background: var(--color-navy-blue);
+    color: var(--color-white);
+    padding: 0.5rem 1rem; 
+    margin: 0 auto; 
+    display: block; 
+    border: 2px solid var(--color-navy-blue);
+    border-radius: var(--card-border-radius-2);
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.community_request-container button:last-child {
+    background: var(--color-red);
+    color: var(--color-white);
+    padding: 0.5rem 1rem; 
+    margin: 0 auto; 
+    display: block; 
+    border: 2px solid var(--color-red);
+    border-radius: var(--card-border-radius-2);
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.community_request-container button:hover {
+    background: var(--color-ash);
+    border: 2px solid var(--color-navy-blue);
+    color: var(--color-navy-blue);
+}
+
+.community_request-container button:last-child:hover {
+    background: var(--color-ash);
+    border: 2px solid var(--color-red);
+    color: var(--color-red);
+}
+
 /* ================ Status Styles (Pending, Approved, Declined) ================  */
 .request_pending {
     color: var(--color-charcoal-gray);
