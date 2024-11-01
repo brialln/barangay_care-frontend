@@ -447,7 +447,7 @@ input, textarea, select {
 /* POSTS STYLE */
 .posts_container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(310px, 1fr)); 
+    grid-template-columns: repeat(3, minmax(320px, 1fr)); 
     gap: 4rem;
 }
 
