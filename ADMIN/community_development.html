@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ADMIN Edit Disaster Preparedness | BARANGAY-WBA</title>
+
+    <!-- MONTSERRAT GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <!-- CSS STYLESHEET LINK -->
+     <link rel="stylesheet" href="CSS/style.css">
+     <link rel="stylesheet" href="CSS/community_development.css">
+     <link rel="stylesheet" href="CSS/central_request.css">
+
+     <!-- ICONSCOUT CDN -->
+    <link href="https://unicons.iconscout.com/release/v4.0.8/css/line.css" rel="stylesheet">
+
+    <!-- GENERAL JS LINK -->
+    <script type="text/javascript" src="./JS/app.js" defer></script>
+    <!-- SIDEBAR JS LINK -->
+    <script type="text/javascript" src="./JS/sidebar.js" defer></script>
+    <!-- THREADS JS LINK -->
+     <script type="text/javascript" src="JS/threads.js" defer></script>
+
+</head>
+<body>
+    <aside id="sidebar">
+        <ul>
+            <li>
+                <span class="logo">BarangayCare</span>
+                <button onclick=toggleSidebar() id="toggle-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FFFFFF"><path d="M440-240 200-480l240-240 56 56-183 184 183 184-56 56Zm264 0L464-480l240-240 56 56-183 184 183 184-56 56Z"/></svg>
+                </button>
+            </li>
+
+            <li >
+                <a href="dashboard.html">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M120-200q-33 0-56.5-23.5T40-280v-400q0-33 23.5-56.5T120-760h400q33 0 56.5 23.5T600-680v400q0 33-23.5 56.5T520-200H120Zm0-80h400v-400H120v400Zm560 80v-560h80v560h-80Zm160 0v-560h80v560h-80Zm-720-80v-400 400Z"/></svg>
+                    <span>Dashboard</span>
+                </a>
+            </li>
+
+            <li>
+                <button onclick=toggleSubMenu(this) class="dropdown-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M480-118 120-398l66-50 294 228 294-228 66 50-360 280Zm0-202L120-600l360-280 360 280-360 280Zm0-280Zm0 178 230-178-230-178-230 178 230 178Z"/></svg>
+                    <span>Main Pages</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z"/></svg>
+                </button>
+                <ul class="sub-menu">
+                    <div>
+                        <li><a href="home.html">Home</a></li>
+                        <li><a href="news_updates.html">News & Updates</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="publications.html">Publications</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </div>
+                </ul>
+            </li>
+            
+            <li>
+                <button onclick=toggleSubMenu(this) class="dropdown-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M760-600q-57 0-99-34t-56-86H354q-11 42-41.5 72.5T240-606v251q52 14 86 56t34 99q0 66-47 113T200-40q-66 0-113-47T40-200q0-57 34-99t86-56v-251q-52-14-86-56t-34-98q0-66 47-113t113-47q56 0 98 34t56 86h251q14-52 56-86t99-34q66 0 113 47t47 113q0 66-47 113t-113 47ZM200-120q33 0 56.5-24t23.5-56q0-33-23.5-56.5T200-280q-32 0-56 23.5T120-200q0 32 24 56t56 24Zm0-560q33 0 56.5-23.5T280-760q0-33-23.5-56.5T200-840q-32 0-56 23.5T120-760q0 33 24 56.5t56 23.5ZM760-40q-66 0-113-47t-47-113q0-66 47-113t113-47q66 0 113 47t47 113q0 66-47 113T760-40Zm0-80q33 0 56.5-24t23.5-56q0-33-23.5-56.5T760-280q-33 0-56.5 23.5T680-200q0 32 23.5 56t56.5 24Zm0-560q33 0 56.5-23.5T840-760q0-33-23.5-56.5T760-840q-33 0-56.5 23.5T680-760q0 33 23.5 56.5T760-680ZM200-200Zm0-560Zm560 560Zm0-560Z"/></svg>
+                    <span>Services</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z"/></svg>
+                </button>
+                <ul class="sub-menu">
+                    <div>
+                        <li><a href="central_request.html">Request Document</a></li>
+                        <li class="active"><a href="community_development.html">Community Development</a></li>
+                        <li><a href="disaster_preparedness.html">Disaster Preparedness</a></li>
+                        <li><a href="education.html">Education</a></li>
+                        <li><a href="elderly.html">Elderly</a></li>
+                        <li><a href="health.html">Health</a></li>
+                        <li><a href="justice.html">Justice</a></li>
+                        <li><a href="livelihood_employment.html">Livelihood & Employment</a></li>
+                        <li><a href="social.html">Social</a></li>
+                        <li><a href="women_welfare.html">Women's Welfare</a></li>
+                        <li><a href="youth_sports.html">Youth & Sports</a></li>
+                    </div>
+                </ul>
+            </li>
+            
+            <li>
+                <button onclick=toggleSubMenu(this) class="dropdown-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M40-160v-112q0-34 17.5-62.5T104-378q62-31 126-46.5T360-440q66 0 130 15.5T616-378q29 15 46.5 43.5T680-272v112H40Zm720 0v-120q0-44-24.5-84.5T666-434q51 6 96 20.5t84 35.5q36 20 55 44.5t19 53.5v120H760ZM360-480q-66 0-113-47t-47-113q0-66 47-113t113-47q66 0 113 47t47 113q0 66-47 113t-113 47Zm400-160q0 66-47 113t-113 47q-11 0-28-2.5t-28-5.5q27-32 41.5-71t14.5-81q0-42-14.5-81T544-792q14-5 28-6.5t28-1.5q66 0 113 47t47 113ZM120-240h480v-32q0-11-5.5-20T580-306q-54-27-109-40.5T360-360q-56 0-111 13.5T140-306q-9 5-14.5 14t-5.5 20v32Zm240-320q33 0 56.5-23.5T440-640q0-33-23.5-56.5T360-720q-33 0-56.5 23.5T280-640q0 33 23.5 56.5T360-560Zm0 320Zm0-400Z"/></svg>
+                    <span>Accounts</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z"/></svg>
+                </button>
+                <ul class="sub-menu">
+                    <div>
+                        <li><a href="residents.html">Residents</a></li>
+                        <li><a href="staffs.html">Staffs</a></li>
+                        <li><a href="sangguniang_kabataan.html">SK</a></li>
+                    </div>
+                </ul>
+            </li>
+            
+            <li>
+                <button onclick=toggleSubMenu(this) class="dropdown-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M480-480q-66 0-113-47t-47-113q0-66 47-113t113-47q66 0 113 47t47 113q0 66-47 113t-113 47ZM160-160v-112q0-34 17.5-62.5T224-378q62-31 126-46.5T480-440q66 0 130 15.5T736-378q29 15 46.5 43.5T800-272v112H160Zm80-80h480v-32q0-11-5.5-20T700-306q-54-27-109-40.5T480-360q-56 0-111 13.5T260-306q-9 5-14.5 14t-5.5 20v32Zm240-320q33 0 56.5-23.5T560-640q0-33-23.5-56.5T480-720q-33 0-56.5 23.5T400-640q0 33 23.5 56.5T480-560Zm0-80Zm0 400Z"/></svg>
+                    <span>Profile</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z"/></svg>
+                </button>
+                <ul class="sub-menu">
+                    <div>
+                        <li><a href="profile.html">Profile</a></li>
+                        <li><a href="logout.html">Logout</a></li>
+                    </div>
+                </ul>
+            </li>
+
+        </ul>
+   </aside>
+    <!------------------------------------ END OF SIDEBAR ------------------------------------>
+    <main>
+        <div class="remarks_banner-container">
+            <p>
+                Admin
+            </p>
+       </div>
+    <!-------------- END OF ADMIN BANNER SECTION -------------->
+
+        <div class="container back_button-container">
+            <a href="services.html"><button><i class="uil uil-arrow-circle-left"></i></button></a>
+        </div>
+    <!-------------- END OF BACK BUTTON -------------->
+
+        <div class="container posts">
+            <h3>Community Development</h3>
+            <div class="community_development-container">
+                <h4>Community Announcements</h4>
+                <div class="posts_container">
+                    <article class="post">
+                        <div class="post_thumbnail">
+                            <a href="post.html"><img src="./IMAGES/pamplona_header.jpg"></a>
+                        </div>
+                        <div class="post_info">
+                            <a href="" class="category_button">Community Development</a>
+                            <h3 class="post_title"><a href="post.html">Lorem ipsum dolor sit amet consectetur</a></h3>
+                            <p class="post_body">
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's 
+                                standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.                     
+                            </p>
+                            <div class="post_author">
+                                <div class="post_author-avatar">
+                                    <img src="IMAGES/pamplona_logo.JPG" alt="">
+                                </div>
+                                <div class="post_author-info">
+                                    <h5>By: Barangay Staff Jane</h5>
+                                    <small>October 18, 2022 - 03:51PM</small>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+    
+        </div>
+    <!-------------- END OF COMMUNITY ANNOUNCEMENTS SECTION -------------->
+        <div class="form_section">
+            <div class="container form_section-container">
+                <h2>Add Community Announcements</h2>
+                <form action="" enctype="multipart/form-data">
+                    <input type="text" placeholder="Title">
+                    <select>
+                        <option value="" disabled selected>Select a category</option>
+                        <option value="2">Community Development</option>
+                    </select>
+                    <div class="form_control">
+                        <label for="thumbnail">Add Thumbnail</label>
+                        <input type="file" id="thumbnail">
+                    </div>
+                    <textarea rows="10" name="Description" placeholder="Description"></textarea>
+                    <button type="submit" class="btn">Add Announcement</button>
+                </form>
+            </div>
+        </div>
+    <!-------------- END OF ADD COMMUNITY ANNOUNCEMENTS -------------->
+    
+        <div class="container posts">
+            <div class="community_development-container">
+                <h4>Community Accomplishments</h4>
+                <div class="posts_container">
+                    <article class="post">
+                        <div class="post_thumbnail">
+                            <a href="post.html"><img src="./IMAGES/pamplona_header.jpg"></a>
+                        </div>
+                        <div class="post_info">
+                            <a href="" class="category_button">Community Development</a>
+                            <h3 class="post_title"><a href="post.html">Lorem ipsum dolor sit amet consectetur</a></h3>
+                            <p class="post_body">
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's 
+                                standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.                     
+                            </p>
+                            <div class="post_author">
+                                <div class="post_author-avatar">
+                                    <img src="IMAGES/pamplona_logo.JPG" alt="">
+                                </div>
+                                <div class="post_author-info">
+                                    <h5>By: Barangay Staff Jane</h5>
+                                    <small>October 18, 2022 - 03:51PM</small>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+    
+        </div>
+    <!-------------- END OF COMMUNITY ACCOMPLISHMENTS SECTION -------------->
+    
+        <div class="form_section">
+            <div class="container form_section-container">
+                <h2>Add Community Accomplishments</h2>
+                <form action="" enctype="multipart/form-data">
+                    <input type="text" placeholder="Title">
+                    <select>
+                        <option value="" disabled selected>Select a category</option>
+                        <option value="2">Community Development</option>
+                    </select>
+                    <div class="form_control">
+                        <label for="thumbnail">Add Thumbnail</label>
+                        <input type="file" id="thumbnail">
+                    </div>
+                    <textarea rows="10" name="Description" placeholder="Description"></textarea>
+                    <button type="submit" class="btn">Add Accomplishment</button>
+                </form>
+            </div>
+        </div>
+    <!-------------- END OF ADD COMMUNITY ACCOMPLISHMENTS -------------->
+
+    <section class="threads_section-container">
+        <div class="container community_threads-container">
+            <h3>Administer Barangay Threads</h3>
+            <p>Manage thoughts and insights of the residents!</p>
+    
+            <div class="threads_tabs-container">
+                <button class="threads_tab active" data-tab="barangay-feeds">Barangay Feeds</button>
+                <button class="threads_tab" data-tab="my-feeds">My Feeds</button>
+            </div>
+    
+            <div class="threads_content-container">
+                <div id="barangay-feeds" class="threads_content active">
+                    <!-- Barangay Feeds content goes here -->
+                    <div class="threads_post-input">
+                        <img src="IMAGES/pamplona_sample-profile.jpg" alt="User Icon" class="threads_user-icon">
+                        <textarea placeholder="Share us your thoughts..." class="threads_input"></textarea>                
+                        <button class="threads_post-btn">Post</button>
+                    </div>
+    
+                    <div class="threads_scrollable">
+                        <div class="threads_post">
+                            <div class="threads_post-header">
+                                <img src="IMAGES/pamplona_sample-profile.jpg" alt="User Icon" class="threads_user-icon">
+                                <div class="threads_post-info">
+                                    <div class="threads_post-statistics">
+                                        <span class="threads_username">Someone</span> 
+                                        <span class="threads_post-id">#000009</span> 
+                                        <span class="threads_time">• 13h ago</span>
+                                    </div>
+                                    <div class="threads_post-actions-decision">
+                                        <button class="threads-menu-button"><i class="uil uil-ellipsis-h"></i></button>
+                                        <div class="threads-menu-content">
+                                            <button class="report-thread-btn">Flag</button>
+                                            <button class="delete-thread-btn">Delete</button>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+    
+                            <p class="threads_post-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            
+                            <div class="threads_post-actions">
+                                <div class="threads_post-actions-left">
+                                    <span class="threads_like">12 <button class="like-button"><i class="uil uil-thumbs-up"></i></button></span> 
+                                    <span class="threads_comment">4 <button class="comment-button"><i class="uil uil-comment"></i></button></span> 
+                                </div>
+                            </div>
+                            
+                            <div class="threads_comments" id="comments-section-1">
+                                <!-- Comment section content goes here -->
+                                <div class="comment">
+                                    <img src="IMAGES/pamplona_sample-profile.jpg" alt="User Icon" class="threads_user-icon">
+                                    <div class="comment_info">
+                                        <div class="comment_statistics">
+                                            <span class="comment_username">Peter Parker</span>
+                                            <span class="threads_post-id">#000701</span>
+                                            <span class="comment_time">• 2h ago</span>
+                                        </div>
+                                        <div class="comment_content">
+                                            <p>This is a sample comment.</p>
+                                        </div>
+                                        <div class="comment_actions">
+                                            <span class="comment_like">5 <button class="comment-like-button"><i class="uil uil-thumbs-up"></i></button></span>
+                                            <span class="comment_reply"><button class="comment-reply-button"><i class="uil uil-reply"></i> Reply</button></span>
+                                            <div class="threads_post-actions-decision">
+                                                <button class="threads-menu-button"><i class="uil uil-ellipsis-h"></i></button>
+                                                <div class="threads-menu-content">
+                                                    <button class="report-thread-btn">Flag</button>
+                                                    <button class="delete-thread-btn">Delete</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    
+                                        <!-- View Replies button -->
+                                        <button class="view-replies-btn">View Replies</button>
+                                        <!-- Sample reply -->
+                                        <div class="replies">
+                                            <div class="comment">
+                                                <img src="IMAGES/pamplona_sample-profile.jpg" alt="User Icon" class="threads_user-icon">
+                                                <div class="comment_info">
+                                                    <div class="comment_statistics">
+                                                        <span class="comment_username">Gwen Stacy</span>
+                                                        <span class="threads_post-id">#000501</span>
+                                                        <span class="comment_time">• 1h ago</span>
+                                                    </div>
+                                                    <div class="comment_content">
+                                                        <p>This is a sample reply.</p>
+                                                    </div>
+                                                    <div class="comment_actions">
+                                                        <span class="comment_like">0 <button class="comment-like-button"><i class="uil uil-thumbs-up"></i></button></span>
+                                                        <div class="threads_post-actions-decision">
+                                                            <button class="threads-menu-button"><i class="uil uil-ellipsis-h"></i></button>
+                                                            <div class="threads-menu-content">
+                                                                <button class="report-thread-btn">Flag</button>
+                                                                <button class="delete-thread-btn">Delete</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    
+                                        <div class="reply_input">
+                                            <img src="IMAGES/pamplona_sample-profile.jpg" alt="User Icon" class="threads_user-icon">
+                                            <textarea class="new-reply" placeholder="Add a reply"></textarea>
+                                            <button class="add-reply-btn">Reply</button>
+                                            <button class="close-reply-btn">Close</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Add more comments as needed -->
+                            
+                                <!-- Comment input section -->
+                                <div class="comment_input">
+                                    <img src="IMAGES/pamplona_sample-profile.jpg" alt="User Icon" class="threads_user-icon">
+                                    <textarea class="new-comment" placeholder="Add a comment"></textarea>
+                                    <button class="add-comment-btn"><i class="uil uil-message"></i></button>
+                                </div>
+                            </div>
+                        </div>
+
+                
+                        <!-- Repeat .post for each thread -->
+                    </div>
+                </div>
+
+                <div id="my-feeds" class="threads_content">
+                    <!-- My Feeds content goes here -->
+    
+                    <div class="threads_post-input">
+                        <img src="IMAGES/pamplona_sample-profile.jpg" alt="User Icon" class="threads_user-icon">
+                        <textarea placeholder="Share us your thoughts..." class="threads_input"></textarea>                
+                        <button class="threads_post-btn">Post</button>
+                    </div>
+    
+                    <div class="threads_scrollable">
+                        <div class="threads_post">
+                            <div class="threads_post-header">
+                                <img src="IMAGES/pamplona_sample-profile.jpg" alt="User Icon" class="threads_user-icon">
+                                <div class="threads_post-info">
+                                    <div class="threads_post-statistics">
+                                        <span class="threads_username">My Admin Account</span> 
+                                        <span class="threads_post-id">#000009</span> 
+                                        <span class="threads_time">• 1d ago</span>
+                                    </div>
+                                    <div class="threads_post-actions-decision">
+                                        <button class="threads-menu-button"><i class="uil uil-ellipsis-h"></i></button>
+                                        <div class="threads-menu-content">
+                                            <button class="edit-thread-btn">Edit</button>
+                                            <button class="delete-thread-btn">Delete</button>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+    
+                            <p class="threads_post-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            
+                            <div class="threads_post-actions">
+                                <div class="threads_post-actions-left">
+                                    <span class="threads_like">12 <button class="like-button"><i class="uil uil-thumbs-up"></i></button></span> 
+                                    <span class="threads_comment">4 <button class="comment-button"><i class="uil uil-comment"></i></button></span> 
+                                </div>
+                            </div>
+                            
+                            <div class="threads_comments" id="comments-section-1">
+                                <!-- Comment section content goes here -->
+                                <div class="comment">
+                                    <img src="IMAGES/pamplona_sample-profile.jpg" alt="User Icon" class="threads_user-icon">
+                                    <div class="comment_info">
+                                        <div class="comment_statistics">
+                                            <span class="comment_username">Peter Parker</span>
+                                            <span class="threads_post-id">#000701</span>
+                                            <span class="comment_time">• 2h ago</span>
+                                        </div>
+                                        <div class="comment_content">
+                                            <p>This is a sample comment.</p>
+                                        </div>
+                                        <div class="comment_actions">
+                                            <span class="comment_like">5 <button class="comment-like-button"><i class="uil uil-thumbs-up"></i></button></span>
+                                            <span class="comment_reply"><button class="comment-reply-button"><i class="uil uil-reply"></i> Reply</button></span>
+                                            <div class="threads_post-actions-decision">
+                                                <button class="threads-menu-button"><i class="uil uil-ellipsis-h"></i></button>
+                                                <div class="threads-menu-content">
+                                                    <button class="report-thread-btn">Flag</button>
+                                                    <button class="delete-thread-btn">Delete</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    
+                                        <!-- View Replies button -->
+                                        <button class="view-replies-btn">View Replies</button>
+                                        <!-- Sample reply -->
+                                        <div class="replies">
+                                            <div class="comment">
+                                                <img src="IMAGES/pamplona_sample-profile.jpg" alt="User Icon" class="threads_user-icon">
+                                                <div class="comment_info">
+                                                    <div class="comment_statistics">
+                                                        <span class="comment_username">Gwen Stacy</span>
+                                                        <span class="threads_post-id">#000501</span>
+                                                        <span class="comment_time">• 1h ago</span>
+                                                    </div>
+                                                    <div class="comment_content">
+                                                        <p>This is a sample reply.</p>
+                                                    </div>
+                                                    <div class="comment_actions">
+                                                        <span class="comment_like">0 <button class="comment-like-button"><i class="uil uil-thumbs-up"></i></button></span>
+                                                        <div class="threads_post-actions-decision">
+                                                            <button class="threads-menu-button"><i class="uil uil-ellipsis-h"></i></button>
+                                                            <div class="threads-menu-content">
+                                                                <button class="report-thread-btn">Flag</button>
+                                                                <button class="delete-thread-btn">Delete</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    
+                                        <div class="reply_input">
+                                            <img src="IMAGES/pamplona_sample-profile.jpg" alt="User Icon" class="threads_user-icon">
+                                            <textarea class="new-reply" placeholder="Add a reply"></textarea>
+                                            <button class="add-reply-btn">Reply</button>
+                                            <button class="close-reply-btn">Close</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Add more comments as needed -->
+                            
+                                <!-- Comment input section -->
+                                <div class="comment_input">
+                                    <img src="IMAGES/pamplona_sample-profile.jpg" alt="User Icon" class="threads_user-icon">
+                                    <textarea class="new-comment" placeholder="Add a comment"></textarea>
+                                    <button class="add-comment-btn"><i class="uil uil-message"></i></button>
+                                </div>
+                            </div>
+                        </div>
+
+                
+                        <!-- Repeat .post for each thread -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-------------- END OF COMMUNITY THREADS SECTION -------------->
+
+    <div id="barangayIdeaSubmissions"  class="container community_section-container">
+        <h3>Manage Idea Submissions</h3>
+        <div class="barangay_request-container">
+            <div class="header_request-container">
+                <h3>Residents Idea Submissions</h3>
+                <!-- Filter Dropdown -->
+                <div class="filter-dropdown">
+                    <button class="filter-btn" onclick="toggleDropdown(this)">
+                        Sort: <span class="selected-filter">Select</span>
+                    </button>
+                    <ul class="dropdown-content">
+                        <li><input type="checkbox" onclick="selectOption(this, 'filter')" /><label>Earliest</label></li>
+                        <li><input type="checkbox" onclick="selectOption(this, 'filter')" /><label>Latest</label></li>
+                    </ul>
+                </div>
+                <button class="trash_button">
+                    Trash
+                    <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#03045E"><path d="M200-80q-33 0-56.5-23.5T120-160v-451q-18-11-29-28.5T80-680v-120q0-33 23.5-56.5T160-880h640q33 0 56.5 23.5T880-800v120q0 23-11 40.5T840-611v451q0 33-23.5 56.5T760-80H200Zm0-520v440h560v-440H200Zm-40-80h640v-120H160v120Zm200 280h240v-80H360v80Zm120 20Z"/></svg>
+                </button>
+                
+            </div>            
+
+            <div class="tab_box-container">
+                <button class="tab_btn active">Idea Submissions</button>
+            </div>
+
+            <div class="community_request-container">
+                <p>No.</p>
+                <p>Barangay ID</p>
+                <p>Name</p>
+                <p>Date & Time</p>
+                <p>Details</p>
+                <p>Delete</p>
+            </div>
+            <div class="request_container">
+                <div class="request active">
+                    <div class="community_request-container">
+                        <p>1</p>
+                        <p>01</p>
+                        <p>21 Savage</p>
+                        <p>2024-10-12 13:02</p>
+                        <button id="readIdeaBtn">Read Idea</button>
+                        <button>Delete</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Idea Submission Modal -->
+    <div class="ideaModal">
+        <div class="ideaModal-content">
+            <span class="closeIdea">&times;</span>
+            <h3>Read Idea Submission</h3>
+            <p>From:</p>
+            <p>Juan Dela Cruz</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates, nesciunt aspernatur! Ipsa consectetur porro delectus, voluptas alias sunt beatae optio recusandae quibusdam minima earum fugiat possimus ea soluta quae debitis!</p>
+        </div>
+    </div>
+    <!-------------- END OF IDEA SUBMISSION AND VOLUNTEER SIGN UP SECTION -------------->
+
+    <div id="deleteModal" class="modal">
+        <div class="modal-content">
+            <h3>Delete Post</h3>
+            <p>Are you sure you want to delete this post?</p>
+            <button id="confirmDelete" class="btn">Delete</button>
+            <button id="cancelDelete" class="btn cancelDelete">Cancel</button>
+        </div>
+    </div>
+    <!-------------- END OF MODAL POP=UP FOR THREADS DELETE CONFIRMATION -------------->
+
+    <div id="reportModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h3>Flag Post</h3>
+            <p>Please provide a reason for flagging this post:</p>
+            <textarea id="reportReason" rows="4" cols="50"></textarea>
+            <button id="submitReport" class="btn">Flag Post</button>
+        </div>
+    </div>
+    <!-------------- END OF MODAL POP=UP FOR THREADS REPORT -------------->
+    
+    </main>
+</body>
+</html>
