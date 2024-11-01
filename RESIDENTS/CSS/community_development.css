@@ -1,0 +1,609 @@
+
+@import url(style.css);
+
+/* ========================== Barangay Announcements & Accomplishments ========================== */
+.community_development-container h4 {
+    color: var(--color-white);
+    background: var(--color-navy-blue);
+    padding: 0.5rem 0;
+    text-align: center;
+    font-size: 1.3rem;
+    border-radius: var(--card-border-radius-2);
+    margin-bottom: 1rem;
+}
+
+.community_development-container {
+    margin-top: 1rem;
+}
+
+/* ========================== Barangay Threads Container ========================== */
+.threads_section-container {
+    text-align: center;
+    padding: 4rem 0 4rem;
+    background-color: #f5f5f5;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1600 900'%3E%3Cdefs%3E%3ClinearGradient id='a' x1='0' x2='0' y1='1' y2='0'%3E%3Cstop offset='0' stop-color='%23FF0000'/%3E%3Cstop offset='1' stop-color='%23CF6'/%3E%3C/linearGradient%3E%3ClinearGradient id='b' x1='0' x2='0' y1='0' y2='1'%3E%3Cstop offset='0' stop-color='%23F00'/%3E%3Cstop offset='1' stop-color='%23FC0'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cg fill='%23FFF' fill-opacity='0' stroke-miterlimit='10'%3E%3Cg stroke='url(%23a)' stroke-width='2'%3E%3Cpath transform='translate(0 0)' d='M1409 581 1450.35 511 1490 581z'/%3E%3Ccircle stroke-width='4' transform='rotate(0 800 450)' cx='500' cy='100' r='40'/%3E%3Cpath transform='translate(0 0)' d='M400.86 735.5h-83.73c0-23.12 18.74-41.87 41.87-41.87S400.86 712.38 400.86 735.5z'/%3E%3C/g%3E%3Cg stroke='url(%23b)' stroke-width='4'%3E%3Cpath transform='translate(0 0)' d='M149.8 345.2 118.4 389.8 149.8 434.4 181.2 389.8z'/%3E%3Crect stroke-width='8' transform='rotate(0 1089 759)' x='1039' y='709' width='100' height='100'/%3E%3Cpath transform='rotate(0 1400 132)' d='M1426.8 132.4 1405.7 168.8 1363.7 168.8 1342.7 132.4 1363.7 96 1405.7 96z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    background-attachment: fixed;
+    background-size: cover;
+    color: var(--color-white);
+    box-shadow: inset 0px 6px 8px 0px rgba(0, 0, 0, 0.1);
+}
+
+.community_threads-container {
+    background: var(--color-white);
+    padding: 3rem 1.5rem 3rem 1.5rem;
+    max-width: 800px;
+    margin: 0 auto;
+    color: var(--color-black);
+    border-radius: var(--card-border-radius-3);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: var(--transition);
+}
+
+.community_threads-container:hover {
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15); 
+}
+
+.community_threads-container h3 {
+    color: var(--color-primary);
+}
+
+/* ========================== Threads Tabs (Barangay Threads & My Threads) ========================== */
+.threads_tabs-container {
+    display: flex;
+    border: 2px solid var(--color-primary);
+    border-radius: var(--card-border-radius-1);
+    margin-top: 1.2rem;
+    margin-bottom: 1.2rem;
+    overflow: hidden;
+}
+
+.threads_tab {
+    flex: 1;
+    cursor: pointer;
+    border: none;
+    background: var(--color-white);
+    color: var(--color-primary);
+    font-weight: bold;
+    padding: 10px 20px;
+    transition: background 0.3s ease;
+}
+
+.threads_tab.active {
+    background: var(--color-primary);
+    color: var(--color-white);
+}
+
+.threads_content {
+    display: none;
+}
+
+.threads_content.active {
+    display: block;
+}
+
+/* ========================== Threads Post Main Input Section (Top) ========================== */
+.threads_post-input {
+    display: flex;
+    align-items: flex-start;
+    border: 2px solid var(--color-primary);
+    padding: 0.7rem;
+    border-radius: var(--card-border-radius-1);
+    margin-bottom: 1.2rem;
+}
+
+.threads_user-icon {
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    margin-right: 0.7rem;
+}
+
+.threads_post-input textarea {
+    width: 80%; /* Adjust the width as needed */
+    height: 80px; /* Adjust the height as needed */
+    padding: 10px;
+    box-sizing: border-box;
+    border: 2px solid var(--color-dark-gray);
+    border-radius: var(--card-border-radius-1);
+    font-size: 14px; /* Adjust the font size as needed */
+}
+
+.threads_post-btn {
+    margin-left: 0.5rem;
+    height: 45px;
+    background: var(--color-navy-blue);
+    color: var(--color-white);
+    border: 2px solid transparent;
+    padding: 0.7rem 1.2rem;
+    cursor: pointer;
+    border-radius: var(--card-border-radius-1);
+    transition: var(--transition);
+    font-weight: 600;
+}
+
+.threads_post-btn:hover {
+    background: var(--color-white);
+    color: var(--color-navy-blue);
+    border: 2px solid var(--color-navy-blue);
+}
+
+/* ========================== Threads Scrollable or Threads Posts Container ========================== */
+.threads_scrollable {
+    max-height: 500px;
+    overflow-y: auto;
+    padding: 1rem; /* Adjust the padding as needed */
+    border: 2px solid var(--color-primary);
+    border-radius: var(--card-border-radius-1);
+}
+
+/* Optional: Customize scrollbar appearance */
+.threads_scrollable::-webkit-scrollbar {
+    margin-left: 5;
+    width: 10px; /* Width of the scrollbar */
+}
+
+.threads_scrollable::-webkit-scrollbar-thumb {
+    background-color: var(--color-navy-blue); /* Scrollbar thumb color */
+    border-top-right-radius: var(--card-border-radius-1);
+    border-bottom-right-radius: var(--card-border-radius-1);
+}
+
+.threads_scrollable::-webkit-scrollbar-track {
+    background: var(--color-primary); /* Scrollbar track color */
+    border-top-right-radius: var(--card-border-radius-1);
+    border-bottom-right-radius: var(--card-border-radius-1);
+}
+
+/* ========================== Individual Threads Posts ========================== */
+.threads_post {
+    border: 1px solid var(--color-navy-blue);
+    border-radius: var(--card-border-radius-1);
+    padding: 1rem;
+    margin-bottom: 0.7rem;
+    text-align: left;
+}
+
+.threads_post-header {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.threads_post-info {
+    margin-left: 0.4rem;
+    flex-grow: 1; /* This will make the info section take up available space */
+}
+
+/* User Information */
+.threads_username {
+    font-weight: bold;
+    color: var(--color-black);
+}
+
+.threads_post-id, .threads_time {
+    color: var(--color-charcoal-gray);
+    font-weight: 400;
+    font-size: 0.9em;
+}
+
+/* Edit and Delete in Individual User Threads Post */
+.threads_post-actions-decision {
+    position: relative;
+    margin-left: 22rem; /* Adjust this value to add space */
+    display: inline-block;
+}
+
+.threads-menu-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2rem;
+    color: var(--color-black);
+}
+
+.threads-menu-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 100%;
+    background-color: var(--color-navy-blue);
+    border-radius: var(--card-border-radius-1);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.threads-menu-content button {
+    color: var(--color-white);
+    padding: 8px 16px;
+    text-align: left;
+    border: none;
+    background: none;
+    cursor: pointer;
+    width: 100%;
+    transition: var(--transition);
+}
+
+.threads-menu-content button:first-child:hover {
+    color: var(--color-green);
+}
+
+.threads-menu-content button:last-child:hover {
+    color: var(--color-red);
+}
+
+.threads-menu-content.show {
+    display: block;
+}
+
+.threads-menu-content button:hover {
+    background-color: var(--color-light-gray);
+}
+
+/* Individual Threads Actions (Like, Comment, Report) Buttons */
+.threads_post-actions {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--color-charcoal-gray);
+}
+
+.threads_post-actions-left {
+    display: flex;
+    flex-direction: row;
+    gap: 7rem;
+}
+
+.threads_like, .threads_comment {
+    font-weight: 500;
+}
+
+.threads_like button, .threads_comment button, .threads_report button {
+    color: var(--color-charcoal-gray);
+    font-size: 1.2rem;
+    transition: all 200ms ease-in-out;
+}
+
+.threads_like button.active {
+    color: var(--color-primary); /* Change to the desired color */
+}
+
+.threads_comment button:hover {
+    color: var(--color-primary); /* Change to the desired color */
+}
+
+.threads_report button:hover {
+    color: var(--color-red);
+}
+
+.threads_report button, .comment_report button {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    color: var(--color-charcoal-gray);
+    font-size: 1.2rem;
+    transition: var(--transition);
+}
+
+.threads_like button, .threads_comment button, .threads_report button {
+    background: transparent;
+    cursor: pointer;
+}
+
+.threads_report {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+/* ========================== Comments in Threads Posts ========================== */
+.threads_comments {
+    margin-top: 1rem;
+    padding: 0;
+    border-top: 2px solid var(--color-dark-gray);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-out, padding 0.5s ease-out;
+}
+
+.threads_comments.expanded {
+    max-height: 500px; /* Adjust this value based on the expected content height */
+    padding: 1rem;
+}
+
+.comment {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+}
+
+.comment .comment {
+    margin-top: 1rem; /* Add spacing between nested comments */
+}
+
+/* Comment's User Information */
+.comment_info {
+    margin-left: 0.7rem;
+}
+
+.comment_username {
+    font-weight: bold;
+    color: var(--color-black);
+}
+
+.comment_time {
+    color: var(--color-charcoal-gray);
+    font-size: 0.9em;
+}
+
+/* Content of the Comment */
+.comment_content {
+    margin-top: 0.5rem;
+    color: var(--color-black);
+}
+
+/* Individual Comment Actions (Like, Reply, Report) */
+.comment_actions {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-top: 0.5rem;
+}
+
+.comment_like button, .comment_report button, .comment_reply button {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    color: var(--color-charcoal-gray);
+    font-size: 1rem;
+    transition: all 200ms ease-in-out;
+}
+
+.comment_like button.active, .comment_reply button.active {
+    color: var(--color-primary);
+}
+
+.comment_reply button:hover {
+    color: var(--color-primary);
+}
+
+.comment_report button:hover {
+    color: var(--color-red);
+}
+
+/* ========================== Reply Input in Comments in Threads Posts ========================== */
+.reply_input {
+    display: none;
+    align-items: flex-start;
+    margin-top: 1rem;
+}
+
+.reply_input textarea {
+    flex: 1;
+    border: 1px solid var(--color-dark-gray);
+    border-radius: var(--card-border-radius-1);
+    padding: 0.5rem;
+}
+
+.reply_input button {
+    background: var(--color-navy-blue);
+    color: var(--color-white);
+    border: 1px solid transparent;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    border-radius: var(--card-border-radius-1);
+    margin-left: 0.5rem;
+    transition: var(--transition);
+}
+
+.reply_input button:hover {
+    background: var(--color-white);
+    color: var(--color-navy-blue);
+    border: 1px solid var(--color-navy-blue);
+}
+
+.close-reply-btn {
+    background: var(--color-charcoal-gray);
+}
+
+/* ========================== View Replies in Comments in Threads Post ========================== */
+.view-replies-btn {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    color: var(--color-primary);
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+    display: block;
+}
+
+.replies {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-out;
+}
+
+.replies.expanded {
+    max-height: 500px; /* Adjust this value based on the expected height of the replies */
+}
+
+/* ========================== Main Comment Input in Threads Post ========================== */
+.comment_input {
+    display: flex;
+    align-items: flex-start;
+    margin-top: 1rem;
+}
+
+.comment_input textarea {
+    flex: 1;
+    border: 2px solid var(--color-dark-gray);
+    border-radius: var(--card-border-radius-1);
+    padding: 0.5rem;
+    margin-right: 0.5rem;
+}
+
+.comment_input button {
+    background: var(--color-navy-blue);
+    color: var(--color-white);
+    border: none;
+    padding: 0.5rem 0.8rem;
+    cursor: pointer;
+    border-radius: var(--card-border-radius-1);
+    transition: var(--transition);
+}
+
+.comment_input button:hover {
+    opacity: 0.7;
+}
+
+/* ========================= Overall Report Modal Pop-Up ========================= */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    animation: fadeIn 0.5s;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 30%; /* Could be more or less, depending on screen size */
+    border-radius: var(--card-border-radius-2);
+    animation: slideIn 0.5s;
+}
+
+.modal-content button {
+    width: 100%;
+    background: var(--color-navy-blue);
+    margin-top: 1rem;
+}
+
+.modal-content button:hover {
+    color: var(--color-navy-blue);
+    border-color: var(--color-navy-blue);
+}
+
+.modal-content textarea {
+    margin-top: 1rem;
+    border-color: var(--color-navy-blue);
+}
+
+.modal-content h3 {
+    color: var(--color-red);
+}
+
+.close-button {
+    color: var(--color-charcoal-gray);
+    float: right;
+    font-size: 2rem;
+}
+
+.close-button:hover,
+.close-button:focus {
+    opacity: 0.7;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Keyframes for animations */
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@keyframes slideIn {
+    from {transform: translateY(-50px);}
+    to {transform: translateY(0);}
+}
+
+@keyframes fadeOut {
+    from {opacity: 1;}
+    to {opacity: 0;}
+}
+
+@keyframes slideOut {
+    from {transform: translateY(0);}
+    to {transform: translateY(-50px);}
+}
+
+/* Add classes for hiding animations */
+.modal.fade-out {
+    animation: fadeOut 0.5s;
+}
+
+.modal-content.slide-out {
+    animation: slideOut 0.5s;
+}
+
+
+/* ========================== IDEA SUBMISSION AND VOLUNTEER SIGN UP ========================== */
+.idea_volunteer-section {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    background: var(--color-light-primary);
+    box-shadow: inset 0px 6px 8px 0px rgba(0, 0, 0, 0.1);
+    
+}
+
+.idea_volunteer-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4rem;
+    width: 65rem;
+}
+
+.idea_volunteer h4 {
+    background: var(--color-primary);
+    color: var(--color-white);
+    text-align: center;
+    padding: 0.8rem;
+    border-radius: var(--card-border-radius-3) var(--card-border-radius-3) 0 0;
+}
+
+.idea_volunteer {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    width: 50%;
+    
+}
+
+.idea_volunteer-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: var(--color-white);
+    padding: 1.5rem;
+    gap: 1rem;
+    border-radius: var(--card-border-radius-3);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 0 0 var(--card-border-radius-3) var(--card-border-radius-3);
+    transition: var(--transition);
+}
+
+.idea_volunteer-box:hover {
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+}
+
+.idea_volunteer-box img {
+    border-radius: var(--card-border-radius-3);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    height: 200px;
+    object-fit: fill;
+}
+
+.idea_volunteer-box button {
+    width: 100%;
+}
