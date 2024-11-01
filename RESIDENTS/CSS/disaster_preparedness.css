@@ -1,5 +1,6 @@
 @import url(style.css);
 
+/* ========================== Emergency Hotlines ========================== */
 .emergency_hotline-container {
     padding: 0 1rem;
     display: flex;
@@ -45,7 +46,7 @@
     transform: scale(1.1);
 }
 
-/* SAFETY GUIDES */
+/* ========================== Safety Guides ========================== */
 .disaster_section-container {
     border: 3px solid var(--color-red);
     padding: 1rem;
@@ -66,18 +67,6 @@
     padding: 0.5rem;
     border-top-right-radius: var(--card-border-radius-4);
     border-top-left-radius: var(--card-border-radius-4);
-}
-
-.disaster_section-container {
-    border: 3px solid var(--color-red);
-    padding: 1rem;
-    border-bottom-right-radius: var(--card-border-radius-3);
-    border-bottom-left-radius: var(--card-border-radius-3);
-    display: grid;
-    grid-template-columns: repeat(3, minmax(350px, 1fr));  
-    justify-content: center; 
-    align-content: center; 
-    gap: 1.5rem; 
 }
 
 .disaster_section-container h4 {
