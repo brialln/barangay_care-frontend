@@ -8,7 +8,8 @@
     padding: 0.5rem 0;
     text-align: center;
     font-size: 1.3rem;
-    border-radius: var(--card-border-radius-2);
+    border-top-right-radius: var(--card-border-radius-4);
+    border-top-left-radius: var(--card-border-radius-4);
     margin-bottom: 1rem;
 }
 
@@ -85,6 +86,7 @@
 .threads_post-input {
     display: flex;
     align-items: flex-start;
+    justify-content: center;
     border: 2px solid var(--color-primary);
     padding: 0.7rem;
     border-radius: var(--card-border-radius-1);
@@ -164,13 +166,15 @@
 }
 
 .threads_post-header {
-    position: relative;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
 .threads_post-info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
     margin-left: 0.4rem;
     flex-grow: 1; /* This will make the info section take up available space */
 }
@@ -190,7 +194,6 @@
 /* Edit and Delete in Individual User Threads Post */
 .threads_post-actions-decision {
     position: relative;
-    margin-left: 22rem; /* Adjust this value to add space */
     display: inline-block;
 }
 
@@ -205,12 +208,13 @@
 .threads-menu-content {
     display: none;
     position: absolute;
-    right: 0;
-    top: 100%;
+    right: 100%; /* Position the menu to the left of the ellipsis button */
+    top: 0;
     background-color: var(--color-navy-blue);
     border-radius: var(--card-border-radius-1);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     z-index: 1;
+    margin-right: 0.5rem;
 }
 
 .threads-menu-content button {
@@ -548,11 +552,8 @@
 
 /* ========================== IDEA SUBMISSION AND VOLUNTEER SIGN UP ========================== */
 .idea_volunteer-section {
-    padding-top: 4rem;
-    padding-bottom: 4rem;
-    background: var(--color-light-primary);
-    box-shadow: inset 0px 6px 8px 0px rgba(0, 0, 0, 0.1);
-    
+    padding: 4rem;
+    padding-bottom: 2rem;
 }
 
 .idea_volunteer-container {
@@ -560,7 +561,10 @@
     align-items: center;
     justify-content: center;
     gap: 4rem;
-    width: 65rem;
+    background: var(--color-light-primary);
+    border-radius: var(--card-border-radius-3);
+    box-shadow: inset 0px 6px 8px 6px rgba(0, 0, 0, 0.1);
+    padding: 3rem 4rem;
 }
 
 .idea_volunteer h4 {
