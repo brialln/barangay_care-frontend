@@ -1,5 +1,3 @@
-
-// Functionality for Like Threads, Comment on Threads, Report Modal Pop-up, Like Comment, Reply Comment, Open and Close Reply, and View Replies Expand 
 document.addEventListener('DOMContentLoaded', function() {
     // Ensure the lightbox is hidden on page load
     const lightbox = document.getElementById('lightbox');
@@ -25,32 +23,57 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // Modal functionality
-    const modal = document.getElementById('reportModal');
-    const modalContent = modal.querySelector('.modal-content');
-    const closeButton = document.querySelector('.close-button');
+    const reportModal = document.getElementById('reportModal');
+    const reportModalContent = reportModal.querySelector('.modal-content');
+    const deleteModal = document.getElementById('deleteModal');
+    const deleteModalContent = deleteModal.querySelector('.modal-content');
+    const cancelButtons = document.querySelectorAll('.cancelDelete');
+    const closeButtons = document.querySelectorAll('.close-button');
 
-    document.querySelectorAll('.report-button').forEach(button => {
+    document.querySelectorAll('.report-thread-btn').forEach(button => {
         button.addEventListener('click', function() {
-            modal.style.display = 'block';
-            modal.classList.remove('fade-out');
-            modalContent.classList.remove('slide-out');
+            reportModal.style.display = 'block';
+            reportModal.classList.remove('fade-out');
+            reportModalContent.classList.remove('slide-out');
         });
     });
 
-    closeButton.addEventListener('click', function() {
-        modal.classList.add('fade-out');
-        modalContent.classList.add('slide-out');
-        setTimeout(() => {
-            modal.style.display = 'none';
-        }, 500); // Match the duration of the fade-out animation
+    document.querySelectorAll('.delete-thread-btn').forEach(button => {
+        button.addEventListener('click', function() {
+            deleteModal.style.display = 'block';
+            deleteModal.classList.remove('fade-out');
+            deleteModalContent.classList.remove('slide-out');
+        });
+    });
+
+    cancelButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const modal = this.closest('.modal');
+            modal.classList.add('fade-out');
+            modal.querySelector('.modal-content').classList.add('slide-out');
+            setTimeout(() => {
+                modal.style.display = 'none';
+            }, 500)
+        })
+    })
+
+    closeButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const modal = this.closest('.modal');
+            modal.classList.add('fade-out');
+            modal.querySelector('.modal-content').classList.add('slide-out');
+            setTimeout(() => {
+                modal.style.display = 'none';
+            }, 500); // Match the duration of the fade-out animation
+        });
     });
 
     window.addEventListener('click', function(event) {
-        if (event.target === modal) {
-            modal.classList.add('fade-out');
-            modalContent.classList.add('slide-out');
+        if (event.target === reportModal || event.target === deleteModal) {
+            event.target.classList.add('fade-out');
+            event.target.querySelector('.modal-content').classList.add('slide-out');
             setTimeout(() => {
-                modal.style.display = 'none';
+                event.target.style.display = 'none';
             }, 500); // Match the duration of the fade-out animation
         }
     });
@@ -63,11 +86,11 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // Add event listener for comment report buttons
-    document.querySelectorAll('.comment-report-button').forEach(button => {
+    document.querySelectorAll('.comment-report-btn').forEach(button => {
         button.addEventListener('click', function() {
-            modal.style.display = 'block';
-            modal.classList.remove('fade-out');
-            modalContent.classList.remove('slide-out');
+            reportModal.style.display = 'block';
+            reportModal.classList.remove('fade-out');
+            reportModalContent.classList.remove('slide-out');
         });
     });
 
@@ -103,7 +126,6 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-
 // Functionality for Threads Tab Switching (Barangay Feeds & My Feeds)
 document.addEventListener('DOMContentLoaded', function() {
     const tabs = document.querySelectorAll('.threads_tab');
@@ -127,21 +149,21 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-
-// Functionality for Edit and Delete User Tweets (My Feeds)
+// Functionality for Edit and Delete User Threads (My Feeds)
 document.addEventListener('DOMContentLoaded', function() {
-    const menuButton = document.querySelector('.threads-menu-button');
-    const menuContent = document.querySelector('.threads-menu-content');
+    document.querySelectorAll('.threads-menu-button').forEach(menuButton => {
+        const menuContent = menuButton.nextElementSibling;
 
-    menuButton.addEventListener('click', function() {
-        menuContent.classList.toggle('show');
-    });
+        menuButton.addEventListener('click', function() {
+            menuContent.classList.toggle('show');
+        });
 
-    // Optional: Close the menu if clicked outside
-    document.addEventListener('click', function(event) {
-        if (!menuButton.contains(event.target) && !menuContent.contains(event.target)) {
-            menuContent.classList.remove('show');
-        }
+        // Optional: Close the menu if clicked outside
+        document.addEventListener('click', function(event) {
+            if (!menuButton.contains(event.target) && !menuContent.contains(event.target)) {
+                menuContent.classList.remove('show');
+            }
+        });
     });
 });
 
@@ -159,14 +181,15 @@ document.addEventListener('DOMContentLoaded', (event) => {
         submitIdeaMessage.style.display = "block";
         volunteerSignUpMessage.style.display = "none";
         modal.style.display = "block";
+        submitIdeaMessage.style.textAlign = "center"
         submitIdeaMessage.style.color = "#FD5B32";
-
     }
 
     volunteerSignUpBtn.onclick = function() {
         submitIdeaMessage.style.display = "none";
         volunteerSignUpMessage.style.display = "block";
         modal.style.display = "block";
+        volunteerSignUpMessage.style.textAlign = "center"
         volunteerSignUpMessage.style.color = "#FD5B32";
     }
 
