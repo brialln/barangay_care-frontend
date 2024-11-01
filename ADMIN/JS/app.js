@@ -1,6 +1,4 @@
-// GENERAL JS FUNCTION
-
-// Page refresh once
+// ----------------------------------- Page refresh once -----------------------------------
 window.onload = function() {
     // Check if the page was refreshed before
     if (!sessionStorage.getItem('refreshed')) {
@@ -12,7 +10,7 @@ window.onload = function() {
     }
   }
 
-// Function for Barangay ID Requests
+// ----------------------------------- Function for Barangay ID Requests -----------------------------------
 const barangayIDTabs = document.querySelectorAll('#barangayIDRequests .tab_btn');
 const barangayIDContent = document.querySelectorAll('#barangayIDRequests .request');
 
@@ -26,7 +24,7 @@ barangayIDTabs.forEach((tab, index) => {
     });
 });
 
-// Function for Barangay Clearance Requests
+// ----------------------------------- Function for Barangay Clearance Requests -----------------------------------
 const barangayClearanceTabs = document.querySelectorAll('#barangayClearanceRequests .tab_btn');
 const barangayClearanceContent = document.querySelectorAll('#barangayClearanceRequests .request');
 
@@ -40,7 +38,7 @@ barangayClearanceTabs.forEach((tab, index) => {
     });
 });
 
-// Function for Barangay Clearance Requests
+// ----------------------------------- Function for Barangay Clearance Requests -----------------------------------
 const barangayIndigencyTabs = document.querySelectorAll('#barangayIndigencyRequests .tab_btn');
 const barangayIndigencyContent = document.querySelectorAll('#barangayIndigencyRequests .request');
 
@@ -54,7 +52,7 @@ barangayIndigencyTabs.forEach((tab, index) => {
     });
 });
 
-// Function for Barangay Disaster Responses
+// ----------------------------------- Function for Barangay Disaster Responses -----------------------------------
 const barangayDisasterTabs = document.querySelectorAll('#barangayDisasterRequests .tab_btn');
 const barangayDisasterContent = document.querySelectorAll('#barangayDisasterRequests .request');
 
@@ -68,7 +66,7 @@ barangayDisasterTabs.forEach((tab, index) => {
     });
 });
 
-// Function for Dropdown Sort and Filter
+// ----------------------------------- Function for Dropdown Sort and Filter -----------------------------------
 // Toggle dropdown visibility for each button individually
 function toggleDropdown(button) {
     const dropdownContent = button.nextElementSibling; // Target the specific dropdown next to the clicked button
@@ -114,7 +112,7 @@ document.addEventListener('click', function(event) {
     });
 });
 
-// Approve/Respond Modal Functionality
+// ----------------------------------- Approve/Respond Modal Functionality ----------------------------------- 
 // Get modal elements
 const modal = document.getElementById('responseModal');
 const respondButton = document.querySelector('.approve_button');
@@ -138,7 +136,7 @@ window.addEventListener('click', (event) => {
 });
 
 
-// Decline Modal Functionality
+// ----------------------------------- Decline Modal Functionality -----------------------------------
 const declineModal = document.getElementById('declineModal');
 const declineButton = document.querySelector('.decline_button');
 const closeDeclineButton = declineModal.querySelector('.decline_close_button');
@@ -156,3 +154,19 @@ window.addEventListener('click', (event) => {
         declineModal.classList.remove('show');
     }
 });
+
+// ----------------------------------- Function for Barangay Idea Submissions -----------------------------------
+const barangayIdeaTabs = document.querySelectorAll('#barangayDisasterRequests .tab_btn');
+const barangayIdeaContent = document.querySelectorAll('#barangayDisasterRequests .request');
+
+barangayIdeaTabs.forEach((tab, index) => {
+    tab.addEventListener('click', () => {
+        barangayIdeaTabs.forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+        
+        barangayIdeaContent.forEach(content => content.classList.remove('active'));
+        barangayIdeaContent[index].classList.add('active');
+    });
+});
+
+// ----------------------------------- Function for Barangay Volunteer Sign Ups -----------------------------------
