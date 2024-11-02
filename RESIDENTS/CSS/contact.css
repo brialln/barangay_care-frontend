@@ -1,9 +1,10 @@
 @import url(style.css);
 
-/* CONTACT FORM STYLES */
+/* ====================== Contact Form ======================  */
 .contact_form-container {
     display: grid;
     grid-template-columns: 50% 50%;
+    align-items: center;
     background: var(--color-white);
     border-radius: var(--card-border-radius-3);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -55,7 +56,7 @@
     margin-bottom: 1rem;
 }
 
-/* LOCATION MAP STYLES */
+/* ====================== Maps Location API ======================  */
 .location_container {
     margin-top: 1rem;
     flex: 1 1 100%;
