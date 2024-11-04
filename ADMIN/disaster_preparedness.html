@@ -128,7 +128,7 @@
         <div class="barangay_request-container">
             <div class="header_request-container">
                 <h3>Disaster Preparedness Responses</h3>
-                <button class="trash_button">
+                <button class="trash_button trash_disaster">
                     Trash
                     <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#03045E"><path d="M200-80q-33 0-56.5-23.5T120-160v-451q-18-11-29-28.5T80-680v-120q0-33 23.5-56.5T160-880h640q33 0 56.5 23.5T880-800v120q0 23-11 40.5T840-611v451q0 33-23.5 56.5T760-80H200Zm0-520v440h560v-440H200Zm-40-80h640v-120H160v120Zm200 280h240v-80H360v80Zm120 20Z"/></svg>
                 </button>
@@ -174,69 +174,64 @@
                 <button class="tab_btn">In-Progress</button>
                 <button class="tab_btn">Resolved</button>
             </div>
-            <div class="disaser_label-container">
+
+            <div class="disaster_label-container">
                 <p>No.</p>
                 <p>Barangay ID</p>
-                <p>Name</p>
+                <p>First Name</p>
+                <p>Last Name</p>
                 <p>Date & Time</p>
                 <p>Priority Level</p>
                 <p>Status</p>
                 <p>Details</p>
+                <p>Remarks & Actions</p>
             </div>
             <div class="request_container">
+                <!-- Reported -->
                 <div class="request active">
                     <div class="disaster_request-container">
                         <p>1</p>
                         <p>01</p>
-                        <p>Uvuvwevwevwe Ossas</p>
+                        <p>Uvuvwevwevwe</p>
+                        <p>Ossas</p>
                         <p>2024-10-12 13:02</p>
                         <p class="priority_level" data-priority="High">High</p>
                         <p class="request_pending">Reported</p>
-                        <button><a href="brgy_disaster-responses.html">View Details</button></a>
-                    </div>
-
-                    <div class="disaster_request-container">
-                        <p>2</p>
-                        <p>20</p>
-                        <p>Uvuvwevwevwe Ossas</p>
-                        <p>2024-10-12 13:02</p>
-                        <p class="priority_level" data-priority="Medium">Medium</p>
-                        <p class="request_pending">Reported</p>
-                        <button><a href="brgy_disaster-responses.html">View Details</button></a>
-                    </div>
-
-                    <div class="disaster_request-container">
-                        <p>3</p>
-                        <p>10</p>
-                        <p>Uvuvwevwevwe Ossas</p>
-                        <p>2024-10-12 13:02</p>
-                        <p class="priority_level" data-priority="Low">Low</p>
-                        <p class="request_pending">Reported</p>
-                        <button><a href="brgy_disaster-responses.html">View Details</button></a>
+                        <button class="details_button">Details</button>
+                        <button class="approve_button">Approve</button>
+                        <button class="unable_button">Delete</button>
                     </div>
                 </div>
 
+                <!-- In Progress -->
                 <div class="request">
                     <div class="disaster_request-container">
                         <p>1</p>
                         <p>01</p>
-                        <p>Uvuvwevwevwe Ossas</p>
+                        <p>Uvuvwevwevwe</p>
+                        <p>Ossas</p>
                         <p>2024-10-12 13:02</p>
                         <p class="priority_level" data-priority="High">High</p>
                         <p class="request_pending">In-Progress</p>
-                        <button><a href="brgy_disaster-responses.html">View Details</button></a>
+                        <button class="details_button">Details</button>
+                        <button class="remarks_button">Remarks</button>
+                        <button class="unable_button">Delete</button>
                     </div>
                 </div>
 
+                <!-- Resolved -->
                 <div class="request">
                     <div class="disaster_request-container">
                         <p>1</p>
                         <p>01</p>
-                        <p>Uvuvwevwevwe Ossas</p>
+                        <p>Uvuvwevwevwe</p>
+                        <p>Ossas</p>
                         <p>2024-10-12 13:02</p>
                         <p class="priority_level" data-priority="High">High</p>
                         <p class="request_approved">Resolved</p>
-                        <button><a href="brgy_disaster-responses.html">View Details</button></a>
+                        <button class="details_button">Details</button>
+                        <button class="remarks_button">Remarks</button>
+                        <button class="delete_button-m">Delete</button>
                     </div>
                 </div>
             </div>
@@ -340,5 +335,164 @@
         </div>
     </div>
     <!-------------- END OF ADD SAFETY GUIDE -------------->
+
+    <div id="responseModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h4>Approve Remarks:</h4>
+            <textarea rows="10"></textarea>
+            <h4>Date Reviewed:</h4>
+            <input type="date" required>
+            <button class="btn">Approve</button>
+        </div>
+    </div>
+    <!-------------- END OF MODAL APPROVE BUTTON CLICK EXPAND -------------->
+    
+    <div id="declineModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h4>Decline Remarks:</h4>
+            <textarea rows="10"></textarea>
+            <h4>Date Reviewed:</h4>
+            <input type="date" required>
+            <button class="btn">Decline</button>
+        </div>
+    </div>
+    <!-------------- END OF MODAL DECLINE BUTTON CLICK EXPAND -------------->
+
+    <div id="deleteModal" class="modal">
+        <div class="modal-content">
+            <h4>Delete Request?</h4>
+            <div class="delete_actions">
+                <button class="delete_button-m btn">Delete</button>
+                <button class="cancelDelete btn">Cancel</button>
+            </div>
+        </div>
+    </div>
+    <!-------------- END OF MODAL DELETE BUTTON CLICK EXPAND -------------->  
+
+    <div id="restoreModal" class="modal">
+        <div class="modal-content">
+            <h4>Restore Request?</h4>
+            <div class="restore_actions">
+                <button class="restore_button btn">Restore</button>
+                <button class="cancelDelete btn">Cancel</button>
+            </div>
+
+        </div>
+    </div>
+    <!-------------- END OF MODAL RESTORE BUTTON CLICK EXPAND -------------->  
+
+    <div id="detailModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <div class="req_details-container">
+                <div class="req_details">
+                    <h4>First Name</h4>
+                    <p>Uvuvwevwevwe</p>
+                </div>
+    
+                <div class="req_details">
+                    <h4>Last Name</h4>
+                    <p>Ossas</p>
+                </div>
+    
+                <div class="req_details">
+                    <h4>Contact Number:</h4>
+                    <p>09879878765</p>
+                </div>
+    
+                <div class="req_details">
+                    <h4>Type of Disaster:</h4>
+                    <p>Flood o Baha</p>
+                </div>
+            </div>
+            <div class="req_details">
+                <h4>Details:</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates, nesciunt aspernatur! Ipsa consectetur porro delectus, voluptas alias sunt beatae optio recusandae quibusdam minima earum fugiat possimus ea soluta quae debitis!</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem quaerat nobis temporibus doloribus quam corporis rerum dolorum, eveniet ab cupiditate a neque nostrum iste tenetur earum odit eos rem quos.</p>
+            </div>
+        </div>
+    </div>
+    <!-------------- END OF MODAL VIEW DETAILS BUTTON EXPAND -------------->
+
+    <div id="remarksModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <div class="req_details">
+                <h4>Remarks:</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates, nesciunt aspernatur! Ipsa consectetur porro delectus, voluptas alias sunt beatae optio recusandae quibusdam minima earum fugiat possimus ea soluta quae debitis!</p>
+            </div>
+            <div class="req_details">
+                <h4>Date Reviewed:</h4>
+                <p>November 2, 2024 - 3:10 PM</p>
+            </div>
+        </div>
+    </div>
+    <!-------------- END OF MODAL VIEW REMARKS BUTTON EXPAND -------------->
+
+    <!--------------  MODAL OF TRASH BUTTON EXPAND -------------->
+    <div id="trashDisasterModal" class="trash_modal">
+        <div class="trash_modal-container">
+            <div class="close_button-container">
+                <h4>Disaster Request Trash</h4>
+                <button class="close_button">Close</button>
+            </div>
+            <div class="trash_modal-content">
+                <div class="trash_header-container">
+                    <div class="trash_header-action">
+                        <button class="restore_button">Restore</button>
+                        <button class="delete_button-m">Delete</button>
+                    </div>
+                </div>
+
+                <div class="disaster_trash_label-container">
+                    <div class="select_all-container">
+                        <p>All</p>
+                        <input type="checkbox">
+                    </div>
+                    <p>No.</p>
+                    <p>Barangay ID</p>
+                    <p>First Name</p>
+                    <p>Last Name</p>
+                    <p>Date & Time</p>
+                    <p>Priority Level</p>
+                    <p>Status</p>
+                    <p>Details</p>
+                    <p>Remarks</p>
+                </div>
+
+                <div class="trash_user-request-container">
+                    <div class="disaster_trash_user-request">
+                        <input type="checkbox">
+                        <p>1</p>
+                        <p>01</p>
+                        <p>Boy</p>
+                        <p>Bawang</p>
+                        <p>2024-10-12 13:02</p>
+                        <p class="priority_level" data-priority="Low">Low</p>
+                        <P class="request_approved">Resolved</P>
+                        <button class="details_button">Details</button>
+                        <button class="remarks_button">Remarks</button>
+                    </div>
+
+                    <div class="disaster_trash_user-request">
+                        <input type="checkbox">
+                        <p>12</p>
+                        <p>25</p>
+                        <p>Boy</p>
+                        <p>Wangba</p>
+                        <p>2024-10-12 13:02</p>
+                        <p class="priority_level" data-priority="Medium">Medium</p>
+                        <P class="request_approved">Resolved</P>
+                        <button class="details_button">Details</button>
+                        <button class="remarks_button">Remarks</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!-------------- END MODAL OF DISASTER TRASH BUTTON EXPAND -------------->
 </main>
 </body>
