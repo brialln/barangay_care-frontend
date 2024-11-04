@@ -113,100 +113,267 @@
 
         </ul>
    </aside>
-<!-------------- END OF SIDEBAR SECTION -------------->
-<main>
-    <div class="remarks_banner-container">
-        <p>
-            Admin
-        </p>
-   </div>
-<!-------------- END OF ADMIN BANNER SECTION -------------->
+    <!-------------- END OF SIDEBAR SECTION -------------->
+    <main>
+        <div class="remarks_banner-container">
+            <p>
+                Admin
+            </p>
+        </div>
+    <!-------------- END OF ADMIN BANNER SECTION -------------->
 
-    <div id="barangayDisasterRequests"  class="container parent_request-container">
-        <h3>Edit Justice</h3>
-        <div class="barangay_request-container">
-            <div class="header_request-container">
-                <h3>Justice Responses</h3>
-                <button class="trash_button">
-                    Trash
-                    <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#03045E"><path d="M200-80q-33 0-56.5-23.5T120-160v-451q-18-11-29-28.5T80-680v-120q0-33 23.5-56.5T160-880h640q33 0 56.5 23.5T880-800v120q0 23-11 40.5T840-611v451q0 33-23.5 56.5T760-80H200Zm0-520v440h560v-440H200Zm-40-80h640v-120H160v120Zm200 280h240v-80H360v80Zm120 20Z"/></svg>
-                </button>
-            </div>
-
-            <div class="search-filter-container">
-                <!-- Search Bar -->
-                <div class="search-bar">
-
-                    <input type="text" placeholder="Search">
-                    <button type="button" class="search-button">
-                        <i class="uil uil-search"></i>
+        <div id="barangayJusticeRequests"  class="container parent_request-container">
+            <h3>Edit Justice</h3>
+            <div class="barangay_request-container">
+                <div class="header_request-container">
+                    <h3>Justice Responses</h3>
+                    <button class="trash_button trash_justice">
+                        Trash
+                        <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#03045E"><path d="M200-80q-33 0-56.5-23.5T120-160v-451q-18-11-29-28.5T80-680v-120q0-33 23.5-56.5T160-880h640q33 0 56.5 23.5T880-800v120q0 23-11 40.5T840-611v451q0 33-23.5 56.5T760-80H200Zm0-520v440h560v-440H200Zm-40-80h640v-120H160v120Zm200 280h240v-80H360v80Zm120 20Z"/></svg>
                     </button>
                 </div>
-            
 
-                <!-- Filter Dropdown -->
-                <div class="filter-dropdown">
-                    <button class="filter-btn" onclick="toggleDropdown(this)">
-                        Sort: <span class="selected-filter">Select</span>
-                    </button>
-                    <ul class="dropdown-content">
-                        <li><input type="checkbox" onclick="selectOption(this, 'filter')" /><label>Earliest</label></li>
-                        <li><input type="checkbox" onclick="selectOption(this, 'filter')" /><label>Latest</label></li>
-                    </ul>
-                </div>
+                <div class="search-filter-container">
+                    <!-- Search Bar -->
+                    <div class="search-bar">
 
-            </div>
-            <div class="tab_box-container">
-                <button class="tab_btn active">Pending</button>
-                <button class="tab_btn">Approved</button>
-                <button class="tab_btn">Declined</button>
-            </div>
-            <div class="label_request-container">
-                <p>No.</p>
-                <p>Barangay ID</p>
-                <p>Name</p>
-                <p>Date & Time</p>
-                <p>Status</p>
-                <p>Details</p>
-            </div>
-            <div class="request_container">
-                <div class="request active">
-                    <div class="user_request">
-                        <p>1</p>
-                        <p>01</p>
-                        <p>21 Savage</p>
-                        <p>2024-10-12 13:02</p>
-                        <p class="request_pending">Pending</p>
-                        <button><a href="brgy_justice-responses.html">View Details</button></a>
+                        <input type="text" placeholder="Search">
+                        <button type="button" class="search-button">
+                            <i class="uil uil-search"></i>
+                        </button>
                     </div>
-                </div>
+                
 
-                <div class="request">
-                    <div class="user_request">
-                        <p>1</p>
-                        <p>01</p>
-                        <p>21 Savage</p>
-                        <p>2024-10-12 13:02</p>
-                        <p class="request_approved">Approved</p>
-                        <button><a href="brgy_justice-responses.html">View Details</a></button>
+                    <!-- Filter Dropdown -->
+                    <div class="filter-dropdown">
+                        <button class="filter-btn" onclick="toggleDropdown(this)">
+                            Sort: <span class="selected-filter">Select</span>
+                        </button>
+                        <ul class="dropdown-content">
+                            <li><input type="checkbox" onclick="selectOption(this, 'filter')" /><label>Earliest</label></li>
+                            <li><input type="checkbox" onclick="selectOption(this, 'filter')" /><label>Latest</label></li>
+                        </ul>
                     </div>
+
                 </div>
 
-                <div class="request">
-                    <div class="user_request">
-                        <p>1</p>
-                        <p>01</p>
-                        <p>21 Savage</p>
-                        <p>2024-10-12 13:02</p>
-                        <p class="request_declined">Declined</p>
-                        <button><a href="brgy_justice-responses.html">View Details</a></button>
+                <div class="tab_box-container">
+                    <button class="tab_btn active">Pending</button>
+                    <button class="tab_btn">Approved</button>
+                    <button class="tab_btn">Declined</button>
+                </div>
+
+                <div class="label_request-container">
+                    <p>No.</p>
+                    <p>Barangay ID</p>
+                    <p>First Name</p>
+                    <p>Last Name</p>
+                    <p>Date & Time</p>
+                    <p>Status</p>
+                    <p>Details</p>
+                    <p>Remarks & Actions</p>
+                </div>
+                <div class="request_container">
+                    <div class="request active">
+                        <div class="user_request">
+                            <p>1</p>
+                            <p>01</p>
+                            <p>21</p>
+                            <p>Savage</p>
+                            <p>2024-10-12 13:02</p>
+                            <p class="request_pending">Pending</p>
+                            <button class="details_button">Details</button>
+                            <button class="approve_button">Approve</button>
+                            <button class="decline_button">Decline</button>
+                        </div>
+                    </div>
+
+                    <div class="request">
+                        <div class="user_request">
+                            <p>1</p>
+                            <p>01</p>
+                            <p>21</p>
+                            <p>Savage</p>
+                            <p>2024-10-12 13:02</p>
+                            <p class="request_approved">Approved</p>
+                            <button class="details_button">Details</button>
+                            <button class="remarks_button">Remarks</button>
+                            <button class="delete_button-m">Delete</button>
+                        </div>
+                    </div>
+
+                    <div class="request">
+                        <div class="user_request">
+                            <p>1</p>
+                            <p>01</p>
+                            <p>NBA</p>
+                            <p>YoungBoy</p>
+                            <p>2024-10-12 13:02</p>
+                            <P class="request_declined">Declined</P>
+                            <button class="details_button">Details</button>
+                            <button class="remarks_button">Remarks</button>
+                            <button class="delete_button-m">Delete</button>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-</main>
-<script>
+    <!-------------- END OF BARANGAY DISASTER REQUESTS -------------->
 
-</script>
+    <div id="responseModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h4>Approve Remarks:</h4>
+            <textarea rows="10"></textarea>
+            <h4>Date Reviewed:</h4>
+            <input type="date" required>
+            <button class="btn">Approve</button>
+        </div>
+    </div>
+    <!-------------- END OF MODAL APPROVE BUTTON CLICK EXPAND -------------->
+    
+    <div id="declineModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h4>Decline Remarks:</h4>
+            <textarea rows="10"></textarea>
+            <h4>Date Reviewed:</h4>
+            <input type="date" required>
+            <button class="btn">Decline</button>
+        </div>
+    </div>
+    <!-------------- END OF MODAL DECLINE BUTTON CLICK EXPAND -------------->
+
+    <div id="deleteModal" class="modal">
+        <div class="modal-content">
+            <h4>Delete Request?</h4>
+            <div class="delete_actions">
+                <button class="delete_button-m btn">Delete</button>
+                <button class="cancelDelete btn">Cancel</button>
+            </div>
+        </div>
+    </div>
+    <!-------------- END OF MODAL DELETE BUTTON CLICK EXPAND -------------->  
+
+    <div id="restoreModal" class="modal">
+        <div class="modal-content">
+            <h4>Restore Request?</h4>
+            <div class="restore_actions">
+                <button class="restore_button btn">Restore</button>
+                <button class="cancelDelete btn">Cancel</button>
+            </div>
+
+        </div>
+    </div>
+    <!-------------- END OF MODAL RESTORE BUTTON CLICK EXPAND -------------->  
+
+    <div id="detailModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <div class="req_details-container">
+                <div class="req_details">
+                    <h4>First Name</h4>
+                    <p>NBA</p>
+                </div>
+    
+                <div class="req_details">
+                    <h4>Last Name</h4>
+                    <p>YoungBoy</p>
+                </div>
+    
+                <div class="req_details">
+                    <h4>Contact Number:</h4>
+                    <p>09879878765</p>
+                </div>
+    
+                <div class="req_details">
+                    <h4>Type of Complaint:</h4>
+                    <p>Riot</p>
+                </div>
+            </div>
+            <div class="req_details">
+                <h4>Details:</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates, nesciunt aspernatur! Ipsa consectetur porro delectus, voluptas alias sunt beatae optio recusandae quibusdam minima earum fugiat possimus ea soluta quae debitis!</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem quaerat nobis temporibus doloribus quam corporis rerum dolorum, eveniet ab cupiditate a neque nostrum iste tenetur earum odit eos rem quos.</p>
+            </div>
+        </div>
+    </div>
+    <!-------------- END OF MODAL VIEW DETAILS BUTTON EXPAND -------------->
+
+    <div id="remarksModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <div class="req_details">
+                <h4>Remarks:</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates, nesciunt aspernatur! Ipsa consectetur porro delectus, voluptas alias sunt beatae optio recusandae quibusdam minima earum fugiat possimus ea soluta quae debitis!</p>
+            </div>
+            <div class="req_details">
+                <h4>Date Reviewed:</h4>
+                <p>November 2, 2024 - 3:10 PM</p>
+            </div>
+        </div>
+    </div>
+    <!-------------- END OF MODAL VIEW REMARKS BUTTON EXPAND -------------->
+
+    <!--------------  MODAL OF TRASH BUTTON EXPAND -------------->
+    <div id="trashJusticeModal" class="trash_modal">
+        <div class="trash_modal-container">
+            <div class="close_button-container">
+                <h4>Justice Request Trash</h4>
+                <button class="close_button">Close</button>
+            </div>
+            <div class="trash_modal-content">
+                <div class="trash_header-container">
+                    <div class="trash_header-action">
+                        <button class="restore_button">Restore</button>
+                        <button class="delete_button-m">Delete</button>
+                    </div>
+                </div>
+
+                <div class="trash_label-container">
+                    <div class="select_all-container">
+                        <p>All</p>
+                        <input type="checkbox">
+                    </div>
+                    <p>No.</p>
+                    <p>Barangay ID</p>
+                    <p>First Name</p>
+                    <p>Last Name</p>
+                    <p>Date & Time</p>
+                    <p>Status</p>
+                    <p>Details</p>
+                    <p>Remarks</p>
+                </div>
+
+                <div class="trash_user-request-container">
+                    <div class="trash_user-request">
+                        <input type="checkbox">
+                        <p>1</p>
+                        <p>01</p>
+                        <p>Siling</p>
+                        <p>Labuyo</p>
+                        <p>2024-10-12 13:02</p>
+                        <P class="request_declined">Declined</P>
+                        <button class="details_button">Details</button>
+                        <button class="remarks_button">Remarks</button>
+                    </div>
+
+                    <div class="trash_user-request">
+                        <input type="checkbox">
+                        <p>12</p>
+                        <p>25</p>
+                        <p>Siling</p>
+                        <p>Matamis</p>
+                        <p>2024-10-12 13:02</p>
+                        <P class="request_declined">Declined</P>
+                        <button class="details_button">Details</button>
+                        <button class="remarks_button">Remarks</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!-------------- END MODAL OF ID TRASH BUTTON EXPAND -------------->
+    </main>
 </body>
