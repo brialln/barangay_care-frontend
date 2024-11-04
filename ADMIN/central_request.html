@@ -25,116 +25,212 @@
 
 </head>
 <body>
-    <aside id="sidebar">
-        <ul>
-            <li>
-                <span class="logo">BarangayCare</span>
-                <button onclick=toggleSidebar() id="toggle-btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FFFFFF"><path d="M440-240 200-480l240-240 56 56-183 184 183 184-56 56Zm264 0L464-480l240-240 56 56-183 184 183 184-56 56Z"/></svg>
-                </button>
-            </li>
+        <aside id="sidebar">
+            <ul>
+                <li>
+                    <span class="logo">BarangayCare</span>
+                    <button onclick=toggleSidebar() id="toggle-btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FFFFFF"><path d="M440-240 200-480l240-240 56 56-183 184 183 184-56 56Zm264 0L464-480l240-240 56 56-183 184 183 184-56 56Z"/></svg>
+                    </button>
+                </li>
 
-            <li >
-                <a href="dashboard.html">
-                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M120-200q-33 0-56.5-23.5T40-280v-400q0-33 23.5-56.5T120-760h400q33 0 56.5 23.5T600-680v400q0 33-23.5 56.5T520-200H120Zm0-80h400v-400H120v400Zm560 80v-560h80v560h-80Zm160 0v-560h80v560h-80Zm-720-80v-400 400Z"/></svg>
-                    <span>Dashboard</span>
-                </a>
-            </li>
+                <li >
+                    <a href="dashboard.html">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M120-200q-33 0-56.5-23.5T40-280v-400q0-33 23.5-56.5T120-760h400q33 0 56.5 23.5T600-680v400q0 33-23.5 56.5T520-200H120Zm0-80h400v-400H120v400Zm560 80v-560h80v560h-80Zm160 0v-560h80v560h-80Zm-720-80v-400 400Z"/></svg>
+                        <span>Dashboard</span>
+                    </a>
+                </li>
 
-            <li>
-                <button onclick=toggleSubMenu(this) class="dropdown-btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M480-118 120-398l66-50 294 228 294-228 66 50-360 280Zm0-202L120-600l360-280 360 280-360 280Zm0-280Zm0 178 230-178-230-178-230 178 230 178Z"/></svg>
-                    <span>Main Pages</span>
-                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z"/></svg>
-                </button>
-                <ul class="sub-menu">
-                    <div>
-                        <li><a href="home.html">Home</a></li>
-                        <li><a href="news_updates.html">News & Updates</a></li>
-                        <li><a href="services.html">Services</a></li>
-                        <li><a href="publications.html">Publications</a></li>
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </div>
-                </ul>
-            </li>
-            
-            <li>
-                <button onclick=toggleSubMenu(this) class="dropdown-btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M760-600q-57 0-99-34t-56-86H354q-11 42-41.5 72.5T240-606v251q52 14 86 56t34 99q0 66-47 113T200-40q-66 0-113-47T40-200q0-57 34-99t86-56v-251q-52-14-86-56t-34-98q0-66 47-113t113-47q56 0 98 34t56 86h251q14-52 56-86t99-34q66 0 113 47t47 113q0 66-47 113t-113 47ZM200-120q33 0 56.5-24t23.5-56q0-33-23.5-56.5T200-280q-32 0-56 23.5T120-200q0 32 24 56t56 24Zm0-560q33 0 56.5-23.5T280-760q0-33-23.5-56.5T200-840q-32 0-56 23.5T120-760q0 33 24 56.5t56 23.5ZM760-40q-66 0-113-47t-47-113q0-66 47-113t113-47q66 0 113 47t47 113q0 66-47 113T760-40Zm0-80q33 0 56.5-24t23.5-56q0-33-23.5-56.5T760-280q-33 0-56.5 23.5T680-200q0 32 23.5 56t56.5 24Zm0-560q33 0 56.5-23.5T840-760q0-33-23.5-56.5T760-840q-33 0-56.5 23.5T680-760q0 33 23.5 56.5T760-680ZM200-200Zm0-560Zm560 560Zm0-560Z"/></svg>
-                    <span>Services</span>
-                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z"/></svg>
-                </button>
-                <ul class="sub-menu">
-                    <div>
-                        <li class="active"><a href="central_request.html">Request Document</a></li>
-                        <li><a href="community_development.html">Community Development</a></li>
-                        <li><a href="disaster_preparedness.html">Disaster Preparedness</a></li>
-                        <li><a href="education.html">Education</a></li>
-                        <li><a href="elderly.html">Elderly</a></li>
-                        <li><a href="health.html">Health</a></li>
-                        <li><a href="justice.html">Justice</a></li>
-                        <li><a href="livelihood_employment.html">Livelihood & Employment</a></li>
-                        <li><a href="social.html">Social</a></li>
-                        <li><a href="women_welfare.html">Women's Welfare</a></li>
-                        <li><a href="youth_sports.html">Youth & Sports</a></li>
-                    </div>
-                </ul>
-            </li>
-            
-            <li>
-                <button onclick=toggleSubMenu(this) class="dropdown-btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M40-160v-112q0-34 17.5-62.5T104-378q62-31 126-46.5T360-440q66 0 130 15.5T616-378q29 15 46.5 43.5T680-272v112H40Zm720 0v-120q0-44-24.5-84.5T666-434q51 6 96 20.5t84 35.5q36 20 55 44.5t19 53.5v120H760ZM360-480q-66 0-113-47t-47-113q0-66 47-113t113-47q66 0 113 47t47 113q0 66-47 113t-113 47Zm400-160q0 66-47 113t-113 47q-11 0-28-2.5t-28-5.5q27-32 41.5-71t14.5-81q0-42-14.5-81T544-792q14-5 28-6.5t28-1.5q66 0 113 47t47 113ZM120-240h480v-32q0-11-5.5-20T580-306q-54-27-109-40.5T360-360q-56 0-111 13.5T140-306q-9 5-14.5 14t-5.5 20v32Zm240-320q33 0 56.5-23.5T440-640q0-33-23.5-56.5T360-720q-33 0-56.5 23.5T280-640q0 33 23.5 56.5T360-560Zm0 320Zm0-400Z"/></svg>
-                    <span>Accounts</span>
-                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z"/></svg>
-                </button>
-                <ul class="sub-menu">
-                    <div>
-                        <li><a href="residents.html">Residents</a></li>
-                        <li><a href="staffs.html">Staffs</a></li>
-                        <li><a href="sangguniang_kabataan.html">SK</a></li>
-                    </div>
-                </ul>
-            </li>
-            
-            <li>
-                <button onclick=toggleSubMenu(this) class="dropdown-btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M480-480q-66 0-113-47t-47-113q0-66 47-113t113-47q66 0 113 47t47 113q0 66-47 113t-113 47ZM160-160v-112q0-34 17.5-62.5T224-378q62-31 126-46.5T480-440q66 0 130 15.5T736-378q29 15 46.5 43.5T800-272v112H160Zm80-80h480v-32q0-11-5.5-20T700-306q-54-27-109-40.5T480-360q-56 0-111 13.5T260-306q-9 5-14.5 14t-5.5 20v32Zm240-320q33 0 56.5-23.5T560-640q0-33-23.5-56.5T480-720q-33 0-56.5 23.5T400-640q0 33 23.5 56.5T480-560Zm0-80Zm0 400Z"/></svg>
-                    <span>Profile</span>
-                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z"/></svg>
-                </button>
-                <ul class="sub-menu">
-                    <div>
-                        <li><a href="profile.html">Profile</a></li>
-                        <li><a href="logout.html">Logout</a></li>
-                    </div>
-                </ul>
-            </li>
+                <li>
+                    <button onclick=toggleSubMenu(this) class="dropdown-btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M480-118 120-398l66-50 294 228 294-228 66 50-360 280Zm0-202L120-600l360-280 360 280-360 280Zm0-280Zm0 178 230-178-230-178-230 178 230 178Z"/></svg>
+                        <span>Main Pages</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z"/></svg>
+                    </button>
+                    <ul class="sub-menu">
+                        <div>
+                            <li><a href="home.html">Home</a></li>
+                            <li><a href="news_updates.html">News & Updates</a></li>
+                            <li><a href="services.html">Services</a></li>
+                            <li><a href="publications.html">Publications</a></li>
+                            <li><a href="about.html">About</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </div>
+                    </ul>
+                </li>
+                
+                <li>
+                    <button onclick=toggleSubMenu(this) class="dropdown-btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M760-600q-57 0-99-34t-56-86H354q-11 42-41.5 72.5T240-606v251q52 14 86 56t34 99q0 66-47 113T200-40q-66 0-113-47T40-200q0-57 34-99t86-56v-251q-52-14-86-56t-34-98q0-66 47-113t113-47q56 0 98 34t56 86h251q14-52 56-86t99-34q66 0 113 47t47 113q0 66-47 113t-113 47ZM200-120q33 0 56.5-24t23.5-56q0-33-23.5-56.5T200-280q-32 0-56 23.5T120-200q0 32 24 56t56 24Zm0-560q33 0 56.5-23.5T280-760q0-33-23.5-56.5T200-840q-32 0-56 23.5T120-760q0 33 24 56.5t56 23.5ZM760-40q-66 0-113-47t-47-113q0-66 47-113t113-47q66 0 113 47t47 113q0 66-47 113T760-40Zm0-80q33 0 56.5-24t23.5-56q0-33-23.5-56.5T760-280q-33 0-56.5 23.5T680-200q0 32 23.5 56t56.5 24Zm0-560q33 0 56.5-23.5T840-760q0-33-23.5-56.5T760-840q-33 0-56.5 23.5T680-760q0 33 23.5 56.5T760-680ZM200-200Zm0-560Zm560 560Zm0-560Z"/></svg>
+                        <span>Services</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z"/></svg>
+                    </button>
+                    <ul class="sub-menu">
+                        <div>
+                            <li class="active"><a href="central_request.html">Request Document</a></li>
+                            <li><a href="community_development.html">Community Development</a></li>
+                            <li><a href="disaster_preparedness.html">Disaster Preparedness</a></li>
+                            <li><a href="education.html">Education</a></li>
+                            <li><a href="elderly.html">Elderly</a></li>
+                            <li><a href="health.html">Health</a></li>
+                            <li><a href="justice.html">Justice</a></li>
+                            <li><a href="livelihood_employment.html">Livelihood & Employment</a></li>
+                            <li><a href="social.html">Social</a></li>
+                            <li><a href="women_welfare.html">Women's Welfare</a></li>
+                            <li><a href="youth_sports.html">Youth & Sports</a></li>
+                        </div>
+                    </ul>
+                </li>
+                
+                <li>
+                    <button onclick=toggleSubMenu(this) class="dropdown-btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M40-160v-112q0-34 17.5-62.5T104-378q62-31 126-46.5T360-440q66 0 130 15.5T616-378q29 15 46.5 43.5T680-272v112H40Zm720 0v-120q0-44-24.5-84.5T666-434q51 6 96 20.5t84 35.5q36 20 55 44.5t19 53.5v120H760ZM360-480q-66 0-113-47t-47-113q0-66 47-113t113-47q66 0 113 47t47 113q0 66-47 113t-113 47Zm400-160q0 66-47 113t-113 47q-11 0-28-2.5t-28-5.5q27-32 41.5-71t14.5-81q0-42-14.5-81T544-792q14-5 28-6.5t28-1.5q66 0 113 47t47 113ZM120-240h480v-32q0-11-5.5-20T580-306q-54-27-109-40.5T360-360q-56 0-111 13.5T140-306q-9 5-14.5 14t-5.5 20v32Zm240-320q33 0 56.5-23.5T440-640q0-33-23.5-56.5T360-720q-33 0-56.5 23.5T280-640q0 33 23.5 56.5T360-560Zm0 320Zm0-400Z"/></svg>
+                        <span>Accounts</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z"/></svg>
+                    </button>
+                    <ul class="sub-menu">
+                        <div>
+                            <li><a href="residents.html">Residents</a></li>
+                            <li><a href="staffs.html">Staffs</a></li>
+                            <li><a href="sangguniang_kabataan.html">SK</a></li>
+                        </div>
+                    </ul>
+                </li>
+                
+                <li>
+                    <button onclick=toggleSubMenu(this) class="dropdown-btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M480-480q-66 0-113-47t-47-113q0-66 47-113t113-47q66 0 113 47t47 113q0 66-47 113t-113 47ZM160-160v-112q0-34 17.5-62.5T224-378q62-31 126-46.5T480-440q66 0 130 15.5T736-378q29 15 46.5 43.5T800-272v112H160Zm80-80h480v-32q0-11-5.5-20T700-306q-54-27-109-40.5T480-360q-56 0-111 13.5T260-306q-9 5-14.5 14t-5.5 20v32Zm240-320q33 0 56.5-23.5T560-640q0-33-23.5-56.5T480-720q-33 0-56.5 23.5T400-640q0 33 23.5 56.5T480-560Zm0-80Zm0 400Z"/></svg>
+                        <span>Profile</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z"/></svg>
+                    </button>
+                    <ul class="sub-menu">
+                        <div>
+                            <li><a href="profile.html">Profile</a></li>
+                            <li><a href="logout.html">Logout</a></li>
+                        </div>
+                    </ul>
+                </li>
 
-        </ul>
-   </aside>
-<!-------------- END OF SIDEBAR SECTION -------------->
-<main>
-    <div class="remarks_banner-container">
-        <p>
-            Admin
-        </p>
-   </div>
-<!-------------- END OF ADMIN BANNER SECTION -------------->
+            </ul>
+        </aside>
+    <!-------------- END OF SIDEBAR SECTION -------------->
+    <main>
+        <div class="remarks_banner-container">
+            <p>
+                Admin
+            </p>
+        </div>
+    <!-------------- END OF ADMIN BANNER SECTION -------------->
 
-    <div id="barangayIDRequests"  class="container parent_request-container">
-        <h3>Document Requests</h3>
-        <div class="barangay_request-container">
-            <div class="header_request-container">
-                <h3>Barangay ID Requests</h3>
-                <button class="trash_button">
-                    Trash
-                    <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#03045E"><path d="M200-80q-33 0-56.5-23.5T120-160v-451q-18-11-29-28.5T80-680v-120q0-33 23.5-56.5T160-880h640q33 0 56.5 23.5T880-800v120q0 23-11 40.5T840-611v451q0 33-23.5 56.5T760-80H200Zm0-520v440h560v-440H200Zm-40-80h640v-120H160v120Zm200 280h240v-80H360v80Zm120 20Z"/></svg>
-                </button>
+        <div id="barangayIDRequests"  class="container parent_request-container">
+            <h3>Document Requests</h3>
+            <div class="barangay_request-container">
+                <div class="header_request-container">
+                    <h3>Barangay ID Requests</h3>
+                    <button class="trash_button trash_id">
+                        Trash
+                        <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#03045E"><path d="M200-80q-33 0-56.5-23.5T120-160v-451q-18-11-29-28.5T80-680v-120q0-33 23.5-56.5T160-880h640q33 0 56.5 23.5T880-800v120q0 23-11 40.5T840-611v451q0 33-23.5 56.5T760-80H200Zm0-520v440h560v-440H200Zm-40-80h640v-120H160v120Zm200 280h240v-80H360v80Zm120 20Z"/></svg>
+                    </button>
+                </div>
+
+                <div class="search-filter-container">
+                    <!-- Search Bar -->
+                        <div class="search-bar">
+
+                            <input type="text" placeholder="Search">
+                            <button type="button" class="search-button">
+                                <i class="uil uil-search"></i>
+                            </button>
+                        </div>
+
+                    <!-- Filter Dropdown -->
+                    <div class="filter-dropdown">
+                        <button class="filter-btn" onclick="toggleDropdown(this)">
+                            Sort: <span class="selected-filter">Select</span>
+                        </button>
+                        <ul class="dropdown-content">
+                            <li><input type="checkbox" onclick="selectOption(this, 'filter')" /><label>Earliest</label></li>
+                            <li><input type="checkbox" onclick="selectOption(this, 'filter')" /><label>Latest</label></li>
+                        </ul>
+                    </div>
+
+                </div>
+                
+                <div class="tab_box-container">
+                    <button class="tab_btn active">Pending</button>
+                    <button class="tab_btn">Approved</button>
+                    <button class="tab_btn">Declined</button>
+                </div>
+
+                <div class="label_request-container">
+                    <p>No.</p>
+                    <p>Barangay ID</p>
+                    <p>First Name</p>
+                    <p>Last Name</p>
+                    <p>Date & Time</p>
+                    <p>Status</p>
+                    <p>Details</p>
+                    <p>Remarks & Actions</p>
+                </div>
+                <div class="request_container">
+                    <div class="request active">
+                        <div class="user_request">
+                            <p>1</p>
+                            <p>01</p>
+                            <p>21</p>
+                            <p>Savage</p>
+                            <p>2024-10-12 13:02</p>
+                            <p class="request_pending">Pending</p>
+                            <button class="details_button">Details</button>
+                            <button class="approve_button">Approve</button>
+                            <button class="decline_button">Decline</button>
+                        </div>
+                    </div>
+
+                    <div class="request">
+                        <div class="user_request">
+                            <p>1</p>
+                            <p>01</p>
+                            <p>21</p>
+                            <p>Savage</p>
+                            <p>2024-10-12 13:02</p>
+                            <p class="request_approved">Approved</p>
+                            <button class="details_button">Details</button>
+                            <button class="remarks_button">Remarks</button>
+                            <button class="delete_button-m">Delete</button>
+                        </div>
+                    </div>
+
+                    <div class="request">
+                        <div class="user_request">
+                            <p>1</p>
+                            <p>01</p>
+                            <p>21</p>
+                            <p>Savage</p>
+                            <p>2024-10-12 13:02</p>
+                            <P class="request_declined">Declined</P>
+                            <button class="details_button">Details</button>
+                            <button class="remarks_button">Remarks</button>
+                            <button class="delete_button-m">Delete</button>
+                        </div>
+                    </div>
+                </div>
             </div>
+        </div>
+    <!-------------- END OF BARANGAY ID REQUESTS -------------->
 
-            <div class="search-filter-container">
-                 <!-- Search Bar -->
+        <div id="barangayClearanceRequests"  class="container parent_request-container">
+            <div class="barangay_request-container">
+                <div class="header_request-container">
+                    <h3>Barangay Clearance Requests</h3>
+                    <button class="trash_button trash_clearance">
+                        Trash
+                        <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#03045E"><path d="M200-80q-33 0-56.5-23.5T120-160v-451q-18-11-29-28.5T80-680v-120q0-33 23.5-56.5T160-880h640q33 0 56.5 23.5T880-800v120q0 23-11 40.5T840-611v451q0 33-23.5 56.5T760-80H200Zm0-520v440h560v-440H200Zm-40-80h640v-120H160v120Zm200 280h240v-80H360v80Zm120 20Z"/></svg>
+                    </button>
+                </div>
+
+                <div class="search-filter-container">
+                    <!-- Search Bar -->
                     <div class="search-bar">
 
                         <input type="text" placeholder="Search">
@@ -142,239 +238,420 @@
                             <i class="uil uil-search"></i>
                         </button>
                     </div>
-
-                <!-- Filter Dropdown -->
-                <div class="filter-dropdown">
-                    <button class="filter-btn" onclick="toggleDropdown(this)">
-                        Sort: <span class="selected-filter">Select</span>
-                    </button>
-                    <ul class="dropdown-content">
-                        <li><input type="checkbox" onclick="selectOption(this, 'filter')" /><label>Earliest</label></li>
-                        <li><input type="checkbox" onclick="selectOption(this, 'filter')" /><label>Latest</label></li>
-                    </ul>
-                </div>
-
-            </div>
-            
-
-            <div class="tab_box-container">
-                <button class="tab_btn active">Pending</button>
-                <button class="tab_btn">Approved</button>
-                <button class="tab_btn">Declined</button>
-            </div>
-
-            <div class="label_request-container">
-                <p>No.</p>
-                <p>Barangay ID</p>
-                <p>Name</p>
-                <p>Date & Time</p>
-                <p>Status</p>
-                <p>Details</p>
-            </div>
-            <div class="request_container">
-                <div class="request active">
-                    <div class="user_request">
-                        <p>1</p>
-                        <p>01</p>
-                        <p>21 Savage</p>
-                        <p>2024-10-12 13:02</p>
-                        <p class="request_pending">Pending</p>
-                        <button><a href="brgy_id-details.html">View Details</button></a>
-                    </div>
-                </div>
-
-                <div class="request">
-                    <div class="user_request">
-                        <p>1</p>
-                        <p>01</p>
-                        <p>21 Savage</p>
-                        <p>2024-10-12 13:02</p>
-                        <p class="request_approved">Approved</p>
-                        <button><a href="brgy_id-details.html">View Details</a></button>
-                    </div>
-                </div>
-
-                <div class="request">
-                    <div class="user_request">
-                        <p>1</p>
-                        <p>01</p>
-                        <p>21 Savage</p>
-                        <p>2024-10-12 13:02</p>
-                        <p class="request_declined">Declined</p>
-                        <button><a href="brgy_id-details.html">View Details</a></button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div id="barangayClearanceRequests"  class="container parent_request-container">
-        <div class="barangay_request-container">
-            <div class="header_request-container">
-                <h3>Barangay Clearance Requests</h3>
-                <button class="trash_button">
-                    Trash
-                    <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#03045E"><path d="M200-80q-33 0-56.5-23.5T120-160v-451q-18-11-29-28.5T80-680v-120q0-33 23.5-56.5T160-880h640q33 0 56.5 23.5T880-800v120q0 23-11 40.5T840-611v451q0 33-23.5 56.5T760-80H200Zm0-520v440h560v-440H200Zm-40-80h640v-120H160v120Zm200 280h240v-80H360v80Zm120 20Z"/></svg>
-                </button>
-            </div>
-
-            <div class="search-filter-container">
-                <!-- Search Bar -->
-                <div class="search-bar">
-
-                    <input type="text" placeholder="Search">
-                    <button type="button" class="search-button">
-                        <i class="uil uil-search"></i>
-                    </button>
-                </div>
-            
-                <!-- Filter Dropdown -->
-                <div class="filter-dropdown">
-                    <button class="filter-btn" onclick="toggleDropdown(this)">
-                        Sort: <span class="selected-filter">Select</span>
-                    </button>
-                    <ul class="dropdown-content">
-                        <li><input type="checkbox" onclick="selectOption(this, 'filter')" /><label>Earliest</label></li>
-                        <li><input type="checkbox" onclick="selectOption(this, 'filter')" /><label>Latest</label></li>
-                    </ul>
-                </div>
-
-            </div>
-            <div class="tab_box-container">
-                <button class="tab_btn active">Pending</button>
-                <button class="tab_btn">Approved</button>
-                <button class="tab_btn">Declined</button>
-            </div>
-
-            <div class="label_request-container">
-                <p>No.</p>
-                <p>Barangay ID</p>
-                <p>Name</p>
-                <p>Date & Time</p>
-                <p>Status</p>
-                <p>Details</p>
-            </div>
-            <div class="request_container">
-                <div class="request active">
-                    <div class="user_request">
-                        <p>1</p>
-                        <p>01</p>
-                        <p>21 Savage</p>
-                        <p>2024-10-12 13:02</p>
-                        <p class="request_pending">Pending</p>
-                        <button><a href="brgy_clearance-details.html">View Details</button></a>
-                    </div>
-                </div>
-
-                <div class="request">
-                    <div class="user_request">
-                        <p>1</p>
-                        <p>01</p>
-                        <p>21 Savage</p>
-                        <p>2024-10-12 13:02</p>
-                        <p class="request_approved">Approved</p>
-                        <button><a href="brgy_clearance-details.html">View Details</a></button>
-                    </div>
-                </div>
-
-                <div class="request">
-                    <div class="user_request">
-                        <p>1</p>
-                        <p>01</p>
-                        <p>21 Savage</p>
-                        <p>2024-10-12 13:02</p>
-                        <p class="request_declined">Declined</p>
-                        <button><a href="brgy_clearance-details.html">View Details</a></button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div id="barangayIndigencyRequests"  class="container parent_request-container">
-        <div class="barangay_request-container">
-            <div class="header_request-container">
-                <h3>Barangay Indigency Requests</h3>
-                <button class="trash_button">
-                    Trash
-                    <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#03045E"><path d="M200-80q-33 0-56.5-23.5T120-160v-451q-18-11-29-28.5T80-680v-120q0-33 23.5-56.5T160-880h640q33 0 56.5 23.5T880-800v120q0 23-11 40.5T840-611v451q0 33-23.5 56.5T760-80H200Zm0-520v440h560v-440H200Zm-40-80h640v-120H160v120Zm200 280h240v-80H360v80Zm120 20Z"/></svg>
-                </button>
-            </div>
-
-            <div class="search-filter-container">
-                 <!-- Search Bar -->
-                    <div class="search-bar">
-
-                        <input type="text" placeholder="Search">
-                        <button type="button" class="search-button">
-                            <i class="uil uil-search"></i>
+                
+                    <!-- Filter Dropdown -->
+                    <div class="filter-dropdown">
+                        <button class="filter-btn" onclick="toggleDropdown(this)">
+                            Sort: <span class="selected-filter">Select</span>
                         </button>
+                        <ul class="dropdown-content">
+                            <li><input type="checkbox" onclick="selectOption(this, 'filter')" /><label>Earliest</label></li>
+                            <li><input type="checkbox" onclick="selectOption(this, 'filter')" /><label>Latest</label></li>
+                        </ul>
                     </div>
 
-                <!-- Filter Dropdown -->
-                <div class="filter-dropdown">
-                    <button class="filter-btn" onclick="toggleDropdown(this)">
-                        Sort: <span class="selected-filter">Select</span>
-                    </button>
-                    <ul class="dropdown-content">
-                        <li><input type="checkbox" onclick="selectOption(this, 'filter')" /><label>Earliest</label></li>
-                        <li><input type="checkbox" onclick="selectOption(this, 'filter')" /><label>Latest</label></li>
-                    </ul>
                 </div>
-            </div>
+                <div class="tab_box-container">
+                    <button class="tab_btn active">Pending</button>
+                    <button class="tab_btn">Approved</button>
+                    <button class="tab_btn">Declined</button>
+                </div>
 
-            <div class="tab_box-container">
-                <button class="tab_btn active">Pending</button>
-                <button class="tab_btn">Approved</button>
-                <button class="tab_btn">Declined</button>
-            </div>
-            <div class="label_request-container">
-                <p>No.</p>
-                <p>Barangay ID</p>
-                <p>Name</p>
-                <p>Date & Time</p>
-                <p>Status</p>
-                <p>Details</p>
-            </div>
-            <div class="request_container">
-                <div class="request active">
-                    <div class="user_request">
-                        <p>1</p>
-                        <p>01</p>
-                        <p>21 Savage</p>
-                        <p>2024-10-12 13:02</p>
-                        <p class="request_pending">Pending</p>
-                        <button><a href="brgy_indigency-details.html">View Details</button></a>
+                <div class="label_request-container">
+                    <p>No.</p>
+                    <p>Barangay ID</p>
+                    <p>First Name</p>
+                    <p>Last Name</p>
+                    <p>Date & Time</p>
+                    <p>Status</p>
+                    <p>Details</p>
+                    <p>Remarks & Actions</p>
+                </div>
+
+                <div class="request_container">
+                    <div class="request active">
+                        <div class="user_request">
+                            <p>1</p>
+                            <p>01</p>
+                            <p>21</p>
+                            <p>Savage</p>
+                            <p>2024-10-12 13:02</p>
+                            <p class="request_pending">Pending</p>
+                            <button class="details_button">Details</button>
+                            <button class="approve_button">Approve</button>
+                            <button class="decline_button">Decline</button>
+                        </div>
                     </div>
-                </div>
 
-                <div class="request">
-                    <div class="user_request">
-                        <p>1</p>
-                        <p>01</p>
-                        <p>21 Savage</p>
-                        <p>2024-10-12 13:02</p>
-                        <p class="request_approved">Approved</p>
-                        <button><a href="brgy_indigency-details.html">View Details</a></button>
+                    <div class="request">
+                        <div class="user_request">
+                            <p>1</p>
+                            <p>01</p>
+                            <p>21</p>
+                            <p>Savage</p>
+                            <p>2024-10-12 13:02</p>
+                            <p class="request_approved">Approved</p>
+                            <button class="details_button">Details</button>
+                            <button class="remarks_button">Remarks</button>
+                            <button class="delete_button-m">Delete</button>
+                        </div>
                     </div>
-                </div>
 
-                <div class="request">
-                    <div class="user_request">
-                        <p>1</p>
-                        <p>01</p>
-                        <p>21 Savage</p>
-                        <p>2024-10-12 13:02</p>
-                        <p class="request_declined">Declined</p>
-                        <button><a href="brgy_indigency-details.html">View Details</a></button>
+                    <div class="request">
+                        <div class="user_request">
+                            <p>1</p>
+                            <p>01</p>
+                            <p>21</p>
+                            <p>Savage</p>
+                            <p>2024-10-12 13:02</p>
+                            <P class="request_declined">Declined</P>
+                            <button class="details_button">Details</button>
+                            <button class="remarks_button">Remarks</button>
+                            <button class="delete_button-m">Delete</button>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+    <!-------------- END OF BARANGAY CLEARANCE REQUESTS -------------->
 
-</main>
-<script>
+        <div id="barangayIndigencyRequests"  class="container parent_request-container">
+            <div class="barangay_request-container">
+                <div class="header_request-container">
+                    <h3>Barangay Indigency Requests</h3>
+                    <button class="trash_button trash_indigency">
+                        Trash
+                        <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#03045E"><path d="M200-80q-33 0-56.5-23.5T120-160v-451q-18-11-29-28.5T80-680v-120q0-33 23.5-56.5T160-880h640q33 0 56.5 23.5T880-800v120q0 23-11 40.5T840-611v451q0 33-23.5 56.5T760-80H200Zm0-520v440h560v-440H200Zm-40-80h640v-120H160v120Zm200 280h240v-80H360v80Zm120 20Z"/></svg>
+                    </button>
+                </div>
 
-</script>
+                <div class="search-filter-container">
+                    <!-- Search Bar -->
+                        <div class="search-bar">
+
+                            <input type="text" placeholder="Search">
+                            <button type="button" class="search-button">
+                                <i class="uil uil-search"></i>
+                            </button>
+                        </div>
+
+                    <!-- Filter Dropdown -->
+                    <div class="filter-dropdown">
+                        <button class="filter-btn" onclick="toggleDropdown(this)">
+                            Sort: <span class="selected-filter">Select</span>
+                        </button>
+                        <ul class="dropdown-content">
+                            <li><input type="checkbox" onclick="selectOption(this, 'filter')" /><label>Earliest</label></li>
+                            <li><input type="checkbox" onclick="selectOption(this, 'filter')" /><label>Latest</label></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="tab_box-container">
+                    <button class="tab_btn active">Pending</button>
+                    <button class="tab_btn">Approved</button>
+                    <button class="tab_btn">Declined</button>
+                </div>
+                <div class="label_request-container">
+                    <p>No.</p>
+                    <p>Barangay ID</p>
+                    <p>First Name</p>
+                    <p>Last Name</p>
+                    <p>Date & Time</p>
+                    <p>Status</p>
+                    <p>Details</p>
+                    <p>Remarks & Actions</p>
+                </div>
+                <div class="request_container">
+                    <div class="request active">
+                        <div class="user_request">
+                            <p>1</p>
+                            <p>01</p>
+                            <p>21</p>
+                            <p>Savage</p>
+                            <p>2024-10-12 13:02</p>
+                            <p class="request_pending">Pending</p>
+                            <button class="details_button">Details</button>
+                            <button class="approve_button">Approve</button>
+                            <button class="decline_button">Decline</button>
+                        </div>
+                    </div>
+
+                    <div class="request">
+                        <div class="user_request">
+                            <p>1</p>
+                            <p>01</p>
+                            <p>22</p>
+                            <p>Cabbage</p>
+                            <p>2024-10-12 13:02</p>
+                            <p class="request_approved">Approved</p>
+                            <button class="details_button">Details</button>
+                            <button class="remarks_button">Remarks</button>
+                            <button class="delete_button-m">Delete</button>
+                        </div>
+                    </div>
+
+                    <div class="request">
+                        <div class="user_request">
+                            <p>1</p>
+                            <p>01</p>
+                            <p>23</p>
+                            <p>Stage</p>
+                            <p>2024-10-12 13:02</p>
+                            <P class="request_declined">Declined</P>
+                            <button class="details_button">Details</button>
+                            <button class="remarks_button">Remarks</button>
+                            <button class="delete_button-m">Delete</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <!-------------- END OF BARANGAY INDIGENCY REQUESTS -------------->
+
+        <div id="responseModal" class="modal">
+            <div class="modal-content">
+                <span class="close-button">&times;</span>
+                <h4>Approve Remarks:</h4>
+                <textarea rows="10"></textarea>
+                <h4>Date Reviewed:</h4>
+                <input type="date" required>
+                <button class="btn">Approve</button>
+            </div>
+        </div>
+    <!-------------- END OF MODAL APPROVE BUTTON CLICK EXPAND -------------->
+        
+        <div id="declineModal" class="modal">
+            <div class="modal-content">
+                <span class="close-button">&times;</span>
+                <h4>Decline Remarks:</h4>
+                <textarea rows="10"></textarea>
+                <h4>Date Reviewed:</h4>
+                <input type="date" required>
+                <button class="btn">Decline</button>
+            </div>
+        </div>
+    <!-------------- END OF MODAL DECLINE BUTTON CLICK EXPAND -------------->
+
+        <div id="deleteModal" class="modal">
+            <div class="modal-content">
+                <h4>Delete Request?</h4>
+                <div class="delete_actions">
+                    <button class="delete_button-m btn">Delete</button>
+                    <button class="cancelDelete btn">Cancel</button>
+                </div>
+            </div>
+        </div>
+    <!-------------- END OF MODAL DELETE BUTTON CLICK EXPAND -------------->  
+
+        <div id="restoreModal" class="modal">
+            <div class="modal-content">
+                <h4>Restore Request?</h4>
+                <div class="restore_actions">
+                    <button class="restore_button btn">Restore</button>
+                    <button class="cancelDelete btn">Cancel</button>
+                </div>
+
+            </div>
+        </div>
+    <!-------------- END OF MODAL RESTORE BUTTON CLICK EXPAND -------------->  
+
+        <div id="detailModal" class="modal">
+            <div class="modal-content">
+                <span class="close-button">&times;</span>
+                <div class="req_details">
+                    <h4>Reason for applying:</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates, nesciunt aspernatur! Ipsa consectetur porro delectus, voluptas alias sunt beatae optio recusandae quibusdam minima earum fugiat possimus ea soluta quae debitis!</p>
+                </div>
+                <div class="req_details">
+                    <h4>Pick-up Date:</h4>
+                    <p>November 2, 2024</p>
+                </div>
+            </div>
+        </div>
+    <!-------------- END OF MODAL VIEW DETAILS BUTTON EXPAND -------------->
+
+        <div id="remarksModal" class="modal">
+            <div class="modal-content">
+                <span class="close-button">&times;</span>
+                <div class="req_details">
+                    <h4>Remarks:</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates, nesciunt aspernatur! Ipsa consectetur porro delectus, voluptas alias sunt beatae optio recusandae quibusdam minima earum fugiat possimus ea soluta quae debitis!</p>
+                </div>
+                <div class="req_details">
+                    <h4>Date Reviewed:</h4>
+                    <p>November 2, 2024 - 3:10 PM</p>
+                </div>
+            </div>
+        </div>
+    <!-------------- END OF MODAL VIEW REMARKS BUTTON EXPAND -------------->
+
+    <!--------------  MODAL OF TRASH BUTTON EXPAND -------------->
+        <div id="trashIDModal" class="trash_modal">
+            <div class="trash_modal-container">
+                <div class="close_button-container">
+                    <h4>ID Request Trash</h4>
+                    <button class="close_button">Close</button>
+                </div>
+                <div class="trash_modal-content">
+                    <div class="trash_header-container">
+                        <div class="trash_header-action">
+                            <button class="restore_button">Restore</button>
+                            <button class="delete_button-m">Delete</button>
+                        </div>
+                    </div>
+
+                    <div class="trash_label-container">
+                        <div class="select_all-container">
+                            <p>All</p>
+                            <input type="checkbox">
+                        </div>
+                        <p>No.</p>
+                        <p>Barangay ID</p>
+                        <p>First Name</p>
+                        <p>Last Name</p>
+                        <p>Date & Time</p>
+                        <p>Status</p>
+                        <p>Details</p>
+                        <p>Remarks</p>
+                    </div>
+
+                    <div class="trash_user-request-container">
+                        <div class="trash_user-request">
+                            <input type="checkbox">
+                            <p>1</p>
+                            <p>01</p>
+                            <p>Boy</p>
+                            <p>Bawang</p>
+                            <p>2024-10-12 13:02</p>
+                            <P class="request_declined">Declined</P>
+                            <button class="details_button">Details</button>
+                            <button class="remarks_button">Remarks</button>
+                        </div>
+
+                        <div class="trash_user-request">
+                            <input type="checkbox">
+                            <p>12</p>
+                            <p>25</p>
+                            <p>Boy</p>
+                            <p>Bawang</p>
+                            <p>2024-10-12 13:02</p>
+                            <P class="request_declined">Declined</P>
+                            <button class="details_button">Details</button>
+                            <button class="remarks_button">Remarks</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    <!-------------- END MODAL OF ID TRASH BUTTON EXPAND -------------->
+
+        <div id="trashClearanceModal" class="trash_modal">
+            <div class="trash_modal-container">
+                <div class="close_button-container">
+                    <h4>Clearance Request Trash</h4>
+                    <button class="close_button">Close</button>
+                </div>
+                <div class="trash_modal-content">
+                    <div class="trash_header-container">
+                        <div class="trash_header-action">
+                            <button class="restore_button">Restore</button>
+                            <button class="delete_button-m">Delete</button>
+                        </div>
+                    </div>
+
+                    <div class="trash_label-container">
+                        <div class="select_all-container">
+                            <p>All</p>
+                            <input type="checkbox">
+                        </div>
+                        <p>No.</p>
+                        <p>Barangay ID</p>
+                        <p>First Name</p>
+                        <p>Last Name</p>
+                        <p>Date & Time</p>
+                        <p>Status</p>
+                        <p>Details</p>
+                        <p>Remarks</p>
+                    </div>
+
+                    <div class="trash_user-request-container">
+                        <div class="trash_user-request">
+                            <input type="checkbox">
+                            <p>1</p>
+                            <p>01</p>
+                            <p>Boy</p>
+                            <p>Bawang</p>
+                            <p>2024-10-12 13:02</p>
+                            <P class="request_declined">Declined</P>
+                            <button class="details_button">Details</button>
+                            <button class="remarks_button">Remarks</button>
+                        </div>
+
+                        <div class="trash_user-request">
+                            <input type="checkbox">
+                            <p>1</p>
+                            <p>03</p>
+                            <p>Labubu</p>
+                            <p>Labubu</p>
+                            <p>2024-10-12 13:02</p>
+                            <P class="request_declined">Declined</P>
+                            <button class="details_button">Details</button>
+                            <button class="remarks_button">Remarks</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <!-------------- END MODAL OF CLEARANCE TRASH BUTTON EXPAND -------------->
+
+        <div id="trashIndigencyModal" class="trash_modal">
+            <div class="trash_modal-container">
+                <div class="close_button-container">
+                    <h4>Indigency Request Trash</h4>
+                    <button class="close_button">Close</button>
+                </div>
+                <div class="trash_modal-content">
+                    <div class="trash_header-container">
+                        <div class="trash_header-action">
+                            <button class="restore_button">Restore</button>
+                            <button class="delete_button-m">Delete</button>
+                        </div>
+                    </div>
+
+                    <div class="trash_label-container">
+                        <div class="select_all-container">
+                            <p>All</p>
+                            <input type="checkbox">
+                        </div>
+                        <p>No.</p>
+                        <p>Barangay ID</p>
+                        <p>First Name</p>
+                        <p>Last Name</p>
+                        <p>Date & Time</p>
+                        <p>Status</p>
+                        <p>Details</p>
+                        <p>Remarks</p>
+                    </div>
+
+                    <div class="trash_user-request-container">
+                        <div class="trash_user-request">
+                            <input type="checkbox">
+                            <p>1</p>
+                            <p>56</p>
+                            <p>Skibidi</p>
+                            <p>Toilet</p>
+                            <p>2024-10-12 13:02</p>
+                            <P class="request_declined">Declined</P>
+                            <button class="details_button">Details</button>
+                            <button class="remarks_button">Remarks</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <!-------------- END MODAL OF INDIGENCY TRASH BUTTON EXPAND -------------->
+
+    </main>
 </body>
