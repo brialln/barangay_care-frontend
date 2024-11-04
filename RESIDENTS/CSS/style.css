@@ -583,6 +583,7 @@ input, textarea, select {
 
 /* POSTS STYLE */
 .posts_container {
+    margin-top: 1rem;
     display: grid;
     grid-template-columns: repeat(3, minmax(350px, 1fr)); 
     align-items: center;

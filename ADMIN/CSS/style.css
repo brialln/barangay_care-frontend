@@ -519,7 +519,10 @@ input, textarea, select {
 .posts_container {
     display: grid;
     grid-template-columns: repeat(3, minmax(350px, 1fr)); 
-    gap: 4rem;
+    margin-top: 1rem;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
 }
 
 .post {
