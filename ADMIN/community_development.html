@@ -485,7 +485,23 @@
         <h3>Manage Idea Submissions</h3>
         <div class="barangay_request-container">
             <div class="header_request-container">
-                <h3>Residents Idea Submissions</h3>
+                <h3>Community Idea Submissions</h3>
+                <button class="trash_button trash_idea">
+                    Trash
+                    <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#03045E"><path d="M200-80q-33 0-56.5-23.5T120-160v-451q-18-11-29-28.5T80-680v-120q0-33 23.5-56.5T160-880h640q33 0 56.5 23.5T880-800v120q0 23-11 40.5T840-611v451q0 33-23.5 56.5T760-80H200Zm0-520v440h560v-440H200Zm-40-80h640v-120H160v120Zm200 280h240v-80H360v80Zm120 20Z"/></svg>
+                </button>
+            </div>
+
+            <div class="search-filter-container">
+                <!-- Search Bar -->
+                    <div class="search-bar">
+
+                        <input type="text" placeholder="Search">
+                        <button type="button" class="search-button">
+                            <i class="uil uil-search"></i>
+                        </button>
+                    </div>
+
                 <!-- Filter Dropdown -->
                 <div class="filter-dropdown">
                     <button class="filter-btn" onclick="toggleDropdown(this)">
@@ -496,21 +512,18 @@
                         <li><input type="checkbox" onclick="selectOption(this, 'filter')" /><label>Latest</label></li>
                     </ul>
                 </div>
-                <button class="trash_button">
-                    Trash
-                    <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#03045E"><path d="M200-80q-33 0-56.5-23.5T120-160v-451q-18-11-29-28.5T80-680v-120q0-33 23.5-56.5T160-880h640q33 0 56.5 23.5T880-800v120q0 23-11 40.5T840-611v451q0 33-23.5 56.5T760-80H200Zm0-520v440h560v-440H200Zm-40-80h640v-120H160v120Zm200 280h240v-80H360v80Zm120 20Z"/></svg>
-                </button>
-                
-            </div>            
+
+            </div>   
 
             <div class="tab_box-container">
                 <button class="tab_btn active">Idea Submissions</button>
             </div>
 
-            <div class="community_request-container">
+            <div class="community_label_request-container">
                 <p>No.</p>
                 <p>Barangay ID</p>
-                <p>Name</p>
+                <p>First Name</p>
+                <p>Last Name</p>
                 <p>Date & Time</p>
                 <p>Details</p>
                 <p>Delete</p>
@@ -520,49 +533,120 @@
                     <div class="community_request-container">
                         <p>1</p>
                         <p>01</p>
-                        <p>21 Savage</p>
+                        <p>Alvin</p>
+                        <p>Chipmunks</p>
                         <p>2024-10-12 13:02</p>
-                        <button id="readIdeaBtn">Read Idea</button>
-                        <button>Delete</button>
+                        <button class="read_idea-button">Read Idea</button>
+                        <button class="delete_button-m">Delete</button>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Idea Submission Modal -->
-    <div class="ideaModal">
-        <div class="ideaModal-content">
-            <span class="closeIdea">&times;</span>
-            <h3>Read Idea Submission</h3>
-            <p>From:</p>
-            <p>Juan Dela Cruz</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates, nesciunt aspernatur! Ipsa consectetur porro delectus, voluptas alias sunt beatae optio recusandae quibusdam minima earum fugiat possimus ea soluta quae debitis!</p>
+    <div id="ideaModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <div class="req_details">
+                <h4>Submitted by:</h4>
+                <p>Alvin Chipmunks</p>
+            </div>
+            <div class="req_details">
+                <h4>Submitted Idea:</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates, nesciunt aspernatur! Ipsa consectetur porro delectus, voluptas alias sunt beatae optio recusandae quibusdam minima earum fugiat possimus ea soluta quae debitis!</p>
+            </div>
         </div>
     </div>
-    <!-------------- END OF IDEA SUBMISSION AND VOLUNTEER SIGN UP SECTION -------------->
+    <!-------------- END OF MODAL POP-UP FOR READ IDEA BUTTON -------------->
+
+    <div id="reportThreadModal" class="thread_modal">
+        <div class="thread_modal-content">
+            <span class="thread_close-button">&times;</span>
+            <h3>Flag Post</h3>
+            <p>Please provide a reason for flagging this post:</p>
+            <textarea rows="4" cols="50"></textarea>
+            <button class="btn">Flag Post</button>
+        </div>
+    </div>
+    <!-------------- END OF MODAL POP-UP FOR THREADS REPORT -------------->
+
+    <div id="deleteThreadModal" class="thread_modal">
+        <div class="thread_modal-content">
+            <h3>Delete Post</h3>
+            <p>Are you sure you want to delete this post?</p>
+            <button class="btn">Delete</button>
+            <button class="btn thread_cancel-button">Cancel</button>
+        </div>
+    </div>
+    <!-------------- END OF MODAL POP-UP FOR THREADS DELETE CONFIRMATION -------------->
+
+    <div id="trashIdeaModal" class="trash_modal">
+        <div class="trash_modal-container">
+            <div class="close_button-container">
+                <h4>Idea Submission Trash</h4>
+                <button class="close_button">Close</button>
+            </div>
+            <div class="trash_modal-content">
+                <div class="trash_header-container">
+                    <div class="trash_header-action">
+                        <button class="restore_button">Restore</button>
+                        <button class="delete_button-m">Delete</button>
+                    </div>
+                </div>
+
+                <div class="trash_idea_label-container">
+                    <div class="select_all-container">
+                        <p>All</p>
+                        <input type="checkbox">
+                    </div>
+                    <p>No.</p>
+                    <p>Barangay ID</p>
+                    <p>First Name</p>
+                    <p>Last Name</p>
+                    <p>Date & Time</p>
+                    <p>Details</p>
+                </div>
+
+                <div class="trash_user-request-container">
+                    <div class="trash_idea-request">
+                        <input type="checkbox">
+                        <p>1</p>
+                        <p>01</p>
+                        <p>Boy</p>
+                        <p>Bawang</p>
+                        <p>2024-10-12 13:02</p>
+                        <button class="read_idea-button">Read Idea</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!-------------- END MODAL OF ID TRASH BUTTON EXPAND -------------->
 
     <div id="deleteModal" class="modal">
         <div class="modal-content">
-            <h3>Delete Post</h3>
-            <p>Are you sure you want to delete this post?</p>
-            <button id="confirmDelete" class="btn">Delete</button>
-            <button id="cancelDelete" class="btn cancelDelete">Cancel</button>
+            <h4>Delete Request?</h4>
+            <div class="delete_actions">
+                <button class="delete_button-m btn">Delete</button>
+                <button class="cancelDelete btn">Cancel</button>
+            </div>
         </div>
     </div>
-    <!-------------- END OF MODAL POP=UP FOR THREADS DELETE CONFIRMATION -------------->
+    <!-------------- END OF MODAL DELETE BUTTON CLICK EXPAND -------------->  
 
-    <div id="reportModal" class="modal">
+    <div id="restoreModal" class="modal">
         <div class="modal-content">
-            <span class="close-button">&times;</span>
-            <h3>Flag Post</h3>
-            <p>Please provide a reason for flagging this post:</p>
-            <textarea id="reportReason" rows="4" cols="50"></textarea>
-            <button id="submitReport" class="btn">Flag Post</button>
+            <h4>Restore Request?</h4>
+            <div class="restore_actions">
+                <button class="restore_button btn">Restore</button>
+                <button class="cancelDelete btn">Cancel</button>
+            </div>
+
         </div>
     </div>
-    <!-------------- END OF MODAL POP=UP FOR THREADS REPORT -------------->
-    
+    <!-------------- END OF MODAL RESTORE BUTTON CLICK EXPAND -------------->  
+
     </main>
 </body>
 </html>
