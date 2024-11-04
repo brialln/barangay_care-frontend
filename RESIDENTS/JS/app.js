@@ -25,8 +25,6 @@ window.onload = function() {
     }
 });
 
-
-
 // LIGHTBOX FUNCTION FOR IMAGE EXPAND
 function openLightbox(imageSrc) {
     // Ensure the lightbox only opens when this function is called
@@ -54,3 +52,40 @@ function handleImageClick(imageSrc) {
     // Make sure the lightbox is opened through a user interaction (click)
     openLightbox(imageSrc);
 }
+
+// Functionality for Idea Submission Acknowledgement
+document.addEventListener('DOMContentLoaded', function() {
+  // Modal functionality
+  const acknowledgeModal = document.getElementById('acknowledgeModal');
+  const acknowledgeModalContent = acknowledgeModal.querySelector('.thread_modal-content');
+
+  const acknowledgeButtonDone = document.querySelectorAll('.acknowledge-done-btn');
+
+  document.querySelectorAll('.acknowledge-button').forEach(button => {
+      button.addEventListener('click', function() {
+          acknowledgeModal.style.display = 'block';
+          acknowledgeModal.classList.remove('fade-out');
+          acknowledgeModalContent.classList.remove('fade-out');
+      });
+  });
+
+  acknowledgeButtonDone.forEach(button => {
+      button.addEventListener('click', function() {
+          const modal = this.closest('.thread_modal');
+          modal.classList.add('fade-out');
+          setTimeout(() => {
+              modal.style.display = 'none';
+          }, 300)
+      })
+  })
+
+  window.addEventListener('click', function(event) {
+      if (event.target === acknowledgeModal ) {
+          event.target.classList.add('fade-out');
+          event.target.querySelector('.thread_modal-content');
+          setTimeout(() => {
+              event.target.style.display = 'none';
+          }, 300); // Match the duration of the fade-out animation
+      }
+  });
+})
