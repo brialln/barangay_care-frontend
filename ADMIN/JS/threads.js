@@ -1,3 +1,4 @@
+// Function for Threads (Like Buttons, View Comments, View Replies, etc.)
 document.addEventListener('DOMContentLoaded', function() {
     // Ensure the lightbox is hidden on page load
     const lightbox = document.getElementById('lightbox');
@@ -20,62 +21,6 @@ document.addEventListener('DOMContentLoaded', function() {
         button.addEventListener('click', function() {
             this.classList.toggle('active');
         });
-    });
-
-    // Modal functionality
-    const reportModal = document.getElementById('reportModal');
-    const reportModalContent = reportModal.querySelector('.modal-content');
-    const deleteModal = document.getElementById('deleteModal');
-    const deleteModalContent = deleteModal.querySelector('.modal-content');
-    const cancelButtons = document.querySelectorAll('.cancelDelete');
-    const closeButtons = document.querySelectorAll('.close-button');
-
-    document.querySelectorAll('.report-thread-btn').forEach(button => {
-        button.addEventListener('click', function() {
-            reportModal.style.display = 'block';
-            reportModal.classList.remove('fade-out');
-            reportModalContent.classList.remove('slide-out');
-        });
-    });
-
-    document.querySelectorAll('.delete-thread-btn').forEach(button => {
-        button.addEventListener('click', function() {
-            deleteModal.style.display = 'block';
-            deleteModal.classList.remove('fade-out');
-            deleteModalContent.classList.remove('slide-out');
-        });
-    });
-
-    cancelButtons.forEach(button => {
-        button.addEventListener('click', function() {
-            const modal = this.closest('.modal');
-            modal.classList.add('fade-out');
-            modal.querySelector('.modal-content').classList.add('slide-out');
-            setTimeout(() => {
-                modal.style.display = 'none';
-            }, 500)
-        })
-    })
-
-    closeButtons.forEach(button => {
-        button.addEventListener('click', function() {
-            const modal = this.closest('.modal');
-            modal.classList.add('fade-out');
-            modal.querySelector('.modal-content').classList.add('slide-out');
-            setTimeout(() => {
-                modal.style.display = 'none';
-            }, 500); // Match the duration of the fade-out animation
-        });
-    });
-
-    window.addEventListener('click', function(event) {
-        if (event.target === reportModal || event.target === deleteModal) {
-            event.target.classList.add('fade-out');
-            event.target.querySelector('.modal-content').classList.add('slide-out');
-            setTimeout(() => {
-                event.target.style.display = 'none';
-            }, 500); // Match the duration of the fade-out animation
-        }
     });
 
     // Add event listener for comment like buttons
@@ -149,7 +94,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-// Functionality for Edit and Delete User Threads (My Feeds)
+// Functionality for Edit and Delete User Threads Dropdown
 document.addEventListener('DOMContentLoaded', function() {
     document.querySelectorAll('.threads-menu-button').forEach(menuButton => {
         const menuContent = menuButton.nextElementSibling;
@@ -167,36 +112,62 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-// Functionality after Clicking the Submit Idea/Sign up Button (Acknowledgement Message)
+// Functionality for Edit, Flag, and Delete Modals
 document.addEventListener('DOMContentLoaded', function() {
     // Modal functionality
-    var modal = document.querySelector(".ideaModal");
-    var btn = document.getElementById("readIdeaBtn");
-    var span = document.querySelector(".closeIdea");
+    const reportThreadModal = document.getElementById('reportThreadModal');
+    const reportThreadModalContent = reportThreadModal.querySelector('.thread_modal-content');
 
-    // When the user clicks the button, open the modal 
-    btn.onclick = function() {
-        modal.style.display = "block";
-        setTimeout(function() {
-            modal.classList.add("show");
-        }, 10); // Slight delay to trigger transition
-    }
+    const deleteThreadModal = document.getElementById('deleteThreadModal');
+    const deleteThreadModalContent = deleteThreadModal.querySelector('.thread_modal-content');
 
-    // When the user clicks on <span> (x), close the modal
-    span.onclick = function() {
-        modal.classList.remove("show");
-        setTimeout(function() {
-            modal.style.display = "none";
-        }, 500); // Match the transition duration
-    }
+    const closeThreadButton = document.querySelectorAll('.thread_close-button');
+    const cancelThreadButton = document.querySelectorAll('.thread_cancel-button');
 
-    // When the user clicks anywhere outside of the modal, close it
-    window.onclick = function(event) {
-        if (event.target == modal) {
-            modal.classList.remove("show");
-            setTimeout(function() {
-                modal.style.display = "none";
-            }, 500); // Match the transition duration
+    document.querySelectorAll('.report-thread-btn').forEach(button => {
+        button.addEventListener('click', function() {
+            reportThreadModal.style.display = 'block';
+            reportThreadModal.classList.remove('fade-out');
+            reportThreadModalContent.classList.remove('fade-out');
+        });
+    });
+
+    document.querySelectorAll('.delete-thread-btn').forEach(button => {
+        button.addEventListener('click', function() {
+            deleteThreadModal.style.display = 'block';
+            deleteThreadModal.classList.remove('fade-out');
+            deleteThreadModalContent.classList.remove('fade-out');
+        });
+    });
+
+    cancelThreadButton.forEach(button => {
+        button.addEventListener('click', function() {
+            const modal = this.closest('.thread_modal');
+            modal.classList.add('fade-out');
+            setTimeout(() => {
+                modal.style.display = 'none';
+            }, 300)
+        })
+    })
+
+    closeThreadButton.forEach(button => {
+        button.addEventListener('click', function() {
+            const modal = this.closest('.thread_modal');
+            modal.classList.add('fade-out');
+            modal.querySelector('.thread_modal-content');
+            setTimeout(() => {
+                modal.style.display = 'none';
+            }, 300); // Match the duration of the fade-out animation
+        });
+    });
+
+    window.addEventListener('click', function(event) {
+        if (event.target === reportThreadModal || event.target === deleteThreadModal) {
+            event.target.classList.add('fade-out');
+            event.target.querySelector('.thread_modal-content');
+            setTimeout(() => {
+                event.target.style.display = 'none';
+            }, 300); // Match the duration of the fade-out animation
         }
-    }
-});
+    });
+})
