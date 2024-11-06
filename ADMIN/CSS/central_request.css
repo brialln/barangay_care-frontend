@@ -536,7 +536,7 @@
 
 .community_label_request-container {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 2fr 1fr 1fr 1fr;
     align-items: center;
     text-align: center;
     font-size: 0.9rem;
@@ -545,7 +545,7 @@
 
 .community_request-container {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 2fr 1fr 1fr 1fr;
     align-items: center;
     text-align: center;
     font-size: 0.9rem;
