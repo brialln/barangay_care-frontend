@@ -546,6 +546,73 @@
         </div>
     </div>
 
+    <div id="barangayVolunteerSignUps"  class="container community_section-container">
+        <h3>Manage Volunteer Sign Ups</h3>
+        <div class="barangay_request-container">
+            <div class="header_request-container">
+                <h3>Community Volunteer Sign Ups</h3>
+                <button class="trash_button trash_volunteer">
+                    Trash
+                    <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#03045E"><path d="M200-80q-33 0-56.5-23.5T120-160v-451q-18-11-29-28.5T80-680v-120q0-33 23.5-56.5T160-880h640q33 0 56.5 23.5T880-800v120q0 23-11 40.5T840-611v451q0 33-23.5 56.5T760-80H200Zm0-520v440h560v-440H200Zm-40-80h640v-120H160v120Zm200 280h240v-80H360v80Zm120 20Z"/></svg>
+                </button>
+            </div>
+
+            <div class="search-filter-container">
+                <!-- Search Bar -->
+                    <div class="search-bar">
+
+                        <input type="text" placeholder="Search">
+                        <button type="button" class="search-button">
+                            <i class="uil uil-search"></i>
+                        </button>
+                    </div>
+
+                <!-- Filter Dropdown -->
+                <div class="filter-dropdown">
+                    <button class="filter-btn" onclick="toggleDropdown(this)">
+                        Sort: <span class="selected-filter">Select</span>
+                    </button>
+                    <ul class="dropdown-content">
+                        <li><input type="checkbox" onclick="selectOption(this, 'filter')" /><label>Earliest</label></li>
+                        <li><input type="checkbox" onclick="selectOption(this, 'filter')" /><label>Latest</label></li>
+                    </ul>
+                </div>
+
+            </div>   
+
+            <div class="tab_box-container">
+                <button class="tab_btn active">Volunteer Sign Ups</button>
+            </div>
+
+            <div class="community_label_request-container">
+                <p>No.</p>
+                <p>First Name</p>
+                <p>Last Name</p>
+                <p>Contact Number</p>
+                <p>Email</p>
+                <p>Date & Time</p>
+                <p>Details</p>
+                <p>Delete</p>
+            </div>
+            <div class="request_container">
+                <div class="request active">
+                    <div class="community_request-container">
+                        <p>1</p>
+                        <p>Alvin</p>
+                        <p>Chipmunks</p>
+                        <p>09038438443</p>
+                        <p>alvinchipmunks@gmail.com</p>
+                        <p>2024-10-12 13:02</p>
+                        <button class="read_reason-button">Reason</button>
+                        <button class="delete_button-m">Delete</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
     <div id="ideaModal" class="modal">
         <div class="modal-content">
             <span class="close-button">&times;</span>
@@ -555,6 +622,21 @@
             </div>
             <div class="req_details">
                 <h4>Submitted Idea:</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates, nesciunt aspernatur! Ipsa consectetur porro delectus, voluptas alias sunt beatae optio recusandae quibusdam minima earum fugiat possimus ea soluta quae debitis!</p>
+            </div>
+        </div>
+    </div>
+    <!-------------- END OF MODAL POP-UP FOR READ IDEA BUTTON -------------->
+
+    <div id="volunteerModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <div class="req_details">
+                <h4>Volunteer:</h4>
+                <p>Alvin Chipmunks</p>
+            </div>
+            <div class="req_details">
+                <h4>Volunteer Reason:</h4>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates, nesciunt aspernatur! Ipsa consectetur porro delectus, voluptas alias sunt beatae optio recusandae quibusdam minima earum fugiat possimus ea soluta quae debitis!</p>
             </div>
         </div>
@@ -596,7 +678,7 @@
                     </div>
                 </div>
 
-                <div class="trash_idea_label-container">
+                <div class="trash_community_label-container">
                     <div class="select_all-container">
                         <p>All</p>
                         <input type="checkbox">
@@ -611,7 +693,7 @@
                 </div>
 
                 <div class="trash_user-request-container">
-                    <div class="trash_idea-request">
+                    <div class="trash_community-request">
                         <input type="checkbox">
                         <p>1</p>
                         <p>Alvin</p>
@@ -626,7 +708,53 @@
         </div>
 
     </div>
-    <!-------------- END MODAL OF ID TRASH BUTTON EXPAND -------------->
+    <!-------------- END MODAL OF IDEA TRASH BUTTON EXPAND -------------->
+
+    <div id="trashVolunteerModal" class="trash_modal">
+        <div class="trash_modal-container">
+            <div class="close_button-container">
+                <h4>Volunteer Sign Up Trash</h4>
+                <button class="close_button">Close</button>
+            </div>
+            <div class="trash_modal-content">
+                <div class="trash_header-container">
+                    <div class="trash_header-action">
+                        <button class="restore_button">Restore</button>
+                        <button class="delete_button-m">Delete</button>
+                    </div>
+                </div>
+
+                <div class="trash_community_label-container">
+                    <div class="select_all-container">
+                        <p>All</p>
+                        <input type="checkbox">
+                    </div>
+                    <p>No.</p>
+                    <p>First Name</p>
+                    <p>Last Name</p>
+                    <p>Contact Number</p>
+                    <p>Email</p>
+                    <p>Date & Time</p>
+                    <p>Details</p>
+                </div>
+
+                <div class="trash_user-request-container">
+                    <div class="trash_community-request">
+                        <input type="checkbox">
+                        <p>1</p>
+                        <p>Alvin</p>
+                        <p>Chipmunks</p>
+                        <p>09038438443</p>
+                        <p>alvinchipmunks@gmail.com</p>
+                        <p>2024-10-12 13:02</p>
+                        <button class="read_reason-button">Reason</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!-------------- END MODAL OF VOLUNTEER TRASH BUTTON EXPAND -------------->
 
     <div id="deleteModal" class="modal">
         <div class="modal-content">
