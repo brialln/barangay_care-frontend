@@ -426,7 +426,7 @@
     margin-bottom: 0.2rem;
 }
 
-.remarks_button, .restore_button, .read_idea-button {
+.remarks_button, .restore_button, .read_idea-button, .read_reason-button {
     background: var(--color-navy-blue);
     color: var(--color-white);
     padding: 0.5rem 1rem; 
@@ -486,7 +486,7 @@
     transition: var(--transition);
 }
 
-.remarks_button:hover, .restore_button:hover, .read_idea-button:hover {
+.remarks_button:hover, .restore_button:hover, .read_idea-button:hover, .read_reason-button:hover {
     background: var(--color-ash);
     border-color: var(--color-navy-blue);
     color: var(--color-navy-blue);
@@ -846,7 +846,7 @@
     width: 80%;
 }
 
-.select_all-container input[type="checkbox"], .trash_user-request input[type = "checkbox"] {
+.select_all-container input[type="checkbox"], .trash_user-request input[type = "checkbox"], .trash_community-request input[type = "checkbox"] {
     accent-color: var(--color-primary);
     cursor: pointer;
 }
