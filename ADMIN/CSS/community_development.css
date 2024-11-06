@@ -557,7 +557,7 @@
 
 .trash_idea_label-container {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 2fr 1fr 1fr;
     text-align: center;
     font-size: 0.9rem;
     padding: 0 0.8rem 0.6rem;
@@ -565,7 +565,7 @@
 
 .trash_idea-request {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 2fr 1fr 1fr;
     align-items: center;
     text-align: center;
     font-size: 0.9rem;
