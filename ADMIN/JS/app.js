@@ -80,8 +80,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // ----------------------------------- Function for Barangay Idea Submissions -----------------------------------
 document.addEventListener('DOMContentLoaded', function() {
-    const barangayIdeaTabs = document.querySelectorAll('#barangayIdeaRequests .tab_btn');
-    const barangayIdeaContent = document.querySelectorAll('#barangayIdeaRequests .request');
+    const barangayIdeaTabs = document.querySelectorAll('#barangayIdeaSubmissions .tab_btn');
+    const barangayIdeaContent = document.querySelectorAll('#barangayIdeaSubmissions .request');
 
     barangayIdeaTabs.forEach((tab, index) => {
         tab.addEventListener('click', () => {
@@ -90,6 +90,23 @@ document.addEventListener('DOMContentLoaded', function() {
             
             barangayIdeaContent.forEach(content => content.classList.remove('active'));
             barangayIdeaContent[index].classList.add('active');
+        });
+    });
+});
+
+
+// ----------------------------------- Function for Barangay Volunteer Sign Ups -----------------------------------
+document.addEventListener('DOMContentLoaded', function() {
+    const barangayVolunteerTabs = document.querySelectorAll('#barangayVolunteerSignUps .tab_btn');
+    const barangayVolunteerContent = document.querySelectorAll('#barangayVolunteerSignUps .request');
+
+    barangayVolunteerTabs.forEach((tab, index) => {
+        tab.addEventListener('click', () => {
+            barangayVolunteerTabs.forEach(t => t.classList.remove('active'));
+            tab.classList.add('active');
+            
+            barangayVolunteerContent.forEach(content => content.classList.remove('active'));
+            barangayVolunteerContent[index].classList.add('active');
         });
     });
 });
@@ -218,7 +235,8 @@ document.addEventListener('DOMContentLoaded', function() {
         { id: 'trashIndigencyModal', class: 'trash_indigency' },
         { id: 'trashDisasterModal', class: 'trash_disaster' },
         { id: 'trashJusticeModal', class: 'trash_justice' },
-        { id: 'trashIdeaModal', class: 'trash_idea' }
+        { id: 'trashIdeaModal', class: 'trash_idea' },
+        { id: 'trashVolunteerModal', class: 'trash_volunteer' }
     ];
 
     modals.forEach(modalInfo => {
@@ -265,10 +283,13 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-// Function for Idea Submission Modal (Read Idea, Delete Idea)
+// Function for Idea Submission Modal & Volunteer Sign Ups (Read Idea, Read Reason)
 document.addEventListener('DOMContentLoaded', function() {
     const ideaModal = document.getElementById('ideaModal');
     const ideaModalContent = ideaModal.querySelector('.modal-content');
+
+    const volunteerModal = document.getElementById('volunteerModal');
+    const volunteerModalContent = volunteerModal.querySelector('.modal-content');
 
     const closeButtons = document.querySelectorAll('.close-button');
     const cancelButtons = document.querySelectorAll('.cancelDelete');
@@ -278,6 +299,14 @@ document.addEventListener('DOMContentLoaded', function() {
             ideaModal.style.display = 'block';
             ideaModal.classList.remove('fade-out');
             ideaModalContent.classList.remove('fade-out');
+        })
+    })
+
+    document.querySelectorAll('.read_reason-button').forEach(button => {
+        button.addEventListener('click', function() {
+            volunteerModal.style.display = 'block';
+            volunteerModal.classList.remove('fade-out');
+            volunteerModalContent.classList.remove('fade-out');
         })
     })
 
@@ -304,7 +333,7 @@ document.addEventListener('DOMContentLoaded', function() {
     })
 
     window.addEventListener('click', function(event) {
-        if (event.target === ideaModal) {
+        if (event.target === ideaModal || event.target === volunteerModal) {
             event.target.classList.add('fade-out');
             event.target.querySelector('.modal-content');
             setTimeout(() => {
