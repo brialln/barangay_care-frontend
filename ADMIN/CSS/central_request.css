@@ -1,6 +1,27 @@
 @import url(style.css);
 
-/* ================ Barangay Request Container ================ */ 
+/* 
+Notes:
+1. This file is for the Central Request Page in the Admin Module.
+2. The Central Request Styling Sheet mainly stores styles for managing requests and submissions in Admin/Staff/SK. 
+3. It also consists of styles for the modal pop-ups for responses, approvals, declines, and deletions. 
+4. In addition, it includes the styling of Trash ModalS for managing deleted requests. 
+5 .Button Styles for Approve, Decline, Restore, Delete, View Details, View Remarks, etc. are also included in this file.
+*/
+
+/* ================================ PARENTS ================================ */
+/* No Style for the Parents of Main ID, Indigency, Clearance, Disaster, Justice */
+
+/* Parent for Idea Submission, Volunteer Sign Ups, Contact Responses (Light Orange Background) */
+.light-primary_section-container{
+    padding: 3rem 2rem 1rem 2rem;
+    background: var(--color-light-primary);
+    border-radius: var(--card-border-radius-3);
+    box-shadow: inset 0px 6px 8px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* ================================ CHILD OF BOTH COMMUNITY SECTION CONTAINER & PARENT REQUEST CONTAINER ================================ */
+/* Request Container for ID, Indigency, Clearance, Disaster, Justice, Idea Submissions, Volunteer Sign Ups, Contact */
 .barangay_request-container{
     background: var(--color-white);
     display: flex;
@@ -16,7 +37,7 @@
     color: var(--color-navy-blue);
 }
 
-/* ================ Top Header Request Container ================ */ 
+/* General Header for Barangay Request Containers */ 
 .header_request-container {
     display: flex;
     flex-direction: row;
@@ -24,7 +45,118 @@
     justify-content: space-between;
 }
 
-/* ================ Trash Button ================ */ 
+/* ================================ TOP LABELS CONTAINER ================================ */
+/* Label Container for Barangay ID, Barangay Clearance, Barangay Indigency, Barangay Justice - Responses */
+.label_request-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 2fr;
+    text-align: center;
+    font-size: 0.9rem;
+    padding: 0 0.8rem 0.6rem;
+}
+
+/* Label Container for Disaster Preparedness Responses */
+.disaster_label-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 2fr;
+    text-align: center;
+    font-size: 0.9rem;
+    padding: 0 0.8rem 0.6rem;
+}
+
+/* Label Container for Idea Submission & Volunteer Sign Ups */
+.community_label_request-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 2fr 1fr 1fr 1fr;
+    align-items: center;
+    text-align: center;
+    font-size: 0.9rem;
+    padding: 0 0.8rem 0.6rem;
+}
+
+/* Label Container for Contact Responses */
+.contact_label_request-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 2fr 1fr 1fr 1fr;
+    text-align: center;
+    font-size: 0.9rem;
+    padding: 0 0.8rem 0.6rem;
+}
+
+/* ================================ INDIVIDUAL REQUEST CONTAINER  ================================ */
+/* Individual Request Container for Barangay ID, Barangay Clearance, Barangay Indigency, Barangay Justice */
+.user_request {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    align-items: center;
+    text-align: center;
+    font-size: 0.9rem;
+    background: var(--color-ash);
+    padding: 0.8rem 0.6rem;
+    border-radius: var(--card-border-radius-2);
+    box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.15); 
+    margin-bottom: 0.2rem;
+}
+
+/* Individual Disaster Request Container */
+.disaster_request-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    align-items: center;
+    text-align: center;
+    font-size: 0.9rem;
+    background: var(--color-ash);
+    padding: 0.8rem 0.6rem;
+    border-radius: var(--card-border-radius-2);
+    box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.15); 
+    margin-bottom: 0.2rem;
+}
+
+/* Individual Request Container for Idea Submission & Volunteer Sign Ups */
+.community_request-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 2fr 1fr 1fr 1fr;
+    align-items: center;
+    text-align: center;
+    font-size: 0.9rem;
+    background: var(--color-ash);
+    padding: 0.8rem 0.6rem;
+    border-radius: var(--card-border-radius-2);
+    box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.15); 
+    margin-bottom: 0.2rem;
+}
+
+/* Individual Request Container for Contact Responses */
+.contact_request-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 2fr 1fr 1fr 1fr;
+    align-items: center;
+    text-align: center;
+    font-size: 0.9rem;
+    background: var(--color-ash);
+    padding: 0.8rem 0.6rem;
+    border-radius: var(--card-border-radius-2);
+    box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.15); 
+    margin-bottom: 0.2rem;
+}
+
+/* Status Styles Inside of Request Containers  */
+.request_pending {
+    color: var(--color-charcoal-gray);
+    font-weight: 600;
+}
+
+.request_approved {
+    color: var(--color-green);
+    font-weight: 600;
+}
+
+.request_declined {
+    color: var(--color-red);
+    font-weight: 600;
+}
+
+/* Trash Button Inside of Request Container (Triggers Trash Modal) */ 
 .trash_button {
     display: flex;
     flex-direction: row;
@@ -43,11 +175,12 @@
     transition: var(--transition);
 }
 
+/* Trash Button Hover */ 
 .trash_button:hover {
     opacity: 0.6;
 }
 
-/* ================ Search Bar ================ */
+/* ================================ SEARCH BAR AND SORT FILTER ================================ */
 .search-filter-container {
     display: flex;
     align-items: center;
@@ -98,7 +231,7 @@
     border: 1px solid var(--color-primary);
 }
 
-/* ================ Container for Both Dropdowns (Filter and Priority) ================ */ 
+/* Container for Both Dropdown - Filter and Priority */ 
 .dropdown_button-container {
     display: flex;
     flex-direction: row;
@@ -106,7 +239,8 @@
     justify-content: center;
     gap: 2rem;
 }
-/* ================ Filter Dropdown ================ */ 
+
+/* Filter Dropdown */ 
 .filter-dropdown {
     position: relative;
 }
@@ -128,7 +262,7 @@
     color: var(--color-primary);
 }
 
-/* Dropdown Content Styling */
+/* Filter Dropdown Content Styling */
 .dropdown-content {
     position: absolute;
     top: 125%;
@@ -204,7 +338,7 @@
     color: var(--color-black);
 }
 
-/* ================ Priority Level ================ */
+/* Priority Levels */
 .priority_level[data-priority="High"] {
     color: var(--color-red);
     font-weight: 600;
@@ -219,7 +353,6 @@
     color: var(--color-green);
     font-weight: 600;
 }
-
 
 .priority-dropdown {
     position: relative;
@@ -241,7 +374,7 @@
     opacity: 0.8;
 }
 
-/* Dropdown Content Styling */
+/* Priority Dropdown Content Styling */
 .priority_dropdown-content {
     position: absolute;
     top: 125%;
@@ -321,7 +454,8 @@
     color: var(--color-green);
 }
 
-/* ================ Tab Box Container for Responses & Requests ================ */ 
+/* ================================ NAVIGATION TABS FOR REQUESTS ================================ */ 
+/* Navigation Tabs for ID, Clearance, Indigency, Justice, Disaster, Idea Submissions, Volunteer Sign Ups, Contact */
 .tab_box-container {
     width: 100%;
     display: flex;
@@ -331,7 +465,6 @@
     border-bottom: 2px solid var(--color-primary);
     font-size: 1.2rem;
     font-weight: 600;
-
 }
 
 .tab_box-container .tab_btn {
@@ -368,25 +501,7 @@
     border-radius: var(--card-border-radius-4);
 }
 
-/* ================ General Top Labels Container (No, ID, Name, etc.) ================ */
-.label_request-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 2fr;
-    text-align: center;
-    font-size: 0.9rem;
-    padding: 0 0.8rem 0.6rem;
-}
-
-/* ================ Disaster Top Labels Container (No, ID, Name, etc.) ================ */
-.disaster_label-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 2fr;
-    text-align: center;
-    font-size: 0.9rem;
-    padding: 0 0.8rem 0.6rem;
-}
-
-/* ================ Request Tabs Container w/ Moving Animations  ================ */
+/* ================================ GENERAL MULTIPLE INDIVIDUAL REQUEST CONTAINER  ================================ */
 .request_container {
     max-height: 350px; /* Set the maximum height of the container */
     overflow-y: auto; /* Allows vertical scrolling */
@@ -412,8 +527,221 @@
     margin-bottom: 0.8rem;
 }
 
-/* ================ Overall User Requests (Central Request, Justice) ================ */
-.user_request {
+/* SideBar Scroll Section */
+.request_container::-webkit-scrollbar {
+    width: 0.6rem;  /* Width of the vertical scrollbar */
+    height: 0.6rem; /* Height of the horizontal scrollbar (if needed) */
+}
+
+/* Scrollbar track */
+.request_container::-webkit-scrollbar-track {
+    background: var(--color-ash);  /* Background of the scrollbar track */
+    border-radius: 0.6rem;  /* Round edges for the track */
+}
+
+/* Scrollbar handle */
+.request_container::-webkit-scrollbar-thumb {
+    background-color: var(--color-primary); /* Color of the scrollbar thumb */
+    border-radius: 10px;  /* Round edges for the thumb */
+    border: 2px solid var(--color-ash);
+    cursor: pointer;
+}
+
+/* Hover effect on the scrollbar thumb */
+.request_container::-webkit-scrollbar-thumb:hover {
+    background-color: var(--color-navy-blue); /* Darken color on hover */
+}
+
+/* ================= */
+/* ================================ */
+/* ================================ TRASH MODAL SECTION ================================ */
+/* ================================ */
+/* ================= */
+
+/* ================================= GENERAL TRASH MODAL CONTAINER =================================  */
+.trash_modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 9; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    background-color: rgba(0,0,0,0.5); /* Black w/ opacity */
+    transition: var(--transition);
+    animation: fadeIn 0.3s;
+}
+
+.trash_modal-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.trash_modal-container {
+    width: 80%;
+    margin: 5% auto;
+    background: var(--color-white);
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: var(--card-border-radius-3);
+    transition: var(--transition);
+    animation: scaleIn 0.3s;
+}
+
+.trash_header-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.trash_header-action {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 2rem;
+}
+
+.close_button-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.close_button-container button {
+    background: transparent;
+    color: var(--color-navy-blue);
+    border: 2px solid var(--color-navy-blue);
+    padding: 0.5rem 1rem;
+    border-radius: var(--card-border-radius-4);
+    font-weight: 550;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.close_button-container button:hover {
+    opacity: 0.7;
+}
+
+.trash_modal.fade-out {
+    animation: fadeOut 0.3s;
+}
+
+/* Trash Container for Individual Requests */
+.trash_user-request-container {
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+/* Optional: Customize scrollbar appearance */
+.trash_user-request-container::-webkit-scrollbar, .modal-content::-webkit-scrollbar {
+    margin-left: 5;
+    width: 10px; 
+}
+
+.trash_user-request-container::-webkit-scrollbar-thumb, .modal-content::-webkit-scrollbar-thumb {
+    background-color: var(--color-navy-blue); 
+    border-top-right-radius: var(--card-border-radius-3);
+    border-bottom-right-radius: var(--card-border-radius-3);
+}
+
+.trash_user-request-container::-webkit-scrollbar-track, .modal-content::-webkit-scrollbar-track {
+    background: var(--color-primary); 
+    border-top-right-radius: var(--card-border-radius-3);
+    border-bottom-right-radius: var(--card-border-radius-3);
+}
+
+/* ================================ TRASH TOP LABELS ================================ */
+/* Trash Top Labels in ID, Clearance, Indigency, Justice Trash */
+.trash_label-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    text-align: center;
+    font-size: 0.9rem;
+    padding: 0 0.8rem 0.6rem;
+}
+
+/* Trash Top Labels in Contact Trash */
+.trash_contact_label-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 2fr 1fr 1fr;
+    text-align: center;
+    font-size: 0.9rem;
+    padding: 0 0.8rem 0.6rem;
+}
+
+/* Trash Top Labels in Community Trash (Idea Submissions & Volunteer Sign Ups) */
+.trash_community_label-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 2fr 1fr 1fr;
+    text-align: center;
+    font-size: 0.9rem;
+    padding: 0 0.8rem 0.6rem;
+}
+
+/* Trash Top Labels in Disaster Preparedness Trash */
+.disaster_trash_label-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    text-align: center;
+    font-size: 0.9rem;
+    padding: 0 0.8rem 0.6rem;
+}
+
+/* ================================ TRASH INDIVIDUAL REQUEST CONTAINER ================================ */
+/* Trash Individual Request for Contact Trash */
+.trash_contact-request {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 2fr 1fr 1fr;
+    align-items: center;
+    text-align: center;
+    font-size: 0.9rem;
+    background: var(--color-ash);
+    padding: 0.8rem 0.6rem;
+    border-radius: var(--card-border-radius-2);
+    box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.15); 
+    margin-bottom: 0.2rem;
+    margin-right: 0.5rem;
+}
+
+/* Trash Individual Request for Community (Idea Submission & Volunteer Sign Ups) Trash */
+.trash_community-request {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 2fr 1fr 1fr;
+    align-items: center;
+    text-align: center;
+    font-size: 0.9rem;
+    background: var(--color-ash);
+    padding: 0.8rem 0.6rem;
+    border-radius: var(--card-border-radius-2);
+    box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.15); 
+    margin-bottom: 0.2rem;
+    margin-right: 0.5rem;
+}
+
+/* Trash Individual Request for Disaster Trash */
+.disaster_trash_user-request {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    align-items: center;
+    text-align: center;
+    font-size: 0.9rem;
+    background: var(--color-ash);
+    padding: 0.8rem 0.6rem;
+    border-radius: var(--card-border-radius-2);
+    box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.15); 
+    margin-bottom: 0.2rem;
+    margin-right: 0.5rem;
+}
+
+/* Trash Individual Request for ID, Clearance, Indigency, Justice Trash */
+.trash_user-request {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     align-items: center;
@@ -424,9 +752,39 @@
     border-radius: var(--card-border-radius-2);
     box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.15); 
     margin-bottom: 0.2rem;
+    margin-right: 0.5rem;
 }
 
-.remarks_button, .restore_button, .read_idea-button, .read_reason-button {
+/* Inside of Trash Individual Request Container */
+.select_all-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 0.9rem;
+    width: 80%;
+}
+
+.select_all-container input[type="checkbox"], 
+.trash_user-request input[type = "checkbox"], 
+.trash_contact-request input[type = "checkbox"],
+.disaster_trash_user-request input[type = "checkbox"],
+.trash_community-request input[type = "checkbox"] {
+    accent-color: var(--color-primary);
+    cursor: pointer;
+}
+
+/* ================= */
+/* ================================ */
+/* ================================ BUTTONS SECTION ================================ */
+/* ================================ */
+/* ================= */
+.remarks_button, 
+.restore_button, 
+.read_idea-button, 
+.read_reason-button, 
+.read_contact-button, 
+.edit_button-m,
+.cancelDelete {
     background: var(--color-navy-blue);
     color: var(--color-white);
     padding: 0.5rem 1rem; 
@@ -462,7 +820,7 @@
     transition: var(--transition);
 }
 
-.decline_button, .delete_button-m {
+.decline_button, .delete_button-m, .delete_emergency-m {
     background: var(--color-red);
     color: var(--color-white);
     padding: 0.5rem 1rem; 
@@ -486,7 +844,13 @@
     transition: var(--transition);
 }
 
-.remarks_button:hover, .restore_button:hover, .read_idea-button:hover, .read_reason-button:hover {
+.remarks_button:hover, 
+.restore_button:hover, 
+.read_idea-button:hover, 
+.read_reason-button:hover, 
+.read_contact-button:hover, 
+.edit_button-m:hover,
+.cancelDelete:hover {
     background: var(--color-ash);
     border-color: var(--color-navy-blue);
     color: var(--color-navy-blue);
@@ -504,136 +868,26 @@
     color: var(--color-green);
 }
 
-.decline_button:hover, .delete_button-m:hover {
+.decline_button:hover, .delete_button-m:hover, .delete_emergency-m:hover {
     background: var(--color-ash);
     border-color: var(--color-red);
     color: var(--color-red);
 }
 
-/* ================ Specific for Disaster Requests ================ */
-.disaster_request-container {
+/* Button Containers */
+.delete_actions, .restore_actions, .edit_actions-container {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    align-items: center;
-    text-align: center;
-    font-size: 0.9rem;
-    background: var(--color-ash);
-    padding: 0.8rem 0.6rem;
-    border-radius: var(--card-border-radius-2);
-    box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.15); 
-    margin-bottom: 0.2rem;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
 }
 
+/* ================= */
+/* ================================ */
+/* ================================ MODAL SECTION ================================ */
+/* ================================ */
+/* ================= */
 
-
-/* ================ For Idea Submissions & Volunteer Requests ================ */
-.community_section-container{
-    padding: 3rem 2rem 1rem 2rem;
-    background: var(--color-light-primary);
-    border-radius: var(--card-border-radius-3);
-    box-shadow: inset 0px 6px 8px 6px rgba(0, 0, 0, 0.1);
-}
-
-.community_label_request-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 2fr 1fr 1fr 1fr;
-    align-items: center;
-    text-align: center;
-    font-size: 0.9rem;
-    padding: 0 0.8rem 0.6rem;
-}
-
-.community_request-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 2fr 1fr 1fr 1fr;
-    align-items: center;
-    text-align: center;
-    font-size: 0.9rem;
-    background: var(--color-ash);
-    padding: 0.8rem 0.6rem;
-    border-radius: var(--card-border-radius-2);
-    box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.15); 
-    margin-bottom: 0.2rem;
-}
-
-.community_request-container button {
-    background: var(--color-navy-blue);
-    color: var(--color-white);
-    padding: 0.5rem 1rem; 
-    margin: 0 auto; 
-    display: block; 
-    border: 2px solid var(--color-navy-blue);
-    border-radius: var(--card-border-radius-2);
-    cursor: pointer;
-    transition: var(--transition);
-}
-
-.community_request-container button:last-child {
-    background: var(--color-red);
-    color: var(--color-white);
-    padding: 0.5rem 1rem; 
-    margin: 0 auto; 
-    display: block; 
-    border: 2px solid var(--color-red);
-    border-radius: var(--card-border-radius-2);
-    cursor: pointer;
-    transition: var(--transition);
-}
-
-.community_request-container button:hover {
-    background: var(--color-ash);
-    border: 2px solid var(--color-navy-blue);
-    color: var(--color-navy-blue);
-}
-
-.community_request-container button:last-child:hover {
-    background: var(--color-ash);
-    border: 2px solid var(--color-red);
-    color: var(--color-red);
-}
-
-/* ================ Status Styles (Pending, Approved, Declined) ================  */
-.request_pending {
-    color: var(--color-charcoal-gray);
-    font-weight: 600;
-}
-
-.request_approved {
-    color: var(--color-green);
-    font-weight: 600;
-}
-
-.request_declined {
-    color: var(--color-red);
-    font-weight: 600;
-}
-
-/* ================ Side-Scrollbar Section ================ */
-.request_container::-webkit-scrollbar {
-    width: 0.6rem;  /* Width of the vertical scrollbar */
-    height: 0.6rem; /* Height of the horizontal scrollbar (if needed) */
-}
-
-/* Scrollbar track */
-.request_container::-webkit-scrollbar-track {
-    background: var(--color-ash);  /* Background of the scrollbar track */
-    border-radius: 0.6rem;  /* Round edges for the track */
-}
-
-/* Scrollbar handle */
-.request_container::-webkit-scrollbar-thumb {
-    background-color: var(--color-primary); /* Color of the scrollbar thumb */
-    border-radius: 10px;  /* Round edges for the thumb */
-    border: 2px solid var(--color-ash);
-    cursor: pointer;
-}
-
-/* Hover effect on the scrollbar thumb */
-.request_container::-webkit-scrollbar-thumb:hover {
-    background-color: var(--color-navy-blue); /* Darken color on hover */
-}
-
-/* ====================== Modal Button & Styling for Response/Approve, Decline, Restore, Delete, VIew Details, VIew Remarks ======================  */
+/* General Modal for Triggered by Buttons */
 .modal {
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
@@ -736,7 +990,58 @@
     animation: fadeOut 0.3s;
 }
 
-/* Button Style Per Modal */
+/* ================================ ELEMENT ID + MODAL-CONTENT STYLE ================================ */
+/* Edit Modal */
+#editModal .modal-content {
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+}
+
+/* Delete Modal  & Restore Modal */
+#deleteModal .modal-content, #restoreModal .modal-content, #deleteEmergencyModal .modal-content {
+    width: 22%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+/* Delete Idea Modal */
+#deleteIdeaModal .modal-content {
+    text-align: center;
+    width: 22%;
+}
+
+/* ================================ ELEMENT ID + BUTTON STYLE ================================ */
+.edit_actions-m, .delete_actions-m, .restore_actions-m {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+.edit_actions-m button, .delete_actions-m button, .restore_actions-m button {
+    padding: 0.8rem 1rem;
+}
+
+/* Delete Idea Modal */
+#deleteIdeaModal button:nth-child(1) {
+    background: var(--color-red);
+    color: var(--color-white);
+    border: 2px solid transparent;
+    transition: var(--transition);
+}
+
+#deleteIdeaModal button:nth-child(1):hover {
+    background: var(--color-white);
+    border-color: var(--color-red);
+    color: var(--color-red);
+}
+
+#deleteIdeaModal button:nth-child(2) {
+    border: 2px solid var(--color-navy-blue);
+}
+
+/* Response Modal */
 #responseModal button {
     background: var(--color-green);
     border: 2px solid transparent;
@@ -748,190 +1053,26 @@
     color: var(--color-green);
 }
 
-#declineModal button, #deleteModal button:nth-child(1) {
+/* Decline Modal */
+#declineModal button, #deleteModal button:nth-child(1), #deleteEmergencyModal button:nth-child(1) {
     background: var(--color-red);
     border: 2px solid transparent;
 }
 
-#declineModal button:hover, #deleteModal button:nth-child(1):hover {
+#declineModal button:hover, #deleteModal button:nth-child(1):hover, #deleteEmergencyModal button:nth-child(1):hover {
     background: var(--color-white);
     border: 2px solid var(--color-red);
     color: var(--color-red);
 }
 
+/* ================================ ELEMENT ID + H4, P, INPUT TAGS ================================ */
+/* Delete Modal & Restore Modal */
 #deleteModal h4, #restoreModal h4 {
     color: var(--color-navy-blue);
     text-align: center;
 }
 
-.delete_actions, .restore_actions {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1.5rem;
-}
-
-#deleteModal .modal-content, #restoreModal .modal-content {
-    width: 22%;
-    display: flex;
-    flex-direction: column;
-}
-
-/* ====================== Trash Modal ======================  */
-/* Modal Animations */
-.trash_modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 9; /* Sit on top */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    background-color: rgba(0,0,0,0.5); /* Black w/ opacity */
-    transition: var(--transition);
-    animation: fadeIn 0.3s;
-}
-
-.trash_modal-content {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-}
-
-.trash_modal-container {
-    width: 80%;
-    margin: 5% auto;
-    background: var(--color-white);
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    padding: 2rem;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: var(--card-border-radius-3);
-    transition: var(--transition);
-    animation: scaleIn 0.3s;
-}
-
-.close_button-container {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.close_button-container button {
-    background: transparent;
-    color: var(--color-navy-blue);
-    border: 2px solid var(--color-navy-blue);
-    padding: 0.5rem 1rem;
-    border-radius: var(--card-border-radius-4);
-    font-weight: 550;
-    cursor: pointer;
-    transition: var(--transition);
-}
-
-.close_button-container button:hover {
-    opacity: 0.7;
-}
-
-.trash_modal.fade-out {
-    animation: fadeOut 0.3s;
-}
-
-/* Modal Content */
-.select_all-container {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    font-size: 0.9rem;
-    width: 80%;
-}
-
-.select_all-container input[type="checkbox"], .trash_user-request input[type = "checkbox"], .trash_community-request input[type = "checkbox"] {
-    accent-color: var(--color-primary);
-    cursor: pointer;
-}
-
-.trash_label-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    text-align: center;
-    font-size: 0.9rem;
-    padding: 0 0.8rem 0.6rem;
-}
-
-/* Specific for Disaster Preparedness Responses */
-.disaster_trash_label-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    text-align: center;
-    font-size: 0.9rem;
-    padding: 0 0.8rem 0.6rem;
-}
-
-.trash_user-request-container {
-    max-height: 300px;
-    overflow-y: auto;
-}
-
-.trash_user-request {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    align-items: center;
-    text-align: center;
-    font-size: 0.9rem;
-    background: var(--color-ash);
-    padding: 0.8rem 0.6rem;
-    border-radius: var(--card-border-radius-2);
-    box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.15); 
-    margin-bottom: 0.2rem;
-    margin-right: 0.5rem;
-}
-
-/* Specific for Disaster Preparedness Responses */
-.disaster_trash_user-request {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    align-items: center;
-    text-align: center;
-    font-size: 0.9rem;
-    background: var(--color-ash);
-    padding: 0.8rem 0.6rem;
-    border-radius: var(--card-border-radius-2);
-    box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.15); 
-    margin-bottom: 0.2rem;
-    margin-right: 0.5rem;
-}
-
-.trash_header-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    align-items: center;
+#editModal .modal-content input:nth-child(2) {
+    margin-top: 0.5rem;
     margin-bottom: 1rem;
-}
-
-.trash_header-action {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 2rem;
-}
-
-/* ====================== Trash Scrollbale ======================  */
-/* Optional: Customize scrollbar appearance */
-.trash_user-request-container::-webkit-scrollbar, .modal-content::-webkit-scrollbar {
-    margin-left: 5;
-    width: 10px; /* Width of the scrollbar */
-}
-
-.trash_user-request-container::-webkit-scrollbar-thumb, .modal-content::-webkit-scrollbar-thumb {
-    background-color: var(--color-navy-blue); /* Scrollbar thumb color */
-    border-top-right-radius: var(--card-border-radius-3);
-    border-bottom-right-radius: var(--card-border-radius-3);
-}
-
-.trash_user-request-container::-webkit-scrollbar-track, .modal-content::-webkit-scrollbar-track {
-    background: var(--color-primary); /* Scrollbar track color */
-    border-top-right-radius: var(--card-border-radius-3);
-    border-bottom-right-radius: var(--card-border-radius-3);
 }
