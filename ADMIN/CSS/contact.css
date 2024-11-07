@@ -47,36 +47,9 @@
     width: 100%;
 }
 
-
 .contact_edit{
     display: flex;
     flex-direction: column; 
     gap: 0.5rem;
     width: 100%;
-}
-
-/* ==================== Location Map Styles ==================== */
-.location_container {
-    margin-top: 1rem;
-    flex: 1 1 100%;
-    overflow: hidden;
-    border: 5px solid var(--color-navy-blue);
-    border-radius: var(--card-border-radius-3);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow */
-    max-width: 100%; /* Responsive width */
-    position: relative; /* For the responsiveness */
-    padding-top: 56.25%; /* 16:9 aspect ratio */
-    transition: border 300ms ease-in-out;
-}
-
-.location_container:hover {
-    border: 5px solid var(--color-primary);
-}
-
-.location_container iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
 }
