@@ -237,7 +237,24 @@
             </div>
         </div>
     </div>
-<!-------------- END OF DISASTER & RESPONSES -------------->
+    <!-------------- END OF DISASTER & RESPONSES -------------->
+
+    <div class="container contact_form">
+            <div class="emergency_hotline-container">
+                <h3>Emergency Hotlines</h3>
+                <div class="emergency_hotline">
+                    <div class="hotline">
+                        <p>Emergency Medical Services (EMS) / Ambulance:</p>
+                        <p>0999-000-9999</p>
+                        <div class="edit_actions-container">
+                            <button class="edit_button-m">Edit</button>
+                            <button class="delete_emergency-m">Delete</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+    <!-------------- END OF DISASTER & PREPAREDNESS FORM SECTION -------------->
 
     <div class="form_section">
         <div class="container form_section-container">
@@ -316,10 +333,34 @@
     </div>
     <!-------------- END OF MODAL DECLINE BUTTON CLICK EXPAND -------------->
 
+    <div id="editModal" class="modal">
+        <div class="modal-content">
+            <h4>Edit Emergency Hotline</h4>
+            <input type="text" placeholder="Emergency Department">
+            <input type="text" placeholder="Emergency Hotline">
+            <div class="edit_actions-m">
+                <button class="edit_button-m">Done</button>
+                <button class="cancelDelete">Cancel</button>
+            </div>
+        </div>
+    </div>
+    <!-------------- END OF MODAL EDIT BUTTON CLICK EXPAND --------------> 
+
+    <div id="deleteEmergencyModal" class="modal">
+        <div class="modal-content">
+            <h4>Delete Emergency Hotline?</h4>
+            <div class="delete_actions-m">
+                <button class="btn">Delete</button>
+                <button class="cancelDelete btn">Cancel</button>
+            </div>
+        </div>
+    </div>
+    <!-------------- END OF MODAL DELETE EMERGENCY BUTTON CLICK EXPAND --------------> 
+
     <div id="deleteModal" class="modal">
         <div class="modal-content">
-            <h4>Delete Request?</h4>
-            <div class="delete_actions">
+            <h4>Delete Response?</h4>
+            <div class="delete_actions-m">
                 <button class="delete_button-m btn">Delete</button>
                 <button class="cancelDelete btn">Cancel</button>
             </div>
@@ -330,11 +371,10 @@
     <div id="restoreModal" class="modal">
         <div class="modal-content">
             <h4>Restore Request?</h4>
-            <div class="restore_actions">
+            <div class="restore_actions-m">
                 <button class="restore_button btn">Restore</button>
                 <button class="cancelDelete btn">Cancel</button>
             </div>
-
         </div>
     </div>
     <!-------------- END OF MODAL RESTORE BUTTON CLICK EXPAND -------------->  
