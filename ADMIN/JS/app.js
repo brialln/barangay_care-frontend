@@ -1,3 +1,7 @@
+/*
+    * This file contains the General Javascript functions for the ADMIN.
+*/
+
 // ----------------------------------- Function for Barangay ID Requests -----------------------------------
 document.addEventListener('DOMContentLoaded', function() {
     const barangayIDTabs = document.querySelectorAll('#barangayIDRequests .tab_btn');
@@ -111,6 +115,22 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
+// ----------------------------------- Function for Barangay Contact Submissions -----------------------------------
+document.addEventListener('DOMContentLoaded', function() {
+    const barangayContactTabs = document.querySelectorAll('#barangayContactSubmissions .tab_btn');
+    const barangayContactContent = document.querySelectorAll('#barangayContactSubmissions .request');
+
+    barangayContactTabs.forEach((tab, index) => {
+        tab.addEventListener('click', () => {
+            barangayContactTabs.forEach(t => t.classList.remove('active'));
+            tab.classList.add('active');
+            
+            barangayContactContent.forEach(content => content.classList.remove('active'));
+            barangayContactContent[index].classList.add('active');
+        });
+    });
+});
+
 // ----------------------------------- Function for Dropdown Sort and Filter -----------------------------------
 // Toggle dropdown visibility for each button individually
 function toggleDropdown(button) {
@@ -166,7 +186,9 @@ document.addEventListener('DOMContentLoaded', function() {
         { id: 'deleteModal', class: 'delete_button-m' },
         { id: 'restoreModal', class: 'restore_button' },
         { id: 'detailModal', class: 'details_button' },
-        { id: 'remarksModal', class: 'remarks_button' }
+        { id: 'remarksModal', class: 'remarks_button' },
+        { id: 'editModal', class: 'edit_button-m' },
+        { id: 'deleteEmergencyModal', class: 'delete_emergency-m' }
     ];
 
     modals.forEach(modalInfo => {
@@ -236,7 +258,8 @@ document.addEventListener('DOMContentLoaded', function() {
         { id: 'trashDisasterModal', class: 'trash_disaster' },
         { id: 'trashJusticeModal', class: 'trash_justice' },
         { id: 'trashIdeaModal', class: 'trash_idea' },
-        { id: 'trashVolunteerModal', class: 'trash_volunteer' }
+        { id: 'trashVolunteerModal', class: 'trash_volunteer' },
+        { id: 'trashContactModal', class: 'trash_contact' }
     ];
 
     modals.forEach(modalInfo => {
@@ -285,36 +308,37 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // Function for Idea Submission Modal & Volunteer Sign Ups (Read Idea, Read Reason)
 document.addEventListener('DOMContentLoaded', function() {
-    const ideaModal = document.getElementById('ideaModal');
-    const ideaModalContent = ideaModal.querySelector('.modal-content');
+    // Modal functionality for Idea Submission and Volunteer Sign Ups
+    const modals = [
+        { id: 'ideaModal', class: 'read_idea-button' },
+        { id: 'volunteerModal', class: 'read_reason-button' },
+        { id: 'contactModal', class: 'read_contact-button' }
+    ];
 
-    const volunteerModal = document.getElementById('volunteerModal');
-    const volunteerModalContent = volunteerModal.querySelector('.modal-content');
+    modals.forEach(modalInfo => {
+        const modal = document.getElementById(modalInfo.id);
+        const modalContent = modal ? modal.querySelector('.modal-content') : null;
+
+        if (modal && modalContent) {
+            document.querySelectorAll(`.${modalInfo.class}`).forEach(button => {
+                button.addEventListener('click', function() {
+                    modal.style.display = 'block';
+                    modal.classList.remove('fade-out');
+                    modalContent.classList.remove('fade-out');
+                });
+            });
+        }
+    });
 
     const closeButtons = document.querySelectorAll('.close-button');
     const cancelButtons = document.querySelectorAll('.cancelDelete');
 
-    document.querySelectorAll('.read_idea-button').forEach(button => {
-        button.addEventListener('click', function() {
-            ideaModal.style.display = 'block';
-            ideaModal.classList.remove('fade-out');
-            ideaModalContent.classList.remove('fade-out');
-        })
-    })
-
-    document.querySelectorAll('.read_reason-button').forEach(button => {
-        button.addEventListener('click', function() {
-            volunteerModal.style.display = 'block';
-            volunteerModal.classList.remove('fade-out');
-            volunteerModalContent.classList.remove('fade-out');
-        })
-    })
-
     closeButtons.forEach(button => {
         button.addEventListener('click', function() {
             const modal = this.closest('.modal');
+            const modalContent = modal.querySelector('.modal-content');
             modal.classList.add('fade-out');
-            modal.querySelector('.modal-content');
+            modalContent.classList.add('fade-out');
             setTimeout(() => {
                 modal.style.display = 'none';
             }, 300); // Match the duration of the fade-out animation
@@ -324,21 +348,26 @@ document.addEventListener('DOMContentLoaded', function() {
     cancelButtons.forEach(button => {
         button.addEventListener('click', function() {
             const modal = this.closest('.modal');
+            const modalContent = modal.querySelector('.modal-content');
             modal.classList.add('fade-out');
-            modal.querySelector('.modal-content').classList.add('slide-out');
+            modalContent.classList.add('slide-out');
             setTimeout(() => {
                 modal.style.display = 'none';
-            }, 300)
-        })
-    })
+            }, 300); // Match the duration of the fade-out animation
+        });
+    });
 
     window.addEventListener('click', function(event) {
-        if (event.target === ideaModal || event.target === volunteerModal) {
-            event.target.classList.add('fade-out');
-            event.target.querySelector('.modal-content');
-            setTimeout(() => {
-                event.target.style.display = 'none';
-            }, 300); // Match the duration of the fade-out animation
-        }
+        modals.forEach(modalInfo => {
+            const modal = document.getElementById(modalInfo.id);
+            if (event.target === modal) {
+                modal.classList.add('fade-out');
+                const modalContent = modal.querySelector('.modal-content');
+                modalContent.classList.add('fade-out');
+                setTimeout(() => {
+                    modal.style.display = 'none';
+                }, 300); // Match the duration of the fade-out animation
+            }
+        });
     });
-})
+});
