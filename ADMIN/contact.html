@@ -14,6 +14,7 @@
      <link rel="stylesheet" href="CSS/style.css">
      <link rel="stylesheet" href="CSS/sidebar.css">
      <link rel="stylesheet" href="CSS/contact.css">
+     <link rel="stylesheet" href="CSS/central_request.css">
 
      <!-- ICONSCOUT CDN -->
     <link href="https://unicons.iconscout.com/release/v4.0.8/css/line.css" rel="stylesheet">
@@ -140,7 +141,7 @@
                                 <i class="uil uil-phone"></i>
                                 Phone:
                             </label>
-                            <input type="tel" id="phone" name="phone" placeholder="Contact Number" required />
+                            <input type="tel" id="phone" name="phone" maxlength="11" pattern="\d{11}" placeholder="Enter Contact Number" required>
                         </div>
 
                         <div class="contact_edit">
@@ -172,17 +173,125 @@
             </div>
            
         </div>
-
-        <h3>We are located here:</h3>
-        <div class="location_container">
-    
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d482.931841442269!2d120.96995888136628!3d14.45855830110773!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397cdedde49cc91%3A0xeaef723322dfd85b!2sPamplona%20Uno%20Barangay%20Hall!5e0!3m2!1sen!2sph!4v1729609277468!5m2!1sen!2sph" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
-
-            </iframe>
-        </div>
-
     </div>
 <!-------------- END OF EDIT CONTACT SECTION -------------->
+
+    <div id="barangayContactSubmissions"  class="container light-primary_section-container">
+        <h3>Manage Contact Form Submissions</h3>
+        <div class="barangay_request-container">
+            <div class="header_request-container">
+                <h3>Contact Form Submissions</h3>
+                <button class="trash_button trash_contact">
+                    Trash
+                    <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#03045E"><path d="M200-80q-33 0-56.5-23.5T120-160v-451q-18-11-29-28.5T80-680v-120q0-33 23.5-56.5T160-880h640q33 0 56.5 23.5T880-800v120q0 23-11 40.5T840-611v451q0 33-23.5 56.5T760-80H200Zm0-520v440h560v-440H200Zm-40-80h640v-120H160v120Zm200 280h240v-80H360v80Zm120 20Z"/></svg>
+                </button>
+            </div> 
+
+            <div class="tab_box-container">
+                <button class="tab_btn active">Form Submissions</button>
+            </div>
+
+            <div class="contact_label_request-container">
+                <p>No.</p>
+                <p>First Name</p>
+                <p>Last Name</p>
+                <p>Email</p>
+                <p>Date & Time</p>
+                <p>Details</p>
+                <p>Delete</p>
+            </div>
+            <div class="request_container">
+                <div class="request active">
+                    <div class="contact_request-container">
+                        <p>1</p>
+                        <p>NBA</p>
+                        <p>YoungBoy</p>
+                        <p>alvinchipmunks@gmail.com</p>
+                        <p>2024-10-12 13:02</p>
+                        <button class="read_contact-button">Message</button>
+                        <button class="delete_button-m">Delete</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="contactModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <div class="req_details">
+                <h4>Message:</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates, nesciunt aspernatur! Ipsa consectetur porro delectus, voluptas alias sunt beatae optio recusandae quibusdam minima earum fugiat possimus ea soluta quae debitis!</p>
+            </div>
+        </div>
+    </div>
+    <!-------------- END OF MODAL POP-UP FOR READ MESSAGE BUTTON -------------->
+
+    <div id="deleteModal" class="modal">
+        <div class="modal-content">
+            <h4>Delete Message?</h4>
+            <div class="delete_actions-m">
+                <button class="delete_button-m btn">Delete</button>
+                <button class="cancelDelete btn">Cancel</button>
+            </div>
+        </div>
+    </div>
+    <!-------------- END OF MODAL DELETE BUTTON CLICK EXPAND --------------> 
+
+    <div id="restoreModal" class="modal">
+        <div class="modal-content">
+            <h4>Restore Request?</h4>
+            <div class="restore_actions-m">
+                <button class="restore_button btn">Restore</button>
+                <button class="cancelDelete btn">Cancel</button>
+            </div>
+        </div>
+    </div>
+    <!-------------- END OF MODAL RESTORE BUTTON CLICK EXPAND -------------->  
+
+    <div id="trashContactModal" class="trash_modal">
+        <div class="trash_modal-container">
+            <div class="close_button-container">
+                <h4>Contact Message Trash</h4>
+                <button class="close_button">Close</button>
+            </div>
+            <div class="trash_modal-content">
+                <div class="trash_header-container">
+                    <div class="trash_header-action">
+                        <button class="restore_button">Restore</button>
+                        <button class="delete_button-m">Delete</button>
+                    </div>
+                </div>
+
+                <div class="trash_contact_label-container">
+                    <div class="select_all-container">
+                        <p>All</p>
+                        <input type="checkbox">
+                    </div>
+                    <p>No.</p>
+                    <p>First Name</p>
+                    <p>Last Name</p>
+                    <p>Email</p>
+                    <p>Date & Time</p>
+                    <p>Details</p>
+                </div>
+
+                <div class="trash_user-request-container">
+                    <div class="trash_contact-request">
+                        <input type="checkbox">
+                        <p>1</p>
+                        <p>Alvin</p>
+                        <p>Chipmunks</p>
+                        <p>alvinchipmunks@gmail.com</p>
+                        <p>2024-10-12 13:02</p>
+                        <button class="read_contact-button">Message</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-------------- END MODAL OF CONTACT TRASH BUTTON EXPAND -------------->
 
    </main>
 </body>
