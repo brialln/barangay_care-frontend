@@ -1,3 +1,9 @@
+/* 
+* Notes:
+* 1. This is the "GENERAL" CSS file for the ADMIN side.
+* 2. This file should always be included in every HTML head tag in ADMIN.
+*/
+
 * {
     margin: 0;
     padding: 0;
@@ -159,6 +165,7 @@ input, textarea, select {
 .edit-container button:hover svg {
     transform: scale(1.2);
 }
+
 
 /* GENERAL UPLOAD BUTTON STYLE */
 .upload_button {
