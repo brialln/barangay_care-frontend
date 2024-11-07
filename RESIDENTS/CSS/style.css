@@ -1,3 +1,9 @@
+/* 
+* Notes:
+* 1. This is the "GENERAL" CSS file for the RESIDENTS side.
+* 2. This file should always be included in every HTML head tag in RESIDENTS.
+*/
+
 * {
     margin: 0;
     padding: 0;
@@ -192,32 +198,33 @@ nav {
 
 nav a {
     background: transparent;
-    padding: 0.5rem 0.8rem;
+    padding: 0.5rem 0.9rem;
     font-size: 0.8rem;
     font-weight: 500;
     transition: var(--transition);
+    border-radius: var(--card-border-radius-4);
 }
 
 nav a:hover {
     background: var(--color-navy-blue);
     color: var(--color-white);
-    padding: 0.5rem 0.8rem;
-    border-radius: var(--card-border-radius-3);
+    padding: 0.5rem 0.9rem;
+    border-radius: var(--card-border-radius-4);
 }
 
 nav ul li.active a {
     background: var(--color-navy-blue);
     color: var(--color-white);
-    padding: 0.5rem 0.8rem;
-    border-radius: var(--card-border-radius-3);
+    padding: 0.5rem 0.9rem;
+    border-radius: var(--card-border-radius-4);
 }
 
 /* For Services page only */
 .services_active {
     background: var(--color-navy-blue);
     color: var(--color-white);
-    padding: 0.5rem 0.8rem;
-    border-radius: var(--card-border-radius-3);
+    padding: 0.5rem 0.9rem;
+    border-radius: var(--card-border-radius-4);
 }
 
 nav button {
@@ -262,6 +269,7 @@ nav button {
     position: absolute;
     top: 125%;
     right: 0;
+    width: 8rem;
     display: flex;
     flex-direction: column;
     box-shadow: 0 3rem 3rem rgba(0, 0, 0, 0.4);
@@ -269,14 +277,14 @@ nav button {
     visibility: hidden;
     opacity: 0;
     transition: var(--transition);
-    border-radius: 12px;
+    border-radius: var(--card-border-radius-3);
 }
 
 /* NAV PROFILE DROPDOWN STYLE */
 .nav_profile:hover > ul {
     visibility: visible;
     opacity: 1;
-    border-radius: 12px;
+    border-radius: var(--card-border-radius-3);
 } 
 
 .nav_profile ul li a {
@@ -299,8 +307,7 @@ nav button {
 .nav_profile ul li:last-child a {
     background: var(--color-red);
     color: var(--color-white);
-    border-bottom-left-radius: 12px;
-    border-bottom-right-radius: 12px;
+    border-radius: var(--card-border-radius-3);
 }
 
 .nav_profile ul li:last-child a:hover {
@@ -336,7 +343,8 @@ nav button {
     visibility: hidden;
     opacity: 0;
     transition: var(--transition);
-    max-height: 200px; 
+    width: 14rem;
+    max-height: 300px; 
     overflow-y: auto; 
     border-radius: 12px;
 }
