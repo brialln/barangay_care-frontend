@@ -1,6 +1,8 @@
-// GENERAL JS FUNCTION
+/*
+    * This file contains the General Javascript functions for the RESIDENTS.
+*/
 
-// Window Navigation Scroll Animation
+// Window Navigation Scroll Animation -----------------------------------------------------------
 window.addEventListener('scroll', () => {
     document.querySelector('nav').classList.toggle('window-scroll', window.scrollY > 0)
 })
@@ -25,9 +27,8 @@ window.onload = function() {
     }
 });
 
-// LIGHTBOX FUNCTION FOR IMAGE EXPAND
+// LIGHTBOX FUNCTION FOR IMAGE EXPAND -----------------------------------------------------------
 function openLightbox(imageSrc) {
-    // Ensure the lightbox only opens when this function is called
     const lightbox = document.getElementById('lightbox');
     const lightboxImg = document.getElementById('lightbox-img');
     
@@ -49,43 +50,83 @@ function closeLightbox() {
 }
 
 function handleImageClick(imageSrc) {
-    // Make sure the lightbox is opened through a user interaction (click)
     openLightbox(imageSrc);
 }
 
-// Functionality for Idea Submission Acknowledgement
+// Close lightbox when clicking outside of it
+document.addEventListener('click', function(event) {
+    const lightbox = document.getElementById('lightbox');
+    const lightboxContent = document.querySelector('.lightbox-content');
+    
+    if (lightbox && lightboxContent && lightbox.style.display === 'flex') {
+        if (!lightboxContent.contains(event.target)) {
+            closeLightbox();
+        }
+    }
+});
+
+function hideLightbox() {
+    const lightbox = document.getElementById('lightbox');
+    if (lightbox) {
+        lightbox.style.display = 'none';
+    }
+}
+
+// Ensure the lightbox is hidden as soon as the script runs
+(function() {
+    const lightbox = document.getElementById('lightbox');
+    if (lightbox) {
+        lightbox.style.display = 'none';
+    }
+})();
+
+// Functionality for Idea Submission Acknowledgement -----------------------------------------------------------
 document.addEventListener('DOMContentLoaded', function() {
-  // Modal functionality
-  const acknowledgeModal = document.getElementById('acknowledgeModal');
-  const acknowledgeModalContent = acknowledgeModal.querySelector('.thread_modal-content');
+    // Modal functionality
+    const modals = [
+        { id: 'acknowledgeModal', class: 'acknowledge-button' }
+    ];
 
-  const acknowledgeButtonDone = document.querySelectorAll('.acknowledge-done-btn');
+    modals.forEach(modalInfo => {
+        const modal = document.getElementById(modalInfo.id);
+        const modalContent = modal ? modal.querySelector('.thread_modal-content') : null;
 
-  document.querySelectorAll('.acknowledge-button').forEach(button => {
-      button.addEventListener('click', function() {
-          acknowledgeModal.style.display = 'block';
-          acknowledgeModal.classList.remove('fade-out');
-          acknowledgeModalContent.classList.remove('fade-out');
-      });
-  });
+        if (modal && modalContent) {
+            document.querySelectorAll(`.${modalInfo.class}`).forEach(button => {
+                button.addEventListener('click', function() {
+                    modal.style.display = 'block';
+                    modal.classList.remove('fade-out');
+                    modalContent.classList.remove('fade-out');
+                });
+            });
+        }
+    });
 
-  acknowledgeButtonDone.forEach(button => {
-      button.addEventListener('click', function() {
-          const modal = this.closest('.thread_modal');
-          modal.classList.add('fade-out');
-          setTimeout(() => {
-              modal.style.display = 'none';
-          }, 300)
-      })
-  })
+    const acknowledgeButtonDone = document.querySelectorAll('.acknowledge-done-btn');
 
-  window.addEventListener('click', function(event) {
-      if (event.target === acknowledgeModal ) {
-          event.target.classList.add('fade-out');
-          event.target.querySelector('.thread_modal-content');
-          setTimeout(() => {
-              event.target.style.display = 'none';
-          }, 300); // Match the duration of the fade-out animation
-      }
-  });
-})
+    acknowledgeButtonDone.forEach(button => {
+        button.addEventListener('click', function() {
+            const modal = this.closest('.thread_modal');
+            const modalContent = modal.querySelector('.thread_modal-content');
+            modal.classList.add('fade-out');
+            modalContent.classList.add('fade-out');
+            setTimeout(() => {
+                modal.style.display = 'none';
+            }, 300); // Match the duration of the fade-out animation
+        });
+    });
+
+    window.addEventListener('click', function(event) {
+        modals.forEach(modalInfo => {
+            const modal = document.getElementById(modalInfo.id);
+            if (event.target === modal) {
+                modal.classList.add('fade-out');
+                const modalContent = modal.querySelector('.thread_modal-content');
+                modalContent.classList.add('fade-out');
+                setTimeout(() => {
+                    modal.style.display = 'none';
+                }, 300); // Match the duration of the fade-out animation
+            }
+        });
+    });
+});
