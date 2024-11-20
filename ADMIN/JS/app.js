@@ -371,3 +371,34 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+
+// * Current Date & Time for Dashboard
+document.addEventListener("DOMContentLoaded", () => {
+    const currentDateElement = document.getElementById("currentDate");
+    const currentTimeElement = document.getElementById("currentTime");
+    const today = new Date();
+
+    // Options for date formatting
+    const dateOptions = {
+        weekday: "long",
+        year: "numeric",
+        month: "long",
+        day: "numeric",
+    };
+
+    const timeOptions = {
+        hour: '2-digit',
+        minute: '2-digit',
+        hour12: true, // To use 12-hour format (AM/PM)
+    };
+
+    // Set the date and time dynamically
+    currentDateElement.textContent = today.toLocaleDateString("en-US", dateOptions);
+    currentTimeElement.textContent = today.toLocaleTimeString("en-US", timeOptions);
+
+    // Update the time every second
+    setInterval(() => {
+        const newTime = new Date();
+        currentTimeElement.textContent = newTime.toLocaleTimeString("en-US", timeOptions);
+    }, 1000); // Updates every 1 second
+});
