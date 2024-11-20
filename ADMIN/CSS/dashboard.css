@@ -1,9 +1,5 @@
 @import url(style.css);
 
-.dashboard_calendar {
-    width: 23%;
-}
-
 /* ========================== Dashboard Greetings Container ========================== */
 .dashboard_greetings-container {
     display: flex;
@@ -31,14 +27,6 @@
 
 .dashboard_current-date span {
     font-weight: 600;
-}
-
-/* ========================== Dashboard Calendar Container ========================== */
-.dashboard_calendar input {
-    margin-top: 0.5rem;
-    border: none;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    cursor: pointer;
 }
 
 /* ========================== Dashboard Barangay Count Container ========================== */  
