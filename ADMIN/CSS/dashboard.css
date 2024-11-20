@@ -1,0 +1,92 @@
+@import url(style.css);
+
+.dashboard_calendar {
+    width: 23%;
+}
+
+/* ========================== Dashboard Greetings Container ========================== */
+.dashboard_greetings-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.dashboard_greetings{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+/* ========================== Dashboard Current DateTime Container ========================== */
+.dashboard_current-date {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    background: var(--color-white);
+    border-radius: var(--card-border-radius-2);  
+    padding: 1.2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}  
+
+.dashboard_current-date span {
+    font-weight: 600;
+}
+
+/* ========================== Dashboard Calendar Container ========================== */
+.dashboard_calendar input {
+    margin-top: 0.5rem;
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+
+/* ========================== Dashboard Barangay Count Container ========================== */  
+.barangay_count-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+    gap: 2rem;
+}
+
+.barangay_data-count {
+    width: 30%;
+    height: 10rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: var(--color-white);
+    padding: 2rem 4rem;
+    border-radius: var(--card-border-radius-3);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.barangay_data-count h3 {
+    font-size: 2rem;
+}
+
+.barangay_data-count h4 {
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.barangay_data-count p {
+    font-size: 0.9rem;
+    font-weight: 600;
+    opacity: 0.5;
+}
+
+/* ========================== Dashboard Charts/Analytics Container ========================== */
+#pieChart, #stackedAreaChart, #donutChart, #lineChart {
+    max-width: 100%;
+    margin: 1rem auto 2rem auto;
+    background: var(--color-white);
+    padding: 2rem 4rem;
+    border-radius: var(--card-border-radius-4);
+    display: flex;
+    justify-content: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
