@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ADMIN Dashboard | BARANGAY-WBA</title>
+
+    <!-- MONTSERRAT GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <!-- CSS STYLESHEET LINK -->
+     <link rel="stylesheet" href="CSS/style.css">
+     <link rel="stylesheet" href="CSS/dashboard.css">
+
+     <!-- ICONSCOUT CDN -->
+    <link href="https://unicons.iconscout.com/release/v4.0.8/css/line.css" rel="stylesheet">
+    <!-- APEXCHARTS CDN LINK -->
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+
+    <!-- GENERAL JS LINK -->
+    <script type="text/javascript" src="./JS/app.js" defer></script>
+    <!-- SIDEBAR JS LINK -->
+    <script type="text/javascript" src="./JS/sidebar.js" defer></script>
+    <!-- CHARTS JS LINK -->
+    <script src="./JS/charts.js" defer></script>
+</head>
+<body>
+    <aside id="sidebar">
+        <ul>
+            <li>
+                <span class="logo">BarangayCare</span>
+                <button onclick=toggleSidebar() id="toggle-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FFFFFF"><path d="M440-240 200-480l240-240 56 56-183 184 183 184-56 56Zm264 0L464-480l240-240 56 56-183 184 183 184-56 56Z"/></svg>
+                </button>
+            </li>
+
+            <li class="active">
+                <a href="dashboard.html">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M120-200q-33 0-56.5-23.5T40-280v-400q0-33 23.5-56.5T120-760h400q33 0 56.5 23.5T600-680v400q0 33-23.5 56.5T520-200H120Zm0-80h400v-400H120v400Zm560 80v-560h80v560h-80Zm160 0v-560h80v560h-80Zm-720-80v-400 400Z"/></svg>
+                    <span>Dashboard</span>
+                </a>
+            </li>
+
+            <li>
+                <button onclick=toggleSubMenu(this) class="dropdown-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M480-118 120-398l66-50 294 228 294-228 66 50-360 280Zm0-202L120-600l360-280 360 280-360 280Zm0-280Zm0 178 230-178-230-178-230 178 230 178Z"/></svg>
+                    <span>Main Pages</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z"/></svg>
+                </button>
+                <ul class="sub-menu">
+                    <div>
+                        <li><a href="home.html">Home</a></li>
+                        <li><a href="news_updates.html">News & Updates</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="publications.html">Publications</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </div>
+                </ul>
+            </li>
+            
+            <li>
+                <button onclick=toggleSubMenu(this) class="dropdown-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M760-600q-57 0-99-34t-56-86H354q-11 42-41.5 72.5T240-606v251q52 14 86 56t34 99q0 66-47 113T200-40q-66 0-113-47T40-200q0-57 34-99t86-56v-251q-52-14-86-56t-34-98q0-66 47-113t113-47q56 0 98 34t56 86h251q14-52 56-86t99-34q66 0 113 47t47 113q0 66-47 113t-113 47ZM200-120q33 0 56.5-24t23.5-56q0-33-23.5-56.5T200-280q-32 0-56 23.5T120-200q0 32 24 56t56 24Zm0-560q33 0 56.5-23.5T280-760q0-33-23.5-56.5T200-840q-32 0-56 23.5T120-760q0 33 24 56.5t56 23.5ZM760-40q-66 0-113-47t-47-113q0-66 47-113t113-47q66 0 113 47t47 113q0 66-47 113T760-40Zm0-80q33 0 56.5-24t23.5-56q0-33-23.5-56.5T760-280q-33 0-56.5 23.5T680-200q0 32 23.5 56t56.5 24Zm0-560q33 0 56.5-23.5T840-760q0-33-23.5-56.5T760-840q-33 0-56.5 23.5T680-760q0 33 23.5 56.5T760-680ZM200-200Zm0-560Zm560 560Zm0-560Z"/></svg>
+                    <span>Services</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z"/></svg>
+                </button>
+                <ul class="sub-menu">
+                    <div>
+                        <li><a href="central_request.html">Request Document</a></li>
+                        <li><a href="community_development.html">Community Development</a></li>
+                        <li><a href="disaster_preparedness.html">Disaster Preparedness</a></li>
+                        <li><a href="education.html">Education</a></li>
+                        <li><a href="elderly.html">Elderly</a></li>
+                        <li><a href="health.html">Health</a></li>
+                        <li><a href="justice.html">Justice</a></li>
+                        <li><a href="livelihood_employment.html">Livelihood & Employment</a></li>
+                        <li><a href="social.html">Social</a></li>
+                        <li><a href="women_welfare.html">Women's Welfare</a></li>
+                        <li><a href="youth_sports.html">Youth & Sports</a></li>
+                    </div>
+                </ul>
+            </li>
+            
+            <li>
+                <button onclick=toggleSubMenu(this) class="dropdown-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M40-160v-112q0-34 17.5-62.5T104-378q62-31 126-46.5T360-440q66 0 130 15.5T616-378q29 15 46.5 43.5T680-272v112H40Zm720 0v-120q0-44-24.5-84.5T666-434q51 6 96 20.5t84 35.5q36 20 55 44.5t19 53.5v120H760ZM360-480q-66 0-113-47t-47-113q0-66 47-113t113-47q66 0 113 47t47 113q0 66-47 113t-113 47Zm400-160q0 66-47 113t-113 47q-11 0-28-2.5t-28-5.5q27-32 41.5-71t14.5-81q0-42-14.5-81T544-792q14-5 28-6.5t28-1.5q66 0 113 47t47 113ZM120-240h480v-32q0-11-5.5-20T580-306q-54-27-109-40.5T360-360q-56 0-111 13.5T140-306q-9 5-14.5 14t-5.5 20v32Zm240-320q33 0 56.5-23.5T440-640q0-33-23.5-56.5T360-720q-33 0-56.5 23.5T280-640q0 33 23.5 56.5T360-560Zm0 320Zm0-400Z"/></svg>
+                    <span>Accounts</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z"/></svg>
+                </button>
+                <ul class="sub-menu">
+                    <div>
+                        <li><a href="residents.html">Residents</a></li>
+                        <li><a href="staffs.html">Staffs</a></li>
+                        <li><a href="sangguniang_kabataan.html">SK</a></li>
+                    </div>
+                </ul>
+            </li>
+            
+            <li>
+                <button onclick=toggleSubMenu(this) class="dropdown-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M480-480q-66 0-113-47t-47-113q0-66 47-113t113-47q66 0 113 47t47 113q0 66-47 113t-113 47ZM160-160v-112q0-34 17.5-62.5T224-378q62-31 126-46.5T480-440q66 0 130 15.5T736-378q29 15 46.5 43.5T800-272v112H160Zm80-80h480v-32q0-11-5.5-20T700-306q-54-27-109-40.5T480-360q-56 0-111 13.5T260-306q-9 5-14.5 14t-5.5 20v32Zm240-320q33 0 56.5-23.5T560-640q0-33-23.5-56.5T480-720q-33 0-56.5 23.5T400-640q0 33 23.5 56.5T480-560Zm0-80Zm0 400Z"/></svg>
+                    <span>Profile</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z"/></svg>
+                </button>
+                <ul class="sub-menu">
+                    <div>
+                        <li><a href="profile.html">Profile</a></li>
+                        <li><a href="logout.html">Logout</a></li>
+                    </div>
+                </ul>
+            </li>
+
+        </ul>
+   </aside>
+    <!------------------------------------ END OF SIDEBAR ------------------------------------>
+
+    <main>
+        <div class="remarks_banner-container">
+            <p>
+                Admin
+            </p>
+       </div>
+        <!-------------- END OF ADMIN BANNER SECTION -------------->
+
+        <div class="container dashboard_greetings-container">
+            <div class="dashboard_greetings">
+                <h3>Welcome, Admin</h3>
+                <h4>Checkout the latest updates from Barangay Pamplona Uno!</h4>
+            </div>
+
+            <div class="dashboard_current-date">
+                <p>Today is: <span id="currentDate">Tuesday, November 19, 2024</span></p>
+                <p>Current Time: <span id="currentTime">12:34 PM</span></p>
+            </div>
+        </div>
+        <!-------------- END OF DASHBOARD GREETINGS -------------->
+
+        <div class="container dashboard_calendar-container">
+            <div class="dashboard_calendar">
+                <h4>Choose a date:</h4>
+                <input type="date">
+            </div>
+        </div>
+        <!-------------- END OF DASHBOARD CALENDAR -------------->
+
+        <div class="container barangay_count-container">
+            <div class="barangay_data-count">
+                <h3>100</h3>
+                <h4>Residents</h4>
+            </div>
+
+            <div class="barangay_data-count">
+                <h3>10</h3>
+                <h4>Pending Requests</h4>
+                <p>Last 24 hours</p>
+            </div>
+
+            <div class="barangay_data-count">
+                <h3>12</h3>
+                <h4>Resolved Requests</h4>
+                <p>Last 24 hours</p>
+            </div>
+
+            <div class="barangay_data-count">
+                <h3>20</h3>
+                <h4>Declined Requests</h4>
+                <p>Last 24 hours</p>
+            </div>
+        </div>
+        <!-------------- END OF BARANGAY DATA COUNT -------------->
+
+        <div class="container barangay_analytics-container">
+            <h3>Barangay Central Requests</h3>
+            <div id="pieChart"></div>
+        
+            <h3>Disaster Preparedness</h3>
+            <div id="stackedAreaChart"></div>
+        
+            <h3>Justice Responses</h3>
+            <div id="donutChart"></div>
+        
+            <h3>Community Trends</h3>
+            <div id="lineChart"></div>
+        </div>
+        <!-------------- END OF BARANGAY ANALYTICS -------------->
+    </main>
+</body>
