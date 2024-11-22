@@ -57,7 +57,12 @@ body {
 
 .container {
     width: var(--container-width-lg);
-    margin: 1rem auto 2rem auto;
+    margin: 1rem auto 4rem auto;
+}
+
+.fornav-container {
+    width: var(--container-width-lg);
+    margin: 0rem auto 2rem auto;
 }
 
 section {
@@ -80,10 +85,6 @@ h2 {
 h3 {
     font-size: 1.8rem;
     color: var(--color-primary);
-}
-
-h3:hover {
-    color: var(--color-primary); 
 }
 
 h4 {
@@ -181,6 +182,22 @@ footer ul li a:hover {
 }
 
 /* ========================== Navigation Bar ========================== */
+#navbar-container {
+    background: transparent;
+    width: 100vw;
+    height: 5rem;
+    position: sticky;
+    top: 0;
+    z-index: 11;
+    margin: 1rem 0 1rem 0;
+}
+
+.nav_items a.active {
+    background: var(--color-navy-blue);
+    color: var(--color-white);
+    border-radius: var(--card-border-radius-4);
+}
+
 nav {
     background: transparent;
     width: 100vw;
@@ -188,6 +205,7 @@ nav {
     position: sticky;
     top: 0;
     z-index: 11;
+    margin: 1rem 0 1rem 0;
 }
 
 .window-scroll {
@@ -219,14 +237,6 @@ nav ul li.active a {
     border-radius: var(--card-border-radius-4);
 }
 
-/* For Services page only */
-.services_active {
-    background: var(--color-navy-blue);
-    color: var(--color-white);
-    padding: 0.5rem 0.9rem;
-    border-radius: var(--card-border-radius-4);
-}
-
 nav button {
     display: none;
 }
@@ -235,7 +245,7 @@ nav button {
     height: 100%;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-between
 }
 
 .avatar {
@@ -327,12 +337,12 @@ nav button {
 }
 
 /* SERVICES DROPDOWN STYLES */
-.nav_services {
+.nav_dropdown {
     position: relative;
     cursor: pointer;
 }
 
-.nav_services ul {
+.nav_dropdown ul {
     position: absolute;
     top: 125%;
     left: 0;
@@ -349,44 +359,44 @@ nav button {
     border-radius: 12px;
 }
 
-.nav_services:hover > ul {
+.nav_dropdown:hover > ul {
     visibility: visible;
     opacity: 1;
     border-radius: 12px;
 }
 
-.nav_services ul li a {
+.nav_dropdown ul li a {
     padding: 1rem 2rem;
     display: block;
     color: var(--color-white);
     border-radius: 12px;
 }
 
-.nav_services ul li a:hover {
+.nav_dropdown ul li a:hover {
     background: var(--color-navy-blue);
     color: var(--color-primary);
     border-radius: 12px;
 }
 
 /* Optional: Customize scrollbar appearance */
-.nav_services ul::-webkit-scrollbar {
+.nav_dropdown ul::-webkit-scrollbar {
     width: 8px; /* Width of the scrollbar */
     border-radius: 12px;
 }
 
-.nav_services ul::-webkit-scrollbar-thumb {
+.nav_dropdown ul::-webkit-scrollbar-thumb {
     background-color: var(--color-primary); /* Scrollbar thumb color */
     border-radius: 12px; /* Rounded scrollbar thumb */
 }
 
-.nav_services ul::-webkit-scrollbar-track {
+.nav_dropdown ul::-webkit-scrollbar-track {
     background-color: var(--color-navy-blue); /* Scrollbar track color */
     border-radius: 12px;
 }
 
 /* ========================== Forms Section ========================== */
 form {
-    margin-top: 2rem;
+    margin-top: 1rem;
     display: flex;
     flex-direction: column;
     gap: 1rem;
@@ -438,7 +448,7 @@ input, textarea, select {
 .img_section-container {
     width: 100%;
     max-width: 100%; /* Ensures the container takes up the full width of its parent */
-    height: 650px; /* Fixed height */
+    height: 450px; /* Fixed height */
     border: 5px solid var(--color-navy-blue);
     border-radius: 1rem;
     overflow: hidden;
@@ -594,9 +604,8 @@ input, textarea, select {
     margin-top: 1rem;
     display: grid;
     grid-template-columns: repeat(3, minmax(350px, 1fr)); 
-    align-items: center;
-    justify-content: center;
     gap: 2rem;
+    width: 100%;
 }
 
 .post {
@@ -675,56 +684,46 @@ input, textarea, select {
 }
 
 .reusable_section-container {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    margin-bottom: 4rem;
-}
-
-.reusable_section-container h4 {
-    color: var(--color-navy-blue);
-}
-
-.reusable_section-container button{
-    margin: 0 auto;
+    position: relative;
+    overflow: hidden; /* Prevent horizontal overflow */
 }
 
 .barangay_section-container {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(350px, 1fr)); 
-    justify-content: center; 
-    align-content: center; 
-    gap: 2rem; 
+    display: flex;
+    gap: 2rem;
+    overflow-x: auto; /* Enable horizontal scrolling */
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch; /* Enable smooth scrolling on iOS */
+    scroll-behavior: smooth;
+    padding: 1rem 0;
+    overflow: hidden;
+}
+
+.barangay_section-container::-webkit-scrollbar {
+    display: none; /* Hide scrollbar for better UI */
 }
 
 .reusable-card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    flex: 0 0 auto; /* Prevent shrinking and allow scrolling */
+    width: 400px; /* Fixed width for cards */
     background-color: white;
     border: 1px solid #ccc;
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     cursor: pointer;
-    transition: var(--transition)
+    transition: var(--transition);
 }
 
 .reusable-card:hover {
-    transform: scale(1.1); /* Slightly enlarge the card */
+    transform: scale(1.05); /* Slightly enlarge the card */
     box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15); 
 }
 
 .reusable-card img {
     width: 100%;
     height: 20rem;
-    object-fit: cover; 
-}
-
-.reusable_image-container {
-    position: relative;    
-    width: 100%;
+    object-fit: cover;
 }
 
 .reusable_content-container {
@@ -735,6 +734,141 @@ input, textarea, select {
     padding: 1rem;
     text-align: center;
     gap: 0.5rem;
+}
+
+.scroll-arrow {
+    position: absolute;
+    top: 50%; /* Centers the arrow vertically */
+    transform: translateY(-50%); /* Adjusts for perfect centering */
+    background: var(--color-navy-blue);
+    color: var(--color-white);
+    border: none;
+    border-radius: 50%;
+    width: 3rem;
+    height: 3rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center; /* Centers icon vertically */
+    justify-content: center; /* Centers icon horizontally */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 2;
+    transition: var(--transition);
+}
+
+.scroll-arrow:hover {
+    background: var(--color-primary);
+}
+
+.left-arrow {
+    left: 10px; /* Position on the left */
+    user-select: none; /* Prevent accidental text selection */
+}
+
+.right-arrow {
+    right: 10px; /* Position on the right */
+    user-select: none; /* Prevent accidental text selection */
+}
+
+/* Additional style for the icon */
+.scroll-arrow i {
+    font-size: 1.5rem; /* Adjust icon size */
+    line-height: 1; /* Remove unnecessary spacing */
+}
+
+/* ========================== Inforgraphics for Services ========================== */
+.infographics_container {
+    margin-top: 1.2rem;
+    background: var(--color-white);
+    padding: 2rem;
+    border-radius: var(--card-border-radius-3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    transition: var(--transition);
+}
+
+.infographics_container:hover {
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15); 
+}
+
+.infographics_container h3 {
+    font-size: 1.2rem;
+    color: var(--color-white);
+    background: var(--color-primary);
+    padding: 1rem 1.2rem;
+    border-radius: var(--card-border-radius-3);
+    margin-bottom: 1rem;
+}
+
+.infographics_body {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+}
+
+.infographics_content {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+    border-right: 2px solid var(--color-primary);
+    border-bottom: 2px solid var(--color-primary);
+    border-top-right-radius: var(--card-border-radius-3);
+    border-bottom-left-radius: var(--card-border-radius-3);
+    border-bottom-right-radius: var(--card-border-radius-3);
+    transition: var(--transition);
+    cursor: pointer;
+}
+
+.infographics_content:hover {
+    transform: scale(1.03);
+}
+
+/* ========================== Sign Ups Health Alerts ========================== */
+.health_signup-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.health_signup-container h5 {
+    color: var(--color-white);
+    background: var(--color-primary);
+    padding: 0.5rem 1rem;
+    border-top-right-radius: var(--card-border-radius-4);
+    border-top-left-radius: var(--card-border-radius-4) ;
+    width: 50%;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.health_form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: var(--color-white);
+    padding: 1.5rem 2rem;
+    border-top: 5px solid var(--color-primary);
+    border-bottom-right-radius: var(--card-border-radius-3);
+    border-bottom-left-radius: var(--card-border-radius-3) ;
+    width: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    transition: var(--transition);
+}
+
+.health_form-container h4 {
+    font-size: 1.3rem;
+    color: var(--color-navy-blue);
+}
+
+.health_form-container:hover {
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15); 
 }
 
 /* ========================== Lightbox Styles for Clicked Image Expansion ========================== */
@@ -810,41 +944,53 @@ input, textarea, select {
     transition: var(--transition);
 }
 
+
+
+
 /* ========================== Media Queries (Coming Soon) :> ========================== */
 /* MEDIA QUERIES */
 
-/* Extra Small Devices (Phones) 
+/* Extra Small Devices (Phones) */
+/*
 @media only screen and (max-width: 600px) {
     body {
-      background-color: lightblue;
+        background-color: lightblue;
     }
-  }
-  
-  /* Small Devices (Tablets) 
-  @media only screen and (min-width: 601px) and (max-width: 768px) {
+}
+*/
+
+/* Small Devices (Tablets) */
+/*
+@media only screen and (min-width: 601px) and (max-width: 768px) {
     body {
-      background-color: lightgreen;
+        background-color: lightgreen;
     }
-  }
-  
-  /* Medium Devices (Laptops) 
-  @media only screen and (min-width: 769px) and (max-width: 1024px) {
+}
+*/
+
+/* Medium Devices (Laptops) */
+/*
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
     body {
-      background-color: lightyellow;
+        background-color: lightyellow;
     }
-  }
-  
-  /* Large Devices (Desktops) 
-  @media only screen and (min-width: 1025px) and (max-width: 1200px) {
+}
+*/
+
+/* Large Devices (Desktops) */
+/*
+@media only screen and (min-width: 1025px) and (max-width: 1200px) {
     body {
-      background-color: orange;
+        background-color: orange;
     }
-  }
-  
-  /* Extra Large Devices (Large Desktops or Ultra-wide monitors) 
-  @media only screen and (min-width: 1201px) {
+}
+*/
+
+/* Extra Large Devices (Large Desktops or Ultra-wide monitors) */
+/*
+@media only screen and (min-width: 1201px) {
     body {
-      background-color: lightcoral;
+        background-color: lightcoral;
     }
-  }
+}
 */
