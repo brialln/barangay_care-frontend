@@ -1,0 +1,114 @@
+@import url(style.css);
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 10; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    background-color: rgba(0, 0, 0, 0.5); /* Black w/ opacity */
+    transition: var(--transition);
+    animation: fadeIn 0.3s;
+}
+
+.modal-content {
+    position: relative;
+    background: var(--color-white);
+    text-align: center;
+    margin: 10% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid var(--color-ash);
+    width: 30%; /* Adjust to screen size */
+    border-radius: var(--card-border-radius-2);
+    max-width: 50%;
+    max-height: 500px;
+    overflow-y: auto;
+    animation: scaleIn 0.3s;
+    z-index: 11;
+    transition: var(--transition);
+}
+
+.modal-content h4 {
+    color: var(--color-black);
+    margin-bottom: 0.4rem;
+}
+
+.modal-content button:first-child{
+    width: 100%;
+    background: var(--color-primary);
+    margin-top: 1rem;
+}
+
+.modal-content button:hover:first-child {
+    color: var(--color-primary);
+    border-color: var(--color-primary);
+    background: var(--color-white);
+}
+
+.modal-content button:last-child{
+    width: 100%;
+    background: var(--color-navy-blue);
+    margin-top: 1rem;
+}
+
+.modal-content button:hover:last-child {
+    color: var(--color-navy-blue);
+    border-color: var(--color-navy-blue);
+    background: var(--color-white);
+}
+
+.close-button {
+    position: absolute;
+    top: 0;
+    right: 1rem;
+    font-size: 2rem;
+    color: var(--color-navy-blue);
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.close-button:hover,
+.close-button:focus {
+    opacity: 0.6;
+    text-decoration: none;
+}
+
+/* Keyframes for animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes scaleIn {
+    from {
+        transform: scale(0.9);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+.modal.fade-out {
+    animation: fadeOut 0.3s;
+}
+
+.modal_button-container {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
