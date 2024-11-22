@@ -1,0 +1,89 @@
+@import url(style.css);
+
+.sports_events h3 {
+    background: var(--color-primary);
+    color: var(--color-white);
+    text-align: center;
+    border-radius: var(--card-border-radius-2);
+    padding: 0.6rem;
+}
+
+.sports_event-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.sports_event {
+    padding: 2rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1.4rem;
+    height: fit-content;
+    background: var(--color-navy-blue);
+    color: var(--color-white);
+    cursor: pointer;
+    border-radius: var(--card-border-radius-2);
+    overflow: hidden; /* Ensure content doesn't overflow during animation */
+}
+
+.sports_event h4 {
+    font-size: 1rem;
+    line-height: 2.2;
+}
+
+.sports_event p {
+    height: 0;
+    overflow: hidden;
+    transition: height 0.3s ease;
+}
+
+.sports_event.open p {
+    height: auto;
+}
+
+.sports_event-icon {
+    align-self: flex-start;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+}
+
+
+
+.youth_sports-application {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    border-radius: var(--card-border-radius-2);
+}
+
+.youth_sports-application h5 {
+    border-top-right-radius: var(--card-border-radius-4);
+    border-top-left-radius: var(--card-border-radius-4) ;
+    background: var(--color-primary);
+    color: var(--color-white);
+    padding: 0.6rem;
+    width: 60%;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.youth_sports-container {
+    background: var(--color-white);
+    padding: 1rem 2rem 2rem 2rem;
+    width: 60%;
+    border-top: 5px solid var(--color-primary);
+    border-bottom-right-radius: var(--card-border-radius-3);
+    border-bottom-left-radius: var(--card-border-radius-3);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    transition: var(--transition);
+}
+
+.youth_sports-container:hover {
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15); 
+}
