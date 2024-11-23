@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RESIDENT About | BARANGAY-WBA</title>
+    <title>RESIDENT Navigation Bar | BARANGAY-WBA</title>
 
     <!-- MONTSERRAT GOOGLE FONTS -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -12,12 +12,13 @@
 
     <!-- CSS STYLESHEET LINK -->
      <link rel="stylesheet" href="CSS/style.css">
+     <link rel="stylesheet" href="CSS/modal.css">
 
      <!-- ICONSCOUT CDN -->
     <link href="https://unicons.iconscout.com/release/v4.0.8/css/line.css" rel="stylesheet">
 
     <!-- GENERAL JS LINK -->
-    <script src="JS/app.js defer"></script>
+    <script src="JS/app.js" defer></script>
 
 </head>
 <body>
@@ -69,7 +70,8 @@
                         <img src="IMAGES/pamplona_sample-profile.jpg">
                     </div>
                     <ul>
-                        <li><a href="profile.html">Profile</a></li>
+                        <li><a href="profile.html">Profile</a></li>    
+                        <li><a class="give-feedback">Give Feedback (Ctrl + B)</a></li>                    
                         <li><a href="logout.html">Logout</a></li>
                     </ul>
                 </li>
@@ -78,4 +80,25 @@
             <button id="close_nav-btn"><i class="uil uil-multiply"></i></button>
         </div>
     </nav>
+    <!-------------- END OF NAVIGATION BAR -------------->
+
+    <!-- Feedback Modal -->
+    <div class="modal" id="feedback-modal">
+        <div class="modal-content">
+            <h4>Give Feedback</h4>
+            <p>How would you rate your experience?</p>
+            <div class="star-rating">
+                <span data-rating="1">&#9733;</span>
+                <span data-rating="2">&#9733;</span>
+                <span data-rating="3">&#9733;</span>
+                <span data-rating="4">&#9733;</span>
+                <span data-rating="5">&#9733;</span>
+            </div>
+            <textarea placeholder="Type your feedback here..." rows="5" style="width: 100%;"></textarea>
+            <div class="modal_button-container">
+                <button class="btn submit-modal-m">Submit</button>
+                <button class="btn cancel-modal-m">Cancel</button>
+            </div>
+        </div>
+    </div>
 </body>

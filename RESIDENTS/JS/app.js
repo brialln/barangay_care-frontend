@@ -2,11 +2,10 @@
     * This file contains the General Javascript functions for the RESIDENTS.
 */
 
-// Window Navigation Scroll Animation -----------------------------------------------------------
+// * Window Navigation Scroll Animation -----------------------------------------------------------
 window.addEventListener('scroll', () => {
     document.querySelector('nav').classList.toggle('window-scroll', window.scrollY > 0)
 })
-
 
 // * Horizontal Scroll Functionality for Barangay Section -----------------------------------------------------------
 document.addEventListener('DOMContentLoaded', () => {
@@ -80,8 +79,6 @@ function addScrollFunctionality(leftArrow, rightArrow, container) {
 function scrollContainer(container, distance) {
     container.scrollBy({ left: distance, behavior: "smooth" });
 }
-
-
 
 // * Page refresh once for lightbox -----------------------------------------------------------
 window.onload = function() {
@@ -207,7 +204,6 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-
 // * Functionality for Centralized Navigation Bar -----------------------------------------------------------
 document.addEventListener("DOMContentLoaded", () => {
     fetch('navbar.html')
@@ -239,7 +235,138 @@ document.addEventListener("DOMContentLoaded", () => {
         });
 });
 
-// * Show and Hide Upcoming Sports Events
+// * Functionality for Feedback Modal -----------------------------------------------------------
+document.addEventListener('DOMContentLoaded', function () {
+    fetch('navbar.html')
+        .then(response => response.text())
+        .then(html => {
+            document.getElementById('navbar-container').innerHTML = html;
+
+            // Define modal configuration
+            const modals = [
+                { id: 'feedback-modal', class: 'give-feedback' }
+            ];
+
+            // Open modal functionality
+            modals.forEach(modalInfo => {
+                const modal = document.getElementById(modalInfo.id);
+                const modalContent = modal ? modal.querySelector('.modal-content') : null;
+
+                if (modal && modalContent) {
+                    document.querySelectorAll(`.${modalInfo.class}`).forEach(button => {
+                        button.addEventListener('click', function () {
+                            modal.style.display = 'block';
+                            modal.classList.remove('fade-out');
+                            modalContent.classList.remove('fade-out');
+                        });
+                    });
+                }
+            });
+
+            // Submit button action
+            document.querySelectorAll('.submit-modal-m').forEach(button => {
+                button.addEventListener('click', function () {
+                    // Perform the desired action on submit
+                    alert('Successfully Submitted!');
+                    const modal = this.closest('.modal');
+                    const modalContent = modal.querySelector('.modal-content');
+                    modal.classList.add('fade-out');
+                    modalContent.classList.add('fade-out');
+                    setTimeout(() => {
+                        modal.style.display = 'none';
+                    }, 300); // Match fade-out animation duration
+                });
+            });
+
+            // Close modal functionality
+            document.querySelectorAll('.cancel-modal-m, .close-button').forEach(button => {
+                button.addEventListener('click', function () {
+                    const modal = this.closest('.modal');
+                    const modalContent = modal.querySelector('.modal-content');
+                    modal.classList.add('fade-out');
+                    modalContent.classList.add('fade-out');
+                    setTimeout(() => {
+                        modal.style.display = 'none';
+                    }, 300); // Match fade-out animation duration
+                });
+            });
+
+            // Close modal when clicking outside
+            window.addEventListener('click', function (event) {
+                modals.forEach(modalInfo => {
+                    const modal = document.getElementById(modalInfo.id);
+                    if (event.target === modal) {
+                        modal.classList.add('fade-out');
+                        const modalContent = modal.querySelector('.modal-content');
+                        modalContent.classList.add('fade-out');
+                        setTimeout(() => {
+                            modal.style.display = 'none';
+                        }, 300); // Match fade-out animation duration
+                    }
+                });
+            });
+        });
+});
+
+// * Functionality for Ctrl + B to open Feedback Modal -----------------------------------------------------------
+document.addEventListener('keydown', (event) => {
+    console.log(`Key pressed: ${event.key}, Ctrl: ${event.ctrlKey}`);
+    if (event.ctrlKey && event.key === 'b') {
+        event.preventDefault(); // Prevent default browser behavior (e.g., bold in some editors)
+        const feedbackModal = document.getElementById('feedback-modal');
+        if (feedbackModal) {
+            feedbackModal.style.display = 'block';
+            console.log("Ctrl + B triggered: Modal opened");
+        } else {
+            console.error("Feedback modal not found!");
+        }
+    }
+});
+
+// * Functionality for Star Rating -----------------------------------------------------------
+document.addEventListener("DOMContentLoaded", () => {
+    const stars = document.querySelectorAll(".star-rating span");
+    const ratingValueDisplay = document.getElementById("rating-value");
+    let selectedRating = 0;
+
+    // Star hover and click events
+    stars.forEach(star => {
+        star.addEventListener("mouseover", () => {
+            highlightStars(star.dataset.rating);
+        });
+
+        star.addEventListener("mouseout", () => {
+            highlightStars(selectedRating);
+        });
+
+        star.addEventListener("click", () => {
+            selectedRating = star.dataset.rating;
+            highlightStars(selectedRating);
+            ratingValueDisplay.textContent = `Rating: ${selectedRating}`;
+        });
+    });
+
+    function highlightStars(rating) {
+        stars.forEach(star => {
+            star.classList.toggle("selected", star.dataset.rating <= rating);
+        });
+    }
+
+    // Submit feedback (example functionality)
+    const submitFeedbackButton = document.getElementById("submit-feedback");
+    submitFeedbackButton.addEventListener("click", () => {
+        const feedbackText = document.getElementById("feedback-text").value;
+        if (selectedRating > 0 && feedbackText.trim()) {
+            alert(`Thank you for your feedback!\nRating: ${selectedRating}\nFeedback: ${feedbackText}`);
+            // Close modal after submission
+            document.getElementById("feedback-modal").style.display = "none";
+        } else {
+            alert("Please provide a rating and your feedback before submitting.");
+        }
+    });
+});
+
+// * Show and Hide Upcoming Sports Events -----------------------------------------------------------
 document.addEventListener('DOMContentLoaded', () => {
     const sportsEvents = document.querySelectorAll('.sports_event');
 
@@ -283,7 +410,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // Define modal configuration
     const modals = [
         { id: 'confirmationModal', class: 'confirmation' }, 
-        { id: 'pw-confirmationModal', class: 'pw-confirmation' } 
+        { id: 'pw-confirmationModal', class: 'pw-confirmation' }
     ];
 
     // Open modal functionality

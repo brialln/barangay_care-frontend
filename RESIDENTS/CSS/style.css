@@ -279,7 +279,6 @@ nav button {
     position: absolute;
     top: 125%;
     right: 0;
-    width: 8rem;
     display: flex;
     flex-direction: column;
     box-shadow: 0 3rem 3rem rgba(0, 0, 0, 0.4);
@@ -288,6 +287,7 @@ nav button {
     opacity: 0;
     transition: var(--transition);
     border-radius: var(--card-border-radius-3);
+    width: 14rem;
 }
 
 /* NAV PROFILE DROPDOWN STYLE */
