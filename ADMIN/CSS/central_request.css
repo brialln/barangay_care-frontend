@@ -808,7 +808,7 @@ Notes:
     transition: var(--transition);
 }
 
-.approve_button {
+.approve_button, .resolve_button {
     background: var(--color-green);
     color: var(--color-white);
     padding: 0.5rem 1rem; 
@@ -862,7 +862,7 @@ Notes:
     color: var(--color-primary);
 }
 
-.approve_button:hover {
+.approve_button:hover, .resolve_button:hover {
     background: var(--color-ash);
     border-color: var(--color-green);
     color: var(--color-green);
@@ -999,7 +999,7 @@ Notes:
 }
 
 /* Delete Modal  & Restore Modal */
-#deleteModal .modal-content, #restoreModal .modal-content, #deleteEmergencyModal .modal-content {
+#deleteModal .modal-content, #restoreModal .modal-content, #deleteEmergencyModal .modal-content, #resolveModal .modal-content {
     width: 22%;
     display: flex;
     flex-direction: column;
@@ -1013,13 +1013,13 @@ Notes:
 }
 
 /* ================================ ELEMENT ID + BUTTON STYLE ================================ */
-.edit_actions-m, .delete_actions-m, .restore_actions-m {
+.edit_actions-m, .delete_actions-m, .restore_actions-m, .resolve_actions-m {
     display: flex;
     flex-direction: row;
     gap: 1rem;
 }
 
-.edit_actions-m button, .delete_actions-m button, .restore_actions-m button {
+.edit_actions-m button, .delete_actions-m button, .restore_actions-m button, .resolve_actions-m button {
     padding: 0.8rem 1rem;
 }
 
@@ -1048,6 +1048,17 @@ Notes:
 }
 
 #responseModal button:hover {
+    background: var(--color-white);
+    border: 2px solid var(--color-green);
+    color: var(--color-green);
+}
+
+#resolveModal button:first-child {
+    background: var(--color-green);
+    border: 2px solid transparent;
+}
+
+#resolveModal button:first-child:hover {
     background: var(--color-white);
     border: 2px solid var(--color-green);
     color: var(--color-green);
