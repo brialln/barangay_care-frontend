@@ -1,135 +1,122 @@
 // * This file contains the JavaScript code for the charts in the dashboard page.
+window.addEventListener('resize', () => {
+  chartInstance.resize();
+});
 
+// * This section contains the JavaScript code for the document request trends charts in the dashboard page.
+// Pie Chart Data
+const pieData = [44, 55, 13];
+const pieLabels = ["Barangay ID", "Barangay Clearance", "Barangay Indigency"];
+const totalRequests = pieData.reduce((sum, value) => sum + value, 0);
+
+// Initialize Pie Chart
 const pieOptions = {
   chart: {
-    type: 'pie',
-    height: 400,
+    type: "pie",
+    height: 350,
   },
-  series: [44, 55, 13],
-  labels: ['Barangay ID', 'Barangay Clearance', 'Barangay Indigency'],
+  series: pieData,
+  labels: pieLabels,
   legend: {
-    fontSize: '16px', // Adjust the font size
-    fontFamily: 'Montserrat',
-    fontWeight: '500',
+    fontSize: "14px",
+    fontFamily: "Montserrat",
+    fontWeight: "500",
   },
   dataLabels: {
     style: {
-      fontSize: '16px', // Adjust the font size
-      fontFamily: 'Montserrat',
-      fontWeight: '500', // Optional
+      fontSize: "14px",
+      fontFamily: "Montserrat",
+      fontWeight: "500",
     },
   },
+  title: {
+    text: "Barangay Request Trends",
+    align: 'center',
+    style: {
+      fontSize: '14px',
+      fontFamily: 'Montserrat'
+    }
+  }
 };
-
-const pieChart = new ApexCharts(document.querySelector("#pieChart"), pieOptions);
+const pieChart = new ApexCharts(document.querySelector("#requestTrends"), pieOptions);
 pieChart.render();
 
+// Text Summary
+const mostRequestedIndex = pieData.indexOf(Math.max(...pieData));
+const mostRequestedLabel = pieLabels[mostRequestedIndex];
+const mostRequestedPercentage = ((pieData[mostRequestedIndex] / totalRequests) * 100).toFixed(2);
 
-const stackedAreaOptions = {
+const requestSummaryHTML = `
+  <h4 class="summary-title">Barangay Request Trends Summary</h4>
+  <p class="summary-text">Total Requests: <b>${totalRequests}</b></p>
+  <p class="summary-text">Most Requested Document: <b>${mostRequestedLabel}</b> (${mostRequestedPercentage}% of total)</p>
+  <p class="summary-text">Breakdown:</p>
+  <ul class="summary-list">
+    ${pieLabels.map((label, i) =>
+      `<li class="summary-list-item">${label}: <b>${pieData[i]}</b> (${((pieData[i] / totalRequests) * 100).toFixed(2)}%)</li>`
+    ).join("")}
+  </ul>
+`;
+document.querySelector("#requestTrendsSummary").innerHTML = requestSummaryHTML;
+
+// * This section contains the JavaScript code for the feedback charts in the dashboard page.
+// Sample Feedback Data
+const feedbackData = [
+  { rating: 5, text: "Excellent service and very friendly staff." },
+  { rating: 4, text: "Great experience but could be faster." },
+  { rating: 3, text: "Average, nothing exceptional." },
+  { rating: 5, text: "Amazing quality and quick delivery!" },
+  { rating: 2, text: "Poor service, not satisfied with the experience." },
+  { rating: 5, text: "Highly recommended for everyone!" },
+  { rating: 1, text: "Terrible experience. Won't return!" },
+];
+
+// Calculate Ratings Distribution
+const ratingCounts = feedbackData.reduce((counts, feedback) => {
+  counts[feedback.rating] = (counts[feedback.rating] || 0) + 1;
+  return counts;
+}, {});
+
+// Star Ratings Chart
+const ratingsChartOptions = {
   chart: {
-    type: 'area',
-    height: 400,
-    stacked: true,
+    type: "bar",
+    height: 350,
   },
   series: [
     {
-      name: 'Product A',
-      data: [44, 55, 41, 37, 22, 43, 21, 22],
-    },
-    {
-      name: 'Product B',
-      data: [53, 32, 33, 52, 13, 43, 32, 22],
-    },
-    {
-      name: 'Product C',
-      data: [12, 17, 11, 9, 15, 11, 20, 22],
+      name: "Number of Ratings",
+      data: Object.values(ratingCounts),
     },
   ],
   xaxis: {
-    categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug'],
-    labels: {
-      style: {
-        fontSize: '16px', // Adjust the font size
-        fontFamily: 'Montserrat',
-      },
-    },
+    categories: Object.keys(ratingCounts).map(rating => `${rating} Stars`),
+    title: { text: "Ratings", style: { fontSize: '14px', fontFamily: 'Montserrat' } },
+    labels: { style: { fontSize: '14px', fontFamily: 'Montserrat' } },
   },
   yaxis: {
-    labels: {
-      style: {
-        fontSize: '15px', // Adjust the font size
-        fontFamily: 'Montserrat',
-      },
-    },
+    title: { text: "Number of Feedbacks", style: { fontSize: '14px', fontFamily: 'Montserrat' } },
+    labels: { style: { fontSize: '14px', fontFamily: 'Montserrat' } },
   },
-  legend: {
-    fontSize: '16px', // Adjust the legend font size
-    fontFamily: 'Montserrat',
-  },
+  title: {
+    text: "Feedback Ratings Distribution",
+    align: 'center',
+    style: { fontSize: '14px', fontFamily: 'Montserrat' }
+  }
 };
+new ApexCharts(document.querySelector("#feedbackRatingsChart"), ratingsChartOptions).render();
 
-const stackedAreaChart = new ApexCharts(document.querySelector("#stackedAreaChart"), stackedAreaOptions);
-stackedAreaChart.render();
+// Text Summary
+const totalFeedbacks = feedbackData.length;
+const avgRating = (
+  feedbackData.reduce((sum, fb) => sum + fb.rating, 0) / totalFeedbacks
+).toFixed(2);
 
-
-const donutOptions = {
-  chart: {
-    type: 'donut',
-    height: 400,
-  },
-  series: [44, 55, 41, 17],
-  labels: ['Series A', 'Series B', 'Series C', 'Series D'],
-  legend: {
-    fontSize: '16px', // Adjust the font size
-    fontFamily: 'Montserrat',
-    fontWeight: '500',
-  },
-  dataLabels: {
-    style: {
-      fontSize: '16px', // Adjust the font size
-      fontFamily: 'Montserrat',
-      fontWeight: 'bold',
-    },
-  },
-};
-
-const donutChart = new ApexCharts(document.querySelector("#donutChart"), donutOptions);
-donutChart.render();
-
-
-const lineOptions = {
-  chart: {
-    type: 'line',
-    height: 400,
-  },
-  series: [
-    {
-      name: 'Sales',
-      data: [10, 41, 35, 51, 49, 62, 69, 91, 148],
-    },
-  ],
-  xaxis: {
-    categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep'],
-    labels: {
-      style: {
-        fontSize: '14px', // X-axis font size
-        fontFamily: 'Montserrat',
-      },
-    },
-  },
-  yaxis: {
-    labels: {
-      style: {
-        fontSize: '14px', // Y-axis font size
-        fontFamily: 'Montserrat',
-      },
-    },
-  },
-  legend: {
-    fontSize: '14px', // Legend font size
-    fontFamily: 'Montserrat',
-  },
-};
-
-const lineChart = new ApexCharts(document.querySelector("#lineChart"), lineOptions);
-lineChart.render();
+const feedbackSummaryHTML = `
+  <h4 class="summary-title">Feedback Analysis Summary</h4>
+  <p class="summary-text">Total Feedbacks: <b>${totalFeedbacks}</b></p>
+  <p class="summary-text">Average Rating: <b>${avgRating} Stars</b></p>
+  <p class="summary-text">Most Common Rating: <b>${Object.keys(ratingCounts).reduce((a, b) =>
+    ratingCounts[a] > ratingCounts[b] ? a : b)} Stars</b></p>
+`;
+document.querySelector("#feedbackRatingsSummary").innerHTML = feedbackSummaryHTML;
