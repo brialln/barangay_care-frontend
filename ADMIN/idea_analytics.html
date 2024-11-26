@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>ADMIN Community Threads Analytics | BARANGAY-WBA</title>
+        <title>ADMIN Idea Submission Trends | BARANGAY-WBA</title>
     
         <!-- Google Fonts: Montserrat -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -44,7 +44,7 @@
                 </button>
             </li>
 
-            <li class="active">
+            <li >
                 <a href="dashboard.html">
                     <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M120-200q-33 0-56.5-23.5T40-280v-400q0-33 23.5-56.5T120-760h400q33 0 56.5 23.5T600-680v400q0 33-23.5 56.5T520-200H120Zm0-80h400v-400H120v400Zm560 80v-560h80v560h-80Zm160 0v-560h80v560h-80Zm-720-80v-400 400Z"/></svg>
                     <span>Dashboard</span>
@@ -62,7 +62,7 @@
                         <li data-page="threads_analytics"><a href="threads_analytics.html">Community Threads Analytics</a></li>
                         <li data-page="complaint_analytics"><a href="complaint_analytics.html">Complaint Report Analytics</a></li>
                         <li data-page="emergency_analytics"><a href="emergency_analytics.html">Emergency Report Analytics</a></li>
-                        <li data-page="idea_analytics"><a href="idea_analytics.html">Idea Submission Analytics</a></li>
+                        <li data-page="idea_analytics" class="active"><a href="idea_analytics.html">Idea Submission Analytics</a></li>
                     </div>
                 </ul>
             </li>
@@ -148,10 +148,15 @@
        </div>
         <!-------------- END OF ADMIN BANNER SECTION -------------->
 
+        <div class="forback_container back_button-container">
+            <a href="dashboard.html"><button><i class="uil uil-arrow-circle-left"></i></button></a>
+        </div>
+        <!-------------- END OF BACK BUTTON -------------->
+
         <div class="container dashboard_greetings-container">
             <div class="dashboard_greetings">
-                <h3>Welcome, Admin</h3>
-                <h4>Checkout the latest updates from Barangay Pamplona Uno!</h4>
+                <h3>Idea Submission Analytics</h3>
+                <h4>Checkout the Submission Trends of Barangay Pamplona Uno!</h4>
             </div>
 
             <div class="dashboard_current-date">
@@ -161,75 +166,55 @@
         </div>
         <!-------------- END OF DASHBOARD GREETINGS -------------->
 
-        <div class="container barangay_count-container">
-            <div class="barangay_data-count">
-                <h3>100</h3>
-                <h4>Residents</h4>
-            </div>
-
-            <div class="barangay_data-count">
-                <h3>10</h3>
-                <h4>Pending Requests</h4>
-            </div>
-
-            <div class="barangay_data-count">
-                <h3>12</h3>
-                <h4>Resolved Requests</h4>
-            </div>
-
-            <div class="barangay_data-count">
-                <h3>20</h3>
-                <h4>Declined Requests</h4>
-            </div>
-        </div>
-        <!-------------- END OF BARANGAY DATA COUNT -------------->
-
         <div class="container barangay_analytics-container">
-            <div class="dashboard_analytics-container">
-                <div class="dashboard_analytics">
-                    <h3>Document Requests</h3>
-                    <div  id="requestTrends"></div>
-                    <div id="requestTrendsSummary"></div>
-                </div>
-                <div class="dashboard_analytics">
-                    <h3>Residents Feedback</h3>
-                    <div id="feedbackRatingsChart"></div>
-                    <div id="feedbackRatingsSummary"></div>
-                </div>
-            </div>
-
             <div class="barangay_analytics">
-                <div class="analytics_title">
-                    <h3>Community Threads Analysis</h3>
-                    <a href="threads_analytics.html" class="btn">View More</a>
-                </div>
-                <div id="postPopularity"></div>
-            </div>
-
-            <div class="barangay_analytics">
-                <div class="analytics_title">
-                    <h3>Complaint Report Analysis</h3>
-                    <a href="complaint_analytics.html" class="btn">View More</a>
-                </div>
-                <div id="complaintTrend"></div>
-            </div>
-
-
-
-            <div class="barangay_analytics">
-                <div class="analytics_title">
-                    <h3>Emergency Report Analysis</h3>
-                    <a href="emergency_analytics.html" class="btn">View More</a>
-                </div>
-                <div id="emergencyTrend"></div>
-            </div>
-
-            <div class="barangay_analytics">
-                <div class="analytics_title">
-                    <h3>Idea Submission Analysis</h3>
-                    <a href="idea_analytics.html" class="btn">View More</a>
-                </div>
+                <h3>Submission Trend</h3>
                 <div id="submissionTrend"></div>
+                <div class="analytics_summary-container">
+                    <div class="analytics_summary">
+                        <h4>Weekly Idea Submission</h4>
+                        <div id="weeklySubmissionSummary"></div>
+                    </div>
+
+                    <div class="analytics_summary">
+                        <h4>Monthly Idea Submission</h4>
+                        <div id="monthlySubmissionSummary"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="barangay_analytics">
+                <h3>Participation Analysis</h3>
+                <div id="engagementLevelAnalysis"></div>
+                <div class="analytics_summary-container">
+                    <div class="analytics_summary">
+                        <h4>Top Participants</h4>
+                        <div id="topParticipantsChart"></div>
+                    </div>
+    
+                    <div class="analytics_summary">
+                        <h4>Participant Shares</h4>
+                        <div id="participationShareChart"></div>
+                    </div>
+
+                    
+                </div>
+            </div>
+
+            <div class="barangay_analytics">
+                <h3>Impact of Guidance or Campaigns</h3>
+                <div id="campaignImpactChart"></div>
+            </div>
+            <div class="analytics_summary-container">
+                <div class="analytics_summary">
+                    <h4>Increase with Campaign</h4>
+                    <div id="campaignInsightsIncrease"></div>
+                </div>
+
+                <div class="analytics_summary">
+                    <h4>Decrease with Campaign</h4>
+                    <div id="campaignInsightsDecrease"></div>
+                </div>
             </div>
         </div>
         <!-------------- END OF BARANGAY ANALYTICS -------------->
