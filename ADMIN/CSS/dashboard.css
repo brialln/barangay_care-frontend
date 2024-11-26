@@ -68,13 +68,138 @@
 }
 
 /* ========================== Dashboard Charts/Analytics Container ========================== */
-#pieChart, #stackedAreaChart, #donutChart, #lineChart {
-    max-width: 100%;
+.dashboard_analytics-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 2rem;
+    gap: 2rem;
+}
+
+.analytics_title {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.analytics_title a {
+    background: var(--color-primary);
+    color: var(--color-white);
+    padding: 0.4rem 0.8rem;
+    border: 2px solid transparent;
+    border-radius: var(--card-border-radius-2);
+    cursor: pointer;
+    font-size: 0.8rem;
+    transition: var(--transition);
+}
+
+.analytics_title a:hover {
+    background: transparent;
+    border-color: var(--color-primary);
+}
+
+/* Dashboard Charts/Analytics Styles */
+#requestTrends, #emergencyTrend,
+#complaintTrend, #postPopularity,
+#submissionTrend, #feedbackRatingsChart {
+    width: 100%;
     margin: 1rem auto 2rem auto;
     background: var(--color-white);
-    padding: 2rem 4rem;
-    border-radius: var(--card-border-radius-4);
+    padding: 2rem;
+    border-radius: var(--card-border-radius-3);
     display: flex;
     justify-content: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Dashboard Text Analytics Summary */
+#requestTrendsSummary, #feedbackRatingsSummary {
+    background: var(--color-white);
+    padding: 2rem;
+    border-radius: var(--card-border-radius-3);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 100%;
+}
+
+.summary-title {
+    font-size: 1rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: var(--color-primary); /* Adjust the color as needed */
+}
+
+.summary-text {
+    font-size: 1rem;
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 5px;
+    color: var(--color-charcoal-gray); /* Adjust the color as needed */
+
+}
+
+.summary-text b {
+    font-weight: bold;
+    color: var(--color-black); /* Adjust the color as needed */
+}
+
+.summary-list {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin-top: 5px;
+}
+
+.summary-list-item {
+    font-size: 1rem;
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 5px;
+    color: var(--color-charcoal-gray); /* Adjust the color as needed */
+}
+
+.summary-list-item b {
+    font-weight: bold;
+    color: var(--color-black); /* Adjust the color as needed */
+}
+
+
+/* ========================== More Analytics ========================== */
+
+/* Complaint Trend */
+#complaintTrend, #complaintWeeklySummary, #complaintMonthlySummary,
+#complaintTypeOverall, #complaintTypeDistribution, #complaintTypeNumber,
+#complaintNumberLocation, #complaintPercentageLocation,
+/* Eemergency Trend */
+#emergencyTrend, #emergencyWeeklySummary, #emergencyMonthlySummary,
+#emergencyType, #emergencyTypeDistribution, #emergencyTypeNumber, 
+#emergencyNumberLocation, #emergencyPercentageLocation,
+/* Idea Submission Trend */
+#submissionTrend, #weeklySubmissionSummary, #monthlySubmissionSummary,
+#engagementLevelAnalysis, #topParticipantsChart, #participationShareChart,
+#campaignImpactChart, #campaignInsightsIncrease, #campaignInsightsDecrease, 
+/* Community Trend */ 
+#postPopularity, #postPopularityTop, #postPopularityPopular,
+#engagementTrend, #engagementTrendDaily, #engagementTrendPeak, 
+#userActivityHeatmap, #userActivityHeatmapOverall, #userActivityHeatmapMostActive {
+    max-width: 100%;
+    margin: 1rem auto 2rem auto;
+    background: var(--color-white);
+    padding: 2rem;
+    border-radius: var(--card-border-radius-3);
+    display: flex;
+    justify-content: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.analytics_summary-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+#complaintMap, #emergencyMap {
+    margin: 1rem auto 2rem auto;
+    background: var(--color-white);
+    padding: 2rem;
+    border-radius: var(--card-border-radius-3);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    height: 500px;
 }
