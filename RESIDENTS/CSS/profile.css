@@ -1,27 +1,34 @@
 @import url(style.css);
 
-.profile {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.profile_container {
+.profile_section {
+    margin-top: 1rem;
     background: var(--color-white);
     border-radius: var(--card-border-radius-3);
-    padding: 2rem 3rem;
+    padding: 3rem 5rem;
     display: flex;
     flex-direction: column;
-    gap: 2rem;
-    width: 70%;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
     transition: var(--transition);
+    gap: 2rem;
 }
 
-.profile_container:hover {
+.profile_section:hover {
     box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15); 
 }
 
+.profile_section-container {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Input Fields & Container */
+.profile_section-container form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+}
+
+/* Profile Name and Avatar */
 .profile_info-container {
     display: flex;
     flex-direction: row;
@@ -47,16 +54,7 @@
     opacity: 0.5;
 }
 
-.personal_details-container {
-    display: flex;
-    flex-direction: column;
-}
-
-.personal_details form {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-}
-
+/* Profile Button Container (Update Changes) */
 .profile_button-container {
     display: flex;
     flex-direction: column;
@@ -67,16 +65,4 @@
 .profile_button-container label {
     font-size: 0.7rem;
     font-style: italic;
-}
-
-
-.password_security-container {
-    display: flex;
-    flex-direction: column;
-    padding: 0;
-}
-
-.password_security-container form {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
 }

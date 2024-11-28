@@ -27,7 +27,8 @@
     <!------------------------------------ END OF NAV ------------------------------------>
 
     <div class="container profile">
-        <div class="profile_container">
+        <h3>Resident Profile</h3>
+        <div class="profile_section">
             <div class="profile_info-container">
                 <div class="profile_avatar">
                     <img src="IMAGES/pamplona_logo.JPG" alt="Profile Avatar">
@@ -37,59 +38,58 @@
                     <h5>Resident</h5>
                 </div>
             </div>
-    
-            <div class="personal_details-container">
+
+            <div class="profile_section-container">
                 <h4>Personal Details</h4>
-                <div class="personal_details">
-                    <form action="">
-                        <div class="form_control">
-                            <label for="first-name">First Name</label>
-                            <input type="text" id="first-name" name="first-name" placeholder="First Name" value="John">
-                        </div>
-                        
-                        <div class="form_control">
-                            <label for="last-name">Last Name</label>
-                            <input type="text" id="last-name" name="last-name" placeholder="Last Name" value="Doe">
-                        </div>
-                        
-                        <div class="form_control">
-                            <label for="address">Address</label>
-                            <input type="text" id="address" name="address" placeholder="Address" value="123 Block">
-                        </div>
-                        
-                        <div class="form_control">
-                            <label for="email">Email Address</label>
-                            <input type="email" id="email" name="email" placeholder="Email Address" value="johndoe@gmail.com">
-                        </div>
-                        
-                        <div class="form_control">
-                            <label for="contact-number">Contact Number</label>
-                            <input type="text" id="contact-number" name="contact-number" placeholder="Contact Number" value="09123456789">
-                        </div>
-                        
-                        <div class="form_control">
-                            <label for="birthdate">Birthdate</label>
-                            <input type="date" id="birthdate" name="birthdate" value="2000-01-01">
-                        </div>
-                        
-                        <div class="form_control">
-                            <label for="gender">Gender</label>
-                            <select id="gender" name="gender" required>
-                                <option value="Male">Male</option>
-                                <option value="Female">Female</option>
-                                <option value="Other">Other</option>
-                            </select>
-                        </div>
-    
-                        <div class="profile_button-container">
-                            <label for="update">Click below to update changes</label>
-                            <button type="submit" class="btn confirmation">Update Changes</button>
-                        </div>
-                    </form>
-                </div>
+                <form action="">
+                    <div class="form_control">
+                        <label for="first-name">First Name</label>
+                        <input type="text" id="first-name" name="first-name" placeholder="First Name" value="John">
+                    </div>
+                    
+                    <div class="form_control">
+                        <label for="last-name">Last Name</label>
+                        <input type="text" id="last-name" name="last-name" placeholder="Last Name" value="Doe">
+                    </div>
+                    
+                    <div class="form_control">
+                        <label for="address">Address</label>
+                        <input type="text" id="address" name="address" placeholder="Address" value="123 Block">
+                    </div>
+                    
+                    <div class="form_control">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" placeholder="Email Address" value="johndoe@gmail.com">
+                    </div>
+                    
+                    <div class="form_control">
+                        <label for="contact-number">Contact Number</label>
+                        <input type="text" id="contact-number" name="contact-number" placeholder="Contact Number" value="09123456789">
+                    </div>
+                    
+                    <div class="form_control">
+                        <label for="birthdate">Birthdate</label>
+                        <input type="date" id="birthdate" name="birthdate" value="2000-01-01">
+                    </div>
+                    
+                    <div class="form_control">
+                        <label for="gender">Gender</label>
+                        <select id="gender" name="gender" required>
+                            <option disabled selected> Select Gender</option>
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+
+                    <div class="profile_button-container">
+                        <label for="update">Click below to update changes</label>
+                        <button type="submit" class="btn confirmation">Update Changes</button>
+                    </div>
+                </form>
             </div>
-    
-            <div class="password_security-container">
+
+            <div class="profile_section-container">
                 <h4>Password & Security</h4>
                 <form action="">
                     <div class="form_control">
@@ -114,28 +114,29 @@
                 </form>
             </div>
         </div>
+        <!-------------- END OF ADMIN PROFILE -------------->
     </div>
 
     <div id="confirmationModal" class="modal">
-        <div class="modal-content">
+        <form class="modal-content">
             <h4>Update Changes</h4>
             <p>Are you sure you want to update?</p>
             <div class="modal_button-container">
                 <button class="btn submit-modal-m">Submit</button>
                 <button class="btn cancel-modal-m">Cancel</button>
             </div>
-        </div>
+        </form>
     </div>
 
     <div id="pw-confirmationModal" class="modal">
-        <div class="modal-content">
+        <form class="modal-content">
             <h4>Update Password</h4>
             <p>Are you sure you want to update password?</p>
             <div class="modal_button-container">
                 <button class="btn submit-modal-m">Submit</button>
                 <button class="btn cancel-modal-m">Cancel</button>
             </div>
-        </div>
+        </form>
     </div>
     <!-------------- END OF MODAL CONFIRMATION -------------->
 
