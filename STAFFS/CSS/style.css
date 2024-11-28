@@ -1,0 +1,752 @@
+/* 
+* Notes:
+* 1. This is the "GENERAL" CSS file for the ADMIN side.
+* 2. This file should always be included in every HTML head tag in ADMIN.
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+:root {
+    --color-primary: #FD5B32;
+    --color-light-primary: #FFE1E1;
+    --color-dark-blue: #03045E;
+    --color-bg: #F1F1F1;
+    --color-red: #FF0000;
+    --color-light-red: #FFCCCC;
+    --color-green: #088108;
+    --color-light-green: #99FFCC;
+    --color-charcoal-gray: #36454F;
+    --color-white: #FFFFFF;
+    --color-ash: #F5F5F5;
+    --color-black: #000000;
+    --color-dark-gray: #D9D9D9;
+    --color-navy-blue: #001F3F;
+
+    --font-size: 0.9rem;
+
+    --transition: all 300ms ease;
+
+    --container-width-lg: 88%;
+    --container-width-mg: 88%;
+    --form-width: 40%;
+
+    --card-border-radius-1: 0.3rem;
+    --card-border-radius-2: 0.5rem;
+    --card-border-radius-3: 0.8rem;
+    --card-border-radius-4: 2rem;
+    --card-border-radius-5: 5rem;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+    line-height: 1.7;
+    background: var(--color-ash);
+    min-height: 100vh;
+    min-height: 100dvh;
+    display: grid;
+    grid-template-columns: auto 1fr;
+}
+
+.container {
+    width: var(--container-width-lg);
+    margin: 1rem auto 2rem auto;
+}
+
+.forback_container {
+    width: var(--container-width-lg);
+    margin: 1rem auto 0rem auto;
+}
+
+section {
+    margin-top: 3rem;
+    flex: 1;
+}
+
+h1, h2, h3, h4, h5 {
+    line-height: 1.2;
+}
+
+h1 {
+    font-size: 2.4rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.8rem;
+    color: var(--color-primary);
+}
+
+h4 {
+    font-size: 1rem;
+}
+
+a {
+    color: inherit;
+    cursor: pointer;
+}
+
+img {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.9rem 2rem;
+    border-radius: var(--card-border-radius-2);
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    border: 2px solid transparent;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: var(--transition);
+    cursor: pointer;
+}
+
+.btn:hover {
+    background: transparent;
+    color: var(--color-primary);
+    border-color: var(--color-primary);
+}
+
+/* ========================== Forms Section ========================== */
+form {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: var(--form-width);
+}
+
+input, textarea, select {
+    width: 100%;
+    border: 2px solid var(--color-primary);
+    padding: 0.8rem 1.4rem;
+    background-color: var(--color-white);
+    border-radius: var(--card-border-radius-2);
+    resize: none;
+    color: var(--color-black-font);
+}
+
+.form_section-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ========================== Button Varieties ========================== */
+/* EDIT CONTAINER (EDIT & DELETE BUTTONS) */
+.edit-container {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+}
+
+.edit-container button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+  
+.edit-container svg {
+    width: 24px;
+    height: 24px;
+    transition: transform 0.2s;
+}
+  
+.edit-container button:hover svg {
+    transform: scale(1.2);
+}
+
+/* ================================ General Buttons Editing  ================================ */
+.edit_action-button-container {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+.edit_action-button-container button {
+    padding: 0.5rem 1rem;
+}
+
+/* GENERAL UPLOAD BUTTON STYLE */
+.upload_button {
+    /* Button Style */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    background: var(--color-dark-gray);
+    font-size: 1rem;
+    padding: 0.8rem 2rem;
+    border-radius: 2rem;
+    color: var(--color-black);
+    border: 2px solid transparent;
+    font-weight: 650;
+    transition: var(--transition);
+    cursor: pointer;
+}
+
+.upload_button:hover {
+    color: var(--color-charcoal-gray);
+    background: var(--color-white);
+    transition: var(--transition);
+}
+
+/* CATEGORY BUTTON STYLE */
+.category_button {
+    background: var(--color-light-primary);
+    color: var(--color-primary);
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    border-radius: var(--card-border-radius-2);
+    font-weight: 600;
+    font-size: 0.8rem;
+    text-align: center;
+    transition: var(--transition);
+    margin-bottom: 0.5rem;
+}
+
+.category_button:hover {
+    color: var(--color-light-primary);
+}
+
+/* BACK BUTTON STYLE */
+.back_button-container button {
+    border-radius: 50%;
+}
+
+.back_button-container .uil-arrow-circle-left {
+    font-size: 2.6rem;
+    color: var(--color-primary);
+    cursor: pointer;
+}
+
+.back_button-container .uil-arrow-circle-left:hover {
+    opacity: 0.5;
+    transition: var(--transition);
+}
+
+/* ========================== Sidebar ========================== */
+#sidebar {
+    font-weight: 550;
+    box-sizing: border-box;
+    width: 250px;
+    height: 100vh;
+    padding: 5px;
+    padding: 5px 1em;
+    background-color: var(--color-navy-blue);
+    border-right: 2px solid var(--color-light-primary);
+
+    position: sticky;
+    top: 0;
+    align-self: start;
+    transition: var(--transition);
+    overflow: hidden;
+    text-wrap: nowrap;
+}
+#sidebar.close {
+    padding: 5px;
+    width: 60px;
+}
+#sidebar ul {
+    list-style: none;
+}
+#sidebar > ul > li:first-child {
+    background: var(--color-primary);
+    border-radius: 0.5rem;
+    color: var(--color-light-primary);
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 0.2rem;
+    .logo {
+        font-weight: 600;
+    }
+}
+#sidebar ul li.active a {
+    color: var(--color-primary);
+
+    svg {
+        fill: var(--color-primary);
+    }
+}
+#sidebar ul li.active a:hover {
+    background: var(--color-light-primary);
+}
+#sidebar a, #sidebar .dropdown-btn, #sidebar .logo {
+    border-radius: .5em;
+    padding: .85em;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    align-items: center;
+    gap: 1em;
+    color: var(--color-white);
+}
+.dropdown-btn {
+    width: 100%;
+    text-align: left;
+    background: none;
+    border: none;
+    font: inherit;
+    cursor: pointer;
+}
+#sidebar svg {
+    flex-shrink: 0;
+    fill: var(--color-white);
+}
+#sidebar a span, #sidebar .dropdown-btn span {
+    flex-grow: 1;
+}
+#sidebar a:hover, #sidebar .dropdown-btn:hover {
+    background-color: var(--color-primary);
+}
+#sidebar .sub-menu {
+    font-size: 12px;
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: var(--transition);
+
+    > div {
+        overflow: hidden;
+    }
+}
+#sidebar .sub-menu.show {
+    grid-template-rows: 1fr;
+}
+.dropdown-btn svg{
+    transition: var(--transition);
+}
+.rotate svg:last-child {
+    rotate: 180deg;
+}
+#sidebar .sub-menu a{
+    padding-left: 2em;
+    font-size: 0.7rem;
+}
+#toggle-btn {
+    margin-left: auto;
+    padding: 1em;
+    border: none;
+    border-radius: .5em;
+    background: none;
+    cursor: pointer;
+    svg {
+        transition: rotate 150ms ease;
+    }
+}
+/* SIDEBAR MEDIA QUERY (SMARTPHONE) */
+@media(max-width: 800px) {
+    body{
+        grid-template-columns: 1fr;
+    }
+    main {
+        padding: 2em 1em 60px 1em;
+    }
+    .container {
+        border: none;
+        padding: 0;
+    }
+    #sidebar {
+        height: 60px;
+        width: 100%;
+        border-right: none;
+        border-top: 1px solid var(--color-navy-blue);
+        padding: 0;
+        position: fixed;
+        top: unset;
+        bottom: 0;
+
+        > ul {
+            padding: 0;
+            display: grid;
+            grid-auto-columns: 60px;
+            grid-auto-flow: column;
+            align-items: center;
+            overflow-x: scroll;
+        }
+
+        ul li {
+            height: 100%;
+        }
+
+        ul a, ul .dropdown-btn {
+            width: 60px;
+            height: 60px;
+            padding: 0;
+            border-radius: 0;
+            justify-content: center;
+        } 
+
+        ul li span, ul li:first-child, .dropdown-btn svg:last-child{
+            display: none;
+        }
+
+        ul li .sub-menu.show{
+            position: fixed;
+            bottom: 60px;
+            left: 0;
+            box-sizing: border-box;
+            height: 60px;
+            width: 100%;
+            background-color: var(--color-primary);
+            display: flex;
+            justify-content: center;
+
+            > div {
+                overflow-x: auto;
+            }
+            
+            li {
+                display: inline-flex;
+            }
+
+            a{
+                box-sizing: border-box;
+                padding: 1em;
+                width: auto;
+                justify-content: center;
+            }
+        }
+    }
+}
+
+/* ========================== Header ========================== */
+/* REMARKS BANNER SECTION (ADMIN) */
+.remarks_banner-container {
+    top: 0;
+    background: var(--color-white);
+    height: 2.5rem;
+    padding-left: 1rem;
+    padding-top: 5px;
+    font-weight: bold;
+    border-bottom: 2px solid var(--color-light-primary);
+}
+
+/* HEADER SECTION STYLE */
+.header_section-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.img_section-container {
+    position: relative;
+    width: 100%;
+    max-width: 100%; /* Ensures the container takes up the full width of its parent */
+    height: 450px; /* Fixed height */
+    border: 5px solid var(--color-primary);
+    border-radius: 1rem;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: border 300ms ease-in-out;
+    cursor: pointer;
+}
+
+.img_section-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image covers the entire container */
+}
+
+.upload_button-inside {
+    /* Button Position */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    /* Button Style */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    background: var(--color-dark-gray);
+    font-size: 1rem;
+    padding: 0.8rem 2rem;
+    border-radius: 2rem;
+    color: var(--color-black);
+    border: 2px solid transparent;
+    font-weight: 650;
+    transition: var(--transition);
+    cursor: pointer;
+}
+
+.upload_button-inside:hover {
+    color: var(--color-charcoal-gray);
+    background: var(--color-white);
+    transition: var(--transition);
+}
+
+/* ========================== Posts Styles (Articles & Guidelines) ========================== */
+/* GENERAL POSTS STYLE */
+.post_thumbnail {
+    width: 100%;
+    max-width: 100%; /* Ensures the container takes up the full width of its parent */
+    height: 250px; /* Fixed height */
+    border-radius: var(--card-border-radius-3);
+    border: 0.3rem solid var(--color-navy-blue);
+    overflow: hidden;
+    margin-bottom: 1.6rem;
+    transition: var(--transition);
+}
+
+.post_thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.post:hover .post_thumbnail img {
+    filter: saturate(0.6);
+    transform: var(--transition);
+    cursor: pointer;
+}
+
+.post_author {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1.2rem;
+}
+
+.post_author-avatar {
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.post_author-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* POSTS STYLE */
+.posts_container {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(350px, 1fr)); 
+    margin-top: 1rem;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.post {
+    background: var(--color-white);
+    padding: 1rem 1rem;
+    border-radius: var(--card-border-radius-3);
+}
+
+.post_info a {
+    color: var(--color-black);
+    transition: var(--transition);
+}
+
+.post_info a:hover {
+    color: var(--color-primary);
+}
+
+/* SINGLE POST */
+.singlepost {
+    margin: 2rem 0 2rem;
+}
+
+.singlepost_container {
+    width: 70%;
+    background: var(--color-white);
+    padding: 1rem 2rem 2rem;
+    border-radius: var(--card-border-radius-3);  
+}
+
+.singlepost_container:hover {
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15); 
+}
+
+.singlepost_thumbnail {
+    width: 100%;
+    max-width: 100%; /* Ensures the container takes up the full width of its parent */
+    height: 500px; /* Fixed height */
+    margin-top: 1.5rem;
+    position: relative;
+}
+
+.singlepost_thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.singlepost_container p {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    line-height: 1.7rem;
+}
+
+/* ========================== Inforgraphics for Services ========================== */
+.infographics_container {
+    margin-top: 1.2rem;
+    background: var(--color-white);
+    padding: 2rem;
+    border-radius: var(--card-border-radius-3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    transition: var(--transition);
+}
+
+.infographics_container:hover {
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15); 
+}
+
+.infographics_container h3 {
+    font-size: 1.2rem;
+    color: var(--color-white);
+    background: var(--color-primary);
+    padding: 1rem 1.2rem;
+    border-radius: var(--card-border-radius-3);
+    margin-bottom: 1rem;
+}
+
+.infographics_body {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+}
+
+.infographics_content {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+    border-right: 2px solid var(--color-primary);
+    border-bottom: 2px solid var(--color-primary);
+    border-top-right-radius: var(--card-border-radius-3);
+    border-bottom-left-radius: var(--card-border-radius-3);
+    border-bottom-right-radius: var(--card-border-radius-3);
+    transition: var(--transition);
+    cursor: pointer;
+}
+
+.infographics_content:hover {
+    transform: scale(1.03);
+}
+
+/* ========================== Reusable Styles (Announcements, Publications, Safety Guides, Services Container etc.) ========================== */
+.reusable_services-container {
+    margin-top: 1rem;
+}
+
+.reusable_services-container h4 {
+    color: var(--color-white);
+    background: var(--color-navy-blue);
+    padding: 0.5rem 0;
+    text-align: center;
+    font-size: 1.3rem;
+    border-top-right-radius: var(--card-border-radius-4);
+    border-top-left-radius: var(--card-border-radius-4);
+    margin-bottom: 1rem;
+}
+
+.reusable_section-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.reusable_section-container h4 {
+    color: var(--color-navy-blue);
+}
+
+.reusable_section-container button{
+    margin: 0 auto;
+}
+
+.barangay_section-container {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(350px, 1fr));  
+    justify-content: center; 
+    align-content: center; 
+    gap: 1.5rem; 
+}
+
+.reusable-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+
+.reusable-card img {
+    width: 100%;
+    height: 20rem;
+    object-fit: cover; 
+}
+
+.reusable_image-container {
+    position: relative;    
+    width: 100%;
+}
+
+.reusable_content-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    text-align: center;
+    gap: 1rem;
+}
+
+.upload_button-reusable {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    width: 10rem;
+    justify-content: center;
+    gap: 0.5rem;
+    background: var(--color-dark-gray);
+    font-size: 0.8rem;
+    padding: 0.5rem 1rem;
+    border-radius: 2rem;
+    color: var(--color-black);
+    border: 2px solid transparent;
+    font-weight: 600;
+    transition: var(--transition);
+    cursor: pointer;
+}
+
+.upload_button-reusable:hover {
+    color: var(--color-charcoal-gray);
+    background: var(--color-white);
+    transition: var(--transition);
+}

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>STAFF Manage | BARANGAY-WBA</title>
+    
+        <!-- Google Fonts: Montserrat -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    
+        <!-- CSS Stylesheets -->
+        <link rel="stylesheet" href="CSS/style.css">
+        <link rel="stylesheet" href="CSS/authentication.css">
+        <link rel="stylesheet" href="CSS/action_modal.css">
+        <link rel="stylesheet" href="CSS/profile.css">
+        <link rel="stylesheet" href="CSS/about.css">
+        <link rel="stylesheet" href="CSS/central_request.css">
+        <link rel="stylesheet" href="CSS/community_development.css">
+        <link rel="stylesheet" href="CSS/contact.css">
+        <link rel="stylesheet" href="CSS/disaster_preparedness.css">
+        <link rel="stylesheet" href="CSS/publications.css">
+        <link rel="stylesheet" href="CSS/women_welfare.css">
+        <link rel="stylesheet" href="CSS/youth_sports.css">
+    
+        <!-- Iconscout CDN -->
+        <link href="https://unicons.iconscout.com/release/v4.0.8/css/line.css" rel="stylesheet">
+    
+        <!-- JavaScript Files -->
+        <script src="./JS/app.js" defer></script>
+        <script src="./JS/sidebar.js" defer></script>
+        <script src="./JS/threads.js" defer></script>
+    </head>
+<body>
+    <div id="sidebar-container"></div>
+    <!------------------------------------ END OF SIDEBAR ------------------------------------>
+    <main>
+        <div class="remarks_banner-container">
+            <p>
+                Staff
+            </p>
+        </div>
+
+        <div class="container profile">
+            <h3>Staff Profile</h3>
+            <div class="profile_section">
+                <div class="profile_info-container">
+                    <div class="profile_avatar">
+                        <img src="IMAGES/pamplona_logo.JPG" alt="Profile Avatar">
+                    </div>
+                    <div class="profile_details">
+                        <h4>Jane Doe</h4>
+                        <h5>Staff</h5>
+                    </div>
+                </div>
+
+                <div class="profile_section-container">
+                    <h4>Personal Details</h4>
+                    <form action="">
+                        <div class="form_control">
+                            <label for="first-name">First Name</label>
+                            <input type="text" id="first-name" name="first-name" placeholder="First Name" value="Jane" required>
+                        </div>
+                        
+                        <div class="form_control">
+                            <label for="last-name">Last Name</label>
+                            <input type="text" id="last-name" name="last-name" placeholder="Last Name" value="Doe" required>
+                        </div>
+                        
+                        <div class="form_control">
+                            <label for="address">Address</label>
+                            <input type="text" id="address" name="address" placeholder="Address" value="123 Block" required>
+                        </div>
+                        
+                        <div class="form_control">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" placeholder="Email Address" value="janedoe@gmail.com" required>
+                        </div>
+                        
+                        <div class="form_control">
+                            <label for="contact-number">Contact Number</label>
+                            <input type="tel" id="phone" name="phone" maxlength="11" pattern="\d{11}" placeholder="Contact Number" value="09088666688" required>
+                        </div>
+                        
+                        <div class="form_control">
+                            <label for="birthdate">Birthdate</label>
+                            <input type="date" id="birthdate" name="birthdate" value="2000-01-01" required>
+                        </div>
+                        
+                        <div class="form_control">
+                            <label for="gender">Gender</label>
+                            <select id="gender" name="gender" required>
+                                <option disabled selected> Select Gender</option>
+                                <option value="Male">Male</option>
+                                <option value="Female">Female</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </div>
+    
+                        <div class="profile_button-container">
+                            <label for="update">Click below to update changes</label>
+                            <button type="submit" class="btn confirmation">Update Changes</button>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="profile_section-container">
+                    <h4>Password & Security</h4>
+                    <form action="">
+                        <div class="form_control">
+                            <label for="old-password">Old Password</label>
+                            <input type="password" id="old-password" name="old-password" placeholder="Old Password">
+                        </div>
+    
+                        <div class="form_control">
+                            <label for="new-password">New Password</label>
+                            <input type="password" id="new-password" name="new-password" placeholder="New Password">
+                        </div>
+                        
+                        <div class="form_control">
+                            <label for="confirm-password">Confirm Password</label>
+                            <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm Password">
+                        </div>
+                        
+                        <div class="profile_button-container">
+                            <label for="update">Click below to update password</label>
+                            <button type="submit" class="btn pw-confirmation">Update Password</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <!-------------- END OF ADMIN PROFILE -------------->
+        </div>
+
+        <div id="confirmationModal" class="modal">
+            <form class="modal_content-action">
+                <h4>Update Changes</h4>
+                <p>Are you sure you want to update?</p>
+                <div class="button_action-container">
+                    <button class="btn submit-modal-m">Submit</button>
+                    <button class="btn cancel-modal-m">Cancel</button>
+                </div>
+            </form>
+        </div>
+    
+        <div id="pw-confirmationModal" class="modal">
+            <form class="modal_content-action">
+                <h4>Update Password</h4>
+                <p>Are you sure you want to update password?</p>
+                <div class="button_action-container">
+                    <button class="btn submit-modal-m">Submit</button>
+                    <button class="btn cancel-modal-m">Cancel</button>
+                </div>
+            </form>
+        </div>
+        <!-------------- END OF MODAL CONFIRMATION -------------->
+    </main>
+</body>

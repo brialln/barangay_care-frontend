@@ -1,0 +1,55 @@
+@import url(style.css);
+
+/* ==================== Contact Form ==================== */
+.contact_form-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: var(--color-white);
+    border-radius: var(--card-border-radius-3);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    overflow: hidden;
+    margin: 1rem 0 3rem 0;
+    padding: 2rem 1.5rem;
+    gap: 2rem;
+}
+
+.contact_aside {
+    width: 50%;
+    padding: 0 0 1rem 0;
+}
+
+.contact_aside-image  {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.contact_aside-image img {
+    width: 7rem;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.contact_aside p {
+    word-wrap: break-word; /* Break long words onto the next line */
+    overflow-wrap: break-word; /* Ensure text doesn't overflow the container */
+    font-size: 0.9rem;
+}
+
+.contact_details {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    width: 100%;
+}
+
+.contact_edit{
+    display: flex;
+    flex-direction: column; 
+    gap: 0.5rem;
+    width: 100%;
+}

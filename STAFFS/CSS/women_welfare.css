@@ -1,0 +1,67 @@
+@import url(style.css);
+
+/* =============== Success Stories =============== */
+.success_post {
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    gap: 2rem;
+    border: 2px solid var(--color-primary);
+    background: var(--color-white);
+}
+
+.success_posts_container {
+    margin-top: 1rem;
+    display: block;
+    gap: 2rem;
+    width: 100%;
+}
+
+.success_post-thumbnail {
+    width: 100%;
+    max-width: 100%; /* Ensures the container takes up the full width of its parent */
+    height: 300px; /* Fixed height */
+    border-radius: var(--card-border-radius-3);
+    border: 0.3rem solid var(--color-navy-blue);
+    overflow: hidden;
+    transition: var(--transition);
+}
+
+.success_post-thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.success_post-thumbnail:hover {
+    border: 0.3rem solid var(--color-primary);
+}
+
+.success_post:hover .success_post-thumbnail img {
+    filter: saturate(0.6);
+    transition: var(--transition);
+    cursor: pointer;
+}
+
+.success_post {
+    width: 100%;
+    background: var(--color-white);
+    padding: 1rem 1rem;
+    border-radius: var(--card-border-radius-3);
+    transition: var(--transition);
+}
+
+.success_post:hover {
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15); 
+}
+
+.success_post-info a {
+    color: var(--color-navy-blue);
+    transition: var(--transition);
+}
+
+.success_post-info a:hover {
+    color: var(--color-primary);
+}
