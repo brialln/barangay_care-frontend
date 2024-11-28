@@ -1,0 +1,171 @@
+@import url(style.css);
+
+/* This file contains the general modal styles and action menu for the website. */
+
+/* ================================ Action Menu Container (Edit & Delete Barangay Ordinance) ================================ */
+
+/* Dropdown container (hidden by default) */
+.action_menu-container {
+    display: none; /* Hidden initially */
+    position: absolute;
+    right: 0; /* Align to the right of the button */
+    top: 100%; /* Position below the ellipsis button */
+    background-color: var(--color-navy-blue);
+    border-radius: var(--card-border-radius-1);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    margin-top: 0.5rem;
+    padding: 8px 0;
+    width: 6rem; /* Set a fixed width */
+}
+
+/* Dropdown buttons */
+.action_menu-container button {
+    display: block;
+    color: var(--color-white);
+    padding: 8px 16px;
+    text-align: left;
+    border: none;
+    background: none;
+    cursor: pointer;
+    width: 100%;
+    transition: var(--transition);
+    font-size: 14px;
+}
+
+/* Specific hover for "Edit" buttons */
+.action_menu-container button:first-child:hover {
+    color: var(--color-green);
+}
+
+/* Specific hover for "Delete" buttons */
+.action_menu-container button:last-child:hover {
+    color: var(--color-red);
+}
+
+/* Show class to make the dropdown visible */
+.action_menu-container.show {
+    display: block;
+}
+
+/* Action menu button */
+.action-menu-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--color-primary);
+    font-size: 1.2rem;
+    transition: var(--transition);
+}
+
+/* ================================ Modal for Action Menu Dropdown ================================ */
+/* General Modal for Triggered by Buttons */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 10; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    background-color: rgba(0,0,0,0.5); /* Black w/ opacity */
+    transition: var(--transition);
+    animation: fadeIn 0.3s;
+}
+
+.modal_content-action {
+    position: relative;
+    background: var(--color-white);
+    margin: 10% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid var(--color-ash);
+    width: 30%; /* Could be more or less, depending on screen size */
+    border-radius: var(--card-border-radius-2);
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 50%;
+    max-height: 500px;
+    overflow-y: auto;
+    animation: scaleIn 0.3s;
+    z-index: 11;
+    transition: var(--transition);
+    text-align: center;
+}
+
+.modal_content-action textarea {
+    border-color: var(--color-navy-blue);
+}
+
+.modal_content-action input {
+    border-color: var(--color-navy-blue);
+}
+
+.modal_content-action h4 {
+    color: var(--color-navy-blue);
+}
+
+.modal_content-action button:first-child{
+    width: 100%;
+    background: var(--color-primary);
+}
+
+.modal_content-action button:hover:first-child {
+    color: var(--color-primary);
+    border-color: var(--color-primary);
+    background: var(--color-white);
+}
+
+.modal_content-action button:last-child{
+    width: 100%;
+    background: var(--color-navy-blue);
+}
+
+.modal_content-action button:hover:last-child {
+    color: var(--color-navy-blue);
+    border-color: var(--color-navy-blue);
+    background: var(--color-white);
+}
+
+.close-button {
+    position: absolute;
+    top: 0;
+    right: 1rem;
+    font-size: 2rem;
+    color: var(--color-navy-blue);
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.close-button:hover,
+.close-button:focus {
+    opacity: 0.6;
+    text-decoration: none;
+}
+
+/* Keyframes for animations */
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@keyframes scaleIn {
+    from {transform: scale(0.9);}
+    to {transform: scale(1);}
+}
+
+@keyframes fadeOut {
+    from {opacity: 1;}
+    to {opacity: 0;}
+}
+
+/* Add classes for hiding animations */
+.modal.fade-out {
+    animation: fadeOut 0.3s;
+}
+
+.button_action-container {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
