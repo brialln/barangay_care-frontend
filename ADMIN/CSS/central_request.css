@@ -83,6 +83,7 @@ Notes:
     padding: 0 0.8rem 0.6rem;
 }
 
+/* Label Container for Health Alert Responses */
 .health_label_request-container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 2fr;
@@ -91,6 +92,7 @@ Notes:
     padding: 0 0.8rem 0.6rem;
 }
 
+/* label Container for Resident Responses */
 .resident_label_request-container {
     display: grid;
     grid-template-columns: 0.5fr 1fr 1fr 2fr 1fr 1fr 1fr 1fr 1fr 1fr 2fr;
@@ -104,9 +106,10 @@ Notes:
     padding: 0 0.5rem; /* Adds consistent padding for alignment */
 }
 
+/* Label Container for Feedback Responses */
 .feedback_label_request-container {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 2fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     text-align: center;
     font-size: 0.9rem;
     padding: 0 0.8rem 0.6rem;
@@ -169,6 +172,7 @@ Notes:
     margin-bottom: 0.2rem;
 }
 
+/* Individual Request Container for Health Alert Responses */
 .health_request-container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 2fr;
@@ -182,6 +186,7 @@ Notes:
     margin-bottom: 0.2rem;
 }
 
+/* Individual Request Container for Resident Responses */
 .resident_request-container {
     display: grid;
     grid-template-columns: 0.5fr 1fr 1fr 2fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
@@ -200,9 +205,10 @@ Notes:
     padding: 0 0.5rem; /* Adds consistent padding for alignment */
 }
 
+/* Individual Request Container for Feedback Responses */
 .feedback_request-container {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 2fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     align-items: center;
     text-align: center;
     font-size: 0.9rem;
