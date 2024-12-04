@@ -11,37 +11,46 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
     <!-- CSS STYLESHEET LINK -->
-     <link rel="stylesheet" href="CSS/login.css">
+     <link rel="stylesheet" href="CSS/style.css">
+     <link rel="stylesheet" href="CSS/authentication.css">
 
      <!-- ICONSCOUT CDN -->
     <link href="https://unicons.iconscout.com/release/v4.0.8/css/line.css" rel="stylesheet">
 
     <!-- GENERAL JS LINK -->
     <script src="JS/app.js"></script>
-
 </head>
 <body>
-    <section class="form_section">
-        <div class="container side_section-container">
-            <img src="IMAGES/pamplona_sample-profile.jpg">
-        </div>
+    <div class="container">
+        <div class="form_container">
+            <div class="form_box">
+                <form>
+                    <div class="form_image">
+                        <img src="IMAGES/pamplona_logo.JPG">
+                    </div>
+                    <h4>BarangayCare</h4>
+                    <p>Enter your resident credentials</p>
+                    <div class="alert_message error">
+                        <p>This is an error message</p>
+                    </div>
+                    <div class="input_box">
+                        <input type="text" placeholder="Enter Barangay ID" required>
+                    </div>
+                    <div class="input_box">
+                        <input type="password" placeholder="Enter Password" required>
+                    </div>
+                    <button type="submit" class="btn">Login</button>
+                    <div class="forgot_link">
+                        <a href="forgot_password.html">Forgot Password?</a>
+                    </div>
 
-        <div class="container form_section-container">
-            <h3>LOGIN</h3> 
-            <h4>Login your credentials.</h4>
-            <div class="alert_message error">
-                <p>This is an error message</p>
+                    <div class="register_link">
+                        <p>Doesn't have an account?<a href="sign_up.html">Register</a></p>
+                    </div>
+                </form>
             </div>
-            <form action="" method="POST" enctype="multipart/form-data">
-                <input type="text" placeholder="Barangay ID" id="barangay-id" name="barangay-id" required>
-                <input type="password" placeholder="Password" id="resident-password" name="resident-password" required>
-
-                <button type="submit" class="btn">Login</button>
-                <center><small><b> <a href="forgot_password.html">Forgot Password?</a></b></small></center>
-                <small>Doesn't have an account? <b> <a href="sign_up.html">Sign up</a></b></small>
-            </form>
         </div>
-    </section>
+    </div>
     <!-- =========== END OF FORM SECTION =========== -->
 
     <footer>
@@ -58,50 +67,51 @@
                 </div>
 
                 <div class="footer_2">
-                    <h4>Home</h4>
+                    <a href="home.html"><h4>Home</h4></a>
                     <ul class="permalinks">
-                        <li><a href="index.html">Announcement</a></li>
-                        <li><a href="index.html">Barangay Facilities</a></li>
+                        <li><a href="home.html">Announcement</a></li>
+                        <li><a href="home.html">Barangay Facilities</a></li>
                     </ul>
 
-                    <h4>Publications</h4>
+                    <a href="#"><h4>Publications</h4></a>
                     <ul class="permalinks">
-                        <li><a href="index.html">Executive Order</a></li>
-                        <li><a href="index.html">Barangay Ordinance</a></li>
-                        <li><a href="index.html">Barangay Resolution</a></li>
+                        <li><a href="barangay_ordinance.html">Barangay Ordinance</a></li>
+                        <li><a href="barangay_resolution.html">Barangay Resolution</a></li>
+                        <li><a href="executive_order.html">Executive Order</a></li>
+                        <li><a href="resource_transparency.html">Resource Transparency</a></li>
                     </ul>
                 </div>
 
                 <div class="footer_3">
-                    <h4>News & Updates</h4>
+                    <a href="news_updates.html"><h4>News & Updates</h4></a>
 
-                    <h4>Services</h4>
+                    <a href="#"><h4>Services</h4></a>
                     <ul class="permalinks">
-                        <li><a href="index.html">Community Development</a></li>
-                        <li><a href="index.html">Disaster Preparedness</a></li>
-                        <li><a href="index.html">Education</a></li>
-                        <li><a href="index.html">Elderly</a></li>
-                        <li><a href="index.html">Health</a></li>
-                        <li><a href="index.html">Justice</a></li>
-                        <li><a href="index.html">Livelihood & Employment</a></li>
-                        <li><a href="index.html">Social</a></li>
-                        <li><a href="index.html">Women's Welfare</a></li>
-                        <li><a href="index.html">Youth & Sports</a></li>
+                        <li><a href="central_request.html">Request Document</a></li>
+                        <li><a href="community_development.html">Community Development</a></li>
+                        <li><a href="disaster_preparedness.html">Disaster Preparedness</a></li>
+                        <li><a href="education.html">Education</a></li>
+                        <li><a href="elderly.html">Elderly</a></li>
+                        <li><a href="health.html">Health</a></li>
+                        <li><a href="justice.html">Justice</a></li>
+                        <li><a href="livelihood_employment.html">Livelihood & Employment</a></li>
+                        <li><a href="social.html">Social</a></li>
+                        <li><a href="women_welfare.html">Women's Welfare</a></li>
+                        <li><a href="youth_sports.html">Youth & Sports</a></li>
                     </ul>
                 </div>
 
                 <div class="footer_4">
-                    <h4>About Us</h4>
+                    <a href="#"><h4>About</h4></a>
                     <ul class="permalinks">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="index.html">News & Updates</a></li>
-                        <li><a href="index.html">Services</a></li>
-                        <li><a href="index.html">Publications</a></li>
-                        <li><a href="index.html">About</a></li>
-                        <li><a href="index.html">Contact</a></li>
+                        <li><a href="mensahe_punong-barangay.html">Mensahe ng Punong-Barangay</a></li>
+                        <li><a href="history_physical.html">History & Physical Information</a></li>
+                        <li><a href="vision_mission.html">Vision and Mission</a></li>
+                        <li><a href="sangguniang_barangay.html">Sangguniang Barangay</a></li>
+                        <li><a href="sangguniang_kabataan.html">Sangguniang Kabataan</a></li>
                     </ul>
 
-                    <h4>Contact Us</h4>
+                    <a href="contact.html"><h4>Contact Us</h4></a>
                     <ul class="permalinks">
                         <li><a href="index.html">+63-945-999-1000</a></li>
                         <li><a href="index.html">+63-945-999-1000</a></li>

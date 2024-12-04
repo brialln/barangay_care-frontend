@@ -13,6 +13,7 @@
     <!-- CSS STYLESHEET LINK -->
      <link rel="stylesheet" href="CSS/style.css">
      <link rel="stylesheet" href="CSS/sign_up.css">
+        <link rel="stylesheet" href="CSS/authentication.css">
 
      <!-- ICONSCOUT CDN -->
     <link href="https://unicons.iconscout.com/release/v4.0.8/css/line.css" rel="stylesheet">
@@ -22,15 +23,13 @@
     
 </head>
 <body>
-    <div class="container back_button-container">
-        <a href="login.html"><button><i class="uil uil-arrow-circle-left"></i></button></a>
-    </div>
-    
-    <section class="form_section">
-        <div class="container form_section-container">
-            <img class="form_logo" src="IMAGES/pamplona_logo.JPG">
-            <h4>Create your account here</h4>
-            <h5>Manage transactions and get the latest updates!</h5> 
+    <div class="container">
+        <div class="register_form-container">
+            <div class="register_form-header">
+                <img class="register_logo" src="IMAGES/pamplona_logo.JPG">
+                <h4>Create your account here</h4>
+                <h5>Manage transactions and get the latest updates!</h5> 
+            </div>
             <div class="alert_message error">
                 <p>This is an error message</p>
             </div>
@@ -61,12 +60,14 @@
                 </div>
 
                 <button type="submit" class="btn">Sign Up</button>
-                <small>Already have an account? <b><a href="login.html">Login</a></b></small>
+
+                <div class="login_link">
+                    <p>Already have an account?<a href="login.html">Login</a></p>
+                </div>
             </form>
         </div>
-    </section>
+    </div>
     <!-- =========== END OF FORM SECTION =========== -->
-
     <footer>
         <div class="container footer_container">
                 <div class="footer_1">
@@ -138,39 +139,5 @@
             <small>Copyright &copy; Barangay Pamplona Uno | Las Pinas City</small>
         </div>
     </footer>
-
-    <script>
-        // JavaScript for client-side validation
-        document.getElementById('signupForm').addEventListener('submit', function(event) {
-            // Phone number validation
-            const phone = document.getElementById('phone').value;
-            const phoneRegex = /^[0-9]{10,15}$/;
-
-            if (!phoneRegex.test(phone)) {
-                alert('Invalid phone number. It should be 10 to 15 digits.');
-                event.preventDefault(); // Prevent form submission
-            }
-
-            // Email validation (using pattern attribute in HTML already)
-
-            // File validation for proof of residency
-            const fileInput = document.getElementById('proof');
-            const filePath = fileInput.value;
-            const allowedExtensions = /(\.jpg|\.jpeg|\.png|\.pdf)$/i;
-
-            if (!allowedExtensions.exec(filePath)) {
-                alert('Invalid file type. Only JPG, PNG, and PDF files are allowed.');
-                fileInput.value = ''; // Clear the file input
-                event.preventDefault();
-            }
-
-            // Checkbox validation (to make sure the user certifies their info)
-            const certify = document.getElementById('certify').checked;
-            if (!certify) {
-                alert('Please certify that the information is correct.');
-                event.preventDefault();
-            }
-        });
-    </script>
 </body>
 </html>
