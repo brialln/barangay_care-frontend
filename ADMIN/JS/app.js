@@ -122,6 +122,7 @@ document.addEventListener('DOMContentLoaded', function() {
         { id: 'deleteModal', class: 'delete_button-m' },
         { id: 'restoreModal', class: 'restore_button' },
         { id: 'detailModal', class: 'details_button' },
+        { id: 'viewModal', class: 'view_button' },
         { id: 'remarksModal', class: 'remarks_button' },
         { id: 'resolveModal', class: 'resolve_button' },
         { id: 'editModal', class: 'edit_button-m' },

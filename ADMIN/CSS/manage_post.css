@@ -134,6 +134,24 @@
     color: var(--color-primary);
 }
 
+.view_button {
+    background: var(--color-primary);
+    color: var(--color-white);
+    padding: 0.5rem 1rem; 
+    margin: 0 auto; 
+    display: block; 
+    border: 2px solid transparent;
+    border-radius: var(--card-border-radius-2);
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.view_button:hover {
+    background: transparent;
+    border-color: var(--color-primary);
+    color: var(--color-primary);
+}
+
 /* ================= */
 /* ================================ */
 /* ================================ OTHERS ================================ */
