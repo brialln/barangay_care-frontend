@@ -6,6 +6,34 @@
     * This file contains the General Javascript functions for the ADMIN.
 */
 
+// Function for Back Button
+document.addEventListener("DOMContentLoaded", () => {
+    const backButton = document.getElementById("backButton");
+
+    // Store the referrer in sessionStorage if it's not coming from a form submission
+    if (document.referrer && !sessionStorage.getItem("submittedForm")) {
+        sessionStorage.setItem("prevPage", document.referrer);
+    }
+
+    backButton.addEventListener("click", () => {
+        // Retrieve the saved referrer
+        const prevPage = sessionStorage.getItem("prevPage");
+        if (prevPage) {
+            window.location.href = prevPage;
+        }
+    });
+
+    // Prevent referrer overwrite on form submission
+    const form = document.querySelector("form");
+    if (form) {
+        form.addEventListener("submit", () => {
+            sessionStorage.setItem("submittedForm", true);
+        });
+    }
+});
+
+
+
 // Helper function for handling tab switching
 function handleTabSwitching(tabsSelector, contentSelector) {
     document.addEventListener('DOMContentLoaded', function() {
@@ -101,6 +129,7 @@ document.addEventListener('DOMContentLoaded', function() {
         { id: 'editActionModal', class: 'edit_button-action'},
         { id: 'deleteActionModal', class: 'delete_button-action'},
         { id: 'feedbackModal', class: 'feedback_button' },
+        { id: 'deletePostModal', class: 'delete_post-button' },
     ];
 
     modals.forEach(modalInfo => {

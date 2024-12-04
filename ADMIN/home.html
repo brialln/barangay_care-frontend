@@ -1,29 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ADMIN Edit Home | BARANGAY-WBA</title>
-
-    <!-- MONTSERRAT GOOGLE FONTS -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-
-    <!-- CSS STYLESHEET LINK -->
-     <link rel="stylesheet" href="CSS/style.css">
-     <link rel="stylesheet" href="CSS/sidebar.css">
-     <link rel="stylesheet" href="CSS/home.css">
-
-     <!-- ICONSCOUT CDN -->
-    <link href="https://unicons.iconscout.com/release/v4.0.8/css/line.css" rel="stylesheet">
-
-    <!-- GENERAL JS LINK -->
-    <script type="text/javascript" src="./JS/app.js" defer></script>
-    <!-- SIDEBAR JS LINK -->
-    <script type="text/javascript" src="./JS/sidebar.js" defer></script>
-
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ADMIN Manage Home | BARANGAY-WBA</title>
+    
+        <!-- Google Fonts: Montserrat -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    
+        <!-- CSS Stylesheets -->
+        <link rel="stylesheet" href="CSS/style.css">
+        <link rel="stylesheet" href="CSS/sidebar.css">
+        <link rel="stylesheet" href="CSS/manage_post.css">
+        <link rel="stylesheet" href="CSS/authentication.css">
+        <link rel="stylesheet" href="CSS/central_request.css">
+        <link rel="stylesheet" href="CSS/action_modal.css">
+        <link rel="stylesheet" href="CSS/community_development.css">
+        <link rel="stylesheet" href="CSS/contact.css">
+        <link rel="stylesheet" href="CSS/dashboard.css">
+        <link rel="stylesheet" href="CSS/disaster_preparedness.css">
+        <link rel="stylesheet" href="CSS/profile.css">
+        <link rel="stylesheet" href="CSS/publications.css">
+        <link rel="stylesheet" href="CSS/women_welfare.css">
+        <link rel="stylesheet" href="CSS/youth_sports.css">
+    
+        <!-- Iconscout CDN -->
+        <link href="https://unicons.iconscout.com/release/v4.0.8/css/line.css" rel="stylesheet">
+    
+        <!-- JavaScript Files -->
+        <script src="./JS/app.js" defer></script>
+        <script src="./JS/sidebar.js" defer></script>
+        <script src="./JS/charts.js" defer></script>
+        <script src="./JS/complaint_analytics.js" defer></script>
+        <script src="./JS/emergency_analytics.js" defer></script>
+        <script src="./JS/idea_analytics.js" defer></script>
+        <script src="./JS/sidebar_analytics.js" defer></script>
+        <script src="./JS/threads.js" defer></script>
+        <script src="./JS/threads_analytics.js" defer></script>
+    </head>
 <body>
     <div id="sidebar-container"></div>
     <!------------------------------------ END OF SIDEBAR ------------------------------------>
@@ -34,263 +50,132 @@
             Admin
         </p>
    </div>
-<!-------------- END OF ADMIN BANNER SECTION -------------->
+    <!-------------- END OF ADMIN BANNER SECTION -------------->
 
-   <div class="container header_section-container">
-    <h3>Edit Home</h3>
-    <div class="img_section-container">
-        <img src="IMAGES/pamplona_logo.JPG">
-        <button class="upload_button-inside">
-            Upload New 
-            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FD5B32"><path d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h357l-80 80H200v560h560v-278l80-80v358q0 33-23.5 56.5T760-120H200Zm280-360ZM360-360v-170l367-367q12-12 27-18t30-6q16 0 30.5 6t26.5 18l56 57q11 12 17 26.5t6 29.5q0 15-5.5 29.5T897-728L530-360H360Zm481-424-56-56 56 56ZM440-440h56l232-232-28-28-29-28-231 231v57Zm260-260-29-28 29 28 28 28-28-28Z"/></svg>
-        </button>
-    </div>
-   </div>
-<!-------------- END OF HEADER SECTION -------------->
+    <!-------------- HOME SECTION -------------->
+    <div id="barangayHeaderSection"  class="container parent_request-container">
+        <h3>Home Page</h3>
+        <div class="barangay_manage-container">
+            <div class="header_manage-container">
+                <h3>Header</h3>
+            </div>
 
-<div class="container reusable_section-container">
-    <h4>Barangay Announcement</h4>
-    <div class="barangay_section-container">
-        <div class="reusable-card">
-            <div class="reusable_image-container">
-                <img src="IMAGES/pamplona_side-section.png" alt="Barangay Hall">
-                <button class="upload_button-reusable">
-                    Upload New 
-                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FD5B32"><path d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h357l-80 80H200v560h560v-278l80-80v358q0 33-23.5 56.5T760-120H200Zm280-360ZM360-360v-170l367-367q12-12 27-18t30-6q16 0 30.5 6t26.5 18l56 57q11 12 17 26.5t6 29.5q0 15-5.5 29.5T897-728L530-360H360Zm481-424-56-56 56 56ZM440-440h56l232-232-28-28-29-28-231 231v57Zm260-260-29-28 29 28 28 28-28-28Z"/></svg>
-                </button>
+            <div class="tab_box-container">
+                <button class="tab_btn active">Header</button>
             </div>
-            
-            <div class="reusable_content-container">
-                <h4>Announcement #1</h4>
-                <p>Announcement details or description can go here.</p>
-                <div class="edit-container">
-                    <button class="edit_button">
-                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FD5B32"><path d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h357l-80 80H200v560h560v-278l80-80v358q0 33-23.5 56.5T760-120H200Zm280-360ZM360-360v-170l367-367q12-12 27-18t30-6q16 0 30.5 6t26.5 18l56 57q11 12 17 26.5t6 29.5q0 15-5.5 29.5T897-728L530-360H360Zm481-424-56-56 56 56ZM440-440h56l232-232-28-28-29-28-231 231v57Zm260-260-29-28 29 28 28 28-28-28Z"/></svg>
-                    </button>
-                    <button class="delete_button">
-                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FD5B32"><path d="M280-120q-33 0-56.5-23.5T200-200v-520h-40v-80h200v-40h240v40h200v80h-40v520q0 33-23.5 56.5T680-120H280Zm400-600H280v520h400v-520ZM360-280h80v-360h-80v360Zm160 0h80v-360h-80v360ZM280-720v520-520Z"/></svg>
-                    </button>
-                </div>
+            <div class="manage_post-header-container">
+                <p>No.</p>
+                <p>Title</p>
+                <p>Image</p>
+                <p>Upload New</p>
             </div>
-        </div>
-
-        <div class="reusable-card">
-            <div class="reusable_image-container">
-                <img src="IMAGES/pamplona_side-section.png" alt="Barangay Hall">
-                <button class="upload_button-reusable">
-                    Upload New 
-                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FD5B32"><path d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h357l-80 80H200v560h560v-278l80-80v358q0 33-23.5 56.5T760-120H200Zm280-360ZM360-360v-170l367-367q12-12 27-18t30-6q16 0 30.5 6t26.5 18l56 57q11 12 17 26.5t6 29.5q0 15-5.5 29.5T897-728L530-360H360Zm481-424-56-56 56 56ZM440-440h56l232-232-28-28-29-28-231 231v57Zm260-260-29-28 29 28 28 28-28-28Z"/></svg>
-                </button>
-            </div>
-            
-            <div class="reusable_content-container">
-                <h4>Announcement #1</h4>
-                <p>Announcement details or description can go here.</p>
-                <div class="edit-container">
-                    <button class="edit_button">
-                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FD5B32"><path d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h357l-80 80H200v560h560v-278l80-80v358q0 33-23.5 56.5T760-120H200Zm280-360ZM360-360v-170l367-367q12-12 27-18t30-6q16 0 30.5 6t26.5 18l56 57q11 12 17 26.5t6 29.5q0 15-5.5 29.5T897-728L530-360H360Zm481-424-56-56 56 56ZM440-440h56l232-232-28-28-29-28-231 231v57Zm260-260-29-28 29 28 28 28-28-28Z"/></svg>
-                    </button>
-                    <button class="delete_button">
-                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FD5B32"><path d="M280-120q-33 0-56.5-23.5T200-200v-520h-40v-80h200v-40h240v40h200v80h-40v520q0 33-23.5 56.5T680-120H280Zm400-600H280v520h400v-520ZM360-280h80v-360h-80v360Zm160 0h80v-360h-80v360ZM280-720v520-520Z"/></svg>
-                    </button>
-                </div>
-            </div>
-        </div>
-
-        <div class="reusable-card">
-            <div class="reusable_image-container">
-                <img src="IMAGES/pamplona_side-section.png" alt="Barangay Hall">
-                <button class="upload_button-reusable">
-                    Upload New 
-                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FD5B32"><path d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h357l-80 80H200v560h560v-278l80-80v358q0 33-23.5 56.5T760-120H200Zm280-360ZM360-360v-170l367-367q12-12 27-18t30-6q16 0 30.5 6t26.5 18l56 57q11 12 17 26.5t6 29.5q0 15-5.5 29.5T897-728L530-360H360Zm481-424-56-56 56 56ZM440-440h56l232-232-28-28-29-28-231 231v57Zm260-260-29-28 29 28 28 28-28-28Z"/></svg>
-                </button>
-            </div>
-            
-            <div class="reusable_content-container">
-                <h4>Announcement #1</h4>
-                <p>Announcement details or description can go here.</p>
-                <div class="edit-container">
-                    <button class="edit_button">
-                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FD5B32"><path d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h357l-80 80H200v560h560v-278l80-80v358q0 33-23.5 56.5T760-120H200Zm280-360ZM360-360v-170l367-367q12-12 27-18t30-6q16 0 30.5 6t26.5 18l56 57q11 12 17 26.5t6 29.5q0 15-5.5 29.5T897-728L530-360H360Zm481-424-56-56 56 56ZM440-440h56l232-232-28-28-29-28-231 231v57Zm260-260-29-28 29 28 28 28-28-28Z"/></svg>
-                    </button>
-                    <button class="delete_button">
-                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FD5B32"><path d="M280-120q-33 0-56.5-23.5T200-200v-520h-40v-80h200v-40h240v40h200v80h-40v520q0 33-23.5 56.5T680-120H280Zm400-600H280v520h400v-520ZM360-280h80v-360h-80v360Zm160 0h80v-360h-80v360ZM280-720v520-520Z"/></svg>
-                    </button>
+            <div class="request_container">
+                <div class="request active">
+                    <div class="manage_post-header">
+                        <p>1</p>
+                        <p>Header</p>
+                        <p>pamplona_header.png</p>
+                        <button class="upload_new-button">Upload New</button>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-  </div>
-<!-------------- END OF BARANGAY ANNOUNCEMENTS SECTION -------------->
+    <!-------------- END OF HEADER SECTION  -------------->
 
-    <div class="form_section">
-        <div class="container form_section-container">
-            <h2>Add Announcement</h2>
-            <form action="" enctype="multipart/form-data">
-                <input type="text" placeholder="Title">
-                <div class="form_control">
-                    <label for="thumbnail">Add Thumbnail</label>
-                    <input type="file" id="thumbnail">
-                </div>
-                <textarea rows="10" name="Description" placeholder="Description"></textarea>
-                <button type="submit" class="btn">Add Announcement</button>
-            </form>
-        </div>
-    </div>
-<!-------------- END OF ADD ANNOUNCEMENT -------------->
-
-<div class="container reusable_section-container">
-    <h4>Barangay Facilities</h4>
-    <div class="barangay_section-container">
-        <div class="reusable-card">
-            <div class="reusable_image-container">
-                <img src="IMAGES/pamplona_side-section.png" alt="Barangay Hall">
-                <button class="upload_button-reusable">
-                    Upload New 
-                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FD5B32"><path d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h357l-80 80H200v560h560v-278l80-80v358q0 33-23.5 56.5T760-120H200Zm280-360ZM360-360v-170l367-367q12-12 27-18t30-6q16 0 30.5 6t26.5 18l56 57q11 12 17 26.5t6 29.5q0 15-5.5 29.5T897-728L530-360H360Zm481-424-56-56 56 56ZM440-440h56l232-232-28-28-29-28-231 231v57Zm260-260-29-28 29 28 28 28-28-28Z"/></svg>
-                </button>
-            </div>
-            
-            <div class="reusable_content-container">
-                <h4>Facility #1</h4>
-                <div class="edit-container">
-                    <button class="edit_button">
-                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FD5B32"><path d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h357l-80 80H200v560h560v-278l80-80v358q0 33-23.5 56.5T760-120H200Zm280-360ZM360-360v-170l367-367q12-12 27-18t30-6q16 0 30.5 6t26.5 18l56 57q11 12 17 26.5t6 29.5q0 15-5.5 29.5T897-728L530-360H360Zm481-424-56-56 56 56ZM440-440h56l232-232-28-28-29-28-231 231v57Zm260-260-29-28 29 28 28 28-28-28Z"/></svg>
-                    </button>
-                    <button class="delete_button">
-                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FD5B32"><path d="M280-120q-33 0-56.5-23.5T200-200v-520h-40v-80h200v-40h240v40h200v80h-40v520q0 33-23.5 56.5T680-120H280Zm400-600H280v520h400v-520ZM360-280h80v-360h-80v360Zm160 0h80v-360h-80v360ZM280-720v520-520Z"/></svg>
-                    </button>
+    <div id="barangayAnnouncementSection"  class="container parent_request-container">
+        <div class="barangay_manage-container">
+            <div class="header_manage-container">
+                <h3>Announcements</h3>
+                <div class="header_button-container">
+                    <a href="add_post.html">
+                        <button class="add_people-button">Add Post</button>
+                    </a>
                 </div>
             </div>
-        </div>
 
-        <div class="reusable-card">
-            <div class="reusable_image-container">
-                <img src="IMAGES/pamplona_side-section.png" alt="Barangay Hall">
-                <button class="upload_button-reusable">
-                    Upload New 
-                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FD5B32"><path d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h357l-80 80H200v560h560v-278l80-80v358q0 33-23.5 56.5T760-120H200Zm280-360ZM360-360v-170l367-367q12-12 27-18t30-6q16 0 30.5 6t26.5 18l56 57q11 12 17 26.5t6 29.5q0 15-5.5 29.5T897-728L530-360H360Zm481-424-56-56 56 56ZM440-440h56l232-232-28-28-29-28-231 231v57Zm260-260-29-28 29 28 28 28-28-28Z"/></svg>
-                </button>
+            <div class="tab_box-container">
+                <button class="tab_btn active">Manage Post</button>
             </div>
-            
-            <div class="reusable_content-container">
-                <h4>Facility #2</h4>
-                <div class="edit-container">
-                    <button class="edit_button">
-                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FD5B32"><path d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h357l-80 80H200v560h560v-278l80-80v358q0 33-23.5 56.5T760-120H200Zm280-360ZM360-360v-170l367-367q12-12 27-18t30-6q16 0 30.5 6t26.5 18l56 57q11 12 17 26.5t6 29.5q0 15-5.5 29.5T897-728L530-360H360Zm481-424-56-56 56 56ZM440-440h56l232-232-28-28-29-28-231 231v57Zm260-260-29-28 29 28 28 28-28-28Z"/></svg>
-                    </button>
-                    <button class="delete_button">
-                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FD5B32"><path d="M280-120q-33 0-56.5-23.5T200-200v-520h-40v-80h200v-40h240v40h200v80h-40v520q0 33-23.5 56.5T680-120H280Zm400-600H280v520h400v-520ZM360-280h80v-360h-80v360Zm160 0h80v-360h-80v360ZM280-720v520-520Z"/></svg>
-                    </button>
-                </div>
+            <div class="manage_post-container">
+                <p>No.</p>
+                <p>Title</p>
+                <p>Details</p>
+                <p>Edit</p>
+                <p>Delete</p>
             </div>
-        </div>
-
-        <div class="reusable-card">
-            <div class="reusable_image-container">
-                <img src="IMAGES/pamplona_side-section.png" alt="Barangay Hall">
-                <button class="upload_button-reusable">
-                    Upload New 
-                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FD5B32"><path d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h357l-80 80H200v560h560v-278l80-80v358q0 33-23.5 56.5T760-120H200Zm280-360ZM360-360v-170l367-367q12-12 27-18t30-6q16 0 30.5 6t26.5 18l56 57q11 12 17 26.5t6 29.5q0 15-5.5 29.5T897-728L530-360H360Zm481-424-56-56 56 56ZM440-440h56l232-232-28-28-29-28-231 231v57Zm260-260-29-28 29 28 28 28-28-28Z"/></svg>
-                </button>
-            </div>
-            
-            <div class="reusable_content-container">
-                <h4>Facility #3</h4>
-                <div class="edit-container">
-                    <button class="edit_button">
-                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FD5B32"><path d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h357l-80 80H200v560h560v-278l80-80v358q0 33-23.5 56.5T760-120H200Zm280-360ZM360-360v-170l367-367q12-12 27-18t30-6q16 0 30.5 6t26.5 18l56 57q11 12 17 26.5t6 29.5q0 15-5.5 29.5T897-728L530-360H360Zm481-424-56-56 56 56ZM440-440h56l232-232-28-28-29-28-231 231v57Zm260-260-29-28 29 28 28 28-28-28Z"/></svg>
-                    </button>
-                    <button class="delete_button">
-                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FD5B32"><path d="M280-120q-33 0-56.5-23.5T200-200v-520h-40v-80h200v-40h240v40h200v80h-40v520q0 33-23.5 56.5T680-120H280Zm400-600H280v520h400v-520ZM360-280h80v-360h-80v360Zm160 0h80v-360h-80v360ZM280-720v520-520Z"/></svg>
-                    </button>
-                </div>
-            </div>
-        </div>
-
-        <div class="reusable-card">
-            <div class="reusable_image-container">
-                <img src="IMAGES/pamplona_side-section.png" alt="Barangay Hall">
-                <button class="upload_button-reusable">
-                    Upload New 
-                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FD5B32"><path d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h357l-80 80H200v560h560v-278l80-80v358q0 33-23.5 56.5T760-120H200Zm280-360ZM360-360v-170l367-367q12-12 27-18t30-6q16 0 30.5 6t26.5 18l56 57q11 12 17 26.5t6 29.5q0 15-5.5 29.5T897-728L530-360H360Zm481-424-56-56 56 56ZM440-440h56l232-232-28-28-29-28-231 231v57Zm260-260-29-28 29 28 28 28-28-28Z"/></svg>
-                </button>
-            </div>
-            
-            <div class="reusable_content-container">
-                <h4>Facility #4</h4>
-                <div class="edit-container">
-                    <button class="edit_button">
-                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FD5B32"><path d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h357l-80 80H200v560h560v-278l80-80v358q0 33-23.5 56.5T760-120H200Zm280-360ZM360-360v-170l367-367q12-12 27-18t30-6q16 0 30.5 6t26.5 18l56 57q11 12 17 26.5t6 29.5q0 15-5.5 29.5T897-728L530-360H360Zm481-424-56-56 56 56ZM440-440h56l232-232-28-28-29-28-231 231v57Zm260-260-29-28 29 28 28 28-28-28Z"/></svg>
-                    </button>
-                    <button class="delete_button">
-                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FD5B32"><path d="M280-120q-33 0-56.5-23.5T200-200v-520h-40v-80h200v-40h240v40h200v80h-40v520q0 33-23.5 56.5T680-120H280Zm400-600H280v520h400v-520ZM360-280h80v-360h-80v360Zm160 0h80v-360h-80v360ZM280-720v520-520Z"/></svg>
-                    </button>
-                </div>
-            </div>
-        </div>
-
-        <div class="reusable-card">
-            <div class="reusable_image-container">
-                <img src="IMAGES/pamplona_side-section.png" alt="Barangay Hall">
-                <button class="upload_button-reusable">
-                    Upload New 
-                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FD5B32"><path d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h357l-80 80H200v560h560v-278l80-80v358q0 33-23.5 56.5T760-120H200Zm280-360ZM360-360v-170l367-367q12-12 27-18t30-6q16 0 30.5 6t26.5 18l56 57q11 12 17 26.5t6 29.5q0 15-5.5 29.5T897-728L530-360H360Zm481-424-56-56 56 56ZM440-440h56l232-232-28-28-29-28-231 231v57Zm260-260-29-28 29 28 28 28-28-28Z"/></svg>
-                </button>
-            </div>
-            
-            <div class="reusable_content-container">
-                <h4>Facility #5</h4>
-                <div class="edit-container">
-                    <button class="edit_button">
-                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FD5B32"><path d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h357l-80 80H200v560h560v-278l80-80v358q0 33-23.5 56.5T760-120H200Zm280-360ZM360-360v-170l367-367q12-12 27-18t30-6q16 0 30.5 6t26.5 18l56 57q11 12 17 26.5t6 29.5q0 15-5.5 29.5T897-728L530-360H360Zm481-424-56-56 56 56ZM440-440h56l232-232-28-28-29-28-231 231v57Zm260-260-29-28 29 28 28 28-28-28Z"/></svg>
-                    </button>
-                    <button class="delete_button">
-                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FD5B32"><path d="M280-120q-33 0-56.5-23.5T200-200v-520h-40v-80h200v-40h240v40h200v80h-40v520q0 33-23.5 56.5T680-120H280Zm400-600H280v520h400v-520ZM360-280h80v-360h-80v360Zm160 0h80v-360h-80v360ZM280-720v520-520Z"/></svg>
-                    </button>
-                </div>
-            </div>
-        </div>
-
-        <div class="reusable-card">
-            <div class="reusable_image-container">
-                <img src="IMAGES/pamplona_side-section.png" alt="Barangay Hall">
-                <button class="upload_button-reusable">
-                    Upload New 
-                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FD5B32"><path d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h357l-80 80H200v560h560v-278l80-80v358q0 33-23.5 56.5T760-120H200Zm280-360ZM360-360v-170l367-367q12-12 27-18t30-6q16 0 30.5 6t26.5 18l56 57q11 12 17 26.5t6 29.5q0 15-5.5 29.5T897-728L530-360H360Zm481-424-56-56 56 56ZM440-440h56l232-232-28-28-29-28-231 231v57Zm260-260-29-28 29 28 28 28-28-28Z"/></svg>
-                </button>
-            </div>
-            
-            <div class="reusable_content-container">
-                <h4>Facility #6</h4>
-                <div class="edit-container">
-                    <button class="edit_button">
-                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FD5B32"><path d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h357l-80 80H200v560h560v-278l80-80v358q0 33-23.5 56.5T760-120H200Zm280-360ZM360-360v-170l367-367q12-12 27-18t30-6q16 0 30.5 6t26.5 18l56 57q11 12 17 26.5t6 29.5q0 15-5.5 29.5T897-728L530-360H360Zm481-424-56-56 56 56ZM440-440h56l232-232-28-28-29-28-231 231v57Zm260-260-29-28 29 28 28 28-28-28Z"/></svg>
-                    </button>
-                    <button class="delete_button">
-                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FD5B32"><path d="M280-120q-33 0-56.5-23.5T200-200v-520h-40v-80h200v-40h240v40h200v80h-40v520q0 33-23.5 56.5T680-120H280Zm400-600H280v520h400v-520ZM360-280h80v-360h-80v360Zm160 0h80v-360h-80v360ZM280-720v520-520Z"/></svg>
-                    </button>
+            <div class="request_container">
+                <div class="request active">
+                    <div class="manage_post">
+                        <p>1</p>
+                        <p class="truncate">Announcement #1 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deleniti vitae vero temporibus, aliquam neque excepturi repudiandae sint accusamus officia pariatur delectus dignissimos voluptatem voluptas quis accusantium consectetur modi natus et.</p>
+                        <button class="details_button">Details</button>
+                        <a href="edit_post.html"><button class="edit_post-button">Edit</button></a>
+                        <button class="delete_post-button">Delete</button>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-  </div>
-<!-------------- END OF BARANGAY FACILTIES SECTION -------------->
+    <!-------------- END OF ANNOUNCEMENT SECTION -------------->
 
-    <div class="form_section">
-        <div class="container form_section-container">
-            <h2>Add Facility</h2>
-            <form action="" enctype="multipart/form-data">
-                <input type="text" placeholder="Title">
-                <div class="form_control">
-                    <label for="thumbnail">Add Thumbnail</label>
-                    <input type="file" id="thumbnail">
+    <div id="barangayFacilitySection"  class="container parent_request-container">
+        <div class="barangay_manage-container">
+            <div class="header_request-container">
+                <h3>Facilities</h3>
+                <div class="header_manage-container">
+                    <a href="add_post.html">
+                        <button class="add_post-button">Add Post</button>
+                    </a>
                 </div>
-                <button type="submit" class="btn">Add Facility</button>
-            </form>
+            </div>
+
+            <div class="tab_box-container">
+                <button class="tab_btn active">Manage Post</button>
+            </div>
+            <div class="manage_post-container">
+                <p>No.</p>
+                <p>Title</p>
+                <p>Details</p>
+                <p>Edit</p>
+                <p>Delete</p>
+            </div>
+            <div class="request_container">
+                <div class="request active">
+                    <div class="manage_post">
+                        <p>1</p>
+                        <p>Facilties #1</p>
+                        <button class="details_button">Details</button>
+                        <a href="edit_post.html"><button class="edit_post-button">Edit</button></a>
+                        <button class="delete_post-button">Delete</button>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-<!-------------- END OF ADD FACILITIES -------------->
-   
+    <!-------------- END OF FACILTIES SECTION -------------->
+
+
+    <div id="detailModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <div class="req_details">
+                <h4>Details:</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates, nesciunt aspernatur! Ipsa consectetur porro delectus, voluptas alias sunt beatae optio recusandae quibusdam minima earum fugiat possimus ea soluta quae debitis!</p>
+            </div>
+        </div>
+    </div>
+    <!-------------- END OF MODAL VIEW DETAILS BUTTON EXPAND -------------->
+
+    <div id="deletePostModal" class="modal">
+        <form class="modal-content">
+            <h4>Delete Post?</h4>
+            <div class="delete_actions-m">
+                <button class="delete_button-m btn">Delete</button>
+                <button class="cancelDelete btn">Cancel</button>
+            </div>
+        </form>
+    </div>
+    <!-------------- END OF MODAL DELETE BUTTON CLICK EXPAND -------------->  
    </main>
 </body>
