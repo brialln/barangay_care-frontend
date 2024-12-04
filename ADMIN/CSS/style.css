@@ -142,9 +142,27 @@ input, textarea, select {
 
 .form_section-container {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
+    width: 600px;
+    background: var(--color-white);
+    border-radius: var(--card-border-radius-3);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    margin: 5% auto;
+    overflow: hidden;
+}
+
+.form_section {
+    width: 100%;
+    padding: 3rem 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form_section form {
+    width: 100%;
 }
 
 /* ========================== Button Varieties ========================== */
