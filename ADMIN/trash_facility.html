@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ADMIN Manage Home | BARANGAY-WBA</title>
+    
+        <!-- Google Fonts: Montserrat -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    
+        <!-- CSS Stylesheets -->
+        <link rel="stylesheet" href="CSS/style.css">
+        <link rel="stylesheet" href="CSS/sidebar.css">
+        <link rel="stylesheet" href="CSS/manage_post.css">
+        <link rel="stylesheet" href="CSS/trash.css">
+        <link rel="stylesheet" href="CSS/authentication.css">
+        <link rel="stylesheet" href="CSS/central_request.css">
+        <link rel="stylesheet" href="CSS/action_modal.css">
+        <link rel="stylesheet" href="CSS/community_development.css">
+        <link rel="stylesheet" href="CSS/contact.css">
+        <link rel="stylesheet" href="CSS/dashboard.css">
+        <link rel="stylesheet" href="CSS/disaster_preparedness.css">
+        <link rel="stylesheet" href="CSS/profile.css">
+        <link rel="stylesheet" href="CSS/publications.css">
+        <link rel="stylesheet" href="CSS/women_welfare.css">
+        <link rel="stylesheet" href="CSS/youth_sports.css">
+    
+        <!-- Iconscout CDN -->
+        <link href="https://unicons.iconscout.com/release/v4.0.8/css/line.css" rel="stylesheet">
+    
+        <!-- JavaScript Files -->
+        <script src="./JS/app.js" defer></script>
+        <script src="./JS/sidebar.js" defer></script>
+        <script src="./JS/charts.js" defer></script>
+        <script src="./JS/complaint_analytics.js" defer></script>
+        <script src="./JS/emergency_analytics.js" defer></script>
+        <script src="./JS/idea_analytics.js" defer></script>
+        <script src="./JS/threads.js" defer></script>
+        <script src="./JS/threads_analytics.js" defer></script>
+    </head>
+<body>
+    <div></div>
+    <main>
+        <div class="container">
+            <div class="trash_container">
+                <div class="close_button-container">
+                    <h4>Facility Trash</h4>
+                    <button id="backButton">Back</button>
+                </div>
+                <div class="trash-content">
+                    <div class="trash_header-container">
+                        <div class="trash_header-action">
+                            <button class="restore_button">Restore</button>
+                            <button class="delete_post-button">Delete</button>
+                        </div>
+                    </div>
+        
+                    <div class="trash_facility_label-container">
+                        <div class="select_all-container">
+                            <p>All</p>
+                            <input type="checkbox">
+                        </div>
+                        <p>No.</p>
+                        <p>Title</p>
+                        <P>Date Deleted</P>
+                        <p>Details</p>
+                    </div>
+        
+                    <div class="trash_user-request-container">
+                        <div class="trash_facility">
+                            <input type="checkbox">
+                            <p>1</p>
+                            <p class="truncate">Facilties #1</p>
+                            <p>2024-10-12 13:02</p>
+                            <button class="details_button">Details</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-------------- END OF FACILITY TRASH CONTAINER -------------->
+
+
+        <div id="deletePostModal" class="modal">
+            <form class="modal-content">
+                <h4>Delete Facility?</h4>
+                <div class="delete_actions-m">
+                    <button class="delete_button-m btn">Delete</button>
+                    <button class="cancelDelete btn">Cancel</button>
+                </div>
+            </form>
+        </div>
+         <!-------------- END OF MODAL DELETE BUTTON CLICK EXPAND -------------->  
+
+        <div id="restoreModal" class="modal">
+            <form class="modal-content">
+                <h4>Restore Facility?</h4>
+                <div class="restore_actions-m">
+                    <button class="restore_button btn">Restore</button>
+                    <button class="cancelDelete btn">Cancel</button>
+                </div>
+            </form>
+        </div>
+        <!-------------- END OF MODAL RESTORE BUTTON CLICK EXPAND -------------->  
+
+        <div id="detailModal" class="modal">
+            <div class="modal-content">
+                <span class="close-button">&times;</span>
+                <div class="req_details">
+                    <h4>Title:</h4>
+                    <p>Title #1</p>
+                </div>
+                <div class="req_details">
+                    <h4>Image:</h4>
+                    <div class="view_image-header">
+                        <img src="IMAGES/pamplona_header.jpg">
+                    </div>
+                </div>
+                <div class="req_details">
+                    <h4>Description:</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates, nesciunt aspernatur! Ipsa consectetur porro delectus, voluptas alias sunt beatae optio recusandae quibusdam minima earum fugiat possimus ea soluta quae debitis!</p>
+                </div>
+            </div>
+        </div>
+        <!-------------- END OF MODAL VIEW DETAILS BUTTON EXPAND -------------->
+    </main>
+</body>
