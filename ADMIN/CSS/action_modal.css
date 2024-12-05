@@ -10,7 +10,7 @@
     position: absolute;
     right: 0; /* Align to the right of the button */
     top: 100%; /* Position below the ellipsis button */
-    background-color: var(--color-navy-blue);
+    background-color: var(--color-secondary);
     border-radius: var(--card-border-radius-1);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     z-index: 1;
@@ -94,15 +94,15 @@
 }
 
 .modal_content-action textarea {
-    border-color: var(--color-navy-blue);
+    border-color: var(--color-secondary);
 }
 
 .modal_content-action input {
-    border-color: var(--color-navy-blue);
+    border-color: var(--color-secondary);
 }
 
 .modal_content-action h4 {
-    color: var(--color-navy-blue);
+    color: var(--color-secondary);
 }
 
 .modal_content-action button:first-child{
@@ -118,12 +118,12 @@
 
 .modal_content-action button:last-child{
     width: 100%;
-    background: var(--color-navy-blue);
+    background: var(--color-secondary);
 }
 
 .modal_content-action button:hover:last-child {
-    color: var(--color-navy-blue);
-    border-color: var(--color-navy-blue);
+    color: var(--color-secondary);
+    border-color: var(--color-secondary);
     background: var(--color-white);
 }
 
@@ -132,7 +132,7 @@
     top: 0;
     right: 1rem;
     font-size: 2rem;
-    color: var(--color-navy-blue);
+    color: var(--color-secondary);
     cursor: pointer;
     transition: var(--transition);
 }
