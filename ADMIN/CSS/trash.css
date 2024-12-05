@@ -63,14 +63,24 @@
     padding: 0 0.5rem; /* Adds consistent padding for alignment */
 }
 
-/* Trash Top Labels in Announcement Trash */
-.trash_announcement_label-container, .trash_facility_label-container {
+/* Trash Top Labels in Announcement, Faciltiy, Publication */
+.trash_announcement_label-container, .trash_facility_label-container, .trash_publication_label-container {
     display: grid;
     grid-template-columns: 1fr 1fr 2fr 2fr 1fr;
     text-align: center;
     font-size: 0.9rem;
     padding: 0 0.8rem 0.6rem;
 }
+
+/* Trash Top Labels in Article Trash */
+.trash_article_label-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    text-align: center;
+    font-size: 0.9rem;
+    padding: 0 0.8rem 0.6rem;
+}
+
 
 /* ================================ TRASH INDIVIDUAL REQUEST CONTAINER ================================ */
 /* Trash Individual Request for Contact Trash */
@@ -149,9 +159,23 @@
 }
 
 /* Trash Individual Post for Announcement Trash */
-.trash_announcement, .trash_facility {
+.trash_announcement, .trash_facility, .trash_publication {
     display: grid;
     grid-template-columns: 1fr 1fr 2fr 2fr 1fr;
+    align-items: center;
+    text-align: center;
+    font-size: 0.9rem;
+    background: var(--color-ash);
+    padding: 0.8rem 0.6rem;
+    border-radius: var(--card-border-radius-2);
+    box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.15); 
+    margin-bottom: 0.2rem;
+}
+
+/* Trash Individual Post for Article Trash */
+.trash_article {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
     align-items: center;
     text-align: center;
     font-size: 0.9rem;
@@ -177,7 +201,9 @@
 .disaster_trash_user-request input[type = "checkbox"],
 .trash_community-request input[type = "checkbox"],
 .trash_resident-request input[type = "checkbox"],
-.trash_announcement input[type = "checkbox"] {
+.trash_announcement input[type = "checkbox"],
+.trash_article input[type = "checkbox"], 
+.trash_publication input[type = "checkbox"] {
     accent-color: var(--color-primary);
     cursor: pointer;
 }
