@@ -14,6 +14,7 @@
         <link rel="stylesheet" href="CSS/style.css">
         <link rel="stylesheet" href="CSS/sidebar.css">
         <link rel="stylesheet" href="CSS/manage_post.css">
+        <link rel="stylesheet" href="CSS/trash.css">
         <link rel="stylesheet" href="CSS/authentication.css">
         <link rel="stylesheet" href="CSS/central_request.css">
         <link rel="stylesheet" href="CSS/action_modal.css">
@@ -36,7 +37,6 @@
         <script src="./JS/complaint_analytics.js" defer></script>
         <script src="./JS/emergency_analytics.js" defer></script>
         <script src="./JS/idea_analytics.js" defer></script>
-        <script src="./JS/sidebar_analytics.js" defer></script>
         <script src="./JS/threads.js" defer></script>
         <script src="./JS/threads_analytics.js" defer></script>
     </head>
@@ -86,10 +86,14 @@
     <div id="barangayAnnouncementSection"  class="container parent_request-container">
         <div class="barangay_manage-container">
             <div class="header_manage-container">
-                <h3>Announcements</h3>
+                <h3>Announcement</h3>
                 <div class="header_button-container">
-                    <a href="add_post.html">
-                        <button class="add_people-button">Add Post</button>
+                    <button class="add_post-button">Add Post</button>
+                    <a href="trash_announcement.html">
+                        <button class="trash_button">
+                            Trash
+                            <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#321E1E"><path d="M200-80q-33 0-56.5-23.5T120-160v-451q-18-11-29-28.5T80-680v-120q0-33 23.5-56.5T160-880h640q33 0 56.5 23.5T880-800v120q0 23-11 40.5T840-611v451q0 33-23.5 56.5T760-80H200Zm0-520v440h560v-440H200Zm-40-80h640v-120H160v120Zm200 280h240v-80H360v80Zm120 20Z"/></svg>
+                        </button>
                     </a>
                 </div>
             </div>
@@ -110,7 +114,7 @@
                         <p>1</p>
                         <p class="truncate">Announcement #1 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deleniti vitae vero temporibus, aliquam neque excepturi repudiandae sint accusamus officia pariatur delectus dignissimos voluptatem voluptas quis accusantium consectetur modi natus et.</p>
                         <button class="details_button">Details</button>
-                        <a href="edit_post.html"><button class="edit_post-button">Edit</button></a>
+                        <button class="edit_post-button">Edit</button>
                         <button class="delete_post-button">Delete</button>
                     </div>
                 </div>
@@ -121,11 +125,15 @@
 
     <div id="barangayFacilitySection"  class="container parent_request-container">
         <div class="barangay_manage-container">
-            <div class="header_request-container">
-                <h3>Facilities</h3>
-                <div class="header_manage-container">
-                    <a href="add_post.html">
-                        <button class="add_post-button">Add Post</button>
+            <div class="header_manage-container">
+                <h3>Facility</h3>
+                <div class="header_button-container">
+                    <button class="add_post-button">Add Post</button>
+                    <a href="trash_facility.html">
+                        <button class="trash_button">
+                            Trash
+                            <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#321E1E"><path d="M200-80q-33 0-56.5-23.5T120-160v-451q-18-11-29-28.5T80-680v-120q0-33 23.5-56.5T160-880h640q33 0 56.5 23.5T880-800v120q0 23-11 40.5T840-611v451q0 33-23.5 56.5T760-80H200Zm0-520v440h560v-440H200Zm-40-80h640v-120H160v120Zm200 280h240v-80H360v80Zm120 20Z"/></svg>
+                        </button>
                     </a>
                 </div>
             </div>
@@ -144,9 +152,9 @@
                 <div class="request active">
                     <div class="manage_post">
                         <p>1</p>
-                        <p>Facilties #1</p>
+                        <p class="truncate">Facilties #1</p>
                         <button class="details_button">Details</button>
-                        <a href="edit_post.html"><button class="edit_post-button">Edit</button></a>
+                        <button class="edit_post-button">Edit</button>
                         <button class="delete_post-button">Delete</button>
                     </div>
                 </div>
@@ -172,12 +180,69 @@
         <div class="modal-content">
             <span class="close-button">&times;</span>
             <div class="req_details">
-                <h4>Details:</h4>
+                <h4>Title:</h4>
+                <p>Title #1</p>
+            </div>
+            <div class="req_details">
+                <h4>Image:</h4>
+                <div class="view_image-header">
+                    <img src="IMAGES/pamplona_header.jpg">
+                </div>
+            </div>
+            <div class="req_details">
+                <h4>Description:</h4>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates, nesciunt aspernatur! Ipsa consectetur porro delectus, voluptas alias sunt beatae optio recusandae quibusdam minima earum fugiat possimus ea soluta quae debitis!</p>
             </div>
         </div>
     </div>
     <!-------------- END OF MODAL VIEW DETAILS BUTTON EXPAND -------------->
+
+    <div id="addPostModal" class="modal">
+        <div class="modal-content">
+                <div class="form_section">
+                    <h2>Add Post</h2>
+                    <form id="postForm" enctype="multipart/form-data">
+                        <input type="text" id="postTitle" placeholder="Title" required>
+                        <div class="form_control">
+                            <label for="thumbnail">Add Thumbnail</label>
+                            <input type="file" id="thumbnail" accept="image/*">
+                            <div class="image_preview" id="imagePreview">
+                                <p>Image Preview:</p>
+                                <img src="" alt="Thumbnail Preview" id="previewImg">
+                            </div>
+                        </div>
+                        <textarea rows="10" id="postDescription" name="Description" placeholder="Description" required></textarea>
+                        <button type="submit" id="submitButton" class="btn">Add Post</button>
+                        <button class="cancelDelete btn">Cancel</button>
+                    </form>
+                </div>
+        </div>
+    </div>
+    <!-------------- END OF MODAL ADD POST BUTTON CLICK EXPAND -------------->
+
+    <div id="editPostModal" class="modal">
+        <div class="modal-content">
+                <div class="form_section">
+                    <h2>Edit Post</h2>
+                    <form id="postForm" enctype="multipart/form-data">
+                        <input type="text" id="postTitle" placeholder="Update Title" required>
+                        <div class="form_control">
+                            <label for="thumbnail">Update Thumbnail</label>
+                            <input type="file" id="thumbnail" accept="image/*">
+                            <div class="image_preview" id="imagePreview">
+                                <p>Image Preview:</p>
+                                <img src="" alt="Thumbnail Preview" id="previewImg">
+                            </div>
+                        </div>
+                        <textarea rows="10" id="postDescription" name="Description" placeholder="Update Description" required></textarea>
+
+                        <button type="submit" id="submitButton" class="btn">Update Post</button>
+                        <button class="cancelDelete btn">Cancel</button>
+                    </form>
+                </div>
+        </div>
+    </div>
+    <!-------------- END OF MODAL EDIT POST BUTTON CLICK EXPAND -------------->
 
     <div id="deletePostModal" class="modal">
         <form class="modal-content">
