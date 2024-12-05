@@ -6,7 +6,30 @@
     * This file contains the General Javascript functions for the ADMIN.
 */
 
-// Function for Back Button
+// Function Image Preview (Add Post and Edit Post)
+document.addEventListener('change', function (event) {
+    // Check if the changed element is a file input with id="thumbnail"
+    if (event.target.id === 'thumbnail') {
+        const formSection = event.target.closest('.form_section');
+        const imagePreview = formSection.querySelector('.image_preview, .imagePreview'); // Handle both "image_preview" and "imagePreview"
+        const previewImg = imagePreview.querySelector('img');
+
+        if (event.target.files && event.target.files[0]) {
+            const reader = new FileReader();
+            reader.onload = function (e) {
+                previewImg.src = e.target.result; // Set the preview image source
+                imagePreview.style.display = 'block'; // Show the preview
+            };
+            reader.readAsDataURL(event.target.files[0]); // Read the file as a data URL
+        } else {
+            previewImg.src = '';
+            imagePreview.style.display = 'none'; // Hide the preview
+        }
+    }
+});
+
+
+// Function for Back Button 
 document.addEventListener("DOMContentLoaded", () => {
     const backButton = document.getElementById("backButton");
 
@@ -31,8 +54,6 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 });
-
-
 
 // Helper function for handling tab switching
 function handleTabSwitching(tabsSelector, contentSelector) {
@@ -66,6 +87,9 @@ handleTabSwitching('#barangayHealthAlertsRequest .tab_btn', '#barangayHealthAler
 handleTabSwitching('#barangayResidentApproval .tab_btn', '#barangayResidentApproval .request');
 handleTabSwitching('#barangayFeedbackResponses .tab_btn', '#barangayFeedbackResponses .request');
 handleTabSwitching('#barangayStaffApproval .tab_btn', '#barangayStaffApproval .request');
+handleTabSwitching('#barangayHeaderSection .tab_btn', '#barangayHeaderSection .request');
+handleTabSwitching('#barangayAnnouncementSection .tab_btn', '#barangayAnnouncementSection .request');
+handleTabSwitching('#barangayFacilitySection .tab_btn', '#barangayFacilitySection .request');
 
 // ----------------------------------- Function for Dropdown Sort and Filter -----------------------------------
 // Toggle dropdown visibility for each button individually
@@ -130,6 +154,8 @@ document.addEventListener('DOMContentLoaded', function() {
         { id: 'editActionModal', class: 'edit_button-action'},
         { id: 'deleteActionModal', class: 'delete_button-action'},
         { id: 'feedbackModal', class: 'feedback_button' },
+        { id: 'addPostModal', class: 'add_post-button' },
+        { id: 'editPostModal', class: 'edit_post-button' },
         { id: 'deletePostModal', class: 'delete_post-button' },
     ];
 
