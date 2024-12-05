@@ -40,7 +40,7 @@
         <div class="container">
             <div class="trash_container">
                 <div class="close_button-container">
-                    <h4>Facility Trash</h4>
+                    <h4>Contact Trash</h4>
                     <button id="backButton">Back</button>
                 </div>
                 <div class="trash-content">
@@ -51,73 +51,66 @@
                         </div>
                     </div>
         
-                    <div class="trash_facility_label-container">
+                    <div class="trash_contact_label-container">
                         <div class="select_all-container">
                             <p>All</p>
                             <input type="checkbox">
                         </div>
                         <p>No.</p>
-                        <p>Title</p>
-                        <P>Date Deleted</P>
+                        <p>First Name</p>
+                        <p>Last Name</p>
+                        <p>Email</p>
+                        <p>Date & Time</p>
                         <p>Details</p>
                     </div>
         
                     <div class="trash_user-request-container">
-                        <div class="trash_facility">
+                        <div class="trash_contact-request">
                             <input type="checkbox">
                             <p>1</p>
-                            <p class="truncate">Facilties #1</p>
+                            <p>Alvin</p>
+                            <p>Chipmunks</p>
+                            <p>alvinchipmunks@gmail.com</p>
                             <p>2024-10-12 13:02</p>
-                            <button class="details_button">Details</button>
+                            <button class="read_contact-button">Message</button>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <!-------------- END OF FACILITY TRASH CONTAINER -------------->
+        <!-------------- END OF CONTACT TRASH CONTAINER -------------->
 
-
-        <div id="deletePostModal" class="modal">
-            <form class="modal-content">
-                <h4>Delete Facility?</h4>
-                <div class="delete_actions-m">
-                    <button class="delete_button-m btn">Delete</button>
-                    <button class="cancelDelete btn">Cancel</button>
+        <div id="contactModal" class="modal">
+            <div class="modal-content">
+                <span class="close-button">&times;</span>
+                <div class="req_details">
+                    <h4>Message:</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates, nesciunt aspernatur! Ipsa consectetur porro delectus, voluptas alias sunt beatae optio recusandae quibusdam minima earum fugiat possimus ea soluta quae debitis!</p>
                 </div>
-            </form>
+            </div>
         </div>
-         <!-------------- END OF MODAL DELETE BUTTON CLICK EXPAND -------------->  
+        <!-------------- END OF MODAL POP-UP FOR READ MESSAGE BUTTON -------------->
 
         <div id="restoreModal" class="modal">
             <form class="modal-content">
-                <h4>Restore Facility?</h4>
+                <h4>Restore Message?</h4>
                 <div class="restore_actions-m">
-                    <button class="restore_button btn">Restore</button>
+                    <button class="restore_button btn" type="submit">Restore</button>
                     <button class="cancelDelete btn">Cancel</button>
                 </div>
             </form>
         </div>
         <!-------------- END OF MODAL RESTORE BUTTON CLICK EXPAND -------------->  
 
-        <div id="detailModal" class="modal">
-            <div class="modal-content">
-                <span class="close-button">&times;</span>
-                <div class="req_details">
-                    <h4>Title:</h4>
-                    <p>Title #1</p>
+        <div id="deletePostModal" class="modal">
+            <form class="modal-content">
+                <h4>Delete Message?</h4>
+                <div class="delete_actions-m">
+                    <button class="delete_button-m btn" type="submit">Delete</button>
+                    <button class="cancelDelete btn">Cancel</button>
                 </div>
-                <div class="req_details">
-                    <h4>Image:</h4>
-                    <div class="view_image-header">
-                        <img src="IMAGES/pamplona_header.jpg">
-                    </div>
-                </div>
-                <div class="req_details">
-                    <h4>Description:</h4>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates, nesciunt aspernatur! Ipsa consectetur porro delectus, voluptas alias sunt beatae optio recusandae quibusdam minima earum fugiat possimus ea soluta quae debitis!</p>
-                </div>
-            </div>
+            </form>
         </div>
-        <!-------------- END OF MODAL VIEW DETAILS BUTTON EXPAND -------------->
+        <!-------------- END OF MODAL DELETE BUTTON CLICK EXPAND -------------->  
     </main>
 </body>
