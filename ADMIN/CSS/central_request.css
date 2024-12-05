@@ -587,23 +587,9 @@ Notes:
     border-radius: var(--card-border-radius-4);
 }
 
-.tab_box-container .tab_btn.active:first-child{
+.tab_box-container .tab_btn.active{
     color: var(--color-white);
     background: var(--color-primary);
-    padding: 0.5rem 1rem;
-    border-radius: var(--card-border-radius-4);
-}
-
-.tab_box-container .tab_btn.active:nth-child(2){
-    color: var(--color-white);
-    background: var(--color-green);
-    padding: 0.5rem 1rem;
-    border-radius: var(--card-border-radius-4);
-}
-
-.tab_box-container .tab_btn.active:nth-child(3){
-    color: var(--color-white);
-    background: var(--color-red);
     padding: 0.5rem 1rem;
     border-radius: var(--card-border-radius-4);
 }
