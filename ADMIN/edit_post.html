@@ -13,6 +13,7 @@
         <!-- CSS Stylesheets -->
         <link rel="stylesheet" href="CSS/style.css">
         <link rel="stylesheet" href="CSS/sidebar.css">
+        <link rel="stylesheet" href="CSS/manage_post.css">
         <link rel="stylesheet" href="CSS/authentication.css">
         <link rel="stylesheet" href="CSS/central_request.css">
         <link rel="stylesheet" href="CSS/action_modal.css">
@@ -44,21 +45,22 @@
     <!------------------------------------ END OF SIDEBAR ------------------------------------>
     <main>
         <div class="container">
-            <div class="forback_container back_button-container">
-                <button id="backButton"><i class="uil uil-arrow-circle-left"></i></button>
-            </div>
             <div class="form_section-container">
-                
                 <div class="form_section">
                     <h2>Edit Post</h2>
-                    <form action="" enctype="multipart/form-data">
-                        <input type="text" placeholder="Title">
+                    <form id="postForm" enctype="multipart/form-data">
+                        <input type="text" id="postTitle" placeholder="Update Title" required>
                         <div class="form_control">
-                            <label for="thumbnail">Edit Thumbnail</label>
-                            <input type="file" id="thumbnail">
+                            <label for="thumbnail">Update Thumbnail</label>
+                            <input type="file" id="thumbnail" accept="image/*">
+                            <div class="image_preview" id="imagePreview" style="display: none;">
+                                <p>Image Preview:</p>
+                                <img src="" alt="Thumbnail Preview" id="previewImg">
+                            </div>
                         </div>
-                        <textarea rows="10" name="Description" placeholder="Description"></textarea>
-                        <button type="submit" class="btn">Update Post</button>
+                        <textarea rows="10" id="postDescription" name="Description" placeholder="Update Description" required></textarea>
+                        <button type="submit" id="submitButton" class="btn">Update Post</button>
+                        <button id="backButton" class="btn">Cancel</button>
                     </form>
                 </div>
             </div>
