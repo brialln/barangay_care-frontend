@@ -69,7 +69,7 @@
                         <p>1</p>
                         <p>Header</p>
                         <button class="view_button">View</button>
-                        <button class="upload_new-button">Upload New</button>
+                        <button class="edit_post-button-one">Upload New</button>
                     </div>
                 </div>
             </div>
@@ -242,6 +242,31 @@
                         <button class="cancelDelete btn">Cancel</button>
                     </form>
                 </div>
+        </div>
+    </div>
+    <!-------------- END OF MODAL EDIT POST BUTTON CLICK EXPAND -------------->
+
+    <div id="editPostModalOne" class="modal">
+        <div class="modal-content">
+            <div class="form_section">
+                <h2>Edit Post</h2>
+                <form id="postForm" enctype="multipart/form-data">
+                    <div class="form_control">
+                        <label for="thumbnail">Update Header</label>
+                        <input type="file" id="thumbnail" accept="image/*,application/pdf,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document">
+                        <div class="image_preview" id="imagePreview">
+                            <p>Preview:</p>
+                            <div id="previewContainer">
+                                <img src="" alt="Thumbnail Preview" id="previewImg" style="display: none;">
+                                <iframe id="previewDoc" style="display: none;" width="100%" height="300px"></iframe>
+                                <p id="fileName" style="display: none;"></p>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="submit" id="submitButton" class="btn">Update Post</button>
+                    <button class="cancelDelete btn">Cancel</button>
+                </form>
+            </div>
         </div>
     </div>
     <!-------------- END OF MODAL EDIT POST BUTTON CLICK EXPAND -------------->
