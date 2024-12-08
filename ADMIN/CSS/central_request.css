@@ -95,16 +95,12 @@ Notes:
 /* label Container for Resident Responses */
 .resident_label_request-container {
     display: grid;
-    grid-template-columns: 0.5fr 1fr 1fr 2fr 1fr 1fr 1fr 1fr 1fr 1fr 2fr;
+    grid-template-columns: 0.5fr 1fr 1fr 1fr 1fr 1fr 1.3fr 1fr 1fr 2fr;
     text-align: center;
     font-size: 0.8rem;
     padding: 0 0.8rem 0.6rem;
 }
 
-.resident_label_request-container p {
-    margin: 0; /* Removes default margins */
-    padding: 0 0.5rem; /* Adds consistent padding for alignment */
-}
 
 /* Label Container for Feedback Responses */
 .feedback_label_request-container {
@@ -189,7 +185,7 @@ Notes:
 /* Individual Request Container for Resident Responses */
 .resident_request-container {
     display: grid;
-    grid-template-columns: 0.5fr 1fr 1fr 2fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 0.5fr 1fr 1fr 1fr 1fr 1fr 1.3fr 1fr 1fr 1fr 1fr;
     align-items: center;
     text-align: center;
     font-size: 0.8rem;
