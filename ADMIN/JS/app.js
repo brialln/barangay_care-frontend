@@ -225,17 +225,16 @@ document.addEventListener('DOMContentLoaded', function() {
         { id: 'viewModal', class: 'view_button' },
         { id: 'remarksModal', class: 'remarks_button' },
         { id: 'resolveModal', class: 'resolve_button' },
-        { id: 'editModal', class: 'edit_button-m' },
-        { id: 'deleteEmergencyModal', class: 'delete_emergency-m' },
-        { id: 'editActionModal', class: 'edit_button-action'},
-        { id: 'deleteActionModal', class: 'delete_button-action'},
         { id: 'feedbackModal', class: 'feedback_button' },
         { id: 'addPostModal', class: 'add_post-button' },
         { id: 'editPostModal', class: 'edit_post-button' },
         { id: 'deletePostModal', class: 'delete_post-button' },
         { id: 'editPostModalOne', class: 'edit_post-button-one' },
         { id: 'editPostModalTwo', class: 'edit_post-button-two' },
-        { id: 'detailModalOne', class: 'details_button-one' }
+        { id: 'detailModalOne', class: 'details_button-one' },
+        { id: 'addPostModalOne', class: 'add_post-button-one' },
+        { id: 'detailModalTwo', class: 'details_button-two' },
+        { id: 'deletePostModalOne', class: 'delete_post-button-one' },
     ];
 
     modals.forEach(modalInfo => {
