@@ -64,7 +64,7 @@
 }   
 
 /* Label for Manage Post for About Core Statements */
-.manage_label-core, .manage_label-contact {
+.manage_label-core, .manage_label-contact, .manage_label-infographics {
     display: grid;
     grid-template-columns:1fr 1fr 1fr 1fr;
     text-align: center;
@@ -139,7 +139,7 @@
 }
 
 /* Manage Individual Post for Managing About Core Statements */
-.manage_post-core, .manage_post-contact {
+.manage_post-core, .manage_post-contact, .manage_post-infographics {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     align-items: center;
@@ -192,7 +192,7 @@
 
 /* Button for Editing and Deleting Post */
 .edit_post-button, .delete_post-button, .edit_post-button-one, 
-.edit_post-button-two {
+.edit_post-button-two, .delete_post-button-one {
     background: var(--color-secondary);
     color: var(--color-white);
     margin: 0 auto; 
@@ -205,13 +205,13 @@
 }
 
 .edit_post-button:hover, .delete_post-button:hover, .edit_post-button-one:hover, 
-.edit_post-button-two:hover {
+.edit_post-button-two:hover, .delete_post-button-one:hover {
     background: transparent;
     border-color: var(--color-secondary);
     color: var(--color-secondary);
 }
 
-.add_post-button {
+.add_post-button, .add_post-button-one {
     background: var(--color-primary);
     color: var(--color-white);
     padding: 0.7rem;
@@ -223,13 +223,13 @@
     transition: var(--transition);
 }
 
-.add_post-button:hover {
+.add_post-button:hover, .add_post-button-one:hover {
     background: transparent;
     border-color: var(--color-primary);
     color: var(--color-primary);
 }
 
-.view_button, .details_button-one {
+.view_button, .details_button-one, .details_button-two {
     background: var(--color-primary);
     color: var(--color-white);
     padding: 0.5rem 1rem; 
@@ -241,7 +241,7 @@
     transition: var(--transition);
 }
 
-.view_button:hover, .details_button-one:hover {
+.view_button:hover, .details_button-one:hover, .details_button-two:hover {
     background: transparent;
     border-color: var(--color-primary);
     color: var(--color-primary);
@@ -260,7 +260,7 @@
     align-items: center;
 }
 
-#deletePostModal .modal-content {
+#deletePostModal .modal-content,#deletePostModalOne .modal-content {
     width: 22%;
     display: flex;
     flex-direction: column;
@@ -281,7 +281,8 @@
     padding: 1rem;
 }
 
-#addPostModal .modal-content, #editPostModal .modal-content, #editPostModalOne .modal-content,
+#addPostModal .modal-content, #addPostModalOne .modal-content,
+#editPostModal .modal-content, #editPostModalOne .modal-content,
 #editPostModalTwo .modal-content {
     margin: 4% auto; /* 15% from the top and centered */
     width: 40%;
