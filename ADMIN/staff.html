@@ -1,31 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ADMIN Manage Staff | BARANGAY-WBA</title>
-
-    <!-- MONTSERRAT GOOGLE FONTS -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-
-    <!-- CSS STYLESHEET LINK -->
-     <link rel="stylesheet" href="CSS/style.css">
-     <link rel="stylesheet" href="CSS/sidebar.css">
-     <link rel="stylesheet" href="CSS/central_request.css">
-     <link rel="stylesheet" href="CSS/action_modal.css">
-     <link rel="stylesheet" href="CSS/profile.css">
-
-     <!-- ICONSCOUT CDN -->
-    <link href="https://unicons.iconscout.com/release/v4.0.8/css/line.css" rel="stylesheet">
-
-    <!-- GENERAL JS LINK -->
-    <script type="text/javascript" src="./JS/app.js" defer></script>
-    <!-- SIDEBAR JS LINK -->
-    <script type="text/javascript" src="./JS/sidebar.js" defer></script>
-
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ADMIN Manage | BARANGAY-WBA</title>
+    
+        <!-- Google Fonts: Montserrat -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    
+        <!-- CSS Stylesheets -->
+        <link rel="stylesheet" href="CSS/style.css">
+        <link rel="stylesheet" href="CSS/manage_post.css">
+        <link rel="stylesheet" href="CSS/trash.css">
+        <link rel="stylesheet" href="CSS/authentication.css">
+        <link rel="stylesheet" href="CSS/central_request.css">
+        <link rel="stylesheet" href="CSS/action_modal.css">
+        <link rel="stylesheet" href="CSS/community_development.css">
+        <link rel="stylesheet" href="CSS/dashboard.css">
+        <link rel="stylesheet" href="CSS/profile.css">
+    
+        <!-- Iconscout CDN -->
+        <link href="https://unicons.iconscout.com/release/v4.0.8/css/line.css" rel="stylesheet">
+    
+        <!-- JavaScript Files -->
+        <script src="./JS/app.js" defer></script>
+        <script src="./JS/sidebar.js" defer></script>
+        <script src="./JS/charts.js" defer></script>
+        <script src="./JS/complaint_analytics.js" defer></script>
+        <script src="./JS/emergency_analytics.js" defer></script>
+        <script src="./JS/idea_analytics.js" defer></script>
+        <script src="./JS/threads.js" defer></script>
+        <script src="./JS/threads_analytics.js" defer></script>
+    </head>
 <body>
     <div id="sidebar-container"></div>
     <!------------------------------------ END OF SIDEBAR ------------------------------------>
@@ -39,10 +47,10 @@
     <!-------------- END OF ADMIN BANNER SECTION -------------->
 
         <div id="barangayStaffApproval"  class="container parent_request-container">
-            <h3>Barangay Staff Approval</h3>
+            <h3>Manage Barangay Staff</h3>
             <div class="barangay_request-container">
                 <div class="header_request-container">
-                    <h3>Staff Approval</h3>
+                    <h3>Barangay Staff</h3>
                     <div class="header_button-container">
                         <button class="add_people-button add_people">
                             Add People +
@@ -82,13 +90,12 @@
                     <p>No.</p>
                     <p>First Name</p>
                     <p>Last Name</p>
-                    <p>Email</p>
                     <p>Contact No.</p>
                     <p>Birthdate</p>
                     <p>Gender</p>
                     <p>Date & Time</p>
                     <p>Status</p>
-                    <p>Residency</p>
+                    <p>Details</p>
                     <p>Remarks & Actions</p>
                 </div>
                 <div class="request_container">
@@ -97,7 +104,6 @@
                             <p>1</p>
                             <p>Ichigo</p>
                             <p>Kurosaki</p>
-                            <p>ichigo_kurosaki@gmail.com</p>
                             <p>0999395699</p>
                             <p>12/30/2003</p>
                             <p>Male</p>
@@ -114,7 +120,6 @@
                             <p>1</p>
                             <p>Ichigo</p>
                             <p>Kurosaki</p>
-                            <p>ichigo_kurosaki@gmail.com</p>
                             <p>0999395699</p>
                             <p>12/30/2003</p>
                             <p>Male</p>
@@ -122,7 +127,7 @@
                             <p class="request_declined">Previous</p>
                             <button class="details_button">Details</button>
                             <button class="remarks_button">Remarks</button>
-                            <button class="delete_button-m">Delete</button>
+                            <button class="delete_post-button">Delete</button>
                         </div>
                     </div>
                 </div>
@@ -154,9 +159,9 @@
         </div>
     <!-------------- END OF MODAL DECLINE BUTTON CLICK EXPAND -------------->
 
-        <div id="deleteModal" class="modal">
+        <div id="deletePostModal" class="modal">
             <form class="modal-content">
-                <h4>Delete Staff History?</h4>
+                <h4>Delete Record?</h4>
                 <div class="delete_actions-m">
                     <button class="delete_button-m btn">Delete</button>
                     <button class="cancelDelete btn">Cancel</button>
@@ -169,7 +174,11 @@
             <div class="modal-content">
                 <span class="close-button">&times;</span>
                 <div class="req_details">
-                    <h4>Address:</h4>
+                    <h4>Email Address:</h4>
+                    <p>ichigo.kurosaki@gmail.com</p>
+                </div>
+                <div class="req_details">
+                    <h4>Physical Address:</h4>
                     <p>123 Block St.</p>
                 </div>
                 <div class="req_details">
