@@ -1,29 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ADMIN Edit Justice | BARANGAY-WBA</title>
-
-    <!-- MONTSERRAT GOOGLE FONTS -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-
-    <!-- CSS STYLESHEET LINK -->
-     <link rel="stylesheet" href="CSS/style.css">
-     <link rel="stylesheet" href="CSS/sidebar.css">
-     <link rel="stylesheet" href="CSS/central_request.css">
-
-     <!-- ICONSCOUT CDN -->
-    <link href="https://unicons.iconscout.com/release/v4.0.8/css/line.css" rel="stylesheet">
-
-    <!-- GENERAL JS LINK -->
-    <script type="text/javascript" src="./JS/app.js" defer></script>
-    <!-- SIDEBAR JS LINK -->
-    <script type="text/javascript" src="./JS/sidebar.js" defer></script>
-
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ADMIN Manage | BARANGAY-WBA</title>
+    
+        <!-- Google Fonts: Montserrat -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    
+        <!-- CSS Stylesheets -->
+        <link rel="stylesheet" href="CSS/style.css">
+        <link rel="stylesheet" href="CSS/manage_post.css">
+        <link rel="stylesheet" href="CSS/trash.css">
+        <link rel="stylesheet" href="CSS/authentication.css">
+        <link rel="stylesheet" href="CSS/central_request.css">
+        <link rel="stylesheet" href="CSS/action_modal.css">
+        <link rel="stylesheet" href="CSS/community_development.css">
+        <link rel="stylesheet" href="CSS/dashboard.css">
+        <link rel="stylesheet" href="CSS/profile.css">
+    
+        <!-- Iconscout CDN -->
+        <link href="https://unicons.iconscout.com/release/v4.0.8/css/line.css" rel="stylesheet">
+    
+        <!-- JavaScript Files -->
+        <script src="./JS/app.js" defer></script>
+        <script src="./JS/sidebar.js" defer></script>
+        <script src="./JS/charts.js" defer></script>
+        <script src="./JS/complaint_analytics.js" defer></script>
+        <script src="./JS/emergency_analytics.js" defer></script>
+        <script src="./JS/idea_analytics.js" defer></script>
+        <script src="./JS/threads.js" defer></script>
+        <script src="./JS/threads_analytics.js" defer></script>
+    </head>
 <body>
     <div id="sidebar-container"></div>
     <!------------------------------------ END OF SIDEBAR ------------------------------------>
@@ -37,14 +47,18 @@
     <!-------------- END OF ADMIN BANNER SECTION -------------->
 
         <div id="barangayJusticeRequests"  class="container parent_request-container">
-            <h3>Edit Justice</h3>
+            <h3>Justice Page</h3>
             <div class="barangay_request-container">
                 <div class="header_request-container">
                     <h3>Justice Responses</h3>
-                    <button class="trash_button trash_justice">
-                        Trash
-                        <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#03045E"><path d="M200-80q-33 0-56.5-23.5T120-160v-451q-18-11-29-28.5T80-680v-120q0-33 23.5-56.5T160-880h640q33 0 56.5 23.5T880-800v120q0 23-11 40.5T840-611v451q0 33-23.5 56.5T760-80H200Zm0-520v440h560v-440H200Zm-40-80h640v-120H160v120Zm200 280h240v-80H360v80Zm120 20Z"/></svg>
-                    </button>
+                    <div class="header_button-container">
+                        <a href="trash_justice.html">
+                            <button class="trash_button">
+                                Trash
+                                <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#321E1E"><path d="M200-80q-33 0-56.5-23.5T120-160v-451q-18-11-29-28.5T80-680v-120q0-33 23.5-56.5T160-880h640q33 0 56.5 23.5T880-800v120q0 23-11 40.5T840-611v451q0 33-23.5 56.5T760-80H200Zm0-520v440h560v-440H200Zm-40-80h640v-120H160v120Zm200 280h240v-80H360v80Zm120 20Z"/></svg>
+                            </button>
+                        </a>
+                    </div>
                 </div>
 
                 <div class="search-filter-container">
@@ -144,7 +158,7 @@
             <button class="btn">Approve</button>
         </div>
     </div>
-    <!-------------- END OF MODAL APPROVE BUTTON CLICK EXPAND -------------->
+    <!-------------- END OF MODAL APPROVE BUTTON FOR JUSTICE COMPLAINTS -------------->
     
     <div id="declineModal" class="modal">
         <div class="modal-content">
@@ -156,30 +170,18 @@
             <button class="btn">Decline</button>
         </div>
     </div>
-    <!-------------- END OF MODAL DECLINE BUTTON CLICK EXPAND -------------->
+    <!-------------- END OF MODAL DECLINE BUTTON FOR JUSTICE COMPLAINTS -------------->
 
     <div id="deleteModal" class="modal">
         <div class="modal-content">
-            <h4>Delete Request?</h4>
+            <h4>Delete Response?</h4>
             <div class="delete_actions-m">
                 <button class="delete_button-m btn">Delete</button>
                 <button class="cancelDelete btn">Cancel</button>
             </div>
         </div>
     </div>
-    <!-------------- END OF MODAL DELETE BUTTON CLICK EXPAND -------------->  
-
-    <div id="restoreModal" class="modal">
-        <div class="modal-content">
-            <h4>Restore Request?</h4>
-            <div class="restore_actions-m">
-                <button class="restore_button btn">Restore</button>
-                <button class="cancelDelete btn">Cancel</button>
-            </div>
-
-        </div>
-    </div>
-    <!-------------- END OF MODAL RESTORE BUTTON CLICK EXPAND -------------->  
+    <!-------------- END OF MODAL DELETE BUTTON FOR JUSTICE COMPLAINTS -------------->  
 
     <div id="detailModal" class="modal">
         <div class="modal-content">
@@ -212,7 +214,7 @@
             </div>
         </div>
     </div>
-    <!-------------- END OF MODAL VIEW DETAILS BUTTON EXPAND -------------->
+    <!-------------- END OF MODAL VIEW DETAILS FOR JUSTICE COMPLAINTS -------------->
 
     <div id="remarksModal" class="modal">
         <div class="modal-content">
@@ -227,67 +229,6 @@
             </div>
         </div>
     </div>
-    <!-------------- END OF MODAL VIEW REMARKS BUTTON EXPAND -------------->
-
-    <!--------------  MODAL OF TRASH BUTTON EXPAND -------------->
-    <div id="trashJusticeModal" class="trash_modal">
-        <div class="trash_modal-container">
-            <div class="close_button-container">
-                <h4>Justice Request Trash</h4>
-                <button class="close_button">Close</button>
-            </div>
-            <div class="trash_modal-content">
-                <div class="trash_header-container">
-                    <div class="trash_header-action">
-                        <button class="restore_button">Restore</button>
-                        <button class="delete_button-m">Delete</button>
-                    </div>
-                </div>
-
-                <div class="trash_label-container">
-                    <div class="select_all-container">
-                        <p>All</p>
-                        <input type="checkbox">
-                    </div>
-                    <p>No.</p>
-                    <p>Barangay ID</p>
-                    <p>First Name</p>
-                    <p>Last Name</p>
-                    <p>Date & Time</p>
-                    <p>Status</p>
-                    <p>Details</p>
-                    <p>Remarks</p>
-                </div>
-
-                <div class="trash_user-request-container">
-                    <div class="trash_user-request">
-                        <input type="checkbox">
-                        <p>1</p>
-                        <p>01</p>
-                        <p>Siling</p>
-                        <p>Labuyo</p>
-                        <p>2024-10-12 13:02</p>
-                        <P class="request_declined">Declined</P>
-                        <button class="details_button">Details</button>
-                        <button class="remarks_button">Remarks</button>
-                    </div>
-
-                    <div class="trash_user-request">
-                        <input type="checkbox">
-                        <p>12</p>
-                        <p>25</p>
-                        <p>Siling</p>
-                        <p>Matamis</p>
-                        <p>2024-10-12 13:02</p>
-                        <P class="request_declined">Declined</P>
-                        <button class="details_button">Details</button>
-                        <button class="remarks_button">Remarks</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-    </div>
-    <!-------------- END MODAL OF ID TRASH BUTTON EXPAND -------------->
+    <!-------------- END OF MODAL VIEW REMARKS FOR JUSTICE COMPLAINTS -------------->
     </main>
 </body>

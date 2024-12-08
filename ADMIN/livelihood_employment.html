@@ -1,29 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ADMIN Edit Livelihood & Employment | BARANGAY-WBA</title>
-
-    <!-- MONTSERRAT GOOGLE FONTS -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-
-    <!-- CSS STYLESHEET LINK -->
-     <link rel="stylesheet" href="CSS/style.css">
-     <link rel="stylesheet" href="CSS/sidebar.css">
-     <link rel="stylesheet" href="CSS/action_modal.css">
-
-     <!-- ICONSCOUT CDN -->
-    <link href="https://unicons.iconscout.com/release/v4.0.8/css/line.css" rel="stylesheet">
-
-    <!-- GENERAL JS LINK -->
-    <script type="text/javascript" src="./JS/app.js" defer></script>
-    <!-- SIDEBAR JS LINK -->
-    <script type="text/javascript" src="./JS/sidebar.js" defer></script>
-
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ADMIN Manage | BARANGAY-WBA</title>
+    
+        <!-- Google Fonts: Montserrat -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    
+        <!-- CSS Stylesheets -->
+        <link rel="stylesheet" href="CSS/style.css">
+        <link rel="stylesheet" href="CSS/manage_post.css">
+        <link rel="stylesheet" href="CSS/trash.css">
+        <link rel="stylesheet" href="CSS/authentication.css">
+        <link rel="stylesheet" href="CSS/central_request.css">
+        <link rel="stylesheet" href="CSS/action_modal.css">
+        <link rel="stylesheet" href="CSS/community_development.css">
+        <link rel="stylesheet" href="CSS/dashboard.css">
+        <link rel="stylesheet" href="CSS/profile.css">
+    
+        <!-- Iconscout CDN -->
+        <link href="https://unicons.iconscout.com/release/v4.0.8/css/line.css" rel="stylesheet">
+    
+        <!-- JavaScript Files -->
+        <script src="./JS/app.js" defer></script>
+        <script src="./JS/sidebar.js" defer></script>
+        <script src="./JS/charts.js" defer></script>
+        <script src="./JS/complaint_analytics.js" defer></script>
+        <script src="./JS/emergency_analytics.js" defer></script>
+        <script src="./JS/idea_analytics.js" defer></script>
+        <script src="./JS/threads.js" defer></script>
+        <script src="./JS/threads_analytics.js" defer></script>
+    </head>
 <body>
     <div id="sidebar-container"></div>
     <!------------------------------------ END OF SIDEBAR ------------------------------------>
@@ -35,46 +45,53 @@
         </p>
     </div>
     <!-------------- END OF ADMIN BANNER SECTION -------------->
-        <div class="container infographics">
-            <h3>Livelihood & Employment</h3>
-            <div class="infographics_container">
-                <h3>SPES Summer Job for Students</h3>
-                <div class="infographics_body">
-                    <div class="infographics_content">
-                        <h4>Program Overview</h4>
-                        <p>The Social Pension for Indigent Senior Citizens is a government program in the Philippines aimed at providing financial assistance to elderly individuals who are considered indigent. The program is managed by the Department of Social Welfare and Development (DSWD) and is designed to support the basic needs of senior citizens who do not receive any form of pension or regular income. Key details of the program include:</p>
-                        <div class="edit_action-button-container">
-                            <button class="btn edit_button-action">Edit</button>
-                        </div>
+        <div id="barangayInfographicsSection"  class="container parent_request-container">
+            <h3>Livelihood and Employment</h3>
+            <div class="barangay_manage-container">
+                <div class="header_manage-container">
+                    <h3>About SPES Summer Job for Students</h3>
+                    <div class="header_button-container">
+
                     </div>
-    
-                    <div class="infographics_content">
-                        <h4>Eligibility Criteria</h4>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Unde laudantium obcaecati, reiciendis earum nostrum cupiditate impedit nemo. Ullam asperiores quidem autem, quam magni, omnis pariatur perspiciatis sunt totam distinctio rem.</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et obcaecati repellendus facilis inventore. Maiores obcaecati deleniti repellat placeat impedit. Omnis distinctio vel eius magni culpa neque temporibus suscipit, saepe magnam.</p>
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. A esse alias provident dolorum velit facilis eaque earum enim odit voluptatibus perferendis minus impedit explicabo distinctio debitis consequatur, expedita architecto quae.</p>
-                        <div class="edit_action-button-container">
-                            <button class="btn edit_button-action">Edit</button>
+                </div>
+
+                <div class="tab_box-container">
+                    <button class="tab_btn active">Manage Post</button>
+                </div>
+                <div class="manage_label-infographics">
+                    <p>No.</p>
+                    <p>Title</p>
+                    <p>Details</p>
+                    <p>Edit</p>
+                </div>
+                <div class="request_container">
+                    <div class="request active">
+                        <div class="manage_post-infographics">
+                            <p>1</p>
+                            <p class="truncate">Eligibility Criteria</p>
+                            <button class="details_button-one">Details</button>
+                            <button class="edit_post-button-one">Edit</button>
                         </div>
-                    </div>
-    
-                    <div class="infographics_content">
-                        <h4>Eligibility Criteria</h4>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Unde laudantium obcaecati, reiciendis earum nostrum cupiditate impedit nemo. Ullam asperiores quidem autem, quam magni, omnis pariatur perspiciatis sunt totam distinctio rem.</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et obcaecati repellendus facilis inventore. Maiores obcaecati deleniti repellat placeat impedit. Omnis distinctio vel eius magni culpa neque temporibus suscipit, saepe magnam.</p>
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. A esse alias provident dolorum velit facilis eaque earum enim odit voluptatibus perferendis minus impedit explicabo distinctio debitis consequatur, expedita architecto quae.</p>
-                        <div class="edit_action-button-container">
-                            <button class="btn edit_button-action">Edit</button>
+
+                        <div class="manage_post-infographics">
+                            <p>2</p>
+                            <p class="truncate">Eligibility Criteria</p>
+                            <button class="details_button-one">Details</button>
+                            <button class="edit_post-button-one">Edit</button>
                         </div>
-                    </div>
-    
-                    <div class="infographics_content">
-                        <h4>Eligibility Criteria</h4>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Unde laudantium obcaecati, reiciendis earum nostrum cupiditate impedit nemo. Ullam asperiores quidem autem, quam magni, omnis pariatur perspiciatis sunt totam distinctio rem.</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et obcaecati repellendus facilis inventore. Maiores obcaecati deleniti repellat placeat impedit. Omnis distinctio vel eius magni culpa neque temporibus suscipit, saepe magnam.</p>
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. A esse alias provident dolorum velit facilis eaque earum enim odit voluptatibus perferendis minus impedit explicabo distinctio debitis consequatur, expedita architecto quae.</p>
-                        <div class="edit_action-button-container">
-                            <button class="btn edit_button-action">Edit</button>
+
+                        <div class="manage_post-infographics">
+                            <p>3</p>
+                            <p class="truncate">Eligibility Criteria</p>
+                            <button class="details_button-one">Details</button>
+                            <button class="edit_post-button-one">Edit</button>
+                        </div>
+
+                        <div class="manage_post-infographics">
+                            <p>4</p>
+                            <p class="truncate">Eligibility Criteria</p>
+                            <button class="details_button-one">Details</button>
+                            <button class="edit_post-button-one">Edit</button>
                         </div>
                     </div>
                 </div>
@@ -82,45 +99,52 @@
         </div>
         <!------------------------------------ END OF SPES SUMMER JOBS ------------------------------------>
     
-        <div class="container infographics">
-            <div class="infographics_container">
-                <h3>Tulong Dunong Financial Assistance</h3>
-                <div class="infographics_body">
-                    <div class="infographics_content">
-                        <h4>Program Overview</h4>
-                        <p>The Social Pension for Indigent Senior Citizens is a government program in the Philippines aimed at providing financial assistance to elderly individuals who are considered indigent. The program is managed by the Department of Social Welfare and Development (DSWD) and is designed to support the basic needs of senior citizens who do not receive any form of pension or regular income. Key details of the program include:</p>
-                        <div class="edit_action-button-container">
-                            <button class="btn edit_button-action">Edit</button>
-                        </div>
-                    </div>
+        <div id="barangayInfographicsSection"  class="container parent_request-container">
+            <div class="barangay_manage-container">
+                <div class="header_manage-container">
+                    <h3>About Tulong Dunong Financial Assistance</h3>
+                    <div class="header_button-container">
     
-                    <div class="infographics_content">
-                        <h4>Eligibility Criteria</h4>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Unde laudantium obcaecati, reiciendis earum nostrum cupiditate impedit nemo. Ullam asperiores quidem autem, quam magni, omnis pariatur perspiciatis sunt totam distinctio rem.</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et obcaecati repellendus facilis inventore. Maiores obcaecati deleniti repellat placeat impedit. Omnis distinctio vel eius magni culpa neque temporibus suscipit, saepe magnam.</p>
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. A esse alias provident dolorum velit facilis eaque earum enim odit voluptatibus perferendis minus impedit explicabo distinctio debitis consequatur, expedita architecto quae.</p>
-                        <div class="edit_action-button-container">
-                            <button class="btn edit_button-action">Edit</button>
-                        </div>
                     </div>
+                </div>
     
-                    <div class="infographics_content">
-                        <h4>Eligibility Criteria</h4>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Unde laudantium obcaecati, reiciendis earum nostrum cupiditate impedit nemo. Ullam asperiores quidem autem, quam magni, omnis pariatur perspiciatis sunt totam distinctio rem.</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et obcaecati repellendus facilis inventore. Maiores obcaecati deleniti repellat placeat impedit. Omnis distinctio vel eius magni culpa neque temporibus suscipit, saepe magnam.</p>
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. A esse alias provident dolorum velit facilis eaque earum enim odit voluptatibus perferendis minus impedit explicabo distinctio debitis consequatur, expedita architecto quae.</p>
-                        <div class="edit_action-button-container">
-                            <button class="btn edit_button-action">Edit</button>
+                <div class="tab_box-container">
+                    <button class="tab_btn active">Manage Post</button>
+                </div>
+                <div class="manage_label-infographics">
+                    <p>No.</p>
+                    <p>Title</p>
+                    <p>Details</p>
+                    <p>Edit</p>
+                </div>
+                <div class="request_container">
+                    <div class="request active">
+                        <div class="manage_post-infographics">
+                            <p>1</p>
+                            <p class="truncate">Eligibility Criteria</p>
+                            <button class="details_button-one">Details</button>
+                            <button class="edit_post-button-one">Edit</button>
                         </div>
-                    </div>
     
-                    <div class="infographics_content">
-                        <h4>Eligibility Criteria</h4>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Unde laudantium obcaecati, reiciendis earum nostrum cupiditate impedit nemo. Ullam asperiores quidem autem, quam magni, omnis pariatur perspiciatis sunt totam distinctio rem.</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et obcaecati repellendus facilis inventore. Maiores obcaecati deleniti repellat placeat impedit. Omnis distinctio vel eius magni culpa neque temporibus suscipit, saepe magnam.</p>
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. A esse alias provident dolorum velit facilis eaque earum enim odit voluptatibus perferendis minus impedit explicabo distinctio debitis consequatur, expedita architecto quae.</p>
-                        <div class="edit_action-button-container">
-                            <button class="btn edit_button-action">Edit</button>
+                        <div class="manage_post-infographics">
+                            <p>2</p>
+                            <p class="truncate">Eligibility Criteria</p>
+                            <button class="details_button-one">Details</button>
+                            <button class="edit_post-button-one">Edit</button>
+                        </div>
+    
+                        <div class="manage_post-infographics">
+                            <p>3</p>
+                            <p class="truncate">Eligibility Criteria</p>
+                            <button class="details_button-one">Details</button>
+                            <button class="edit_post-button-one">Edit</button>
+                        </div>
+    
+                        <div class="manage_post-infographics">
+                            <p>4</p>
+                            <p class="truncate">Eligibility Criteria</p>
+                            <button class="details_button-one">Details</button>
+                            <button class="edit_post-button-one">Edit</button>
                         </div>
                     </div>
                 </div>
@@ -128,18 +152,34 @@
         </div>
         <!------------------------------------ END OF TULONG DUNONG ------------------------------------>
 
-        <div id="editActionModal" class="modal">
-            <form class="modal_content-action">
-                <h4>Edit Title</h4>
-                <input type="text" placeholder="Title">
-                <h4>Edit Description</h4>
-                <textarea placeholder="Description" rows="5"></textarea>
-                <div class="button_action-container">
-                    <button class="btn">Save</button>
-                    <button class="btn cancelButton">Cancel</button>
-                </div>
-            </form>
+        <div id="editPostModalOne" class="modal">
+            <div class="modal-content">
+                    <div class="form_section">
+                        <h2>Edit Post</h2>
+                        <form id="postForm" enctype="multipart/form-data">
+                            <input type="text" id="postTitle" placeholder="Update Title" required>
+                            <textarea rows="10" id="postDescription" name="Description" placeholder="Update Description" required></textarea>
+                            <button type="submit" id="submitButton" class="btn">Update Post</button>
+                            <button class="cancelDelete btn">Cancel</button>
+                        </form>
+                    </div>
+            </div>
         </div>
-        <!-------------- END OF MODAL EDIT ACTION FOR INFOGRAPHICS -------------->  
+        <!-------------- END OF MODAL EDIT POST BUTTON FOR INFOGRAPHICS -------------->
+
+        <div id="detailModalOne" class="modal">
+            <div class="modal-content">
+                <span class="close-button">&times;</span>
+                <div class="req_details">
+                    <h4>Title:</h4>
+                    <p>Title #1</p>
+                </div>
+                <div class="req_details">
+                    <h4>Description:</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates, nesciunt aspernatur! Ipsa consectetur porro delectus, voluptas alias sunt beatae optio recusandae quibusdam minima earum fugiat possimus ea soluta quae debitis!</p>
+                </div>
+            </div>
+        </div>
+        <!-------------- END OF MODAL VIEW DETAILS BUTTON FOR INFOGRAPHICS -------------->
     </main>
 </body>
