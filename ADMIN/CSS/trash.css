@@ -64,7 +64,8 @@
 }
 
 /* Trash Top Labels in Announcement, Faciltiy, Publication */
-.trash_announcement_label-container, .trash_facility_label-container, .trash_publication_label-container {
+.trash_announcement_label-container, .trash_facility_label-container, .trash_publication_label-container,
+.trash_safety_label-container {
     display: grid;
     grid-template-columns: 1fr 1fr 2fr 2fr 1fr;
     text-align: center;
@@ -159,7 +160,7 @@
 }
 
 /* Trash Individual Post for Announcement Trash */
-.trash_announcement, .trash_facility, .trash_publication {
+.trash_announcement, .trash_facility, .trash_publication, .trash_safety {
     display: grid;
     grid-template-columns: 1fr 1fr 2fr 2fr 1fr;
     align-items: center;
