@@ -528,28 +528,29 @@
 }
 
 /* ========================== IDEA SUBMISSION AND VOLUNTEER SIGN UP ========================== */
-.idea_volunteer-section {
-    padding: 4rem;
-    padding-bottom: 2rem;
-}
-
 .idea_volunteer-container {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 4rem;
-    background: var(--color-light-primary);
+    background: var(--color-white);
     border-radius: var(--card-border-radius-3);
-    box-shadow: inset 0px 6px 8px 6px rgba(0, 0, 0, 0.1);
     padding: 3rem 4rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: var(--transition);
+}
+
+.idea_volunteer-container:hover {
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
 }
 
 .idea_volunteer h4 {
-    background: var(--color-primary);
+    background: var(--color-secondary);
     color: var(--color-white);
     text-align: center;
-    padding: 0.8rem;
-    border-radius: var(--card-border-radius-3) var(--card-border-radius-3) 0 0;
+    padding: 0.5rem;
+    border-radius: var(--card-border-radius-4) var(--card-border-radius-4) 0 0;
+    font-size: 1.3rem;
 }
 
 .idea_volunteer {
@@ -557,7 +558,6 @@
     flex-direction: column;
     gap: 0.5rem;
     width: 50%;
-    
 }
 
 .idea_volunteer-box {
@@ -572,6 +572,7 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 0 0 var(--card-border-radius-3) var(--card-border-radius-3);
     transition: var(--transition);
+    border-top: 5px solid var(--color-secondary);
 }
 
 .idea_volunteer-box:hover {

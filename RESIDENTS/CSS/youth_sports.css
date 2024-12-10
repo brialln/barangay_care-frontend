@@ -1,11 +1,13 @@
 @import url(style.css);
 
 .sports_events h3 {
-    background: var(--color-primary);
+    background: var(--color-secondary);
     color: var(--color-white);
     text-align: center;
-    border-radius: var(--card-border-radius-2);
-    padding: 0.6rem;
+    border-top-left-radius: var(--card-border-radius-4);
+    border-top-right-radius: var(--card-border-radius-4);
+    padding: 0.5rem;
+    font-size: 1.3rem;
 }
 
 .sports_event-container {
@@ -13,7 +15,16 @@
     grid-template-columns: 1fr 1fr;
     gap: 1rem;
     margin-top: 1rem;
+    background: var(--color-white);
+    padding: 1rem;
+    border-radius: var(--card-border-radius-3);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: var(--transition);
 }
+
+.sports_event-container:hover {
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+}   
 
 .sports_event {
     padding: 2rem;
@@ -51,8 +62,7 @@
     align-items: center;
 }
 
-
-
+/* ======================= Youth Sports Application ======================= */
 .youth_sports-application {
     display: flex;
     flex-direction: column;
@@ -65,7 +75,7 @@
 .youth_sports-application h5 {
     border-top-right-radius: var(--card-border-radius-4);
     border-top-left-radius: var(--card-border-radius-4) ;
-    background: var(--color-primary);
+    background: var(--color-secondary);
     color: var(--color-white);
     padding: 0.6rem;
     width: 60%;
@@ -77,7 +87,7 @@
     background: var(--color-white);
     padding: 1rem 2rem 2rem 2rem;
     width: 60%;
-    border-top: 5px solid var(--color-primary);
+    border-top: 5px solid var(--color-secondary);
     border-bottom-right-radius: var(--card-border-radius-3);
     border-bottom-left-radius: var(--card-border-radius-3);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
