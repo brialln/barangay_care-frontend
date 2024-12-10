@@ -21,15 +21,15 @@
     --color-bg: #F1F1F1;
     --color-red: #FF0000;
     --color-light-red: #FFCCCC;
-    --color-green: #00F000;
+    --color-green: #088108;
     --color-light-green: #99FFCC;
-
     --color-charcoal-gray: #36454F;
     --color-white: #FFFFFF;
     --color-ash: #F5F5F5;
     --color-black: #000000;
     --color-dark-gray: #D9D9D9;
     --color-navy-blue: #001F3F;
+    --color-secondary: #321E1E;
 
     --font-size: 0.9rem;
 
@@ -185,27 +185,26 @@ footer ul li a:hover {
 #navbar-container {
     background: transparent;
     width: 100vw;
-    height: 5rem;
+    height: 7rem;
     position: sticky;
     top: 0;
     z-index: 11;
-    margin: 1rem 0 1rem 0;
 }
 
 .nav_items a.active {
-    background: var(--color-navy-blue);
+    background: var(--color-secondary);
     color: var(--color-white);
     border-radius: var(--card-border-radius-4);
 }
 
 nav {
-    background: transparent;
+    background: var(--color-primary);
+    color: var(--color-white);
     width: 100vw;
     height: 5rem;
     position: sticky;
     top: 0;
     z-index: 11;
-    margin: 1rem 0 1rem 0;
 }
 
 .window-scroll {
@@ -215,7 +214,6 @@ nav {
 }
 
 nav a {
-    background: transparent;
     padding: 0.5rem 0.9rem;
     font-size: 0.8rem;
     font-weight: 500;
@@ -224,14 +222,14 @@ nav a {
 }
 
 nav a:hover {
-    background: var(--color-navy-blue);
+    background: var(--color-secondary);
     color: var(--color-white);
     padding: 0.5rem 0.9rem;
     border-radius: var(--card-border-radius-4);
 }
 
 nav ul li.active a {
-    background: var(--color-navy-blue);
+    background: var(--color-secondary);
     color: var(--color-white);
     padding: 0.5rem 0.9rem;
     border-radius: var(--card-border-radius-4);
@@ -253,7 +251,7 @@ nav button {
     height: 2.5rem;
     border-radius: 50%;
     overflow: hidden;
-    border: 0.3rem solid var(--color-navy-blue);
+    border: 0.3rem solid var(--color-secondary);
 }
 
 .nav_logo img {
@@ -261,13 +259,15 @@ nav button {
     height: 2.5rem;
     border-radius: 50%;
     overflow: hidden;
-    border: 0.3rem solid var(--color-navy-blue);
+    border: 0.3rem solid var(--color-secondary);
 }
 
 .nav_items {
     display: flex;
     align-items: center;
     gap: 4rem;
+    white-space: nowrap; /* Prevent text wrapping */
+    flex-wrap: nowrap; /* Keep items in a single line */
 }
 
 .nav_profile {
@@ -282,7 +282,7 @@ nav button {
     display: flex;
     flex-direction: column;
     box-shadow: 0 3rem 3rem rgba(0, 0, 0, 0.4);
-    background: var(--color-navy-blue);
+    background: var(--color-secondary);
     visibility: hidden;
     opacity: 0;
     transition: var(--transition);
@@ -303,7 +303,7 @@ nav button {
 }
 
 .nav_profile ul li:first-child a {
-    background: var(--color-navy-blue);
+    background: var(--color-secondary);
     color: var(--color-white);
     border-top-left-radius: 12px;
     border-top-right-radius: 12px;
@@ -332,7 +332,7 @@ nav button {
 }
 
 .nav_profile ul li a:hover {
-    background: var(--color-navy-blue);
+    background: var(--color-secondary);
     color: var(--color-primary);
 }
 
@@ -349,11 +349,11 @@ nav button {
     display: flex;
     flex-direction: column;
     box-shadow: 0 3rem 3rem rgba(0, 0, 0, 0.4);
-    background: var(--color-navy-blue);
+    background: var(--color-secondary);
     visibility: hidden;
     opacity: 0;
     transition: var(--transition);
-    width: 14rem;
+    width: 16rem;
     max-height: 300px; 
     overflow-y: auto; 
     border-radius: 12px;
@@ -373,7 +373,7 @@ nav button {
 }
 
 .nav_dropdown ul li a:hover {
-    background: var(--color-navy-blue);
+    background: var(--color-secondary);
     color: var(--color-primary);
     border-radius: 12px;
 }
@@ -390,7 +390,7 @@ nav button {
 }
 
 .nav_dropdown ul::-webkit-scrollbar-track {
-    background-color: var(--color-navy-blue); /* Scrollbar track color */
+    background-color: var(--color-secondary); /* Scrollbar track color */
     border-radius: 12px;
 }
 
@@ -411,6 +411,16 @@ input, textarea, select {
     border-radius: var(--card-border-radius-2);
     resize: none;
     color: var(--color-black-font);
+    font-size: 16px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Change the font of the placeholders */
+input::placeholder,
+textarea::placeholder {
+    font-family: 'Montserrat', sans-serif; /* Change to your desired font */
+    font-size: 14px; /* Adjust the font size as needed */
+    color: #888; /* Adjust the color as needed */
 }
 
 /* CUSTOM PHONE NUMBER SPINNER */
@@ -436,7 +446,7 @@ input, textarea, select {
 }
 
 .header_section-container h3 {
-    color: var(--color-navy-blue);
+    color: var(--color-secondary);
     transition: color 300ms ease-in-out; 
     cursor: pointer;
 }
@@ -449,7 +459,7 @@ input, textarea, select {
     width: 100%;
     max-width: 100%; /* Ensures the container takes up the full width of its parent */
     height: 450px; /* Fixed height */
-    border: 5px solid var(--color-navy-blue);
+    border: 5px solid var(--color-secondary);
     border-radius: 1rem;
     overflow: hidden;
     display: flex;
@@ -535,20 +545,28 @@ input, textarea, select {
     color: var(--color-light-primary);
 }
 
-/* BACK BUTTON STYLE */
+/* Back Button */
+.back_button-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
 .back_button-container button {
-    border-radius: 50%;
-}
-
-.back_button-container .uil-arrow-circle-left {
-    font-size: 2.6rem;
-    color: var(--color-primary);
+    background: transparent;
+    color: var(--color-secondary);
+    border: 2px solid var(--color-secondary);
+    padding: 0.5rem 1rem;
+    border-radius: var(--card-border-radius-4);
+    font-weight: 550;
     cursor: pointer;
+    transition: var(--transition);
 }
 
-.back_button-container .uil-arrow-circle-left:hover {
-    opacity: 0.5;
-    transition: var(--transition);
+.back_button-container button:hover {
+    opacity: 0.7;
 }
 
 /* ========================== Posts Styles (Articles & Guidelines) ========================== */
@@ -558,7 +576,7 @@ input, textarea, select {
     max-width: 100%; /* Ensures the container takes up the full width of its parent */
     height: 250px; /* Fixed height */
     border-radius: var(--card-border-radius-3);
-    border: 0.3rem solid var(--color-navy-blue);
+    border: 0.3rem solid var(--color-secondary);
     overflow: hidden;
     margin-bottom: 1rem;
     transition: var(--transition);
@@ -614,6 +632,7 @@ input, textarea, select {
     padding: 1rem 1rem;
     border-radius: var(--card-border-radius-3);
     transition: var(--transition);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .post:hover {
@@ -621,7 +640,7 @@ input, textarea, select {
 }
 
 .post_info a {
-    color: var(--color-navy-blue);
+    color: var(--color-secondary);
     transition: var(--transition);
 }
 
@@ -641,6 +660,7 @@ input, textarea, select {
     padding: 1rem 2rem 2rem;
     border-radius: var(--card-border-radius-3);  
     transition: var(--transition);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .singlepost_container:hover {
@@ -674,7 +694,7 @@ input, textarea, select {
 
 .reusable_services-container h4 {
     color: var(--color-white);
-    background: var(--color-navy-blue);
+    background: var(--color-secondary);
     padding: 0.5rem 0;
     text-align: center;
     font-size: 1.3rem;
@@ -686,6 +706,18 @@ input, textarea, select {
 .reusable_section-container {
     position: relative;
     overflow: hidden; /* Prevent horizontal overflow */
+    background: var(--color-white);
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: var(--card-border-radius-3);
+    transition: var(--transition);
+}
+
+.reusable_section-container:hover {
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15); 
 }
 
 .barangay_section-container {
@@ -695,8 +727,10 @@ input, textarea, select {
     overflow-y: hidden;
     -webkit-overflow-scrolling: touch; /* Enable smooth scrolling on iOS */
     scroll-behavior: smooth;
-    padding: 1rem 0;
-    overflow: hidden;
+    box-shadow: inset 0px 2px 8px 2px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    border-radius: var(--card-border-radius-3);
+    background: var(--color-ash);
 }
 
 .barangay_section-container::-webkit-scrollbar {
@@ -706,17 +740,15 @@ input, textarea, select {
 .reusable-card {
     flex: 0 0 auto; /* Prevent shrinking and allow scrolling */
     width: 400px; /* Fixed width for cards */
-    background-color: white;
-    border: 1px solid #ccc;
+    background: var(--color-white);
     border-radius: 10px;
     overflow: hidden;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     cursor: pointer;
     transition: var(--transition);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .reusable-card:hover {
-    transform: scale(1.05); /* Slightly enlarge the card */
     box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15); 
 }
 
@@ -740,7 +772,7 @@ input, textarea, select {
     position: absolute;
     top: 50%; /* Centers the arrow vertically */
     transform: translateY(-50%); /* Adjusts for perfect centering */
-    background: var(--color-navy-blue);
+    background: var(--color-secondary);
     color: var(--color-white);
     border: none;
     border-radius: 50%;
@@ -864,7 +896,7 @@ input, textarea, select {
 
 .health_form-container h4 {
     font-size: 1.3rem;
-    color: var(--color-navy-blue);
+    color: var(--color-secondary);
 }
 
 .health_form-container:hover {
@@ -994,3 +1026,10 @@ input, textarea, select {
     }
 }
 */
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+    nav a {
+        font-size: 0.5rem; /* Adjust font size for smaller viewports */
+    }
+}
