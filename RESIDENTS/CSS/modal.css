@@ -31,7 +31,7 @@
 }
 
 .modal-content h4 {
-    color: var(--color-navy-blue);
+    color: var(--color-secondary);
 }
 
 .modal-content button:first-child{
@@ -47,12 +47,12 @@
 
 .modal-content button:last-child{
     width: 100%;
-    background: var(--color-navy-blue);
+    background: var(--color-secondary);
 }
 
 .modal-content button:hover:last-child {
-    color: var(--color-navy-blue);
-    border-color: var(--color-navy-blue);
+    color: var(--color-secondary);
+    border-color: var(--color-secondary);
     background: var(--color-white);
 }
 
@@ -61,7 +61,7 @@
     top: 0;
     right: 1rem;
     font-size: 2rem;
-    color: var(--color-navy-blue);
+    color: var(--color-secondary);
     cursor: pointer;
     transition: var(--transition);
 }

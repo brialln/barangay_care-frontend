@@ -61,7 +61,7 @@
     margin-top: 1rem;
     flex: 1 1 100%;
     overflow: hidden;
-    border: 5px solid var(--color-navy-blue);
+    border: 5px solid var(--color-secondary);
     border-radius: var(--card-border-radius-2);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow */
     max-width: 100%; /* Responsive width */
