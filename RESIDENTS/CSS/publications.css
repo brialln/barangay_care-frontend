@@ -40,7 +40,7 @@
 .folder_description {
     text-align: center;
     padding: 1rem;
-    color: var(--color-navy-blue);
+    color: var(--color-secondary);
     transition: var(--transition);
 }
 
@@ -69,6 +69,5 @@
 
 .publication_file:hover {
     color: var(--color-primary);
-    transform: scale(1.02);
     box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15); 
 }
