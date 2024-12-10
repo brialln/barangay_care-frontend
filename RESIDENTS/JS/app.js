@@ -7,6 +7,66 @@ window.addEventListener('scroll', () => {
     document.querySelector('nav').classList.toggle('window-scroll', window.scrollY > 0)
 })
 
+
+// * Back Button Function -----------------------------------------------------------
+document.addEventListener("DOMContentLoaded", () => {
+    const backButton = document.getElementById("backButton");
+
+    // Store the referrer in sessionStorage if not from a form submission
+    if (document.referrer && !sessionStorage.getItem("submittedForm")) {
+        sessionStorage.setItem("prevPage", document.referrer);
+    }
+
+    // Reset submittedForm flag on load
+    sessionStorage.removeItem("submittedForm");
+
+    if (backButton) {
+        backButton.addEventListener("click", () => {
+            const prevPage = sessionStorage.getItem("prevPage");
+            if (prevPage) {
+                window.location.href = prevPage;
+            } else {
+                // Optional: Fallback behavior
+                window.history.back();
+            }
+        });
+    }
+
+    // Handle modal form submissions
+    const modalForms = document.querySelectorAll(".modal-content");
+    modalForms.forEach(form => {
+        form.addEventListener("submit", (e) => {
+            e.preventDefault(); // Prevent page reload
+            const actionButton = e.submitter; // Get the clicked button
+
+            if (actionButton.classList.contains("delete_button-m")) {
+                // Handle "Delete" action
+                console.log("Post deleted!");
+                sessionStorage.setItem("submittedForm", true);
+            } else if (actionButton.classList.contains("restore_button")) {
+                // Handle "Restore" action
+                console.log("Post restored!");
+                sessionStorage.setItem("submittedForm", true);
+            }
+
+            // Close the modal (you can add modal-specific logic here)
+            const modal = form.closest(".modal");
+            if (modal) modal.style.display = "none";
+        });
+    });
+
+    // Optional: Add event listeners for cancel buttons
+    const cancelButtons = document.querySelectorAll(".cancelDelete");
+    cancelButtons.forEach(cancelButton => {
+        cancelButton.addEventListener("click", (e) => {
+            e.preventDefault(); // Prevent default button action
+            const modal = cancelButton.closest(".modal");
+            if (modal) modal.style.display = "none";
+        });
+    });
+});
+
+
 // * Horizontal Scroll Functionality for Barangay Section -----------------------------------------------------------
 document.addEventListener('DOMContentLoaded', () => {
     const scrollContainers = document.querySelectorAll(".barangay_section-container");
