@@ -22,7 +22,7 @@
     align-items: center;
     gap: 1.4rem;
     height: fit-content;
-    background: var(--color-navy-blue);
+    background: var(--color-secondary);
     color: var(--color-white);
     cursor: pointer;
     border-radius: var(--card-border-radius-2);
