@@ -621,13 +621,15 @@ textarea::placeholder {
 .posts_container {
     margin-top: 1rem;
     display: grid;
-    grid-template-columns: repeat(3, minmax(350px, 1fr)); 
+    grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
     gap: 2rem;
     width: 100%;
+    justify-content: center; /* Center-align content for single posts */
 }
 
 .post {
-    width: 100%;
+    max-width: 390px; /* Prevents the post from stretching too wide */
+    margin: auto; /* Centers the post horizontally when there's only one */
     background: var(--color-white);
     padding: 1rem 1rem;
     border-radius: var(--card-border-radius-3);
@@ -693,14 +695,8 @@ textarea::placeholder {
 }
 
 .reusable_services-container h4 {
-    color: var(--color-white);
-    background: var(--color-secondary);
-    padding: 0.5rem 0;
-    text-align: center;
-    font-size: 1.3rem;
-    border-top-right-radius: var(--card-border-radius-4);
-    border-top-left-radius: var(--card-border-radius-4);
-    margin-bottom: 1rem;
+    color: var(--color-secondary);
+    font-size: 1.5rem;
 }
 
 .reusable_section-container {
@@ -978,58 +974,86 @@ textarea::placeholder {
 
 
 
-
-/* ========================== Media Queries (Coming Soon) :> ========================== */
-/* MEDIA QUERIES */
+/* Responsive Navigation Bar */
 
 /* Extra Small Devices (Phones) */
-/*
 @media only screen and (max-width: 600px) {
-    body {
-        background-color: lightblue;
+    .nav_items {
+        display: none;
+    }
+
+    nav button {
+        display: block;
+        background: var(--color-secondary);
+        color: var(--color-white);
+        border: none;
+        padding: 0.5rem 1rem;
+        cursor: pointer;
+        border-radius: var(--card-border-radius-4);
+    }
+
+    nav button:active,
+    nav button:focus {
+        outline: none;
+    }
+
+    .nav_items.mobile {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        position: absolute;
+        top: 5rem;
+        left: 0;
+        width: 100%;
+        background: var(--color-primary);
+        box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+        padding: 1rem;
+        visibility: hidden;
+        opacity: 0;
+        transition: var(--transition);
+    }
+
+    .nav_items.mobile.show {
+        visibility: visible;
+        opacity: 1;
+    }
+
+    .nav_items.mobile a {
+        display: block;
+        padding: 1rem;
+        border-radius: var(--card-border-radius-4);
     }
 }
-*/
 
 /* Small Devices (Tablets) */
-/*
 @media only screen and (min-width: 601px) and (max-width: 768px) {
-    body {
-        background-color: lightgreen;
+    .nav_items {
+        gap: 2rem;
+    }
+
+    nav button {
+        display: none;
     }
 }
-*/
 
 /* Medium Devices (Laptops) */
-/*
 @media only screen and (min-width: 769px) and (max-width: 1024px) {
-    body {
-        background-color: lightyellow;
+    .nav_items {
+        gap: 3rem;
+    }
+
+    nav button {
+        display: none;
     }
 }
-*/
 
 /* Large Devices (Desktops) */
-/*
-@media only screen and (min-width: 1025px) and (max-width: 1200px) {
-    body {
-        background-color: orange;
+@media only screen and (min-width: 1025px) {
+    .nav_items {
+        gap: 4rem;
     }
-}
-*/
 
-/* Extra Large Devices (Large Desktops or Ultra-wide monitors) */
-/*
-@media only screen and (min-width: 1201px) {
-    body {
-        background-color: lightcoral;
-    }
-}
-*/
-
-/* Media query for smaller screens */
-@media (max-width: 768px) {
-    nav a {
-        font-size: 0.5rem; /* Adjust font size for smaller viewports */
+    nav button {
+        display: none;
     }
 }
