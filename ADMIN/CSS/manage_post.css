@@ -191,8 +191,8 @@
 }
 
 /* Button for Editing and Deleting Post */
-.edit_post-button, .delete_post-button, .edit_post-button-one, 
-.edit_post-button-two, .delete_post-button-one {
+.edit_post-button, .edit_post-button-one, 
+.edit_post-button-two {
     background: var(--color-secondary);
     color: var(--color-white);
     margin: 0 auto; 
@@ -204,11 +204,30 @@
     transition: 0.3s;
 }
 
-.edit_post-button:hover, .delete_post-button:hover, .edit_post-button-one:hover, 
-.edit_post-button-two:hover, .delete_post-button-one:hover {
+.edit_post-button:hover, .edit_post-button-one:hover, 
+.edit_post-button-two:hover {
     background: transparent;
     border-color: var(--color-secondary);
     color: var(--color-secondary);
+}
+
+/* Button for Deleting Post */
+.delete_post-button, .delete_post-button-one {
+    background: var(--color-red);
+    color: var(--color-white);
+    margin: 0 auto; 
+    display: block; 
+    padding: 0.5rem 1rem;
+    border: 2px solid transparent;
+    border-radius: var(--card-border-radius-2);
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.delete_post-button:hover, .delete_post-button-one:hover {
+    background: transparent;
+    border-color: var(--color-red);
+    color: var(--color-red);
 }
 
 .add_post-button, .add_post-button-one {
