@@ -40,7 +40,7 @@
 .folder_description {
     text-align: center;
     padding: 1rem;
-    color: var(--color-navy-blue);
+    color: var(--color-secondary);
     transition: var(--transition);
 }
 

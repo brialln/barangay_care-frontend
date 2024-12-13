@@ -24,7 +24,7 @@
     max-width: 100%; /* Ensures the container takes up the full width of its parent */
     height: 300px; /* Fixed height */
     border-radius: var(--card-border-radius-3);
-    border: 0.3rem solid var(--color-navy-blue);
+    border: 0.3rem solid var(--color-secondary);
     overflow: hidden;
     transition: var(--transition);
 }
@@ -58,7 +58,7 @@
 }
 
 .success_post-info a {
-    color: var(--color-navy-blue);
+    color: var(--color-secondary);
     transition: var(--transition);
 }
 
