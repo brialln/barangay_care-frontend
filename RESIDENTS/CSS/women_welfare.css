@@ -10,6 +10,7 @@
     gap: 2rem;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
     background: var(--color-white);
+    margin-bottom: 1rem;
 }
 
 .success_posts_container {
