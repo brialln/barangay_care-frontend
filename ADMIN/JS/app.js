@@ -17,7 +17,7 @@ document.addEventListener('change', function (event) {
             previewDoc.id = 'previewDoc';
             previewDoc.style.display = 'none';
             previewDoc.style.width = '100%';
-            previewDoc.style.height = '300px';
+            previewDoc.style.height = '600px';
             imagePreview.appendChild(previewDoc);
         }
         if (!fileName.id) {
@@ -235,6 +235,9 @@ document.addEventListener('DOMContentLoaded', function() {
         { id: 'addPostModalOne', class: 'add_post-button-one' },
         { id: 'detailModalTwo', class: 'details_button-two' },
         { id: 'deletePostModalOne', class: 'delete_post-button-one' },
+        { id: 'addPostPublication', class: 'add_publication-button'},
+        { id: 'editPostPublication', class: 'edit_publication-button'},
+        { id: 'detailPublication', class: 'details_publication-button'},
     ];
 
     modals.forEach(modalInfo => {
