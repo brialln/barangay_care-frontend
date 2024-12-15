@@ -52,7 +52,7 @@
             <div class="header_manage-container">
                 <h3>Barangay Ordinance</h3>
                 <div class="header_button-container">
-                    <button class="add_post-button">Add Post</button>
+                    <button class="add_publication-button">Add Post</button>
                     <a href="trash_publication.html">
                         <button class="trash_button">
                             Trash
@@ -77,8 +77,8 @@
                     <div class="manage_post-publication">
                         <p>1</p>
                         <p class="truncate">Barangay Ordinance 1:2024</p>
-                        <button class="details_button">Details</button>
-                        <button class="edit_post-button">Edit</button>
+                        <button class="details_publication-button">Details</button>
+                        <button class="edit_publication-button">Edit</button>
                         <button class="delete_post-button">Delete</button>
                     </div>
                 </div>
@@ -92,7 +92,7 @@
             <div class="header_manage-container">
                 <h3>Barangay Resolution</h3>
                 <div class="header_button-container">
-                    <button class="add_post-button">Add Post</button>
+                    <button class="add_publication-button">Add Post</button>
                     <a href="trash_publication.html">
                         <button class="trash_button">
                             Trash
@@ -117,8 +117,8 @@
                     <div class="manage_post-publication">
                         <p>1</p>
                         <p class="truncate">Barangay Resolution 1:2024</p>
-                        <button class="details_button">Details</button>
-                        <button class="edit_post-button">Edit</button>
+                        <button class="details_publication-button">Details</button>
+                        <button class="edit_publication-button">Edit</button>
                         <button class="delete_post-button">Delete</button>
                     </div>
                 </div>
@@ -132,7 +132,7 @@
             <div class="header_manage-container">
                 <h3>Executive Order</h3>
                 <div class="header_button-container">
-                    <button class="add_post-button">Add Post</button>
+                    <button class="add_publication-button">Add Post</button>
                     <a href="trash_publication.html">
                         <button class="trash_button">
                             Trash
@@ -157,8 +157,8 @@
                     <div class="manage_post-publication">
                         <p>1</p>
                         <p class="truncate">Executive Order 1:2024</p>
-                        <button class="details_button">Details</button>
-                        <button class="edit_post-button">Edit</button>
+                        <button class="details_publication-button">Details</button>
+                        <button class="edit_publication-button">Edit</button>
                         <button class="delete_post-button">Delete</button>
                     </div>
                 </div>
@@ -172,7 +172,7 @@
             <div class="header_manage-container">
                 <h3>Resource Transparency</h3>
                 <div class="header_button-container">
-                    <button class="add_post-button">Add Post</button>
+                    <button class="add_publication-button">Add Post</button>
                     <a href="trash_publication.html">
                         <button class="trash_button">
                             Trash
@@ -197,8 +197,8 @@
                     <div class="manage_post-publication">
                         <p>1</p>
                         <p class="truncate">Resource Transparency 1:2024</p>
-                        <button class="details_button">Details</button>
-                        <button class="edit_post-button">Edit</button>
+                        <button class="details_publication-button">Details</button>
+                        <button class="edit_publication-button">Edit</button>
                         <button class="delete_post-button">Delete</button>
                     </div>
                 </div>
@@ -208,7 +208,7 @@
     <!-------------- END OF EXECUTIVE ORDER SECTION -------------->
 
     <!-------------- START OF MODALS -------------->
-    <div id="detailModal" class="modal">
+    <div id="detailPublication" class="modal">
         <div class="modal-content">
             <span class="close-button">&times;</span>
             <div class="req_details">
@@ -219,7 +219,7 @@
                 <h4>File:</h4>
                 <div class="view_image-header" id="filePreviewContainer">
                     <img src="IMAGES/pamplona_analytics-svg.svg" id="previewImage" style="display: none;">
-                    <iframe id="previewPDF" style="display: none;" width="100%" height="300px"></iframe>
+                    <iframe id="previewPDF" style="display: none;" width="100%" height="600px"></iframe>
                     <p id="previewFileName" style="display: none;"></p>
                 </div>
             </div>
@@ -227,7 +227,7 @@
     </div>
     <!-------------- END OF MODAL VIEW DETAILS BUTTON EXPAND -------------->
 
-    <div id="addPostModal" class="modal">
+    <div id="addPostPublication" class="modal">
         <div class="modal-content">
             <div class="form_section">
                 <h2>Add Post</h2>
@@ -240,7 +240,7 @@
                             <p>Preview:</p>
                             <div id="previewContainer">
                                 <img src="" alt="Thumbnail Preview" id="previewImg" style="display: none;">
-                                <iframe id="previewDoc" style="display: none;" width="100%" height="300px"></iframe>
+                                <iframe id="previewDoc" style="display: none;" width="100%" height="600px"></iframe>
                                 <p id="fileName" style="display: none;"></p>
                             </div>
                         </div>
@@ -253,7 +253,7 @@
     </div>
     <!-------------- END OF MODAL ADD POST BUTTON CLICK EXPAND -------------->
 
-    <div id="editPostModal" class="modal">
+    <div id="editPostPublication" class="modal">
         <div class="modal-content">
             <div class="form_section">
                 <h2>Edit Post</h2>
@@ -266,7 +266,7 @@
                             <p>Preview:</p>
                             <div id="previewContainer">
                                 <img src="" alt="Thumbnail Preview" id="previewImg" style="display: none;">
-                                <iframe id="previewDoc" style="display: none;" width="100%" height="300px"></iframe>
+                                <iframe id="previewDoc" style="display: none;" width="100%" height="600px"></iframe>
                                 <p id="fileName" style="display: none;"></p>
                             </div>
                         </div>
