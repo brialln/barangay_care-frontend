@@ -238,6 +238,7 @@ document.addEventListener('DOMContentLoaded', function() {
         { id: 'addPostPublication', class: 'add_publication-button'},
         { id: 'editPostPublication', class: 'edit_publication-button'},
         { id: 'detailPublication', class: 'details_publication-button'},
+        { id: 'editPostModalThree', class: 'edit_post-button-three' },
     ];
 
     modals.forEach(modalInfo => {

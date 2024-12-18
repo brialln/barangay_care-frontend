@@ -75,7 +75,7 @@
 /* Lanel for Manage Post for Sangguniang Barangay / Kabataan */
 .manage_label-sanggunian {
     display: grid;
-    grid-template-columns:1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns:1fr 1fr 1fr 1fr 1fr 1fr;
     text-align: center;
     font-size: 0.9rem;
     padding: 0 0.8rem 0.6rem;
@@ -155,7 +155,7 @@
 /* Manage Individual Post for Managing Sangguniang Barangay / Kabataan */
 .manage_post-sanggunian {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
     align-items: center;
     text-align: center;
     font-size: 0.9rem;
@@ -192,7 +192,8 @@
 
 /* Button for Editing and Deleting Post */
 .edit_post-button, .edit_post-button-one, 
-.edit_post-button-two, .edit_publication-button {
+.edit_post-button-two, .edit_post-button-three,
+.edit_publication-button {
     background: var(--color-secondary);
     color: var(--color-white);
     margin: 0 auto; 
@@ -205,7 +206,8 @@
 }
 
 .edit_post-button:hover, .edit_post-button-one:hover, 
-.edit_post-button-two:hover, .edit_publication-button:hover {
+.edit_post-button-two:hover, .edit_post-button-three:hover,
+.edit_publication-button:hover {
     background: transparent;
     border-color: var(--color-secondary);
     color: var(--color-secondary);
@@ -302,7 +304,7 @@
 
 #addPostModal .modal-content, #addPostModalOne .modal-content,
 #editPostModal .modal-content, #editPostModalOne .modal-content,
-#editPostModalTwo .modal-content {
+#editPostModalTwo .modal-content, #editPostModalThree .modal-content {
     margin: 4% auto; /* 15% from the top and centered */
     width: 40%;
     display: flex;
