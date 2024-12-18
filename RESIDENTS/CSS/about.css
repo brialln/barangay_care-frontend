@@ -87,7 +87,9 @@
     margin-bottom: 1.5rem;
 }
 
-.first-row {
+.first-row,
+.fourth-row,
+.fifth-row {
     justify-content: center; /* Center the single item */
 }
 
