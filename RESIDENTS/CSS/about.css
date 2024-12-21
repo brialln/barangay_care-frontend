@@ -95,7 +95,7 @@
 
 .second-row,
 .third-row {
-    justify-content: space-evenly; /* Space out the three items */
+    justify-content: center; /* Space out the three items */
 }
 
 .team_member {
