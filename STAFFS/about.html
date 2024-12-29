@@ -12,17 +12,14 @@
     
         <!-- CSS Stylesheets -->
         <link rel="stylesheet" href="CSS/style.css">
+        <link rel="stylesheet" href="CSS/manage_post.css">
+        <link rel="stylesheet" href="CSS/trash.css">
         <link rel="stylesheet" href="CSS/authentication.css">
-        <link rel="stylesheet" href="CSS/action_modal.css">
-        <link rel="stylesheet" href="CSS/profile.css">
-        <link rel="stylesheet" href="CSS/about.css">
         <link rel="stylesheet" href="CSS/central_request.css">
+        <link rel="stylesheet" href="CSS/action_modal.css">
         <link rel="stylesheet" href="CSS/community_development.css">
-        <link rel="stylesheet" href="CSS/contact.css">
-        <link rel="stylesheet" href="CSS/disaster_preparedness.css">
-        <link rel="stylesheet" href="CSS/publications.css">
-        <link rel="stylesheet" href="CSS/women_welfare.css">
-        <link rel="stylesheet" href="CSS/youth_sports.css">
+        <link rel="stylesheet" href="CSS/dashboard.css">
+        <link rel="stylesheet" href="CSS/profile.css">
     
         <!-- Iconscout CDN -->
         <link href="https://unicons.iconscout.com/release/v4.0.8/css/line.css" rel="stylesheet">
@@ -30,674 +27,404 @@
         <!-- JavaScript Files -->
         <script src="./JS/app.js" defer></script>
         <script src="./JS/sidebar.js" defer></script>
+        <script src="./JS/charts.js" defer></script>
+        <script src="./JS/complaint_analytics.js" defer></script>
+        <script src="./JS/emergency_analytics.js" defer></script>
+        <script src="./JS/idea_analytics.js" defer></script>
         <script src="./JS/threads.js" defer></script>
+        <script src="./JS/threads_analytics.js" defer></script>
     </head>
 <body>
     <div id="sidebar-container"></div>
     <!------------------------------------ END OF SIDEBAR ------------------------------------>
+    
    <main>
     <div class="remarks_banner-container">
         <p>
             Staff
         </p>
    </div>
-<!-------------- END OF ADMIN BANNER SECTION -------------->
+    <!-------------- END OF ADMIN BANNER SECTION -------------->
 
-    <div class="container mensahe">
-        <h3>Edit About</h3>
-        <div class="mensahe_section-container">
-            <div class="message">
-                <h2>Mensahe ng Punong Barangay</h2>
-                <p>Sa aking mga ka-barangay, bilang inyong lingkod-Bayan, mahalaga po para sa akin ang inyong aktibong pakikilahok sa ating bukas na pamamahala sa ating Barangay.</p>
-                <p>Kung ano man po ang narating ng ating pag-unlad sa kasalukuyan, simula ng inyo akong pagkatiwalaan bilang Ama ng ating Barangay, yun ay dahil sa inyong paniniwala at pagtitiwala at aktibong pakikilahok ng mayroong pananagutan.</p>
-                <p>Umaasa po ako, na patuloy po ninyong akong sasamahan para makamit natin ang ating pangarap na pamayanan.</p>
-                <div class="edit-container">
-                    <button class="edit_button">
-                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FD5B32"><path d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h357l-80 80H200v560h560v-278l80-80v358q0 33-23.5 56.5T760-120H200Zm280-360ZM360-360v-170l367-367q12-12 27-18t30-6q16 0 30.5 6t26.5 18l56 57q11 12 17 26.5t6 29.5q0 15-5.5 29.5T897-728L530-360H360Zm481-424-56-56 56 56ZM440-440h56l232-232-28-28-29-28-231 231v57Zm260-260-29-28 29 28 28 28-28-28Z"/></svg>
-                    </button>
+    <div id="barangayCoreSection"  class="container parent_request-container">
+        <h3>About Page</h3>
+        <div class="barangay_manage-container">
+            <div class="header_manage-container">
+                <h3>Core Statements</h3>
+                <div class="header_button-container">
+
                 </div>
             </div>
-            <div class="image">
-                <img src="IMAGES/pamplona_header.jpg" alt="Barangay event" />
-                <button class="upload_button-reusable">
-                    Upload New 
-                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FD5B32"><path d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h357l-80 80H200v560h560v-278l80-80v358q0 33-23.5 56.5T760-120H200Zm280-360ZM360-360v-170l367-367q12-12 27-18t30-6q16 0 30.5 6t26.5 18l56 57q11 12 17 26.5t6 29.5q0 15-5.5 29.5T897-728L530-360H360Zm481-424-56-56 56 56ZM440-440h56l232-232-28-28-29-28-231 231v57Zm260-260-29-28 29 28 28 28-28-28Z"/></svg>
-                </button>
+
+            <div class="tab_box-container">
+                <button class="tab_btn active">Manage Post</button>
+            </div>
+            <div class="manage_label-core">
+                <p>No.</p>
+                <p>Title</p>
+                <p>Details</p>
+                <p>Edit</p>
+            </div>
+            <div class="request_container">
+                <div class="request active">
+                    <div class="manage_post-core">
+                        <p>1</p>
+                        <p class="truncate">Introduction Message</p>
+                        <button class="details_button">Details</button>
+                        <button class="edit_post-button">Edit</button>
+                    </div>
+
+                    <div class="manage_post-core">
+                        <p>2</p>
+                        <p class="truncate">Introduction Image</p>
+                        <button class="view_button">Details</button>
+                        <button class="edit_post-button-one">Edit</button>
+                    </div>
+
+                    <div class="manage_post-core">
+                        <p>3</p>
+                        <p class="truncate">Vision</p>
+                        <button class="details_button">Details</button>
+                        <button class="edit_post-button">Edit</button>
+                    </div>
+
+                    <div class="manage_post-core">
+                        <p>4</p>
+                        <p class="truncate">Mission</p>
+                        <button class="details_button">Details</button>
+                        <button class="edit_post-button">Edit</button>
+                    </div>
+
+                    <div class="manage_post-core">
+                        <p>5</p>
+                        <p class="truncate">Historical Information</p>
+                        <button class="details_button">Details</button>
+                        <button class="edit_post-button">Edit</button>
+                    </div>
+
+                    <div class="manage_post-core">
+                        <p>6</p>
+                        <p class="truncate">Physical Information</p>
+                        <button class="details_button">Details</button>
+                        <button class="edit_post-button">Edit</button>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-<!-------------- END OF PUNONG BARANGAY MESSAGE -------------->
+    <!-------------- END OF BARANGAY CORE STATEMENTS SECTION -------------->
 
-    <div class="container mensahe">
-        <div class="mensahe_section-container">
-            <div class="message">
-                <h2>Historya ng Pamplona</h2>
-                <p>Sa aking mga ka-barangay, bilang inyong lingkod-Bayan, mahalaga po para sa akin ang inyong aktibong pakikilahok sa ating bukas na pamamahala sa ating Barangay.</p>
-                <p>Kung ano man po ang narating ng ating pag-unlad sa kasalukuyan, simula ng inyo akong pagkatiwalaan bilang Ama ng ating Barangay, yun ay dahil sa inyong paniniwala at pagtitiwala at aktibong pakikilahok ng mayroong pananagutan.</p>
-                <p>Umaasa po ako, na patuloy po ninyong akong sasamahan para makamit natin ang ating pangarap na pamayanan.</p>
-                <div class="edit-container">
-                    <button class="edit_button">
-                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FD5B32"><path d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h357l-80 80H200v560h560v-278l80-80v358q0 33-23.5 56.5T760-120H200Zm280-360ZM360-360v-170l367-367q12-12 27-18t30-6q16 0 30.5 6t26.5 18l56 57q11 12 17 26.5t6 29.5q0 15-5.5 29.5T897-728L530-360H360Zm481-424-56-56 56 56ZM440-440h56l232-232-28-28-29-28-231 231v57Zm260-260-29-28 29 28 28 28-28-28Z"/></svg>
-                    </button>
+    <div id="barangaySangguniangBarangaySection"  class="container parent_request-container">
+        <div class="barangay_manage-container">
+            <div class="header_manage-container">
+                <h3>Sangguniang Barangay Members</h3>
+                <div class="header_button-container">
+                    <button class="add_post-button">Add Member</button>
                 </div>
             </div>
 
-            <div class="message">
-                <h2>Pisikal na Impormasyon</h2>
-                <p>Sa aking mga ka-barangay, bilang inyong lingkod-Bayan, mahalaga po para sa akin ang inyong aktibong pakikilahok sa ating bukas na pamamahala sa ating Barangay.</p>
-                <p>Kung ano man po ang narating ng ating pag-unlad sa kasalukuyan, simula ng inyo akong pagkatiwalaan bilang Ama ng ating Barangay, yun ay dahil sa inyong paniniwala at pagtitiwala at aktibong pakikilahok ng mayroong pananagutan.</p>
-                <p>Umaasa po ako, na patuloy po ninyong akong sasamahan para makamit natin ang ating pangarap na pamayanan.</p>
-                <div class="edit-container">
-                    <button class="edit_button">
-                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FD5B32"><path d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h357l-80 80H200v560h560v-278l80-80v358q0 33-23.5 56.5T760-120H200Zm280-360ZM360-360v-170l367-367q12-12 27-18t30-6q16 0 30.5 6t26.5 18l56 57q11 12 17 26.5t6 29.5q0 15-5.5 29.5T897-728L530-360H360Zm481-424-56-56 56 56ZM440-440h56l232-232-28-28-29-28-231 231v57Zm260-260-29-28 29 28 28 28-28-28Z"/></svg>
-                    </button>
+            <div class="tab_box-container">
+                <button class="tab_btn active">Current</button>
+            </div>
+            <div class="manage_label-sanggunian">
+                <p>No.</p>
+                <p>First Name</p>
+                <p>Last Name</p>
+                <p>Position</p>
+                <p>Details</p>
+                <p>Edit</p>
+            </div>
+            <div class="request_container">
+                <div class="request active">
+                    <div class="manage_post-sanggunian">
+                        <p>1</p>
+                        <p class="truncate">Jane</p>
+                        <p class="truncate">Doe</p>
+                        <p class="truncate">Barangay Chairman</p>
+                        <button class="details_button-one">Details</button>
+                        <button class="edit_post-button-two">Edit</button>
+                    </div>
                 </div>
             </div>
-
         </div>
     </div>
-<!-------------- END OF BARANGAY HISTORY AND INFORMATION -------------->
+    <!-------------- END OF BARANGAY MEMBER SECTION -------------->
 
-    <div class="container mensahe">
-        <div class="mensahe_section-container">
-            <div class="message">
-                <h2>Vision</h2>
-                <p>Sa aking mga ka-barangay, bilang inyong lingkod-Bayan, mahalaga po para sa akin ang inyong aktibong pakikilahok sa ating bukas na pamamahala sa ating Barangay.</p>
-                <p>Kung ano man po ang narating ng ating pag-unlad sa kasalukuyan, simula ng inyo akong pagkatiwalaan bilang Ama ng ating Barangay, yun ay dahil sa inyong paniniwala at pagtitiwala at aktibong pakikilahok ng mayroong pananagutan.</p>
-                <p>Umaasa po ako, na patuloy po ninyong akong sasamahan para makamit natin ang ating pangarap na pamayanan.</p>
-                <div class="edit-container">
-                    <button class="edit_button">
-                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FD5B32"><path d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h357l-80 80H200v560h560v-278l80-80v358q0 33-23.5 56.5T760-120H200Zm280-360ZM360-360v-170l367-367q12-12 27-18t30-6q16 0 30.5 6t26.5 18l56 57q11 12 17 26.5t6 29.5q0 15-5.5 29.5T897-728L530-360H360Zm481-424-56-56 56 56ZM440-440h56l232-232-28-28-29-28-231 231v57Zm260-260-29-28 29 28 28 28-28-28Z"/></svg>
-                    </button>
+    <div id="barangaySangguniangKabataanSection"  class="container parent_request-container">
+        <div class="barangay_manage-container">
+            <div class="header_manage-container">
+                <h3>Sangguniang Kabataan Members</h3>
+                <div class="header_button-container">
+                    <button class="add_post-button-one">Add Member</button>
                 </div>
             </div>
 
-            <div class="message">
-                <h2>Mission</h2>
-                <p>Sa aking mga ka-barangay, bilang inyong lingkod-Bayan, mahalaga po para sa akin ang inyong aktibong pakikilahok sa ating bukas na pamamahala sa ating Barangay.</p>
-                <p>Kung ano man po ang narating ng ating pag-unlad sa kasalukuyan, simula ng inyo akong pagkatiwalaan bilang Ama ng ating Barangay, yun ay dahil sa inyong paniniwala at pagtitiwala at aktibong pakikilahok ng mayroong pananagutan.</p>
-                <p>Umaasa po ako, na patuloy po ninyong akong sasamahan para makamit natin ang ating pangarap na pamayanan.</p>
-                <div class="edit-container">
-                    <button class="edit_button">
-                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FD5B32"><path d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h357l-80 80H200v560h560v-278l80-80v358q0 33-23.5 56.5T760-120H200Zm280-360ZM360-360v-170l367-367q12-12 27-18t30-6q16 0 30.5 6t26.5 18l56 57q11 12 17 26.5t6 29.5q0 15-5.5 29.5T897-728L530-360H360Zm481-424-56-56 56 56ZM440-440h56l232-232-28-28-29-28-231 231v57Zm260-260-29-28 29 28 28 28-28-28Z"/></svg>
-                    </button>
+            <div class="tab_box-container">
+                <button class="tab_btn active">Current</button>
+            </div>
+            <div class="manage_label-sanggunian">
+                <p>No.</p>
+                <p>First Name</p>
+                <p>Last Name</p>
+                <p>Position</p>
+                <p>Details</p>
+                <p>Edit</p>
+            </div>
+            <div class="request_container">
+                <div class="request active">
+                    <div class="manage_post-sanggunian">
+                        <p>1</p>
+                        <p class="truncate">Jane</p>
+                        <p class="truncate">Doe</p>
+                        <p class="truncate">SK Chairman</p>
+                        <button class="details_button-one">Details</button>
+                        <button class="edit_post-button-three">Edit</button>
+                    </div>
                 </div>
             </div>
-
         </div>
     </div>
-<!-------------- END OF BARANGAY MISSION AND VISION -------------->
+    <!-------------- END OF BARANGAY MEMBER SECTION -------------->
 
-    <div class="container sangguniang_barangay-container">
-        <h3>Sangguniang Barangay</h3>
-        <div class="sangguniang_container">
-            <article class="team_member">
-                <div class="team_member-image">
-                    <img src="IMAGES/pamplona_sample-profile.jpg" alt="">
-                </div>
 
-                <div class="team_member-info">
-                    <h4>Poke Mon</h4>
-                    <div class="member-pos">
-                        <p>Barangay Chairman</p>
-                        <div class="edit-container">
-                            <button class="edit_button">
-                                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FD5B32"><path d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h357l-80 80H200v560h560v-278l80-80v358q0 33-23.5 56.5T760-120H200Zm280-360ZM360-360v-170l367-367q12-12 27-18t30-6q16 0 30.5 6t26.5 18l56 57q11 12 17 26.5t6 29.5q0 15-5.5 29.5T897-728L530-360H360Zm481-424-56-56 56 56ZM440-440h56l232-232-28-28-29-28-231 231v57Zm260-260-29-28 29 28 28 28-28-28Z"/></svg>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="team_member-contact">
-                    <div class="contact">
-                        <div class="contact-info">
-                            <p>Facebook: Poke Mon</p>
-                        </div>
-                        <div class="edit-container">
-                            <button class="edit_button">
-                                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FD5B32"><path d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h357l-80 80H200v560h560v-278l80-80v358q0 33-23.5 56.5T760-120H200Zm280-360ZM360-360v-170l367-367q12-12 27-18t30-6q16 0 30.5 6t26.5 18l56 57q11 12 17 26.5t6 29.5q0 15-5.5 29.5T897-728L530-360H360Zm481-424-56-56 56 56ZM440-440h56l232-232-28-28-29-28-231 231v57Zm260-260-29-28 29 28 28 28-28-28Z"/></svg>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="contact">
-                        <div class="contact-info">
-                            <p>pokemonpokemon@gmail.com</p>
-                        </div>
-                        <div class="edit-container">
-                            <button class="edit_button">
-                                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FD5B32"><path d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h357l-80 80H200v560h560v-278l80-80v358q0 33-23.5 56.5T760-120H200Zm280-360ZM360-360v-170l367-367q12-12 27-18t30-6q16 0 30.5 6t26.5 18l56 57q11 12 17 26.5t6 29.5q0 15-5.5 29.5T897-728L530-360H360Zm481-424-56-56 56 56ZM440-440h56l232-232-28-28-29-28-231 231v57Zm260-260-29-28 29 28 28 28-28-28Z"/></svg>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="contact">
-                        <div class="contact-info">
-                            <p>+63-123-345-6789</p>
-                        </div>
-                        <div class="edit-container">
-                            <button class="edit_button">
-                                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FD5B32"><path d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h357l-80 80H200v560h560v-278l80-80v358q0 33-23.5 56.5T760-120H200Zm280-360ZM360-360v-170l367-367q12-12 27-18t30-6q16 0 30.5 6t26.5 18l56 57q11 12 17 26.5t6 29.5q0 15-5.5 29.5T897-728L530-360H360Zm481-424-56-56 56 56ZM440-440h56l232-232-28-28-29-28-231 231v57Zm260-260-29-28 29 28 28 28-28-28Z"/></svg>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="edit-container">
-                    <button class="delete_button">
-                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FD5B32"><path d="M280-120q-33 0-56.5-23.5T200-200v-520h-40v-80h200v-40h240v40h200v80h-40v520q0 33-23.5 56.5T680-120H280Zm400-600H280v520h400v-520ZM360-280h80v-360h-80v360Zm160 0h80v-360h-80v360ZM280-720v520-520Z"/></svg>
-                    </button>
-                </div>
-            </article>
-            <article class="team_member">
-                <div class="team_member-image">
+    <!-------------- START OF MODALS -------------->
+    <div id="viewModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <div class="req_details">
+                <h4>Image:</h4>
+                <div class="view_image-header">
                     <img src="IMAGES/pamplona_header.jpg">
                 </div>
-
-                <div class="team_member-info">
-                    <h4>Poke Mon</h4>
-                    <div class="member-pos">
-                        <p>Barangay Chairman</p>
-                        <div class="edit-container">
-                            <button class="edit_button">
-                                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FD5B32"><path d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h357l-80 80H200v560h560v-278l80-80v358q0 33-23.5 56.5T760-120H200Zm280-360ZM360-360v-170l367-367q12-12 27-18t30-6q16 0 30.5 6t26.5 18l56 57q11 12 17 26.5t6 29.5q0 15-5.5 29.5T897-728L530-360H360Zm481-424-56-56 56 56ZM440-440h56l232-232-28-28-29-28-231 231v57Zm260-260-29-28 29 28 28 28-28-28Z"/></svg>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="team_member-contact">
-                    <div class="contact">
-                        <div class="contact-info">
-                            <p>Facebook: Poke Mon</p>
-                        </div>
-                        <div class="edit-container">
-                            <button class="edit_button">
-                                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FD5B32"><path d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h357l-80 80H200v560h560v-278l80-80v358q0 33-23.5 56.5T760-120H200Zm280-360ZM360-360v-170l367-367q12-12 27-18t30-6q16 0 30.5 6t26.5 18l56 57q11 12 17 26.5t6 29.5q0 15-5.5 29.5T897-728L530-360H360Zm481-424-56-56 56 56ZM440-440h56l232-232-28-28-29-28-231 231v57Zm260-260-29-28 29 28 28 28-28-28Z"/></svg>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="contact">
-                        <div class="contact-info">
-                            <p>pokemonpokemon@gmail.com</p>
-                        </div>
-                        <div class="edit-container">
-                            <button class="edit_button">
-                                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FD5B32"><path d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h357l-80 80H200v560h560v-278l80-80v358q0 33-23.5 56.5T760-120H200Zm280-360ZM360-360v-170l367-367q12-12 27-18t30-6q16 0 30.5 6t26.5 18l56 57q11 12 17 26.5t6 29.5q0 15-5.5 29.5T897-728L530-360H360Zm481-424-56-56 56 56ZM440-440h56l232-232-28-28-29-28-231 231v57Zm260-260-29-28 29 28 28 28-28-28Z"/></svg>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="contact">
-                        <div class="contact-info">
-                            <p>+63-123-345-6789</p>
-                        </div>
-                        <div class="edit-container">
-                            <button class="edit_button">
-                                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FD5B32"><path d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h357l-80 80H200v560h560v-278l80-80v358q0 33-23.5 56.5T760-120H200Zm280-360ZM360-360v-170l367-367q12-12 27-18t30-6q16 0 30.5 6t26.5 18l56 57q11 12 17 26.5t6 29.5q0 15-5.5 29.5T897-728L530-360H360Zm481-424-56-56 56 56ZM440-440h56l232-232-28-28-29-28-231 231v57Zm260-260-29-28 29 28 28 28-28-28Z"/></svg>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="edit-container">
-                    <button class="delete_button">
-                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FD5B32"><path d="M280-120q-33 0-56.5-23.5T200-200v-520h-40v-80h200v-40h240v40h200v80h-40v520q0 33-23.5 56.5T680-120H280Zm400-600H280v520h400v-520ZM360-280h80v-360h-80v360Zm160 0h80v-360h-80v360ZM280-720v520-520Z"/></svg>
-                    </button>
-                </div>
-            </article>
-
-            <article class="team_member">
-                <div class="team_member-image">
-                    <img src="IMAGES/pamplona_sample-profile.jpg" alt="">
-                </div>
-
-                <div class="team_member-info">
-                    <h4>Poke Mon</h4>
-                    <div class="member-pos">
-                        <p>Barangay Chairman</p>
-                        <div class="edit-container">
-                            <button class="edit_button">
-                                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FD5B32"><path d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h357l-80 80H200v560h560v-278l80-80v358q0 33-23.5 56.5T760-120H200Zm280-360ZM360-360v-170l367-367q12-12 27-18t30-6q16 0 30.5 6t26.5 18l56 57q11 12 17 26.5t6 29.5q0 15-5.5 29.5T897-728L530-360H360Zm481-424-56-56 56 56ZM440-440h56l232-232-28-28-29-28-231 231v57Zm260-260-29-28 29 28 28 28-28-28Z"/></svg>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="team_member-contact">
-                    <div class="contact">
-                        <div class="contact-info">
-                            <p>Facebook: Poke Mon</p>
-                        </div>
-                        <div class="edit-container">
-                            <button class="edit_button">
-                                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FD5B32"><path d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h357l-80 80H200v560h560v-278l80-80v358q0 33-23.5 56.5T760-120H200Zm280-360ZM360-360v-170l367-367q12-12 27-18t30-6q16 0 30.5 6t26.5 18l56 57q11 12 17 26.5t6 29.5q0 15-5.5 29.5T897-728L530-360H360Zm481-424-56-56 56 56ZM440-440h56l232-232-28-28-29-28-231 231v57Zm260-260-29-28 29 28 28 28-28-28Z"/></svg>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="contact">
-                        <div class="contact-info">
-                            <p>pokemonpokemon@gmail.com</p>
-                        </div>
-                        <div class="edit-container">
-                            <button class="edit_button">
-                                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FD5B32"><path d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h357l-80 80H200v560h560v-278l80-80v358q0 33-23.5 56.5T760-120H200Zm280-360ZM360-360v-170l367-367q12-12 27-18t30-6q16 0 30.5 6t26.5 18l56 57q11 12 17 26.5t6 29.5q0 15-5.5 29.5T897-728L530-360H360Zm481-424-56-56 56 56ZM440-440h56l232-232-28-28-29-28-231 231v57Zm260-260-29-28 29 28 28 28-28-28Z"/></svg>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="contact">
-                        <div class="contact-info">
-                            <p>+63-123-345-6789</p>
-                        </div>
-                        <div class="edit-container">
-                            <button class="edit_button">
-                                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FD5B32"><path d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h357l-80 80H200v560h560v-278l80-80v358q0 33-23.5 56.5T760-120H200Zm280-360ZM360-360v-170l367-367q12-12 27-18t30-6q16 0 30.5 6t26.5 18l56 57q11 12 17 26.5t6 29.5q0 15-5.5 29.5T897-728L530-360H360Zm481-424-56-56 56 56ZM440-440h56l232-232-28-28-29-28-231 231v57Zm260-260-29-28 29 28 28 28-28-28Z"/></svg>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="edit-container">
-                    <button class="delete_button">
-                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FD5B32"><path d="M280-120q-33 0-56.5-23.5T200-200v-520h-40v-80h200v-40h240v40h200v80h-40v520q0 33-23.5 56.5T680-120H280Zm400-600H280v520h400v-520ZM360-280h80v-360h-80v360Zm160 0h80v-360h-80v360ZM280-720v520-520Z"/></svg>
-                    </button>
-                </div>
-            </article>
-
-            <article class="team_member">
-                <div class="team_member-image">
-                    <img src="IMAGES/pamplona_sample-profile.jpg" alt="">
-                </div>
-
-                <div class="team_member-info">
-                    <h4>Poke Mon</h4>
-                    <div class="member-pos">
-                        <p>Barangay Chairman</p>
-                        <div class="edit-container">
-                            <button class="edit_button">
-                                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FD5B32"><path d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h357l-80 80H200v560h560v-278l80-80v358q0 33-23.5 56.5T760-120H200Zm280-360ZM360-360v-170l367-367q12-12 27-18t30-6q16 0 30.5 6t26.5 18l56 57q11 12 17 26.5t6 29.5q0 15-5.5 29.5T897-728L530-360H360Zm481-424-56-56 56 56ZM440-440h56l232-232-28-28-29-28-231 231v57Zm260-260-29-28 29 28 28 28-28-28Z"/></svg>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="team_member-contact">
-                    <div class="contact">
-                        <div class="contact-info">
-                            <p>Facebook: Poke Mon</p>
-                        </div>
-                        <div class="edit-container">
-                            <button class="edit_button">
-                                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FD5B32"><path d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h357l-80 80H200v560h560v-278l80-80v358q0 33-23.5 56.5T760-120H200Zm280-360ZM360-360v-170l367-367q12-12 27-18t30-6q16 0 30.5 6t26.5 18l56 57q11 12 17 26.5t6 29.5q0 15-5.5 29.5T897-728L530-360H360Zm481-424-56-56 56 56ZM440-440h56l232-232-28-28-29-28-231 231v57Zm260-260-29-28 29 28 28 28-28-28Z"/></svg>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="contact">
-                        <div class="contact-info">
-                            <p>pokemonpokemon@gmail.com</p>
-                        </div>
-                        <div class="edit-container">
-                            <button class="edit_button">
-                                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FD5B32"><path d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h357l-80 80H200v560h560v-278l80-80v358q0 33-23.5 56.5T760-120H200Zm280-360ZM360-360v-170l367-367q12-12 27-18t30-6q16 0 30.5 6t26.5 18l56 57q11 12 17 26.5t6 29.5q0 15-5.5 29.5T897-728L530-360H360Zm481-424-56-56 56 56ZM440-440h56l232-232-28-28-29-28-231 231v57Zm260-260-29-28 29 28 28 28-28-28Z"/></svg>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="contact">
-                        <div class="contact-info">
-                            <p>+63-123-345-6789</p>
-                        </div>
-                        <div class="edit-container">
-                            <button class="edit_button">
-                                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FD5B32"><path d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h357l-80 80H200v560h560v-278l80-80v358q0 33-23.5 56.5T760-120H200Zm280-360ZM360-360v-170l367-367q12-12 27-18t30-6q16 0 30.5 6t26.5 18l56 57q11 12 17 26.5t6 29.5q0 15-5.5 29.5T897-728L530-360H360Zm481-424-56-56 56 56ZM440-440h56l232-232-28-28-29-28-231 231v57Zm260-260-29-28 29 28 28 28-28-28Z"/></svg>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="edit-container">
-                    <button class="delete_button">
-                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FD5B32"><path d="M280-120q-33 0-56.5-23.5T200-200v-520h-40v-80h200v-40h240v40h200v80h-40v520q0 33-23.5 56.5T680-120H280Zm400-600H280v520h400v-520ZM360-280h80v-360h-80v360Zm160 0h80v-360h-80v360ZM280-720v520-520Z"/></svg>
-                    </button>
-                </div>
-            </article>
+            </div>
         </div>
     </div>
-<!-------------- END OF BARANGAY OFFICIALS -------------->
+    <!-------------- END OF MODAL VIEW BUTTON EXPAND -------------->
 
-    <div class="form_section">
-        <div class="container form_section-container">
-            <h2>Add Member</h2>
-            <form action="" enctype="multipart/form-data">
-                <input type="text" placeholder="Full Name">
-                <select>
-                    <option value="1">Barangay Chairman</option>
-                    <option value="1">Barangay Staff</option>
-                    <option value="1">Barangay Staff</option>
-                    <option value="1">Barangay Staff</option>
-                    <option value="1">Barangay Staff</option>
-                </select>
-                <input type="text" placeholder="Facebook Link">
-                <input type="email" placeholder="Email Address">
-                <input type="number" placeholder="Contact Number">
-                <div class="form_control">
-                    <label for="thumbnail">Add Profile</label>
-                    <input type="file" id="thumbnail">
-                </div>
-                <button type="submit" class="btn">Add Member</button>
-            </form>
+    <div id="detailModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <div class="req_details">
+                <h4>Description:</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit aliquid, minus maxime eos omnis perferendis quos? Itaque sit, dolor nulla tempore ex recusandae illum omnis vel, eaque nisi numquam iusto?</p>
+            </div>
         </div>
     </div>
-<!-------------- END OF ADD BARANGAY MEMBER -------------->
+    <!-------------- END OF MODAL VIEW DETAILS BUTTON EXPAND -------------->
 
-    <div class="container sangguniang_barangay-container">
-        <h3>Sangguniang Kabataan</h3>
-        <div class="sangguniang_container">
-            <article class="team_member">
-                <div class="team_member-image">
-                    <img src="IMAGES/pamplona_sample-profile.jpg" alt="">
-                </div>
-
-                <div class="team_member-info">
-                    <h4>Poke Mon</h4>
-                    <div class="member-pos">
-                        <p>Barangay Chairman</p>
-                        <div class="edit-container">
-                            <button class="edit_button">
-                                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FD5B32"><path d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h357l-80 80H200v560h560v-278l80-80v358q0 33-23.5 56.5T760-120H200Zm280-360ZM360-360v-170l367-367q12-12 27-18t30-6q16 0 30.5 6t26.5 18l56 57q11 12 17 26.5t6 29.5q0 15-5.5 29.5T897-728L530-360H360Zm481-424-56-56 56 56ZM440-440h56l232-232-28-28-29-28-231 231v57Zm260-260-29-28 29 28 28 28-28-28Z"/></svg>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="team_member-contact">
-                    <div class="contact">
-                        <div class="contact-info">
-                            <p>Facebook: Poke Mon</p>
-                        </div>
-                        <div class="edit-container">
-                            <button class="edit_button">
-                                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FD5B32"><path d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h357l-80 80H200v560h560v-278l80-80v358q0 33-23.5 56.5T760-120H200Zm280-360ZM360-360v-170l367-367q12-12 27-18t30-6q16 0 30.5 6t26.5 18l56 57q11 12 17 26.5t6 29.5q0 15-5.5 29.5T897-728L530-360H360Zm481-424-56-56 56 56ZM440-440h56l232-232-28-28-29-28-231 231v57Zm260-260-29-28 29 28 28 28-28-28Z"/></svg>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="contact">
-                        <div class="contact-info">
-                            <p>pokemonpokemon@gmail.com</p>
-                        </div>
-                        <div class="edit-container">
-                            <button class="edit_button">
-                                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FD5B32"><path d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h357l-80 80H200v560h560v-278l80-80v358q0 33-23.5 56.5T760-120H200Zm280-360ZM360-360v-170l367-367q12-12 27-18t30-6q16 0 30.5 6t26.5 18l56 57q11 12 17 26.5t6 29.5q0 15-5.5 29.5T897-728L530-360H360Zm481-424-56-56 56 56ZM440-440h56l232-232-28-28-29-28-231 231v57Zm260-260-29-28 29 28 28 28-28-28Z"/></svg>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="contact">
-                        <div class="contact-info">
-                            <p>+63-123-345-6789</p>
-                        </div>
-                        <div class="edit-container">
-                            <button class="edit_button">
-                                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FD5B32"><path d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h357l-80 80H200v560h560v-278l80-80v358q0 33-23.5 56.5T760-120H200Zm280-360ZM360-360v-170l367-367q12-12 27-18t30-6q16 0 30.5 6t26.5 18l56 57q11 12 17 26.5t6 29.5q0 15-5.5 29.5T897-728L530-360H360Zm481-424-56-56 56 56ZM440-440h56l232-232-28-28-29-28-231 231v57Zm260-260-29-28 29 28 28 28-28-28Z"/></svg>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="edit-container">
-                    <button class="delete_button">
-                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FD5B32"><path d="M280-120q-33 0-56.5-23.5T200-200v-520h-40v-80h200v-40h240v40h200v80h-40v520q0 33-23.5 56.5T680-120H280Zm400-600H280v520h400v-520ZM360-280h80v-360h-80v360Zm160 0h80v-360h-80v360ZM280-720v520-520Z"/></svg>
-                    </button>
-                </div>
-            </article>
-
-            <article class="team_member">
-                <div class="team_member-image">
-                    <img src="IMAGES/pamplona_sample-profile.jpg" alt="">
-                </div>
-
-                <div class="team_member-info">
-                    <h4>Poke Mon</h4>
-                    <div class="member-pos">
-                        <p>Barangay Chairman</p>
-                        <div class="edit-container">
-                            <button class="edit_button">
-                                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FD5B32"><path d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h357l-80 80H200v560h560v-278l80-80v358q0 33-23.5 56.5T760-120H200Zm280-360ZM360-360v-170l367-367q12-12 27-18t30-6q16 0 30.5 6t26.5 18l56 57q11 12 17 26.5t6 29.5q0 15-5.5 29.5T897-728L530-360H360Zm481-424-56-56 56 56ZM440-440h56l232-232-28-28-29-28-231 231v57Zm260-260-29-28 29 28 28 28-28-28Z"/></svg>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="team_member-contact">
-                    <div class="contact">
-                        <div class="contact-info">
-                            <p>Facebook: Poke Mon</p>
-                        </div>
-                        <div class="edit-container">
-                            <button class="edit_button">
-                                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FD5B32"><path d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h357l-80 80H200v560h560v-278l80-80v358q0 33-23.5 56.5T760-120H200Zm280-360ZM360-360v-170l367-367q12-12 27-18t30-6q16 0 30.5 6t26.5 18l56 57q11 12 17 26.5t6 29.5q0 15-5.5 29.5T897-728L530-360H360Zm481-424-56-56 56 56ZM440-440h56l232-232-28-28-29-28-231 231v57Zm260-260-29-28 29 28 28 28-28-28Z"/></svg>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="contact">
-                        <div class="contact-info">
-                            <p>pokemonpokemon@gmail.com</p>
-                        </div>
-                        <div class="edit-container">
-                            <button class="edit_button">
-                                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FD5B32"><path d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h357l-80 80H200v560h560v-278l80-80v358q0 33-23.5 56.5T760-120H200Zm280-360ZM360-360v-170l367-367q12-12 27-18t30-6q16 0 30.5 6t26.5 18l56 57q11 12 17 26.5t6 29.5q0 15-5.5 29.5T897-728L530-360H360Zm481-424-56-56 56 56ZM440-440h56l232-232-28-28-29-28-231 231v57Zm260-260-29-28 29 28 28 28-28-28Z"/></svg>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="contact">
-                        <div class="contact-info">
-                            <p>+63-123-345-6789</p>
-                        </div>
-                        <div class="edit-container">
-                            <button class="edit_button">
-                                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FD5B32"><path d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h357l-80 80H200v560h560v-278l80-80v358q0 33-23.5 56.5T760-120H200Zm280-360ZM360-360v-170l367-367q12-12 27-18t30-6q16 0 30.5 6t26.5 18l56 57q11 12 17 26.5t6 29.5q0 15-5.5 29.5T897-728L530-360H360Zm481-424-56-56 56 56ZM440-440h56l232-232-28-28-29-28-231 231v57Zm260-260-29-28 29 28 28 28-28-28Z"/></svg>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="edit-container">
-                    <button class="delete_button">
-                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FD5B32"><path d="M280-120q-33 0-56.5-23.5T200-200v-520h-40v-80h200v-40h240v40h200v80h-40v520q0 33-23.5 56.5T680-120H280Zm400-600H280v520h400v-520ZM360-280h80v-360h-80v360Zm160 0h80v-360h-80v360ZM280-720v520-520Z"/></svg>
-                    </button>
-                </div>
-            </article>
-
-            <article class="team_member">
-                <div class="team_member-image">
-                    <img src="IMAGES/pamplona_sample-profile.jpg" alt="">
-                </div>
-
-                <div class="team_member-info">
-                    <h4>Poke Mon</h4>
-                    <div class="member-pos">
-                        <p>Barangay Chairman</p>
-                        <div class="edit-container">
-                            <button class="edit_button">
-                                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FD5B32"><path d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h357l-80 80H200v560h560v-278l80-80v358q0 33-23.5 56.5T760-120H200Zm280-360ZM360-360v-170l367-367q12-12 27-18t30-6q16 0 30.5 6t26.5 18l56 57q11 12 17 26.5t6 29.5q0 15-5.5 29.5T897-728L530-360H360Zm481-424-56-56 56 56ZM440-440h56l232-232-28-28-29-28-231 231v57Zm260-260-29-28 29 28 28 28-28-28Z"/></svg>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="team_member-contact">
-                    <div class="contact">
-                        <div class="contact-info">
-                            <p>Facebook: Poke Mon</p>
-                        </div>
-                        <div class="edit-container">
-                            <button class="edit_button">
-                                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FD5B32"><path d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h357l-80 80H200v560h560v-278l80-80v358q0 33-23.5 56.5T760-120H200Zm280-360ZM360-360v-170l367-367q12-12 27-18t30-6q16 0 30.5 6t26.5 18l56 57q11 12 17 26.5t6 29.5q0 15-5.5 29.5T897-728L530-360H360Zm481-424-56-56 56 56ZM440-440h56l232-232-28-28-29-28-231 231v57Zm260-260-29-28 29 28 28 28-28-28Z"/></svg>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="contact">
-                        <div class="contact-info">
-                            <p>pokemonpokemon@gmail.com</p>
-                        </div>
-                        <div class="edit-container">
-                            <button class="edit_button">
-                                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FD5B32"><path d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h357l-80 80H200v560h560v-278l80-80v358q0 33-23.5 56.5T760-120H200Zm280-360ZM360-360v-170l367-367q12-12 27-18t30-6q16 0 30.5 6t26.5 18l56 57q11 12 17 26.5t6 29.5q0 15-5.5 29.5T897-728L530-360H360Zm481-424-56-56 56 56ZM440-440h56l232-232-28-28-29-28-231 231v57Zm260-260-29-28 29 28 28 28-28-28Z"/></svg>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="contact">
-                        <div class="contact-info">
-                            <p>+63-123-345-6789</p>
-                        </div>
-                        <div class="edit-container">
-                            <button class="edit_button">
-                                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FD5B32"><path d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h357l-80 80H200v560h560v-278l80-80v358q0 33-23.5 56.5T760-120H200Zm280-360ZM360-360v-170l367-367q12-12 27-18t30-6q16 0 30.5 6t26.5 18l56 57q11 12 17 26.5t6 29.5q0 15-5.5 29.5T897-728L530-360H360Zm481-424-56-56 56 56ZM440-440h56l232-232-28-28-29-28-231 231v57Zm260-260-29-28 29 28 28 28-28-28Z"/></svg>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="edit-container">
-                    <button class="delete_button">
-                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FD5B32"><path d="M280-120q-33 0-56.5-23.5T200-200v-520h-40v-80h200v-40h240v40h200v80h-40v520q0 33-23.5 56.5T680-120H280Zm400-600H280v520h400v-520ZM360-280h80v-360h-80v360Zm160 0h80v-360h-80v360ZM280-720v520-520Z"/></svg>
-                    </button>
-                </div>
-            </article>
-
-            <article class="team_member">
-                <div class="team_member-image">
-                    <img src="IMAGES/pamplona_sample-profile.jpg" alt="">
-                </div>
-
-                <div class="team_member-info">
-                    <h4>Poke Mon</h4>
-                    <div class="member-pos">
-                        <p>Barangay Chairman</p>
-                        <div class="edit-container">
-                            <button class="edit_button">
-                                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FD5B32"><path d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h357l-80 80H200v560h560v-278l80-80v358q0 33-23.5 56.5T760-120H200Zm280-360ZM360-360v-170l367-367q12-12 27-18t30-6q16 0 30.5 6t26.5 18l56 57q11 12 17 26.5t6 29.5q0 15-5.5 29.5T897-728L530-360H360Zm481-424-56-56 56 56ZM440-440h56l232-232-28-28-29-28-231 231v57Zm260-260-29-28 29 28 28 28-28-28Z"/></svg>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="team_member-contact">
-                    <div class="contact">
-                        <div class="contact-info">
-                            <p>Facebook: Poke Mon</p>
-                        </div>
-                        <div class="edit-container">
-                            <button class="edit_button">
-                                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FD5B32"><path d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h357l-80 80H200v560h560v-278l80-80v358q0 33-23.5 56.5T760-120H200Zm280-360ZM360-360v-170l367-367q12-12 27-18t30-6q16 0 30.5 6t26.5 18l56 57q11 12 17 26.5t6 29.5q0 15-5.5 29.5T897-728L530-360H360Zm481-424-56-56 56 56ZM440-440h56l232-232-28-28-29-28-231 231v57Zm260-260-29-28 29 28 28 28-28-28Z"/></svg>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="contact">
-                        <div class="contact-info">
-                            <p>pokemonpokemon@gmail.com</p>
-                        </div>
-                        <div class="edit-container">
-                            <button class="edit_button">
-                                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FD5B32"><path d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h357l-80 80H200v560h560v-278l80-80v358q0 33-23.5 56.5T760-120H200Zm280-360ZM360-360v-170l367-367q12-12 27-18t30-6q16 0 30.5 6t26.5 18l56 57q11 12 17 26.5t6 29.5q0 15-5.5 29.5T897-728L530-360H360Zm481-424-56-56 56 56ZM440-440h56l232-232-28-28-29-28-231 231v57Zm260-260-29-28 29 28 28 28-28-28Z"/></svg>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="contact">
-                        <div class="contact-info">
-                            <p>+63-123-345-6789</p>
-                        </div>
-                        <div class="edit-container">
-                            <button class="edit_button">
-                                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FD5B32"><path d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h357l-80 80H200v560h560v-278l80-80v358q0 33-23.5 56.5T760-120H200Zm280-360ZM360-360v-170l367-367q12-12 27-18t30-6q16 0 30.5 6t26.5 18l56 57q11 12 17 26.5t6 29.5q0 15-5.5 29.5T897-728L530-360H360Zm481-424-56-56 56 56ZM440-440h56l232-232-28-28-29-28-231 231v57Zm260-260-29-28 29 28 28 28-28-28Z"/></svg>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="edit-container">
-                    <button class="delete_button">
-                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FD5B32"><path d="M280-120q-33 0-56.5-23.5T200-200v-520h-40v-80h200v-40h240v40h200v80h-40v520q0 33-23.5 56.5T680-120H280Zm400-600H280v520h400v-520ZM360-280h80v-360h-80v360Zm160 0h80v-360h-80v360ZM280-720v520-520Z"/></svg>
-                    </button>
-                </div>
-            </article>
-
-            <article class="team_member">
-                <div class="team_member-image">
-                    <img src="IMAGES/pamplona_sample-profile.jpg" alt="">
-                </div>
-
-                <div class="team_member-info">
-                    <h4>Poke Mon</h4>
-                    <div class="member-pos">
-                        <p>Barangay Chairman</p>
-                        <div class="edit-container">
-                            <button class="edit_button">
-                                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FD5B32"><path d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h357l-80 80H200v560h560v-278l80-80v358q0 33-23.5 56.5T760-120H200Zm280-360ZM360-360v-170l367-367q12-12 27-18t30-6q16 0 30.5 6t26.5 18l56 57q11 12 17 26.5t6 29.5q0 15-5.5 29.5T897-728L530-360H360Zm481-424-56-56 56 56ZM440-440h56l232-232-28-28-29-28-231 231v57Zm260-260-29-28 29 28 28 28-28-28Z"/></svg>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="team_member-contact">
-                    <div class="contact">
-                        <div class="contact-info">
-                            <p>Facebook: Poke Mon</p>
-                        </div>
-                        <div class="edit-container">
-                            <button class="edit_button">
-                                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FD5B32"><path d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h357l-80 80H200v560h560v-278l80-80v358q0 33-23.5 56.5T760-120H200Zm280-360ZM360-360v-170l367-367q12-12 27-18t30-6q16 0 30.5 6t26.5 18l56 57q11 12 17 26.5t6 29.5q0 15-5.5 29.5T897-728L530-360H360Zm481-424-56-56 56 56ZM440-440h56l232-232-28-28-29-28-231 231v57Zm260-260-29-28 29 28 28 28-28-28Z"/></svg>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="contact">
-                        <div class="contact-info">
-                            <p>pokemonpokemon@gmail.com</p>
-                        </div>
-                        <div class="edit-container">
-                            <button class="edit_button">
-                                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FD5B32"><path d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h357l-80 80H200v560h560v-278l80-80v358q0 33-23.5 56.5T760-120H200Zm280-360ZM360-360v-170l367-367q12-12 27-18t30-6q16 0 30.5 6t26.5 18l56 57q11 12 17 26.5t6 29.5q0 15-5.5 29.5T897-728L530-360H360Zm481-424-56-56 56 56ZM440-440h56l232-232-28-28-29-28-231 231v57Zm260-260-29-28 29 28 28 28-28-28Z"/></svg>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="contact">
-                        <div class="contact-info">
-                            <p>+63-123-345-6789</p>
-                        </div>
-                        <div class="edit-container">
-                            <button class="edit_button">
-                                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FD5B32"><path d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h357l-80 80H200v560h560v-278l80-80v358q0 33-23.5 56.5T760-120H200Zm280-360ZM360-360v-170l367-367q12-12 27-18t30-6q16 0 30.5 6t26.5 18l56 57q11 12 17 26.5t6 29.5q0 15-5.5 29.5T897-728L530-360H360Zm481-424-56-56 56 56ZM440-440h56l232-232-28-28-29-28-231 231v57Zm260-260-29-28 29 28 28 28-28-28Z"/></svg>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="edit-container">
-                    <button class="delete_button">
-                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FD5B32"><path d="M280-120q-33 0-56.5-23.5T200-200v-520h-40v-80h200v-40h240v40h200v80h-40v520q0 33-23.5 56.5T680-120H280Zm400-600H280v520h400v-520ZM360-280h80v-360h-80v360Zm160 0h80v-360h-80v360ZM280-720v520-520Z"/></svg>
-                    </button>
-                </div>
-            </article>
+    <div id="detailModalOne" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <div class="req_details">
+                <h4>Facebook/Messenger:</h4>
+                <p>Something</p>
+            </div>
+            <div class="req_details">
+                <h4>Email Address:</h4>
+                <p>Something</p>
+            </div>
+            <div class="req_details">
+                <h4>Contact Number:</h4>
+                <p>Something</p>
+            </div>
         </div>
     </div>
-<!-------------- END OF SK MEMBER -------------->
+    <!-------------- END OF MODAL VIEW DETAILS BUTTON EXPAND -------------->
 
-    <div class="form_section">
-        <div class="container form_section-container">
-            <h2>Add Member</h2>
-            <form action="" enctype="multipart/form-data">
-                <input type="text" placeholder="Full Name">
-                <select>
-                    <option value="1">SK Chairman</option>
-                    <option value="1">SK Staff</option>
-                </select>
-                <input type="text" placeholder="Facebook Link">
-                <input type="email" placeholder="Email Address">
-                <input type="number" placeholder="Contact Number">
-                <div class="form_control">
-                    <label for="thumbnail">Add Profile</label>
-                    <input type="file" id="thumbnail">
-                </div>
-                <button type="submit" class="btn">Add Member</button>
-            </form>
+    <div id="addPostModal" class="modal">
+        <div class="modal-content">
+            <div class="form_section">
+                <h2>Add Member</h2>
+                <form id="postForm" enctype="multipart/form-data">
+                    <input type="text" placeholder="First Name" required>
+                    <input type="text" placeholder="Last Name" required>
+                    <select>
+                        <option value="" disabled selected>Select Position</option>
+                        <option value="punong-barangay">Punong Barangay</option>
+                        <option value="barangay-kagawad">Barangay Kagawad</option>
+                        <option value="barangay-secretary">Barangay Secretary</option>
+                    </select>
+                    <input type="text" placeholder="Facebook/Messenger" required>
+                    <input type="email" placeholder="Email Address" required>
+                    <input type="tel" placeholder="Contact Number" required>
+                    <div class="form_control">
+                        <label for="thumbnail">Add Profile</label>
+                        <input type="file" id="thumbnail" accept="image/*,application/pdf,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document">
+                        <div class="image_preview" id="imagePreview">
+                            <p>Preview:</p>
+                            <div id="previewContainer">
+                                <img src="" alt="Thumbnail Preview" id="previewImg" style="display: none;">
+                                <iframe id="previewDoc" style="display: none;" width="100%" height="300px"></iframe>
+                                <p id="fileName" style="display: none;"></p>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="submit" id="submitButton" class="btn">Add Member</button>
+                    <button class="cancelDelete btn">Cancel</button>
+                </form>
+            </div>
         </div>
     </div>
-<!-------------- END OF ADD BARANGAY MEMBER -------------->
+    <!-------------- END OF MODAL ADD POST BUTTON CLICK EXPAND -------------->
 
+    <div id="addPostModalOne" class="modal">
+        <div class="modal-content">
+            <div class="form_section">
+                <h2>Add Member</h2>
+                <form id="postForm" enctype="multipart/form-data">
+                    <input type="text" placeholder="First Name" required>
+                    <input type="text" placeholder="Last Name" required>
+                    <select>
+                        <option value="" disabled selected>Select Position</option>
+                        <option value="sk-chairman">SK Chairman</option>
+                        <option value="sk-kagawad">SK Kagawad</option>
+                        <option value="sk-secretary">SK Secretary</option>
+                        <option value="sk-treasurer">SK Treasurer</option>
+                    </select>
+                    <input type="text" placeholder="Facebook/Messenger" required>
+                    <input type="email" placeholder="Email Address" required>
+                    <input type="tel" placeholder="Contact Number" required>
+                    <div class="form_control">
+                        <label for="thumbnail">Add Profile</label>
+                        <input type="file" id="thumbnail" accept="image/*,application/pdf,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document">
+                        <div class="image_preview" id="imagePreview">
+                            <p>Preview:</p>
+                            <div id="previewContainer">
+                                <img src="" alt="Thumbnail Preview" id="previewImg" style="display: none;">
+                                <iframe id="previewDoc" style="display: none;" width="100%" height="300px"></iframe>
+                                <p id="fileName" style="display: none;"></p>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="submit" id="submitButton" class="btn">Add Member</button>
+                    <button class="cancelDelete btn">Cancel</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-------------- END OF MODAL ADD POST BUTTON CLICK EXPAND -------------->
+
+    <div id="editPostModal" class="modal">
+        <div class="modal-content">
+            <div class="form_section">
+                <h2>Edit Post</h2>
+                <form id="postForm" enctype="multipart/form-data">
+                    <textarea rows="10" id="postDescription" name="Description" placeholder="Update Description" required></textarea>
+                    <button type="submit" id="submitButton" class="btn">Update Post</button>
+                    <button class="cancelDelete btn">Cancel</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-------------- END OF MODAL EDIT POST BUTTON CLICK EXPAND -------------->
+
+    <div id="editPostModalOne" class="modal">
+        <div class="modal-content">
+            <div class="form_section">
+                <h2>Edit Post</h2>
+                <form id="postForm" enctype="multipart/form-data">
+                    <div class="form_control">
+                        <label for="thumbnail">Update Post</label>
+                        <input type="file" id="thumbnail" accept="image/*,application/pdf,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document">
+                        <div class="image_preview" id="imagePreview">
+                            <p>Preview:</p>
+                            <div id="previewContainer">
+                                <img src="" alt="Thumbnail Preview" id="previewImg" style="display: none;">
+                                <iframe id="previewDoc" style="display: none;" width="100%" height="300px"></iframe>
+                                <p id="fileName" style="display: none;"></p>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="submit" id="submitButton" class="btn">Update Post</button>
+                    <button class="cancelDelete btn">Cancel</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-------------- END OF MODAL EDIT POST BUTTON CLICK EXPAND -------------->
+
+    <div id="editPostModalTwo" class="modal">
+        <div class="modal-content">
+            <div class="form_section">
+                <h2>Update Member Information</h2>
+                <form id="postForm" enctype="multipart/form-data">
+                    <input type="text" placeholder="First Name" required>
+                    <input type="text" placeholder="Last Name" required>
+                    <select>
+                        <option value="" disabled selected>Select Position</option>
+                        <option value="punong-barangay">Punong Barangay</option>
+                        <option value="barangay-kagawad">Barangay Kagawad</option>
+                        <option value="barangay-secretary">Barangay Secretary</option>
+                    </select>
+                    <input type="text" placeholder="Facebook/Messenger" required>
+                    <input type="email" placeholder="Email Address" required>
+                    <input type="tel" placeholder="Contact Number" required>
+                    <div class="form_control">
+                        <label for="thumbnail">Update Profile</label>
+                        <input type="file" id="thumbnail" accept="image/*,application/pdf,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document">
+                        <div class="image_preview" id="imagePreview">
+                            <p>Preview:</p>
+                            <div id="previewContainer">
+                                <img src="" alt="Thumbnail Preview" id="previewImg" style="display: none;">
+                                <iframe id="previewDoc" style="display: none;" width="100%" height="300px"></iframe>
+                                <p id="fileName" style="display: none;"></p>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="submit" id="submitButton" class="btn">Update Member</button>
+                    <button class="cancelDelete btn">Cancel</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-------------- END OF MODAL EDIT POST BUTTON CLICK EXPAND -------------->
+
+    <div id="editPostModalThree" class="modal">
+        <div class="modal-content">
+            <div class="form_section">
+                <h2>Update Member Information</h2>
+                <form id="postForm" enctype="multipart/form-data">
+                    <input type="text" placeholder="First Name" required>
+                    <input type="text" placeholder="Last Name" required>
+                    <select>
+                        <option value="" disabled selected>Select Position</option>
+                        <option value="sk-chairman">SK Chairman</option>
+                        <option value="sk-kagawad">SK Kagawad</option>
+                        <option value="sk-secretary">SK Secretary</option>
+                        <option value="sk-treasurer">SK Treasurer</option>
+                    </select>
+                    <input type="text" placeholder="Facebook/Messenger" required>
+                    <input type="email" placeholder="Email Address" required>
+                    <input type="tel" placeholder="Contact Number" required>
+                    <div class="form_control">
+                        <label for="thumbnail">Update Profile</label>
+                        <input type="file" id="thumbnail" accept="image/*,application/pdf,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document">
+                        <div class="image_preview" id="imagePreview">
+                            <p>Preview:</p>
+                            <div id="previewContainer">
+                                <img src="" alt="Thumbnail Preview" id="previewImg" style="display: none;">
+                                <iframe id="previewDoc" style="display: none;" width="100%" height="300px"></iframe>
+                                <p id="fileName" style="display: none;"></p>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="submit" id="submitButton" class="btn">Update Member</button>
+                    <button class="cancelDelete btn">Cancel</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-------------- END OF MODAL EDIT POST BUTTON CLICK EXPAND -------------->
+
+    <div id="deletePostModal" class="modal">
+        <form class="modal-content">
+            <h4>Delete Member?</h4>
+            <div class="delete_actions-m">
+                <button class="delete_button-m btn">Delete</button>
+                <button class="cancelDelete btn">Cancel</button>
+            </div>
+        </form>
+    </div>
+    <!-------------- END OF MODAL DELETE BUTTON CLICK EXPAND -------------->  
    </main>
 </body>

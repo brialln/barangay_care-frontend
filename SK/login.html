@@ -1,45 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SK LOGIN | BARANGAY-WBA</title>
-
-    <!-- MONTSERRAT GOOGLE FONTS -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-
-    <!-- CSS STYLESHEET LINK -->
-     <link rel="stylesheet" href="CSS/style.css">
-     <link rel="stylesheet" href="CSS/authentication.css">
-
-     <!-- ICONSCOUT CDN -->
-    <link href="https://unicons.iconscout.com/release/v4.0.8/css/line.css" rel="stylesheet">
-
-    <!-- GENERAL JS LINK -->
-    <script type="text/javascript" src="./JS/app.js" defer></script>
-    <!-- SIDEBAR JS LINK -->
-    <script type="text/javascript" src="./JS/sidebar.js" defer></script>
-
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>SANGGUNIANG KABATAAN Manage | BARANGAY-WBA</title>
+    
+        <!-- Google Fonts: Montserrat -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    
+        <!-- CSS Stylesheets -->
+        <link rel="stylesheet" href="CSS/style.css">
+        <link rel="stylesheet" href="CSS/sidebar.css">
+        <link rel="stylesheet" href="CSS/authentication.css">
+        <link rel="stylesheet" href="CSS/central_request.css">
+        <link rel="stylesheet" href="CSS/action_modal.css">
+        <link rel="stylesheet" href="CSS/community_development.css">
+        <link rel="stylesheet" href="CSS/contact.css">
+        <link rel="stylesheet" href="CSS/dashboard.css">
+        <link rel="stylesheet" href="CSS/disaster_preparedness.css">
+        <link rel="stylesheet" href="CSS/profile.css">
+        <link rel="stylesheet" href="CSS/publications.css">
+        <link rel="stylesheet" href="CSS/women_welfare.css">
+        <link rel="stylesheet" href="CSS/youth_sports.css">
+    
+        <!-- Iconscout CDN -->
+        <link href="https://unicons.iconscout.com/release/v4.0.8/css/line.css" rel="stylesheet">
+    
+        <!-- JavaScript Files -->
+        <script src="./JS/app.js" defer></script>
+        <script src="./JS/sidebar.js" defer></script>
+        <script src="./JS/charts.js" defer></script>
+        <script src="./JS/complaint_analytics.js" defer></script>
+        <script src="./JS/emergency_analytics.js" defer></script>
+        <script src="./JS/idea_analytics.js" defer></script>
+        <script src="./JS/sidebar_analytics.js" defer></script>
+        <script src="./JS/threads.js" defer></script>
+        <script src="./JS/threads_analytics.js" defer></script>
+    </head>
 <body>
-    <aside>
-
-    </aside>
+    <div></div>
+    <!------------------------------------ END OF SIDEBAR ------------------------------------>
     <main>
         <div class="container">
             <div class="form_container">
-                <div class="side_box">
-                    <img src="./IMAGES/pamplona_side-section.png" alt="">
-                </div>
-
                 <div class="form_box">
-                    <form action="">
-                        <h4>Login as Sagguniang Kabataan</h4>
-                        <p>Enter your credentials to access BarangayCare</p>
+                    <form>
+                        <div class="form_image">
+                            <img src="IMAGES/pamplona_logo.JPG">
+                        </div>
+                        <h4>BarangayCare</h4>
+                        <p>Enter your sangguniang kabataan credentials</p>
+                        <div class="alert_message error">
+                            <p>This is an error message</p>
+                        </div>
                         <div class="input_box">
-                            <input type="text" placeholder="Enter SK ID" required>
+                            <input type="text" placeholder="Enter Barangay ID" required>
                         </div>
                         <div class="input_box">
                             <input type="password" placeholder="Enter Password" required>
@@ -52,7 +69,7 @@
                 </div>
             </div>
         </div>
+        <!-- =========== END OF FORM SECTION =========== -->
+         
     </main>
-
 </body>
-</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>SANGGUNIANG KABATAAN Manage | BARANGAY-WBA</title>
+    
+        <!-- Google Fonts: Montserrat -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    
+        <!-- CSS Stylesheets -->
+        <link rel="stylesheet" href="CSS/style.css">
+        <link rel="stylesheet" href="CSS/authentication.css">
+        <link rel="stylesheet" href="CSS/action_modal.css">
+        <link rel="stylesheet" href="CSS/profile.css">
+        <link rel="stylesheet" href="CSS/about.css">
+        <link rel="stylesheet" href="CSS/central_request.css">
+        <link rel="stylesheet" href="CSS/community_development.css">
+        <link rel="stylesheet" href="CSS/contact.css">
+        <link rel="stylesheet" href="CSS/disaster_preparedness.css">
+        <link rel="stylesheet" href="CSS/publications.css">
+        <link rel="stylesheet" href="CSS/women_welfare.css">
+        <link rel="stylesheet" href="CSS/youth_sports.css">
+    
+        <!-- Iconscout CDN -->
+        <link href="https://unicons.iconscout.com/release/v4.0.8/css/line.css" rel="stylesheet">
+    
+        <!-- JavaScript Files -->
+        <script src="./JS/app.js" defer></script>
+        <script src="./JS/sidebar.js" defer></script>
+        <script src="./JS/threads.js" defer></script>
+    </head>
+<body>
+    <div id="sidebar-container"></div>
+    <!------------------------------------ END OF SIDEBAR ------------------------------------>
+
+    <main id="restricted-page" class="opacity_access">
+        <div class="remarks_banner-container">
+            <p>
+                Sangguniang Kabataan
+            </p>
+        </div>
+    <!-------------- END OF ADMIN BANNER SECTION -------------->
+
+        <div id="barangayFeedbackResponses"  class="container parent_request-container">
+            <h3>Barangay Resident Feedback</h3>
+            <div class="barangay_request-container">
+                <div class="header_request-container">
+                    <h3>Resident Feedback</h3>
+                </div>
+
+                <div class="tab_box-container">
+                    <button class="tab_btn active">Responses</button>
+                </div>
+
+                <div class="feedback_label_request-container">
+                    <p>No.</p>
+                    <p>Date & Time</p>
+                    <p>Ratings</p>
+                    <p>Feedback</p>
+                </div>
+
+                <div class="request_container">
+                    <div class="request active">
+                        <div class="feedback_request-container">
+                            <p>1</p>
+                            <p>2024-10-12 13:02</p>
+                            <p>5</p>
+                            <button class="feedback_button">Feedback</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <!-------------- END OF FEEDBACK RESPONSES -------------->
+
+        <div id="feedbackModal" class="modal">
+            <div class="modal-content">
+                <span class="close-button">&times;</span>
+                <div class="req_details">
+                    <h4>Feedback:</h4>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda architecto inventore quia labore molestias adipisci non cumque dolorum laboriosam veritatis sunt dolores pariatur sit explicabo accusantium quas, ut quod ab.</p>
+                </div>
+            </div>
+        </div>
+    <!-------------- END OF MODAL APPROVE BUTTON CLICK EXPAND -------------->
+    </main>
+</body>

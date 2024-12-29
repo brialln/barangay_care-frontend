@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>SANGGUNIANG KABATAAN Manage | BARANGAY-WBA</title>
+    
+        <!-- Google Fonts: Montserrat -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    
+        <!-- CSS Stylesheets -->
+        <link rel="stylesheet" href="CSS/style.css">
+        <link rel="stylesheet" href="CSS/manage_post.css">
+        <link rel="stylesheet" href="CSS/trash.css">
+        <link rel="stylesheet" href="CSS/authentication.css">
+        <link rel="stylesheet" href="CSS/central_request.css">
+        <link rel="stylesheet" href="CSS/action_modal.css">
+        <link rel="stylesheet" href="CSS/community_development.css">
+        <link rel="stylesheet" href="CSS/dashboard.css">
+        <link rel="stylesheet" href="CSS/profile.css">
+    
+        <!-- Iconscout CDN -->
+        <link href="https://unicons.iconscout.com/release/v4.0.8/css/line.css" rel="stylesheet">
+    
+        <!-- JavaScript Files -->
+        <script src="./JS/app.js" defer></script>
+        <script src="./JS/sidebar.js" defer></script>
+        <script src="./JS/charts.js" defer></script>
+        <script src="./JS/complaint_analytics.js" defer></script>
+        <script src="./JS/emergency_analytics.js" defer></script>
+        <script src="./JS/idea_analytics.js" defer></script>
+        <script src="./JS/threads.js" defer></script>
+        <script src="./JS/threads_analytics.js" defer></script>
+    </head>
+<body>
+    <div id="sidebar-container"></div>
+    <!------------------------------------ END OF SIDEBAR ------------------------------------>
+   
+   <main id="restricted-page" class="opacity_access">
+    <div class="remarks_banner-container">
+        <p>
+            Sangguniang Kabataan
+        </p>
+   </div>
+<!-------------- END OF ADMIN BANNER SECTION -------------->
+
+    <div id="barangayCoreSection"  class="container parent_request-container">
+        <h3>Contact Page</h3>
+        <div class="barangay_manage-container">
+            <div class="header_manage-container">
+                <h3>Contact Information</h3>
+                <div class="header_button-container">
+
+                </div>
+            </div>
+
+            <div class="tab_box-container">
+                <button class="tab_btn active">Manage Post</button>
+            </div>
+            <div class="manage_label-contact">
+                <p>No.</p>
+                <p>Title</p>
+                <p>Contact</p>
+                <p>Edit</p>
+            </div>
+            <div class="request_container">
+                <div class="request active">
+                    <div class="manage_post-contact">
+                        <p>1</p>
+                        <p class="truncate">Contact Number</p>
+                        <p class="truncate">123456789</p>
+                        <button class="edit_post-button">Edit</button>
+                    </div>
+
+                    <div class="manage_post-contact">
+                        <p>2</p>
+                        <p class="truncate">Email Address</p>
+                        <p class="truncate">pamlona.uno@gmail.com</p>
+                        <button class="edit_post-button">Edit</button>
+                    </div>
+
+                    <div class="manage_post-contact">
+                        <p>3</p>
+                        <p class="truncate">Barangay Location</p>
+                        <p class="truncate">Sa may tabi-tabi</p>
+                        <button class="edit_post-button">Edit</button>
+                    </div>
+
+                    <div class="manage_post-contact">
+                        <p>4</p>
+                        <p class="truncate">Facebook Account</p>
+                        <p class="truncate">Pamplona Uno</p>
+                        <button class="edit_post-button">Edit</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-------------- END OF BARANGAY CORE STATEMENTS SECTION -------------->
+
+    <div id="barangayContactSubmissions"  class="container parent_request-container">
+        <div class="barangay_request-container">
+            <div class="header_request-container">
+                <h3>Contact Form Submissions</h3>
+                <div class="header_button-container">
+                    <a href="trash_contact.html">
+                        <button class="trash_button">
+                            Trash
+                            <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#321E1E"><path d="M200-80q-33 0-56.5-23.5T120-160v-451q-18-11-29-28.5T80-680v-120q0-33 23.5-56.5T160-880h640q33 0 56.5 23.5T880-800v120q0 23-11 40.5T840-611v451q0 33-23.5 56.5T760-80H200Zm0-520v440h560v-440H200Zm-40-80h640v-120H160v120Zm200 280h240v-80H360v80Zm120 20Z"/></svg>
+                        </button>
+                    </a>
+                </div>
+            </div> 
+
+            <div class="tab_box-container">
+                <button class="tab_btn active">Manage Submissions</button>
+            </div>
+
+            <div class="contact_label_request-container">
+                <p>No.</p>
+                <p>First Name</p>
+                <p>Last Name</p>
+                <p>Email</p>
+                <p>Date & Time</p>
+                <p>Details</p>
+                <p>Delete</p>
+            </div>
+            <div class="request_container">
+                <div class="request active">
+                    <div class="contact_request-container">
+                        <p>1</p>
+                        <p>NBA</p>
+                        <p>YoungBoy</p>
+                        <p>alvinchipmunks@gmail.com</p>
+                        <p>2024-10-12 13:02</p>
+                        <button class="read_contact-button">Message</button>
+                        <button class="delete_post-button">Delete</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="contactModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <div class="req_details">
+                <h4>Message:</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates, nesciunt aspernatur! Ipsa consectetur porro delectus, voluptas alias sunt beatae optio recusandae quibusdam minima earum fugiat possimus ea soluta quae debitis!</p>
+            </div>
+        </div>
+    </div>
+    <!-------------- END OF MODAL POP-UP FOR READ MESSAGE BUTTON -------------->
+
+    <div id="editPostModal" class="modal">
+        <div class="modal-content">
+            <div class="form_section">
+                <h2>Edit Post</h2>
+                <form id="postForm" enctype="multipart/form-data">
+                    <input type="text" placeholder="Update Contact">
+                    <button type="submit" id="submitButton" class="btn">Update Post</button>
+                    <button class="cancelDelete btn">Cancel</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-------------- END OF MODAL EDIT POST BUTTON CLICK EXPAND -------------->
+
+    <div id="deletePostModal" class="modal">
+        <form class="modal-content">
+            <h4>Delete Message?</h4>
+            <div class="delete_actions-m">
+                <button class="delete_button-m btn">Delete</button>
+                <button class="cancelDelete btn">Cancel</button>
+            </div>
+        </form>
+    </div>
+    <!-------------- END OF MODAL DELETE BUTTON CLICK EXPAND -------------->  
+   </main>
+</body>

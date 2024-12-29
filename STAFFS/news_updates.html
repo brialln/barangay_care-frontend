@@ -12,17 +12,14 @@
     
         <!-- CSS Stylesheets -->
         <link rel="stylesheet" href="CSS/style.css">
+        <link rel="stylesheet" href="CSS/manage_post.css">
+        <link rel="stylesheet" href="CSS/trash.css">
         <link rel="stylesheet" href="CSS/authentication.css">
-        <link rel="stylesheet" href="CSS/action_modal.css">
-        <link rel="stylesheet" href="CSS/profile.css">
-        <link rel="stylesheet" href="CSS/about.css">
         <link rel="stylesheet" href="CSS/central_request.css">
+        <link rel="stylesheet" href="CSS/action_modal.css">
         <link rel="stylesheet" href="CSS/community_development.css">
-        <link rel="stylesheet" href="CSS/contact.css">
-        <link rel="stylesheet" href="CSS/disaster_preparedness.css">
-        <link rel="stylesheet" href="CSS/publications.css">
-        <link rel="stylesheet" href="CSS/women_welfare.css">
-        <link rel="stylesheet" href="CSS/youth_sports.css">
+        <link rel="stylesheet" href="CSS/dashboard.css">
+        <link rel="stylesheet" href="CSS/profile.css">
     
         <!-- Iconscout CDN -->
         <link href="https://unicons.iconscout.com/release/v4.0.8/css/line.css" rel="stylesheet">
@@ -30,191 +27,180 @@
         <!-- JavaScript Files -->
         <script src="./JS/app.js" defer></script>
         <script src="./JS/sidebar.js" defer></script>
+        <script src="./JS/charts.js" defer></script>
+        <script src="./JS/complaint_analytics.js" defer></script>
+        <script src="./JS/emergency_analytics.js" defer></script>
+        <script src="./JS/idea_analytics.js" defer></script>
         <script src="./JS/threads.js" defer></script>
+        <script src="./JS/threads_analytics.js" defer></script>
     </head>
 <body>
     <div id="sidebar-container"></div>
     <!------------------------------------ END OF SIDEBAR ------------------------------------>
     
-    <main>
-        <div class="remarks_banner-container">
-            <p>
-                Staff
-            </p>
-       </div>
-<!-------------- END OF ADMIN BANNER SECTION -------------->
+   <main>
+    <div class="remarks_banner-container">
+        <p>
+            Staff
+        </p>
+   </div>
+    <!-------------- END OF ADMIN BANNER SECTION -------------->
 
-    <div class="container posts">
-        <h3>Edit News & Updates</h3>
-        <div class="posts_container">
-            <article class="post">
-                <div class="post_thumbnail">
-                    <a href="post.html"><img src="./IMAGES/pamplona_sample-profile.jpg"></a>
+    <div id="barangayNewsUpdatesSection"  class="container parent_request-container">
+        <h3>News & Updates Page</h3>
+        <div class="barangay_manage-container">
+            <div class="header_manage-container">
+                <h3>News & Updates</h3>
+                <div class="header_button-container">
+                    <button class="add_post-button">Add Post</button>
+                    <a href="trash_article.html">
+                        <button class="trash_button">
+                            Trash
+                            <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#321E1E"><path d="M200-80q-33 0-56.5-23.5T120-160v-451q-18-11-29-28.5T80-680v-120q0-33 23.5-56.5T160-880h640q33 0 56.5 23.5T880-800v120q0 23-11 40.5T840-611v451q0 33-23.5 56.5T760-80H200Zm0-520v440h560v-440H200Zm-40-80h640v-120H160v120Zm200 280h240v-80H360v80Zm120 20Z"/></svg>
+                        </button>
+                    </a>
                 </div>
-                <div class="post_info">
-                    <a href="" class="category_button">Health</a>
-                    <h3 class="post_title"><a href="post.html">Lorem ipsum dolor sit amet consectetur</a></h3>
-                    <p class="post_body">
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's 
-                        standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
-                    </p>
+            </div>
 
-                    <div class="post_author">
-                        <div class="post_author-avatar">
-                            <img src="IMAGES/pamplona_logo.JPG" alt="">
-                        </div>
-                        <div class="post_author-info">
-                            <h5>By: Barangay Staff Jane</h5>
-                            <small>October 18, 2022 - 03:51PM</small>
-                        </div>
+            <div class="tab_box-container">
+                <button class="tab_btn active">Manage Post</button>
+            </div>
+            <div class="manage_label-article">
+                <p>No.</p>
+                <p>Title</p>
+                <p>Category</p>
+                <p>Details</p>
+                <p>Edit</p>
+                <p>Delete</p>
+            </div>
+            <div class="request_container">
+                <div class="request active">
+                    <div class="manage_post-article">
+                        <p>1</p>
+                        <p class="truncate">Announcement #1 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deleniti vitae vero temporibus, aliquam neque excepturi repudiandae sint accusamus officia pariatur delectus dignissimos voluptatem voluptas quis accusantium consectetur modi natus et.</p>
+                        <p>Health</p>
+                        <button class="details_button">Details</button>
+                        <button class="edit_post-button">Edit</button>
+                        <button class="delete_post-button">Delete</button>
                     </div>
                 </div>
-            </article>
-
-            <article class="post">
-                <div class="post_thumbnail">
-                    <a href="post.html"><img src="./IMAGES/pamplona_header.jpg"></a>                
-                </div>
-                <div class="post_info">
-                    <a href="" class="category_button">Health</a>
-                    <h3 class="post_title"><a href="post.html">Lorem ipsum dolor sit amet consectetur</a></h3>
-                    <p class="post_body">
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's 
-                        standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.                     
-                    </p>
-                    <div class="post_author">
-                        <div class="post_author-avatar">
-                            <img src="IMAGES/pamplona_logo.JPG" alt="">
-                        </div>
-                        <div class="post_author-info">
-                            <h5>By: Barangay Staff Jane</h5>
-                            <small>October 18, 2022 - 03:51PM</small>
-                        </div>
-                    </div>
-                </div>
-            </article>
-
-            <article class="post">
-                <div class="post_thumbnail">
-                    <a href="post.html"><img src="./IMAGES/pamplona_header.jpg"></a>
-                </div>
-                <div class="post_info">
-                    <a href="" class="category_button">Health</a>
-                    <h3 class="post_title"><a href="post.html">Lorem ipsum dolor sit amet consectetur</a></h3>
-                    <p class="post_body">
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's 
-                        standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.                     
-                    </p>
-                    <div class="post_author">
-                        <div class="post_author-avatar">
-                            <img src="IMAGES/pamplona_logo.JPG" alt="">
-                        </div>
-                        <div class="post_author-info">
-                            <h5>By: Barangay Staff Jane</h5>
-                            <small>October 18, 2022 - 03:51PM</small>
-                        </div>
-                    </div>
-                </div>
-            </article>
-
-            <article class="post">
-                <div class="post_thumbnail">
-                    <a href="post.html"><img src="./IMAGES/pamplona_header.jpg"></a>
-                </div>
-                <div class="post_info">
-                    <a href="" class="category_button">Health</a>
-                    <h3 class="post_title"><a href="post.html">Lorem ipsum dolor sit amet consectetur</a></h3>
-                    <p class="post_body">
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's 
-                        standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.                     
-                    </p>
-                    <div class="post_author">
-                        <div class="post_author-avatar">
-                            <img src="IMAGES/pamplona_logo.JPG" alt="">
-                        </div>
-                        <div class="post_author-info">
-                            <h5>By: Barangay Staff Jane</h5>
-                            <small>October 18, 2022 - 03:51PM</small>
-                        </div>
-                    </div>
-                </div>
-            </article>
-
-            <article class="post">
-                <div class="post_thumbnail">
-                    <a href="post.html"><img src="./IMAGES/pamplona_header.jpg"></a>
-                </div>
-                <div class="post_info">
-                    <a href="" class="category_button">Health</a>
-                    <h3 class="post_title"><a href="post.html">Lorem ipsum dolor sit amet consectetur</a></h3>
-                    <p class="post_body">
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's 
-                        standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
-                    </p>
-                    <div class="post_author">
-                        <div class="post_author-avatar">
-                            <img src="IMAGES/pamplona_logo.JPG" alt="">
-                        </div>
-                        <div class="post_author-info">
-                            <h5>By: Barangay Staff Jane</h5>
-                            <small>October 18, 2022 - 03:51PM</small>
-                        </div>
-                    </div>
-                </div>
-            </article>
-
-            <article class="post">
-                <div class="post_thumbnail">
-                    <a href="post.html"><img src="./IMAGES/pamplona_header.jpg"></a>
-                </div>
-                <div class="post_info">
-                    <a href="" class="category_button">Health</a>
-                    <h3 class="post_title"><a href="post.html">Lorem ipsum dolor sit amet consectetur</a></h3>
-                    <p class="post_body">
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's 
-                        standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
-                    </p>
-                    <div class="post_author">
-                        <div class="post_author-avatar">
-                            <img src="IMAGES/pamplona_logo.JPG" alt="">
-                        </div>
-                        <div class="post_author-info">
-                            <h5>By: Barangay Staff Jane</h5>
-                            <small>October 18, 2022 - 03:51PM</small>
-                        </div>
-                    </div>
-                </div>
-            </article>
+            </div>
         </div>
     </div>
-<!-------------- END OF NEWS AND UPDATES SECTION -------------->
+    <!-------------- END OF NEWS AND UPDATES SECTION -------------->
 
-    <div class="form_section">
-        <div class="container form_section-container">
-            <h2>Add Post</h2>
-            <form action="" enctype="multipart/form-data">
-                <input type="text" placeholder="Title">
-                <select>
-                    <option value="1">Community Development</option>
-                    <option value="1">Disaster Preparedness</option>
-                    <option value="1">Education</option>
-                    <option value="1">Elderly</option>
-                    <option value="1">Health</option>
-                    <option value="1">Justice</option>
-                    <option value="1">Livelihood & Employment</option>
-                    <option value="1">Social</option>
-                    <option value="1">Women's Welfare</option>
-                    <option value="1">Youth & Sports</option>
-                </select>
-                <div class="form_control">
-                    <label for="thumbnail">Add Thumbnail</label>
-                    <input type="file" id="thumbnail">
+    <div id="detailModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <div class="req_details">
+                <h4>Title:</h4>
+                <p>Title #1</p>
+            </div>
+            <div class="req_details">
+                <h4>Thumbnail:</h4>
+                <div class="view_image-header">
+                    <img src="IMAGES/pamplona_header.jpg">
                 </div>
-                <textarea rows="10" name="Description" placeholder="Description"></textarea>
-                <button type="submit" class="btn">Add Post</button>
-            </form>
+            </div>
+            <div class="req_details">
+                <h4>Description:</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates, nesciunt aspernatur! Ipsa consectetur porro delectus, voluptas alias sunt beatae optio recusandae quibusdam minima earum fugiat possimus ea soluta quae debitis!</p>
+            </div>
         </div>
     </div>
-<!-------------- END OF ADD POST -------------->
-    </main>
+    <!-------------- END OF MODAL VIEW DETAILS BUTTON EXPAND -------------->
+
+    <div id="addPostModal" class="modal">
+        <div class="modal-content">
+            <div class="form_section">
+                <h2>Add Post</h2>
+                <form id="postForm" enctype="multipart/form-data">
+                    <input type="text" id="postTitle" placeholder="Add Title" required>
+                    <select>
+                        <option value="" disabled selected>Select a category</option>
+                        <option value="community-development">Community Development</option>
+                        <option value="disaster-preparedness">Disaster Preparedness</option>
+                        <option value="education">Education</option>
+                        <option value="elderly">Elderly</option>
+                        <option value="health">Health</option>
+                        <option value="justice">Justice</option>
+                        <option value="livelihood-employment">Livelihood & Employment</option>
+                        <option value="social">Social</option>
+                        <option value="womens-welfare">Women's Welfare</option>
+                        <option value="youth-sports">Youth & Sports</option>
+                    </select>
+                    <div class="form_control">
+                        <label for="thumbnail">Add Thumbnail</label>
+                        <input type="file" id="thumbnail" accept="image/*,application/pdf,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document">
+                        <div class="image_preview" id="imagePreview">
+                            <p>Preview:</p>
+                            <div id="previewContainer">
+                                <img src="" alt="Thumbnail Preview" id="previewImg" style="display: none;">
+                                <iframe id="previewDoc" style="display: none;" width="100%" height="300px"></iframe>
+                                <p id="fileName" style="display: none;"></p>
+                            </div>
+                        </div>
+                    </div>
+                    <textarea rows="10" id="postDescription" name="Description" placeholder="Add Description" required></textarea>
+
+                    <button type="submit" id="submitButton" class="btn">Add Post</button>
+                    <button class="cancelDelete btn">Cancel</button>
+                </form>
+            </div>
+    </div>
+    </div>
+    <!-------------- END OF MODAL ADD POST BUTTON CLICK EXPAND -------------->
+
+    <div id="editPostModal" class="modal">
+        <div class="modal-content">
+                <div class="form_section">
+                    <h2>Edit Post</h2>
+                    <form id="postForm" enctype="multipart/form-data">
+                        <input type="text" id="postTitle" placeholder="Update Title" required>
+                        <select>
+                            <option value="" disabled selected>Select a category</option>
+                            <option value="community-development">Community Development</option>
+                            <option value="disaster-preparedness">Disaster Preparedness</option>
+                            <option value="education">Education</option>
+                            <option value="elderly">Elderly</option>
+                            <option value="health">Health</option>
+                            <option value="justice">Justice</option>
+                            <option value="livelihood-employment">Livelihood & Employment</option>
+                            <option value="social">Social</option>
+                            <option value="womens-welfare">Women's Welfare</option>
+                            <option value="youth-sports">Youth & Sports</option>
+                        </select>
+                        <div class="form_control">
+                            <label for="thumbnail">Add Publication</label>
+                            <input type="file" id="thumbnail" accept="image/*,application/pdf,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document">
+                            <div class="image_preview" id="imagePreview">
+                                <p>Preview:</p>
+                                <div id="previewContainer">
+                                    <img src="" alt="Thumbnail Preview" id="previewImg" style="display: none;">
+                                    <iframe id="previewDoc" style="display: none;" width="100%" height="300px"></iframe>
+                                    <p id="fileName" style="display: none;"></p>
+                                </div>
+                            </div>
+                        </div>
+                        <textarea rows="10" id="postDescription" name="Description" placeholder="Update Description" required></textarea>
+
+                        <button type="submit" id="submitButton" class="btn">Update Post</button>
+                        <button class="cancelDelete btn">Cancel</button>
+                    </form>
+                </div>
+        </div>
+    </div>
+    <!-------------- END OF MODAL EDIT POST BUTTON CLICK EXPAND -------------->
+
+    <div id="deletePostModal" class="modal">
+        <form class="modal-content">
+            <h4>Delete Post?</h4>
+            <div class="delete_actions-m">
+                <button class="delete_button-m btn">Delete</button>
+                <button class="cancelDelete btn">Cancel</button>
+            </div>
+        </form>
+    </div>
+    <!-------------- END OF MODAL DELETE BUTTON CLICK EXPAND -------------->  
+   </main>
 </body>

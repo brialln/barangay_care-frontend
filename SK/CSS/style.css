@@ -28,7 +28,8 @@
     --color-ash: #F5F5F5;
     --color-black: #000000;
     --color-dark-gray: #D9D9D9;
-    --color-secondary: #001F3F;
+    --color-navy-blue: #001F3F;
+    --color-secondary: #321E1E;
 
     --font-size: 0.9rem;
 
@@ -84,7 +85,7 @@ h2 {
 
 h3 {
     font-size: 1.8rem;
-    color: var(--color-primary);
+    color: var(--color-secondary);
 }
 
 h4 {
@@ -132,12 +133,21 @@ form {
 
 input, textarea, select {
     width: 100%;
-    border: 2px solid var(--color-primary);
+    border: 2px solid var(--color-secondary);
     padding: 0.8rem 1.4rem;
     background-color: var(--color-white);
     border-radius: var(--card-border-radius-2);
     resize: none;
     color: var(--color-black-font);
+    font-family: 'Montserrat', sans-serif; /* Change to your desired font */
+}
+
+/* Change the font of the placeholders */
+input::placeholder,
+textarea::placeholder {
+    font-family: 'Montserrat', sans-serif; /* Change to your desired font */
+    font-size: 14px; /* Adjust the font size as needed */
+    color: #888; /* Adjust the color as needed */
 }
 
 .form_section-container {
@@ -145,6 +155,24 @@ input, textarea, select {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    width: 600px;
+    background: var(--color-white);
+    border-radius: var(--card-border-radius-3);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    margin: 5% auto;
+    overflow: hidden;
+    padding: 2rem;
+}
+
+.form_section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form_section form {
+    width: 100%;
 }
 
 /* ========================== Button Varieties ========================== */
@@ -247,10 +275,8 @@ input, textarea, select {
     width: 250px;
     height: 100vh;
     padding: 5px;
-    padding: 5px 1em;
+    padding: 0.6rem 1em;
     background-color: var(--color-secondary);
-    border-right: 2px solid var(--color-light-primary);
-
     position: sticky;
     top: 0;
     align-self: start;
@@ -258,8 +284,9 @@ input, textarea, select {
     overflow: hidden;
     text-wrap: nowrap;
 }
+
 #sidebar.close {
-    padding: 5px;
+    padding: 0.6rem 6px;
     width: 60px;
 }
 #sidebar ul {
@@ -429,11 +456,14 @@ input, textarea, select {
 .remarks_banner-container {
     top: 0;
     background: var(--color-white);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     height: 2.5rem;
-    padding-left: 1rem;
-    padding-top: 5px;
-    font-weight: bold;
-    border-bottom: 2px solid var(--color-light-primary);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    color: var(--color-secondary);
 }
 
 /* HEADER SECTION STYLE */
@@ -749,4 +779,23 @@ input, textarea, select {
     color: var(--color-charcoal-gray);
     background: var(--color-white);
     transition: var(--transition);
+}
+
+/* ========================== Opacity Access Control ========================== */
+.opacity_access {
+    opacity: 0.2;
+    pointer-events: none;
+}
+
+.popup-message {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 1.3rem;
+    background-color: var(--color-secondary);
+    color: white;
+    border-radius: var(--card-border-radius-2);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
 }

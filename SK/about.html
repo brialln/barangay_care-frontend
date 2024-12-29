@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>SANGGUNIANG KABATAAN Manage | BARANGAY-WBA</title>
+    
+        <!-- Google Fonts: Montserrat -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    
+        <!-- CSS Stylesheets -->
+        <link rel="stylesheet" href="CSS/style.css">
+        <link rel="stylesheet" href="CSS/manage_post.css">
+        <link rel="stylesheet" href="CSS/trash.css">
+        <link rel="stylesheet" href="CSS/authentication.css">
+        <link rel="stylesheet" href="CSS/central_request.css">
+        <link rel="stylesheet" href="CSS/action_modal.css">
+        <link rel="stylesheet" href="CSS/community_development.css">
+        <link rel="stylesheet" href="CSS/dashboard.css">
+        <link rel="stylesheet" href="CSS/profile.css">
+    
+        <!-- Iconscout CDN -->
+        <link href="https://unicons.iconscout.com/release/v4.0.8/css/line.css" rel="stylesheet">
+    
+        <!-- JavaScript Files -->
+        <script src="./JS/app.js" defer></script>
+        <script src="./JS/sidebar.js" defer></script>
+        <script src="./JS/charts.js" defer></script>
+        <script src="./JS/complaint_analytics.js" defer></script>
+        <script src="./JS/emergency_analytics.js" defer></script>
+        <script src="./JS/idea_analytics.js" defer></script>
+        <script src="./JS/threads.js" defer></script>
+        <script src="./JS/threads_analytics.js" defer></script>
+    </head>
+<body>
+    <div id="sidebar-container"></div>
+    <!------------------------------------ END OF SIDEBAR ------------------------------------>
+    
+   <main id="restricted-page" class="opacity_access">
+    <div class="remarks_banner-container">
+        <p>
+            Sangguniang Kabataan
+        </p>
+   </div>
+    <!-------------- END OF ADMIN BANNER SECTION -------------->
+
+    <div id="barangayCoreSection"  class="container parent_request-container">
+        <h3>About Page</h3>
+        <div class="barangay_manage-container">
+            <div class="header_manage-container">
+                <h3>Core Statements</h3>
+                <div class="header_button-container">
+
+                </div>
+            </div>
+
+            <div class="tab_box-container">
+                <button class="tab_btn active">Manage Post</button>
+            </div>
+            <div class="manage_label-core">
+                <p>No.</p>
+                <p>Title</p>
+                <p>Details</p>
+                <p>Edit</p>
+            </div>
+            <div class="request_container">
+                <div class="request active">
+                    <div class="manage_post-core">
+                        <p>1</p>
+                        <p class="truncate">Introduction Message</p>
+                        <button class="details_button">Details</button>
+                        <button class="edit_post-button">Edit</button>
+                    </div>
+
+                    <div class="manage_post-core">
+                        <p>2</p>
+                        <p class="truncate">Introduction Image</p>
+                        <button class="view_button">Details</button>
+                        <button class="edit_post-button-one">Edit</button>
+                    </div>
+
+                    <div class="manage_post-core">
+                        <p>3</p>
+                        <p class="truncate">Vision</p>
+                        <button class="details_button">Details</button>
+                        <button class="edit_post-button">Edit</button>
+                    </div>
+
+                    <div class="manage_post-core">
+                        <p>4</p>
+                        <p class="truncate">Mission</p>
+                        <button class="details_button">Details</button>
+                        <button class="edit_post-button">Edit</button>
+                    </div>
+
+                    <div class="manage_post-core">
+                        <p>5</p>
+                        <p class="truncate">Historical Information</p>
+                        <button class="details_button">Details</button>
+                        <button class="edit_post-button">Edit</button>
+                    </div>
+
+                    <div class="manage_post-core">
+                        <p>6</p>
+                        <p class="truncate">Physical Information</p>
+                        <button class="details_button">Details</button>
+                        <button class="edit_post-button">Edit</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-------------- END OF BARANGAY CORE STATEMENTS SECTION -------------->
+
+    <div id="barangaySangguniangBarangaySection"  class="container parent_request-container">
+        <div class="barangay_manage-container">
+            <div class="header_manage-container">
+                <h3>Sangguniang Barangay Members</h3>
+                <div class="header_button-container">
+                    <button class="add_post-button">Add Member</button>
+                </div>
+            </div>
+
+            <div class="tab_box-container">
+                <button class="tab_btn active">Current</button>
+            </div>
+            <div class="manage_label-sanggunian">
+                <p>No.</p>
+                <p>First Name</p>
+                <p>Last Name</p>
+                <p>Position</p>
+                <p>Details</p>
+                <p>Edit</p>
+            </div>
+            <div class="request_container">
+                <div class="request active">
+                    <div class="manage_post-sanggunian">
+                        <p>1</p>
+                        <p class="truncate">Jane</p>
+                        <p class="truncate">Doe</p>
+                        <p class="truncate">Barangay Chairman</p>
+                        <button class="details_button-one">Details</button>
+                        <button class="edit_post-button-two">Edit</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-------------- END OF BARANGAY MEMBER SECTION -------------->
+
+    <div id="barangaySangguniangKabataanSection"  class="container parent_request-container">
+        <div class="barangay_manage-container">
+            <div class="header_manage-container">
+                <h3>Sangguniang Kabataan Members</h3>
+                <div class="header_button-container">
+                    <button class="add_post-button-one">Add Member</button>
+                </div>
+            </div>
+
+            <div class="tab_box-container">
+                <button class="tab_btn active">Current</button>
+            </div>
+            <div class="manage_label-sanggunian">
+                <p>No.</p>
+                <p>First Name</p>
+                <p>Last Name</p>
+                <p>Position</p>
+                <p>Details</p>
+                <p>Edit</p>
+            </div>
+            <div class="request_container">
+                <div class="request active">
+                    <div class="manage_post-sanggunian">
+                        <p>1</p>
+                        <p class="truncate">Jane</p>
+                        <p class="truncate">Doe</p>
+                        <p class="truncate">SK Chairman</p>
+                        <button class="details_button-one">Details</button>
+                        <button class="edit_post-button-three">Edit</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-------------- END OF BARANGAY MEMBER SECTION -------------->
+
+
+    <!-------------- START OF MODALS -------------->
+    <div id="viewModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <div class="req_details">
+                <h4>Image:</h4>
+                <div class="view_image-header">
+                    <img src="IMAGES/pamplona_header.jpg">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-------------- END OF MODAL VIEW BUTTON EXPAND -------------->
+
+    <div id="detailModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <div class="req_details">
+                <h4>Description:</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit aliquid, minus maxime eos omnis perferendis quos? Itaque sit, dolor nulla tempore ex recusandae illum omnis vel, eaque nisi numquam iusto?</p>
+            </div>
+        </div>
+    </div>
+    <!-------------- END OF MODAL VIEW DETAILS BUTTON EXPAND -------------->
+
+    <div id="detailModalOne" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <div class="req_details">
+                <h4>Facebook/Messenger:</h4>
+                <p>Something</p>
+            </div>
+            <div class="req_details">
+                <h4>Email Address:</h4>
+                <p>Something</p>
+            </div>
+            <div class="req_details">
+                <h4>Contact Number:</h4>
+                <p>Something</p>
+            </div>
+        </div>
+    </div>
+    <!-------------- END OF MODAL VIEW DETAILS BUTTON EXPAND -------------->
+
+    <div id="addPostModal" class="modal">
+        <div class="modal-content">
+            <div class="form_section">
+                <h2>Add Member</h2>
+                <form id="postForm" enctype="multipart/form-data">
+                    <input type="text" placeholder="First Name" required>
+                    <input type="text" placeholder="Last Name" required>
+                    <select>
+                        <option value="" disabled selected>Select Position</option>
+                        <option value="punong-barangay">Punong Barangay</option>
+                        <option value="barangay-kagawad">Barangay Kagawad</option>
+                        <option value="barangay-secretary">Barangay Secretary</option>
+                    </select>
+                    <input type="text" placeholder="Facebook/Messenger" required>
+                    <input type="email" placeholder="Email Address" required>
+                    <input type="tel" placeholder="Contact Number" required>
+                    <div class="form_control">
+                        <label for="thumbnail">Add Profile</label>
+                        <input type="file" id="thumbnail" accept="image/*,application/pdf,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document">
+                        <div class="image_preview" id="imagePreview">
+                            <p>Preview:</p>
+                            <div id="previewContainer">
+                                <img src="" alt="Thumbnail Preview" id="previewImg" style="display: none;">
+                                <iframe id="previewDoc" style="display: none;" width="100%" height="300px"></iframe>
+                                <p id="fileName" style="display: none;"></p>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="submit" id="submitButton" class="btn">Add Member</button>
+                    <button class="cancelDelete btn">Cancel</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-------------- END OF MODAL ADD POST BUTTON CLICK EXPAND -------------->
+
+    <div id="addPostModalOne" class="modal">
+        <div class="modal-content">
+            <div class="form_section">
+                <h2>Add Member</h2>
+                <form id="postForm" enctype="multipart/form-data">
+                    <input type="text" placeholder="First Name" required>
+                    <input type="text" placeholder="Last Name" required>
+                    <select>
+                        <option value="" disabled selected>Select Position</option>
+                        <option value="sk-chairman">SK Chairman</option>
+                        <option value="sk-kagawad">SK Kagawad</option>
+                        <option value="sk-secretary">SK Secretary</option>
+                        <option value="sk-treasurer">SK Treasurer</option>
+                    </select>
+                    <input type="text" placeholder="Facebook/Messenger" required>
+                    <input type="email" placeholder="Email Address" required>
+                    <input type="tel" placeholder="Contact Number" required>
+                    <div class="form_control">
+                        <label for="thumbnail">Add Profile</label>
+                        <input type="file" id="thumbnail" accept="image/*,application/pdf,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document">
+                        <div class="image_preview" id="imagePreview">
+                            <p>Preview:</p>
+                            <div id="previewContainer">
+                                <img src="" alt="Thumbnail Preview" id="previewImg" style="display: none;">
+                                <iframe id="previewDoc" style="display: none;" width="100%" height="300px"></iframe>
+                                <p id="fileName" style="display: none;"></p>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="submit" id="submitButton" class="btn">Add Member</button>
+                    <button class="cancelDelete btn">Cancel</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-------------- END OF MODAL ADD POST BUTTON CLICK EXPAND -------------->
+
+    <div id="editPostModal" class="modal">
+        <div class="modal-content">
+            <div class="form_section">
+                <h2>Edit Post</h2>
+                <form id="postForm" enctype="multipart/form-data">
+                    <textarea rows="10" id="postDescription" name="Description" placeholder="Update Description" required></textarea>
+                    <button type="submit" id="submitButton" class="btn">Update Post</button>
+                    <button class="cancelDelete btn">Cancel</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-------------- END OF MODAL EDIT POST BUTTON CLICK EXPAND -------------->
+
+    <div id="editPostModalOne" class="modal">
+        <div class="modal-content">
+            <div class="form_section">
+                <h2>Edit Post</h2>
+                <form id="postForm" enctype="multipart/form-data">
+                    <div class="form_control">
+                        <label for="thumbnail">Update Post</label>
+                        <input type="file" id="thumbnail" accept="image/*,application/pdf,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document">
+                        <div class="image_preview" id="imagePreview">
+                            <p>Preview:</p>
+                            <div id="previewContainer">
+                                <img src="" alt="Thumbnail Preview" id="previewImg" style="display: none;">
+                                <iframe id="previewDoc" style="display: none;" width="100%" height="300px"></iframe>
+                                <p id="fileName" style="display: none;"></p>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="submit" id="submitButton" class="btn">Update Post</button>
+                    <button class="cancelDelete btn">Cancel</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-------------- END OF MODAL EDIT POST BUTTON CLICK EXPAND -------------->
+
+    <div id="editPostModalTwo" class="modal">
+        <div class="modal-content">
+            <div class="form_section">
+                <h2>Update Member Information</h2>
+                <form id="postForm" enctype="multipart/form-data">
+                    <input type="text" placeholder="First Name" required>
+                    <input type="text" placeholder="Last Name" required>
+                    <select>
+                        <option value="" disabled selected>Select Position</option>
+                        <option value="punong-barangay">Punong Barangay</option>
+                        <option value="barangay-kagawad">Barangay Kagawad</option>
+                        <option value="barangay-secretary">Barangay Secretary</option>
+                    </select>
+                    <input type="text" placeholder="Facebook/Messenger" required>
+                    <input type="email" placeholder="Email Address" required>
+                    <input type="tel" placeholder="Contact Number" required>
+                    <div class="form_control">
+                        <label for="thumbnail">Update Profile</label>
+                        <input type="file" id="thumbnail" accept="image/*,application/pdf,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document">
+                        <div class="image_preview" id="imagePreview">
+                            <p>Preview:</p>
+                            <div id="previewContainer">
+                                <img src="" alt="Thumbnail Preview" id="previewImg" style="display: none;">
+                                <iframe id="previewDoc" style="display: none;" width="100%" height="300px"></iframe>
+                                <p id="fileName" style="display: none;"></p>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="submit" id="submitButton" class="btn">Update Member</button>
+                    <button class="cancelDelete btn">Cancel</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-------------- END OF MODAL EDIT POST BUTTON CLICK EXPAND -------------->
+
+    <div id="editPostModalThree" class="modal">
+        <div class="modal-content">
+            <div class="form_section">
+                <h2>Update Member Information</h2>
+                <form id="postForm" enctype="multipart/form-data">
+                    <input type="text" placeholder="First Name" required>
+                    <input type="text" placeholder="Last Name" required>
+                    <select>
+                        <option value="" disabled selected>Select Position</option>
+                        <option value="sk-chairman">SK Chairman</option>
+                        <option value="sk-kagawad">SK Kagawad</option>
+                        <option value="sk-secretary">SK Secretary</option>
+                        <option value="sk-treasurer">SK Treasurer</option>
+                    </select>
+                    <input type="text" placeholder="Facebook/Messenger" required>
+                    <input type="email" placeholder="Email Address" required>
+                    <input type="tel" placeholder="Contact Number" required>
+                    <div class="form_control">
+                        <label for="thumbnail">Update Profile</label>
+                        <input type="file" id="thumbnail" accept="image/*,application/pdf,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document">
+                        <div class="image_preview" id="imagePreview">
+                            <p>Preview:</p>
+                            <div id="previewContainer">
+                                <img src="" alt="Thumbnail Preview" id="previewImg" style="display: none;">
+                                <iframe id="previewDoc" style="display: none;" width="100%" height="300px"></iframe>
+                                <p id="fileName" style="display: none;"></p>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="submit" id="submitButton" class="btn">Update Member</button>
+                    <button class="cancelDelete btn">Cancel</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-------------- END OF MODAL EDIT POST BUTTON CLICK EXPAND -------------->
+
+    <div id="deletePostModal" class="modal">
+        <form class="modal-content">
+            <h4>Delete Member?</h4>
+            <div class="delete_actions-m">
+                <button class="delete_button-m btn">Delete</button>
+                <button class="cancelDelete btn">Cancel</button>
+            </div>
+        </form>
+    </div>
+    <!-------------- END OF MODAL DELETE BUTTON CLICK EXPAND -------------->  
+   </main>
+</body>

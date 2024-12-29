@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>SANGGUNIANG KABATAAN Manage | BARANGAY-WBA</title>
+    
+        <!-- Google Fonts: Montserrat -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    
+        <!-- CSS Stylesheets -->
+        <link rel="stylesheet" href="CSS/style.css">
+        <link rel="stylesheet" href="CSS/manage_post.css">
+        <link rel="stylesheet" href="CSS/trash.css">
+        <link rel="stylesheet" href="CSS/authentication.css">
+        <link rel="stylesheet" href="CSS/central_request.css">
+        <link rel="stylesheet" href="CSS/action_modal.css">
+        <link rel="stylesheet" href="CSS/community_development.css">
+        <link rel="stylesheet" href="CSS/dashboard.css">
+        <link rel="stylesheet" href="CSS/profile.css">
+    
+        <!-- Iconscout CDN -->
+        <link href="https://unicons.iconscout.com/release/v4.0.8/css/line.css" rel="stylesheet">
+    
+        <!-- JavaScript Files -->
+        <script src="./JS/app.js" defer></script>
+        <script src="./JS/sidebar.js" defer></script>
+        <script src="./JS/charts.js" defer></script>
+        <script src="./JS/complaint_analytics.js" defer></script>
+        <script src="./JS/emergency_analytics.js" defer></script>
+        <script src="./JS/idea_analytics.js" defer></script>
+        <script src="./JS/threads.js" defer></script>
+        <script src="./JS/threads_analytics.js" defer></script>
+    </head>
+<body>
+    <div id="sidebar-container"></div>
+    <!------------------------------------ END OF SIDEBAR ------------------------------------>
+
+    <main id="restricted-page" class="opacity_access">
+        <div class="remarks_banner-container">
+            <p>
+                Sangguniang Kabataan
+            </p>
+        </div>
+    <!-------------- END OF ADMIN BANNER SECTION -------------->
+
+        <div id="barangayResidentApproval"  class="container parent_request-container">
+            <h3>Manage Barangay Resident</h3>
+            <div class="barangay_request-container">
+                <div class="header_request-container">
+                    <h3>Barangay Resident</h3>
+                    <div class="header_button-container">
+                        <button class="add_people-button add_people">
+                            Add People +
+                        </button>
+
+                        <a href="trash_resident.html">
+                            <button class="trash_button">
+                                Trash
+                                <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#321E1E"><path d="M200-80q-33 0-56.5-23.5T120-160v-451q-18-11-29-28.5T80-680v-120q0-33 23.5-56.5T160-880h640q33 0 56.5 23.5T880-800v120q0 23-11 40.5T840-611v451q0 33-23.5 56.5T760-80H200Zm0-520v440h560v-440H200Zm-40-80h640v-120H160v120Zm200 280h240v-80H360v80Zm120 20Z"/></svg>
+                            </button>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="search-filter-container">
+                    <!-- Search Bar -->
+                        <div class="search-bar">
+
+                            <input type="text" placeholder="Search">
+                            <button type="button" class="search-button">
+                                <i class="uil uil-search"></i>
+                            </button>
+                        </div>
+
+                    <!-- Filter Dropdown -->
+                    <div class="filter-dropdown">
+                        <button class="filter-btn" onclick="toggleDropdown(this)">
+                            Sort: <span class="selected-filter">Select</span>
+                        </button>
+                        <ul class="dropdown-content">
+                            <li><input type="checkbox" onclick="selectOption(this, 'filter')" /><label>Earliest</label></li>
+                            <li><input type="checkbox" onclick="selectOption(this, 'filter')" /><label>Latest</label></li>
+                        </ul>
+                    </div>
+
+                </div>
+                
+                <div class="tab_box-container">
+                    <button class="tab_btn active">Pending</button>
+                    <button class="tab_btn">Approved</button>
+                    <button class="tab_btn">Declined</button>
+                </div>
+
+                <div class="resident_label_request-container">
+                    <p>No.</p>
+                    <p>First Name</p>
+                    <p>Last Name</p>
+                    <p>Contact No.</p>
+                    <p>Birthdate</p>
+                    <p>Gender</p>
+                    <p>Date & Time</p>
+                    <p>Status</p>
+                    <p>Details</p>
+                    <p>Remarks & Actions</p>
+                </div>
+                <div class="request_container">
+                    <div class="request active">
+                        <div class="resident_request-container">
+                            <p>1</p>
+                            <p>Ichigo</p>
+                            <p>Kurosaki</p>
+                            <p>0999395699</p>
+                            <p>12/30/2003</p>
+                            <p>Male</p>
+                            <p>2024-10-12 13:02</p>
+                            <p class="request_pending">Pending</p>
+                            <button class="details_button">Details</button>
+                            <button class="approve_button">Approve</button>
+                            <button class="decline_button">Decline</button>
+                        </div>
+                    </div>
+
+                    <div class="request">
+                        <div class="resident_request-container">
+                            <p>1</p>
+                            <p>Ichigo</p>
+                            <p>Kurosaki</p>
+                            <p>0999395699</p>
+                            <p>12/30/2003</p>
+                            <p>Male</p>
+                            <p>2024-10-12 13:02</p>
+                            <p class="request_approved">Approved</p>
+                            <button class="details_button">Details</button>
+                            <button class="remarks_button">Remarks</button>
+                            <button class="delete_post-button">Delete</button>
+                        </div>
+                    </div>
+
+                    <div class="request">
+                        <div class="resident_request-container">
+                            <p>1</p>
+                            <p>Ichigo</p>
+                            <p>Kurosaki</p>
+                            <p>0999395699</p>
+                            <p>12/30/2003</p>
+                            <p>Male</p>
+                            <p>2024-10-12 13:02</p>
+                            <P class="request_declined">Declined</P>
+                            <button class="details_button">Details</button>
+                            <button class="remarks_button">Remarks</button>
+                            <button class="delete_post-button">Delete</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <!-------------- END OF BARANGAY RESIDENTS APPROVAL -------------->
+
+        <div id="barangayFeedbackResponses"  class="container parent_request-container">
+            <div class="barangay_request-container">
+                <div class="header_request-container">
+                    <h3>Resident Feedback</h3>
+                </div>
+
+                <div class="tab_box-container">
+                    <button class="tab_btn active">Responses</button>
+                </div>
+
+                <div class="feedback_label_request-container">
+                    <p>No.</p>
+                    <p>Date & Time</p>
+                    <p>Ratings</p>
+                    <p>Feedback</p>
+                </div>
+
+                <div class="request_container">
+                    <div class="request active">
+                        <div class="feedback_request-container">
+                            <p>1</p>
+                            <p>2024-10-12 13:02</p>
+                            <p>5</p>
+                            <button class="feedback_button">Feedback</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <!-------------- END OF FEEDBACK RESPONSES -------------->
+
+        <div id="responseModal" class="modal">
+            <form class="modal-content">
+                <span class="close-button">&times;</span>
+                <h4>Approve Remarks:</h4>
+                <textarea rows="10"></textarea>
+                <h4>Date Reviewed:</h4>
+                <input type="date" required>
+                <button class="btn">Approve</button>
+            </form>
+        </div>
+    <!-------------- END OF MODAL APPROVE FOR RESIDENT APPROVAL -------------->
+
+        <div id="feedbackModal" class="modal">
+            <div class="modal-content">
+                <span class="close-button">&times;</span>
+                <div class="req_details">
+                    <h4>Feedback:</h4>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda architecto inventore quia labore molestias adipisci non cumque dolorum laboriosam veritatis sunt dolores pariatur sit explicabo accusantium quas, ut quod ab.</p>
+                </div>
+            </div>
+        </div>
+    <!-------------- END OF VIEW FEEDBACK MODAL -------------->
+        
+        <div id="declineModal" class="modal">
+            <form class="modal-content">
+                <span class="close-button">&times;</span>
+                <h4>Decline Remarks:</h4>
+                <textarea rows="10"></textarea>
+                <h4>Date Reviewed:</h4>
+                <input type="date" required>
+                <button class="btn">Decline</button>
+            </form>
+        </div>
+    <!-------------- END OF MODAL DECLINE FOR RESIDENT APPROVAL-------------->
+
+        <div id="deletePostModal" class="modal">
+            <form class="modal-content">
+                <h4>Delete Record?</h4>
+                <div class="delete_actions-m">
+                    <button class="delete_button-m btn">Delete</button>
+                    <button class="cancelDelete btn">Cancel</button>
+                </div>
+            </form>
+        </div>
+    <!-------------- END OF MODAL DELETE FOR RESIDENT APPROVAL -------------->  
+
+        <div id="detailModal" class="modal">
+            <div class="modal-content">
+                <span class="close-button">&times;</span>
+                <div class="req_details">
+                    <h4>Email Address:</h4>
+                    <p>ichigo.kurosaki@gmail.com</p>
+                </div>
+                <div class="req_details">
+                    <h4>Physical Address:</h4>
+                    <p>123 Block St.</p>
+                </div>
+                <div class="req_details">
+                    <h4>Proof of Residency:</h4>
+                    <p><a href="path/to/proof_of_residency.pdf" target="_blank">proof_residency.pdf</a></p>
+                </div>
+            </div>
+        </div>
+    <!-------------- END OF MODAL VIEW DETAILS FOR RESIDENT APPROVAL -------------->
+
+        <div id="remarksModal" class="modal">
+            <div class="modal-content">
+                <span class="close-button">&times;</span>
+                <div class="req_details">
+                    <h4>Remarks:</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates, nesciunt aspernatur! Ipsa consectetur porro delectus, voluptas alias sunt beatae optio recusandae quibusdam minima earum fugiat possimus ea soluta quae debitis!</p>
+                </div>
+                <div class="req_details">
+                    <h4>Date Reviewed:</h4>
+                    <p>December 2, 2024 - 3:10 PM</p>
+                </div>
+            </div>
+        </div>
+    <!-------------- END OF MODAL VIEW REMARKS FOR RESIDENT APPROVAL -------------->
+
+        <div id="addPeopleModal" class="add_people-modal">
+            <div class="add_people-modal-container">
+                <div class="close_button-container">
+                    <h4>Add Resident</h4>
+                    <button class="close_button">Close</button>
+                </div>
+                <div class="add_people-modal-content">
+                    <div class="add_people_fields-container">
+                        <form enctype="multipart/form-data">
+                            <div class="form_control">
+                                <label for="first-name">First Name</label>
+                                <input type="text" id="first-name" name="first-name" placeholder="First Name" value="Jane" required>
+                            </div>
+                            
+                            <div class="form_control">
+                                <label for="last-name">Last Name</label>
+                                <input type="text" id="last-name" name="last-name" placeholder="Last Name" required>
+                            </div>
+                            
+                            <div class="form_control">
+                                <label for="address">Address</label>
+                                <input type="text" id="address" name="address" placeholder="Address" required>
+                            </div>
+                            
+                            <div class="form_control">
+                                <label for="email">Email Address</label>
+                                <input type="email" id="email" name="email" placeholder="Email Address" required>
+                            </div>
+                            
+                            <div class="form_control">
+                                <label for="contact-number">Contact Number</label>
+                                <input type="tel" id="phone" name="phone" maxlength="11" pattern="\d{11}" placeholder="Contact Number" required>
+                            </div>
+                            
+                            <div class="form_control">
+                                <label for="birthdate">Birthdate</label>
+                                <input type="date" id="birthdate" name="birthdate" required>
+                            </div>
+                            
+                            <div class="form_control">
+                                <label for="gender">Gender</label>
+                                <select id="gender" name="gender" required>
+                                    <option disabled selected> Select Gender</option>
+                                    <option value="Male">Male</option>
+                                    <option value="Female">Female</option>
+                                    <option value="Other">Other</option>
+                                </select>
+                            </div>
+
+                            <div class="form_control">
+                                <label for="proof-residency">Proof of Residency:</label>
+                                <input type="file" id="proof" name="proof_of_residency" accept=".pdf, .jpg, .png" required>
+                            </div>
+
+                            <div class="profile_button-container">
+                                <label for="update">Click below to add resident</label>
+                                <button type="submit" class="btn confirmation">Add Resident</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <!-------------- END MODAL OF ADD PEOPLE FOR RESIDENT APPROVAL-------------->
+
+        <div id="confirmationModal" class="modal">
+            <form class="modal_content-action">
+                <h4>Add Resident</h4>
+                <p>Are you sure you want to add this resident?</p>
+                <div class="button_action-container">
+                    <button class="btn submit-modal-m">Confirm</button>
+                    <button class="btn cancel-modal-m">Cancel</button>
+                </div>
+            </form>
+        </div> 
+    <!-------------- END OF MODAL CONFIRMATION FOR RESIDENT APPROVAL -------------->
+    </main>
+</body>

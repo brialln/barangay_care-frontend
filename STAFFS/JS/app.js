@@ -2,9 +2,159 @@
     * This file contains the General Javascript functions for the ADMIN.
 */
 
-/*
-    * This file contains the General Javascript functions for the ADMIN.
-*/
+// Function for access control
+document.addEventListener("DOMContentLoaded", () => {
+    // Ensure this script runs only on the page with the specific ID
+    const mainElement = document.querySelector("main#restricted-page");
+    if (mainElement) {
+        const restrictedSection = document.querySelector(".opacity_access");
+
+        const userAuthorized = false; // Set dynamically based on your logic
+
+        if (!userAuthorized) {
+            showPopupMessage("You do not have access to this page.");
+            restrictedSection.style.pointerEvents = "none";
+        }
+    }
+});
+
+function showPopupMessage(message) {
+    const popup = document.createElement("div");
+    popup.className = "popup-message";
+    popup.textContent = message;
+    document.body.appendChild(popup);
+}
+
+
+// Function to handle file previews (Add Post and Edit Post)
+document.addEventListener('change', function (event) {
+    // Check if the changed element is a file input with id="thumbnail"
+    if (event.target.id === 'thumbnail') {
+        const formSection = event.target.closest('.form_section');
+        const imagePreview = formSection.querySelector('.image_preview, .imagePreview'); // Handle both "image_preview" and "imagePreview"
+        const previewImg = imagePreview.querySelector('img');
+        const previewDoc = imagePreview.querySelector('iframe') || document.createElement('iframe');
+        const fileName = imagePreview.querySelector('p#fileName') || document.createElement('p');
+
+        // Ensure necessary elements are in place
+        if (!previewDoc.id) {
+            previewDoc.id = 'previewDoc';
+            previewDoc.style.display = 'none';
+            previewDoc.style.width = '100%';
+            previewDoc.style.height = '600px';
+            imagePreview.appendChild(previewDoc);
+        }
+        if (!fileName.id) {
+            fileName.id = 'fileName';
+            fileName.style.display = 'none';
+            imagePreview.appendChild(fileName);
+        }
+
+        if (event.target.files && event.target.files[0]) {
+            const file = event.target.files[0];
+            const fileType = file.type;
+
+            // Reset preview
+            previewImg.style.display = 'none';
+            previewDoc.style.display = 'none';
+            fileName.style.display = 'none';
+
+            if (fileType.startsWith('image/')) {
+                // Image preview
+                const reader = new FileReader();
+                reader.onload = function (e) {
+                    previewImg.src = e.target.result; // Set the preview image source
+                    previewImg.style.display = 'block'; // Show the image preview
+                };
+                reader.readAsDataURL(file); // Read the file as a data URL
+            } else if (fileType === 'application/pdf') {
+                // PDF preview
+                const reader = new FileReader();
+                reader.onload = function (e) {
+                    previewDoc.src = e.target.result; // Set the iframe source for PDF
+                    previewDoc.style.display = 'block'; // Show the iframe
+                };
+                reader.readAsDataURL(file);
+            } else if (
+                fileType === 'application/msword' ||
+                fileType === 'application/vnd.openxmlformats-officedocument.wordprocessingml.document'
+            ) {
+                // Word document preview (show file name)
+                fileName.textContent = `Selected File: ${file.name}`;
+                fileName.style.display = 'block'; // Show the file name
+            } else {
+                alert('Unsupported file type');
+            }
+
+            imagePreview.style.display = 'block'; // Show the preview container
+        } else {
+            // No file selected, reset previews
+            previewImg.src = '';
+            previewImg.style.display = 'none';
+            previewDoc.style.display = 'none';
+            fileName.style.display = 'none';
+            imagePreview.style.display = 'none';
+        }
+    }
+});
+
+// Back Button Function
+document.addEventListener("DOMContentLoaded", () => {
+    const backButton = document.getElementById("backButton");
+
+    // Store the referrer in sessionStorage if not from a form submission
+    if (document.referrer && !sessionStorage.getItem("submittedForm")) {
+        sessionStorage.setItem("prevPage", document.referrer);
+    }
+
+    // Reset submittedForm flag on load
+    sessionStorage.removeItem("submittedForm");
+
+    if (backButton) {
+        backButton.addEventListener("click", () => {
+            const prevPage = sessionStorage.getItem("prevPage");
+            if (prevPage) {
+                window.location.href = prevPage;
+            } else {
+                // Optional: Fallback behavior
+                window.history.back();
+            }
+        });
+    }
+
+    // Handle modal form submissions
+    const modalForms = document.querySelectorAll(".modal-content");
+    modalForms.forEach(form => {
+        form.addEventListener("submit", (e) => {
+            e.preventDefault(); // Prevent page reload
+            const actionButton = e.submitter; // Get the clicked button
+
+            if (actionButton.classList.contains("delete_button-m")) {
+                // Handle "Delete" action
+                console.log("Post deleted!");
+                sessionStorage.setItem("submittedForm", true);
+            } else if (actionButton.classList.contains("restore_button")) {
+                // Handle "Restore" action
+                console.log("Post restored!");
+                sessionStorage.setItem("submittedForm", true);
+            }
+
+            // Close the modal (you can add modal-specific logic here)
+            const modal = form.closest(".modal");
+            if (modal) modal.style.display = "none";
+        });
+    });
+
+    // Optional: Add event listeners for cancel buttons
+    const cancelButtons = document.querySelectorAll(".cancelDelete");
+    cancelButtons.forEach(cancelButton => {
+        cancelButton.addEventListener("click", (e) => {
+            e.preventDefault(); // Prevent default button action
+            const modal = cancelButton.closest(".modal");
+            if (modal) modal.style.display = "none";
+        });
+    });
+});
 
 // Helper function for handling tab switching
 function handleTabSwitching(tabsSelector, contentSelector) {
@@ -38,6 +188,8 @@ handleTabSwitching('#barangayHealthAlertsRequest .tab_btn', '#barangayHealthAler
 handleTabSwitching('#barangayResidentApproval .tab_btn', '#barangayResidentApproval .request');
 handleTabSwitching('#barangayFeedbackResponses .tab_btn', '#barangayFeedbackResponses .request');
 handleTabSwitching('#barangayStaffApproval .tab_btn', '#barangayStaffApproval .request');
+handleTabSwitching('#barangaySangguniangBarangaySection .tab_btn', '#barangaySangguniangBarangaySection .request');
+handleTabSwitching('#barangaySangguniangKabataanSection .tab_btn', '#barangaySangguniangKabataanSection .request');
 
 // ----------------------------------- Function for Dropdown Sort and Filter -----------------------------------
 // Toggle dropdown visibility for each button individually
@@ -94,13 +246,23 @@ document.addEventListener('DOMContentLoaded', function() {
         { id: 'deleteModal', class: 'delete_button-m' },
         { id: 'restoreModal', class: 'restore_button' },
         { id: 'detailModal', class: 'details_button' },
+        { id: 'viewModal', class: 'view_button' },
         { id: 'remarksModal', class: 'remarks_button' },
         { id: 'resolveModal', class: 'resolve_button' },
-        { id: 'editModal', class: 'edit_button-m' },
-        { id: 'deleteEmergencyModal', class: 'delete_emergency-m' },
-        { id: 'editActionModal', class: 'edit_button-action'},
-        { id: 'deleteActionModal', class: 'delete_button-action'},
         { id: 'feedbackModal', class: 'feedback_button' },
+        { id: 'addPostModal', class: 'add_post-button' },
+        { id: 'editPostModal', class: 'edit_post-button' },
+        { id: 'deletePostModal', class: 'delete_post-button' },
+        { id: 'editPostModalOne', class: 'edit_post-button-one' },
+        { id: 'editPostModalTwo', class: 'edit_post-button-two' },
+        { id: 'detailModalOne', class: 'details_button-one' },
+        { id: 'addPostModalOne', class: 'add_post-button-one' },
+        { id: 'detailModalTwo', class: 'details_button-two' },
+        { id: 'deletePostModalOne', class: 'delete_post-button-one' },
+        { id: 'addPostPublication', class: 'add_publication-button'},
+        { id: 'editPostPublication', class: 'edit_publication-button'},
+        { id: 'detailPublication', class: 'details_publication-button'},
+        { id: 'editPostModalThree', class: 'edit_post-button-three' },
     ];
 
     modals.forEach(modalInfo => {

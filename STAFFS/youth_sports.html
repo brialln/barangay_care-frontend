@@ -12,17 +12,14 @@
     
         <!-- CSS Stylesheets -->
         <link rel="stylesheet" href="CSS/style.css">
+        <link rel="stylesheet" href="CSS/manage_post.css">
+        <link rel="stylesheet" href="CSS/trash.css">
         <link rel="stylesheet" href="CSS/authentication.css">
-        <link rel="stylesheet" href="CSS/action_modal.css">
-        <link rel="stylesheet" href="CSS/profile.css">
-        <link rel="stylesheet" href="CSS/about.css">
         <link rel="stylesheet" href="CSS/central_request.css">
+        <link rel="stylesheet" href="CSS/action_modal.css">
         <link rel="stylesheet" href="CSS/community_development.css">
-        <link rel="stylesheet" href="CSS/contact.css">
-        <link rel="stylesheet" href="CSS/disaster_preparedness.css">
-        <link rel="stylesheet" href="CSS/publications.css">
-        <link rel="stylesheet" href="CSS/women_welfare.css">
-        <link rel="stylesheet" href="CSS/youth_sports.css">
+        <link rel="stylesheet" href="CSS/dashboard.css">
+        <link rel="stylesheet" href="CSS/profile.css">
     
         <!-- Iconscout CDN -->
         <link href="https://unicons.iconscout.com/release/v4.0.8/css/line.css" rel="stylesheet">
@@ -30,7 +27,12 @@
         <!-- JavaScript Files -->
         <script src="./JS/app.js" defer></script>
         <script src="./JS/sidebar.js" defer></script>
+        <script src="./JS/charts.js" defer></script>
+        <script src="./JS/complaint_analytics.js" defer></script>
+        <script src="./JS/emergency_analytics.js" defer></script>
+        <script src="./JS/idea_analytics.js" defer></script>
         <script src="./JS/threads.js" defer></script>
+        <script src="./JS/threads_analytics.js" defer></script>
     </head>
 <body>
     <div id="sidebar-container"></div>
@@ -44,289 +46,143 @@
    </div>
     <!-------------- END OF ADMIN BANNER SECTION -------------->
 
-    <div class="container posts">
-        <h3>Youth & Sports</h3>
-        <div class="reusable_services-container">
-            <h4>Milestones</h4>
-            <div class="posts_container">
-                <article class="post">
-                    <div class="post_thumbnail">
-                        <a href="post.html"><img src="./IMAGES/pamplona_logo.JPG"></a>
+    <div id="barangayMilestoneSection"  class="container parent_request-container">
+        <h3>Youth & Sports Page</h3>
+        <div class="barangay_manage-container">
+            <div class="header_manage-container">
+                <h3>Youth & Sports Milestones</h3>
+                <div class="header_button-container">
+                    <button class="add_post-button">Add Post</button>
+                    <a href="trash_article.html">
+                        <button class="trash_button">
+                            Trash
+                            <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#321E1E"><path d="M200-80q-33 0-56.5-23.5T120-160v-451q-18-11-29-28.5T80-680v-120q0-33 23.5-56.5T160-880h640q33 0 56.5 23.5T880-800v120q0 23-11 40.5T840-611v451q0 33-23.5 56.5T760-80H200Zm0-520v440h560v-440H200Zm-40-80h640v-120H160v120Zm200 280h240v-80H360v80Zm120 20Z"/></svg>
+                        </button>
+                    </a>
+                </div>
+            </div>
+
+            <div class="tab_box-container">
+                <button class="tab_btn active">Manage Post</button>
+            </div>
+            <div class="manage_label-article">
+                <p>No.</p>
+                <p>Title</p>
+                <p>Category</p>
+                <p>Details</p>
+                <p>Edit</p>
+                <p>Delete</p>
+            </div>
+            <div class="request_container">
+                <div class="request active">
+                    <div class="manage_post-article">
+                        <p>1</p>
+                        <p class="truncate">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deleniti vitae vero temporibus, aliquam neque excepturi repudiandae sint accusamus officia pariatur delectus dignissimos voluptatem voluptas quis accusantium consectetur modi natus et.</p>
+                        <p>Health</p>
+                        <button class="details_button-one">Details</button>
+                        <button class="edit_post-button">Edit</button>
+                        <button class="delete_post-button-one">Delete</button>
                     </div>
-                    <div class="post_info">
-                        <a href="" class="category_button">Youth & Sports</a>
-                        <h3 class="post_title"><a href="post.html">Lorem ipsum dolor sit amet consectetur</a></h3>
-                        <p class="post_body">
-                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's 
-                            standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
-                        </p>
-    
-                        <div class="post_author">
-                            <div class="post_author-avatar">
-                                <img src="IMAGES/pamplona_logo.JPG" alt="">
-                            </div>
-                            <div class="post_author-info">
-                                <h5>By: Barangay Staff Jane</h5>
-                                <small>October 18, 2022 - 03:51PM</small>
-                            </div>
-                        </div>
-                    </div>
-                </article>
-    
-                <article class="post">
-                    <div class="post_thumbnail">
-                        <a href="post.html"><img src="./IMAGES/pamplona_header.jpg"></a>
-                    </div>
-                    <div class="post_info">
-                        <a href="" class="category_button">Youth & Sports</a>
-                        <h3 class="post_title"><a href="post.html">Lorem ipsum dolor sit amet consectetur</a></h3>
-                        <p class="post_body">
-                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's 
-                            standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.                     
-                        </p>
-                        <div class="post_author">
-                            <div class="post_author-avatar">
-                                <img src="IMAGES/pamplona_logo.JPG" alt="">
-                            </div>
-                            <div class="post_author-info">
-                                <h5>By: Barangay Staff Jane</h5>
-                                <small>October 18, 2022 - 03:51PM</small>
-                            </div>
-                        </div>
-                    </div>
-                </article>
-    
-                <article class="post">
-                    <div class="post_thumbnail">
-                        <a href="post.html"><img src="./IMAGES/pamplona_header.jpg"></a>
-                    </div>
-                    <div class="post_info">
-                        <a href="" class="category_button">Youth & Sports</a>
-                        <h3 class="post_title"><a href="post.html">Lorem ipsum dolor sit amet consectetur</a></h3>
-                        <p class="post_body">
-                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's 
-                            standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
-                        </p>
-                        <div class="post_author">
-                            <div class="post_author-avatar">
-                                <img src="IMAGES/pamplona_logo.JPG" alt="">
-                            </div>
-                            <div class="post_author-info">
-                                <h5>By: Barangay Staff Jane</h5>
-                                <small>October 18, 2022 - 03:51PM</small>
-                            </div>
-                        </div>
-                    </div>
-                </article>
+                </div>
             </div>
         </div>
     </div>
-    <!-------------- END OF MILESTONES SECTION -------------->
-    
-    <div class="form_section">
-        <div class="container form_section-container">
-            <h2>Add Community Milestone</h2>
-            <form action="" enctype="multipart/form-data">
-                <input type="text" placeholder="Title">
-                <select>
-                    <option disabled selected>Select Category</option>
-                    <option value="community_development">Community Development</option>
-                </select>
-                <div class="form_control">
-                    <label for="thumbnail">Add Thumbnail</label>
-                    <input type="file" id="thumbnail">
-                </div>
-                <textarea rows="10" name="Description" placeholder="Description"></textarea>
-                <button type="submit" class="btn">Add Milestone</button>
-            </form>
-        </div>
-    </div>
-    <!-------------- END OF ADD MILESTONES -------------->
+    <!-------------- END OF YOUTH & SPOTTS MILESTONE SECTION -------------->
 
-    <div class="container posts">
-        <div class="reusable_services-container">
-            <h4>Accomplishments</h4>
-            <div class="posts_container">
-                <article class="post">
-                    <div class="post_thumbnail">
-                        <a href="post.html"><img src="./IMAGES/pamplona_logo.JPG"></a>
+    <div id="barangayAccomplishmentSection"  class="container parent_request-container">
+        <div class="barangay_manage-container">
+            <div class="header_manage-container">
+                <h3>Youth & Sports Accomplishment</h3>
+                <div class="header_button-container">
+                    <button class="add_post-button">Add Post</button>
+                    <a href="trash_article.html">
+                        <button class="trash_button">
+                            Trash
+                            <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#321E1E"><path d="M200-80q-33 0-56.5-23.5T120-160v-451q-18-11-29-28.5T80-680v-120q0-33 23.5-56.5T160-880h640q33 0 56.5 23.5T880-800v120q0 23-11 40.5T840-611v451q0 33-23.5 56.5T760-80H200Zm0-520v440h560v-440H200Zm-40-80h640v-120H160v120Zm200 280h240v-80H360v80Zm120 20Z"/></svg>
+                        </button>
+                    </a>
+                </div>
+            </div>
+
+            <div class="tab_box-container">
+                <button class="tab_btn active">Manage Post</button>
+            </div>
+            <div class="manage_label-article">
+                <p>No.</p>
+                <p>Title</p>
+                <p>Category</p>
+                <p>Details</p>
+                <p>Edit</p>
+                <p>Delete</p>
+            </div>
+            <div class="request_container">
+                <div class="request active">
+                    <div class="manage_post-article">
+                        <p>1</p>
+                        <p class="truncate">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deleniti vitae vero temporibus, aliquam neque excepturi repudiandae sint accusamus officia pariatur delectus dignissimos voluptatem voluptas quis accusantium consectetur modi natus et.</p>
+                        <p>Health</p>
+                        <button class="details_button-one">Details</button>
+                        <button class="edit_post-button">Edit</button>
+                        <button class="delete_post-button-one">Delete</button>
                     </div>
-                    <div class="post_info">
-                        <a href="" class="category_button">Youth & Sports</a>
-                        <h3 class="post_title"><a href="post.html">Lorem ipsum dolor sit amet consectetur</a></h3>
-                        <p class="post_body">
-                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's 
-                            standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
-                        </p>
-    
-                        <div class="post_author">
-                            <div class="post_author-avatar">
-                                <img src="IMAGES/pamplona_logo.JPG" alt="">
-                            </div>
-                            <div class="post_author-info">
-                                <h5>By: Barangay Staff Jane</h5>
-                                <small>October 18, 2022 - 03:51PM</small>
-                            </div>
-                        </div>
-                    </div>
-                </article>
-    
-                <article class="post">
-                    <div class="post_thumbnail">
-                        <a href="post.html"><img src="./IMAGES/pamplona_header.jpg"></a>
-                    </div>
-                    <div class="post_info">
-                        <a href="" class="category_button">Youth & Sports</a>
-                        <h3 class="post_title"><a href="post.html">Lorem ipsum dolor sit amet consectetur</a></h3>
-                        <p class="post_body">
-                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's 
-                            standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.                     
-                        </p>
-                        <div class="post_author">
-                            <div class="post_author-avatar">
-                                <img src="IMAGES/pamplona_logo.JPG" alt="">
-                            </div>
-                            <div class="post_author-info">
-                                <h5>By: Barangay Staff Jane</h5>
-                                <small>October 18, 2022 - 03:51PM</small>
-                            </div>
-                        </div>
-                    </div>
-                </article>
-    
-                <article class="post">
-                    <div class="post_thumbnail">
-                        <a href="post.html"><img src="./IMAGES/pamplona_header.jpg"></a>
-                    </div>
-                    <div class="post_info">
-                        <a href="" class="category_button">Youth & Sports</a>
-                        <h3 class="post_title"><a href="post.html">Lorem ipsum dolor sit amet consectetur</a></h3>
-                        <p class="post_body">
-                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's 
-                            standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
-                        </p>
-                        <div class="post_author">
-                            <div class="post_author-avatar">
-                                <img src="IMAGES/pamplona_logo.JPG" alt="">
-                            </div>
-                            <div class="post_author-info">
-                                <h5>By: Barangay Staff Jane</h5>
-                                <small>October 18, 2022 - 03:51PM</small>
-                            </div>
-                        </div>
-                    </div>
-                </article>
+                </div>
             </div>
         </div>
     </div>
-    <!-------------- END OF ACCOMPLISHMENTS SECTION -------------->
+    <!-------------- END OF YOUTH & SPORTS ACCOMPLISHMENT SECTION -------------->
 
-    <div class="form_section">
-        <div class="container form_section-container">
-            <h2>Add Community Accomplishment</h2>
-            <form action="" enctype="multipart/form-data">
-                <input type="text" placeholder="Title">
-                <select>
-                    <option disabled selected>Select Category</option>
-                    <option value="community_development">Community Development</option>
-                </select>
-                <div class="form_control">
-                    <label for="thumbnail">Add Thumbnail</label>
-                    <input type="file" id="thumbnail">
+    <div id="barangaySportsEventSection"  class="container parent_request-container">
+        <div class="barangay_manage-container">
+            <div class="header_manage-container">
+                <h3>Barangay Sports Events</h3>
+                <div class="header_button-container">
+                    <button class="add_post-button-one">Add Post</button>
+                    <a href="trash_sportsevent.html">
+                        <button class="trash_button">
+                            Trash
+                            <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#321E1E"><path d="M200-80q-33 0-56.5-23.5T120-160v-451q-18-11-29-28.5T80-680v-120q0-33 23.5-56.5T160-880h640q33 0 56.5 23.5T880-800v120q0 23-11 40.5T840-611v451q0 33-23.5 56.5T760-80H200Zm0-520v440h560v-440H200Zm-40-80h640v-120H160v120Zm200 280h240v-80H360v80Zm120 20Z"/></svg>
+                        </button>
+                    </a>
                 </div>
-                <textarea rows="10" name="Description" placeholder="Description"></textarea>
-                <button type="submit" class="btn">Add Accomplishment</button>
-            </form>
+            </div>
+
+            <div class="tab_box-container">
+                <button class="tab_btn active">Manage Post</button>
+            </div>
+            <div class="manage_post-container">
+                <p>No.</p>
+                <p>Title</p>
+                <p>Details</p>
+                <p>Edit</p>
+                <p>Delete</p>
+            </div>
+            <div class="request_container">
+                <div class="request active">
+                    <div class="manage_post">
+                        <p>1</p>
+                        <p class="truncate">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deleniti vitae vero temporibus, aliquam neque excepturi repudiandae sint accusamus officia pariatur delectus dignissimos voluptatem voluptas quis accusantium consectetur modi natus et.</p>
+                        <button class="details_button-two">Details</button>
+                        <button class="edit_post-button-one">Edit</button>
+                        <button class="delete_post-button-one">Delete</button>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-    <!-------------- END OF ADD ACCOMPLISHMENT -------------->
-
-    <div class="container sports_events">
-        <h3>Upcoming Sports Events</h3>
-        <div class="sports_event-container">
-            <article class="sports_event">
-                <div class="sports_event-icon">
-                    <i class="uil uil-angle-down"></i>
-                </div>
-    
-                <div class="title_description">
-                    <h4>Shohoku vs Kainan: November 22, 2024</h4>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum, o
-                        fficia blanditiis tempora sed voluptas eum unde placeat, autem in quas aut dicta? Cupiditate, 
-                        voluptas perferendis. Voluptatem soluta qui iure porro!
-                    </p>
-                </div>
-
-                <div class="edit_action-button-container">
-                    <button class="btn edit_button-action">Edit</button>
-                    <button class="btn delete_button-action">Delete</button>
-                </div>
-            </article>
-    
-            <article class="sports_event">
-                <div class="sports_event-icon">
-                    <i class="uil uil-angle-down"></i>
-                </div>
-    
-                <div class="title_description">
-                    <h4>Seirin vs Kaijo: November 22, 2024</h4>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum, o
-                        fficia blanditiis tempora sed voluptas eum unde placeat, autem in quas aut dicta? Cupiditate, 
-                        voluptas perferendis. Voluptatem soluta qui iure porro!
-                    </p>
-                </div>
-
-                <div class="edit_action-button-container">
-                    <button class="btn edit_button-action">Edit</button>
-                    <button class="btn delete_button-action">Delete</button>
-                </div>
-            </article>
-    
-            <article class="sports_event">
-                <div class="sports_event-icon">
-                    <i class="uil uil-angle-down"></i>
-                </div>
-    
-                <div class="title_description">
-                    <h4>Karasuno vs Nekoma: November 23, 2024</h4>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum, o
-                        fficia blanditiis tempora sed voluptas eum unde placeat, autem in quas aut dicta? Cupiditate, 
-                        voluptas perferendis. Voluptatem soluta qui iure porro!
-                    </p>
-                </div>
-
-                <div class="edit_action-button-container">
-                    <button class="btn edit_button-action">Edit</button>
-                    <button class="btn delete_button-action">Delete</button>
-                </div>
-            </article>
-        </div>
-    </div>
-    <!-------------- END OF SPORTS EVENTS SECTION -------------->
-
-    <div class="form_section">
-        <div class="container form_section-container">
-            <h2>Add Sports Event</h2>
-            <form action="" enctype="multipart/form-data">
-                <input type="text" placeholder="Title">
-                <textarea rows="10" name="Description" placeholder="Description"></textarea>
-                <button type="submit" class="btn">Add Event</button>
-            </form>
-        </div>
-    </div>
-    <!-------------- END OF ADD SPORTS EVENT -------------->
+    <!-------------- END OF UPCOMING SPORTS EVENT SECTION -------------->
 
     <div id="barangayYouthSportsRequest"  class="container parent_request-container">
         <div class="barangay_request-container">
             <div class="header_request-container">
                 <h3>Youth & Sports Application</h3>
-                <button class="trash_button trash_youthsports">
-                    Trash
-                    <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#03045E"><path d="M200-80q-33 0-56.5-23.5T120-160v-451q-18-11-29-28.5T80-680v-120q0-33 23.5-56.5T160-880h640q33 0 56.5 23.5T880-800v120q0 23-11 40.5T840-611v451q0 33-23.5 56.5T760-80H200Zm0-520v440h560v-440H200Zm-40-80h640v-120H160v120Zm200 280h240v-80H360v80Zm120 20Z"/></svg>
-                </button>
+                <div class="header_button-container">
+                    <a href="trash_youthsports.html">
+                        <button class="trash_button">
+                            Trash
+                            <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#321E1E"><path d="M200-80q-33 0-56.5-23.5T120-160v-451q-18-11-29-28.5T80-680v-120q0-33 23.5-56.5T160-880h640q33 0 56.5 23.5T880-800v120q0 23-11 40.5T840-611v451q0 33-23.5 56.5T760-80H200Zm0-520v440h560v-440H200Zm-40-80h640v-120H160v120Zm200 280h240v-80H360v80Zm120 20Z"/></svg>
+                        </button>
+                    </a>
+                </div>
             </div>
 
             <div class="search-filter-container">
@@ -393,7 +249,7 @@
                         <p class="request_approved">Approved</p>
                         <button class="details_button">Details</button>
                         <button class="remarks_button">Remarks</button>
-                        <button class="delete_button-m">Delete</button>
+                        <button class="delete_post-button">Delete</button>
                     </div>
                 </div>
 
@@ -407,7 +263,7 @@
                         <P class="request_declined">Declined</P>
                         <button class="details_button">Details</button>
                         <button class="remarks_button">Remarks</button>
-                        <button class="delete_button-m">Delete</button>
+                        <button class="delete_post-button">Delete</button>
                     </div>
                 </div>
             </div>
@@ -415,31 +271,6 @@
     </div>
     <!-------------- END OF YOUTH & SPORTS APPLICATION -------------->
 
-        <div id="editActionModal" class="modal">
-            <form class="modal_content-action">
-                <h4>Edit Sports Event Title</h4>
-                <input type="text" placeholder="Sports Event Title">
-                <h4>Edit Description</h4>
-                <textarea placeholder="Sports Event Description" rows="5"></textarea>
-                <div class="button_action-container">
-                    <button class="btn">Save</button>
-                    <button class="btn cancelButton">Cancel</button>
-                </div>
-            </form>
-        </div>
-        <!-------------- END OF MODAL EDIT ACTION FOR SPORTS EVENT -------------->  
-    
-        <div id="deleteActionModal" class="modal">
-            <form class="modal_content-action">
-                <h4>Delete Sports Event</h4>
-                <p>Are you sure you want to delete this sports event?</p>
-                <div class="button_action-container">
-                    <button class="btn">Delete</button>
-                    <button class="btn cancelButton">Cancel</button>
-                </div>
-            </form>
-        </div>
-        <!-------------- END OF MODAL DELETE ACTION FOR SPORTS EVENT -------------->  
 
         <div id="responseModal" class="modal">
             <form class="modal-content">
@@ -451,7 +282,7 @@
                 <button class="btn">Approve</button>
             </form>
         </div>
-    <!-------------- END OF MODAL APPROVE BUTTON CLICK EXPAND -------------->
+    <!-------------- END OF MODAL APPROVE FOR YOUTH & SPORTS APPLICATION -------------->
         
         <div id="declineModal" class="modal">
             <form class="modal-content">
@@ -463,9 +294,9 @@
                 <button class="btn">Decline</button>
             </form>
         </div>
-    <!-------------- END OF MODAL DECLINE BUTTON CLICK EXPAND -------------->
+    <!-------------- END OF MODAL DECLINE FOR YOUTH & SPORTS APPLICATION -------------->
 
-        <div id="deleteModal" class="modal">
+        <div id="deletePostModal" class="modal">
             <form class="modal-content">
                 <h4>Delete Request?</h4>
                 <div class="delete_actions-m">
@@ -474,18 +305,7 @@
                 </div>
             </form>
         </div>
-    <!-------------- END OF MODAL DELETE REQUEST BUTTON CLICK EXPAND -------------->  
-
-        <div id="restoreModal" class="modal">
-            <form class="modal-content">
-                <h4>Restore Request?</h4>
-                <div class="restore_actions-m">
-                    <button class="restore_button btn">Restore</button>
-                    <button class="cancelDelete btn">Cancel</button>
-                </div>
-            </form>
-        </div>
-    <!-------------- END OF MODAL RESTORE BUTTON CLICK EXPAND -------------->  
+    <!-------------- END OF MODAL DELETE FOR YOUTH & SPORTS APPLICATION -------------->    
 
         <div id="detailModal" class="modal">
             <div class="modal-content">
@@ -515,7 +335,7 @@
                 </div>
             </div>
         </div>
-    <!-------------- END OF MODAL VIEW DETAILS BUTTON EXPAND -------------->
+    <!-------------- END OF MODAL VIEW DETAILS FOR YOUTH & SPORTS APPLICATION -------------->
 
         <div id="remarksModal" class="modal">
             <div class="modal-content">
@@ -530,66 +350,165 @@
                 </div>
             </div>
         </div>
-    <!-------------- END OF MODAL VIEW REMARKS BUTTON EXPAND -------------->
+    <!-------------- END OF MODAL VIEW REMARKS FOR YOUTH & SPORTS APPLICATION -------------->
 
-    <div id="trashYouthSportsModal" class="trash_modal">
-        <div class="trash_modal-container">
-            <div class="close_button-container">
-                <h4>Youth & Sports Request Trash</h4>
-                <button class="close_button">Close</button>
-            </div>
-            <div class="trash_modal-content">
-                <div class="trash_header-container">
-                    <div class="trash_header-action">
-                        <button class="restore_button">Restore</button>
-                        <button class="delete_button-m">Delete</button>
+        <div id="detailModalOne" class="modal">
+            <div class="modal-content">
+                <span class="close-button">&times;</span>
+                <div class="req_details">
+                    <h4>Title:</h4>
+                    <p>Title #1</p>
+                </div>
+                <div class="req_details">
+                    <h4>Thumbnail:</h4>
+                    <div class="view_image-header">
+                        <img src="IMAGES/pamplona_header.jpg">
                     </div>
                 </div>
-
-                <div class="trash_label-container">
-                    <div class="select_all-container">
-                        <p>All</p>
-                        <input type="checkbox">
-                    </div>
-                    <p>No.</p>
-                    <p>Barangay ID</p>
-                    <p>First Name</p>
-                    <p>Last Name</p>
-                    <p>Date & Time</p>
-                    <p>Status</p>
-                    <p>Details</p>
-                    <p>Remarks</p>
-                </div>
-
-                <div class="trash_user-request-container">
-                    <div class="trash_user-request">
-                        <input type="checkbox">
-                        <p>1</p>
-                        <p>01</p>
-                        <p>Boy</p>
-                        <p>Bawang</p>
-                        <p>2024-10-12 13:02</p>
-                        <P class="request_declined">Declined</P>
-                        <button class="details_button">Details</button>
-                        <button class="remarks_button">Remarks</button>
-                    </div>
-
-                    <div class="trash_user-request">
-                        <input type="checkbox">
-                        <p>1</p>
-                        <p>03</p>
-                        <p>Labubu</p>
-                        <p>Labubu</p>
-                        <p>2024-10-12 13:02</p>
-                        <P class="request_declined">Declined</P>
-                        <button class="details_button">Details</button>
-                        <button class="remarks_button">Remarks</button>
-                    </div>
+                <div class="req_details">
+                    <h4>Description:</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates, nesciunt aspernatur! Ipsa consectetur porro delectus, voluptas alias sunt beatae optio recusandae quibusdam minima earum fugiat possimus ea soluta quae debitis!</p>
                 </div>
             </div>
         </div>
-    </div>
-    <!-------------- END MODAL OF CLEARANCE TRASH BUTTON EXPAND -------------->
+    <!-------------- END OF MODAL VIEW DETAILS FOR MILESTONES AND ACCOMPLISHMENTS -------------->
 
+        <div id="detailModalTwo" class="modal">
+            <div class="modal-content">
+                <span class="close-button">&times;</span>
+                <div class="req_details">
+                    <h4>Title:</h4>
+                    <p>Title #1</p>
+                </div>
+                <div class="req_details">
+                    <h4>Description:</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates, nesciunt aspernatur! Ipsa consectetur porro delectus, voluptas alias sunt beatae optio recusandae quibusdam minima earum fugiat possimus ea soluta quae debitis!</p>
+                </div>
+            </div>
+        </div>
+    <!-------------- END OF MODAL VIEW DETAILS FOR SPORTS EVENTS -------------->
+
+        <div id="deletePostModalOne" class="modal">
+            <form class="modal-content">
+                <h4>Delete Post?</h4>
+                <div class="delete_actions-m">
+                    <button class="delete_button-m btn">Delete</button>
+                    <button class="cancelDelete btn">Cancel</button>
+                </div>
+            </form>
+        </div>
+    <!-------------- END OF MODAL DELETE FOR SPORTS EVENT, MILESTONES AND ACCOMPLISHMENTS --------------> 
+    
+        <div id="addPostModal" class="modal">
+            <div class="modal-content">
+                <div class="form_section">
+                    <h2>Add Post</h2>
+                    <form id="postForm" enctype="multipart/form-data">
+                        <input type="text" id="postTitle" placeholder="Add Title" required>
+                        <select>
+                            <option value="" disabled selected>Select a category</option>
+                            <option value="community-development">Community Development</option>
+                            <option value="disaster-preparedness">Disaster Preparedness</option>
+                            <option value="education">Education</option>
+                            <option value="elderly">Elderly</option>
+                            <option value="health">Health</option>
+                            <option value="justice">Justice</option>
+                            <option value="livelihood-employment">Livelihood & Employment</option>
+                            <option value="social">Social</option>
+                            <option value="womens-welfare">Women's Welfare</option>
+                            <option value="youth-sports">Youth & Sports</option>
+                        </select>
+                        <div class="form_control">
+                            <label for="thumbnail">Add Thumbnail</label>
+                            <input type="file" id="thumbnail" accept="image/*,application/pdf,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document">
+                            <div class="image_preview" id="imagePreview">
+                                <p>Preview:</p>
+                                <div id="previewContainer">
+                                    <img src="" alt="Thumbnail Preview" id="previewImg" style="display: none;">
+                                    <iframe id="previewDoc" style="display: none;" width="100%" height="300px"></iframe>
+                                    <p id="fileName" style="display: none;"></p>
+                                </div>
+                            </div>
+                        </div>
+                        <textarea rows="10" id="postDescription" name="Description" placeholder="Add Description" required></textarea>
+
+                        <button type="submit" id="submitButton" class="btn">Add Post</button>
+                        <button class="cancelDelete btn">Cancel</button>
+                    </form>
+                </div>
+        </div>
+        </div>
+    <!-------------- END OF MODAL ADD POST FOR MILESTONES AND ACCOMPLISHMENTS -------------->
+
+        <div id="addPostModalOne" class="modal">
+            <div class="modal-content">
+                <div class="form_section">
+                    <h2>Add Post</h2>
+                    <form id="postForm" enctype="multipart/form-data">
+                        <input type="text" id="postTitle" placeholder="Add Title" required>
+                        <textarea rows="10" id="postDescription" name="Description" placeholder="Add Description" required></textarea>
+                        <button type="submit" id="submitButton" class="btn">Add Post</button>
+                        <button class="cancelDelete btn">Cancel</button>
+                    </form>
+                </div>
+        </div>
+        </div>
+    <!-------------- END OF MODAL ADD POST FOR MILESTONES AND ACCOMPLISHMENTS -------------->
+
+        <div id="editPostModal" class="modal">
+            <div class="modal-content">
+                    <div class="form_section">
+                        <h2>Edit Post</h2>
+                        <form id="postForm" enctype="multipart/form-data">
+                            <input type="text" id="postTitle" placeholder="Update Title" required>
+                            <select>
+                                <option value="" disabled selected>Select a category</option>
+                                <option value="community-development">Community Development</option>
+                                <option value="disaster-preparedness">Disaster Preparedness</option>
+                                <option value="education">Education</option>
+                                <option value="elderly">Elderly</option>
+                                <option value="health">Health</option>
+                                <option value="justice">Justice</option>
+                                <option value="livelihood-employment">Livelihood & Employment</option>
+                                <option value="social">Social</option>
+                                <option value="womens-welfare">Women's Welfare</option>
+                                <option value="youth-sports">Youth & Sports</option>
+                            </select>
+                            <div class="form_control">
+                                <label for="thumbnail">Add Publication</label>
+                                <input type="file" id="thumbnail" accept="image/*,application/pdf,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document">
+                                <div class="image_preview" id="imagePreview">
+                                    <p>Preview:</p>
+                                    <div id="previewContainer">
+                                        <img src="" alt="Thumbnail Preview" id="previewImg" style="display: none;">
+                                        <iframe id="previewDoc" style="display: none;" width="100%" height="300px"></iframe>
+                                        <p id="fileName" style="display: none;"></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <textarea rows="10" id="postDescription" name="Description" placeholder="Update Description" required></textarea>
+
+                            <button type="submit" id="submitButton" class="btn">Update Post</button>
+                            <button class="cancelDelete btn">Cancel</button>
+                        </form>
+                    </div>
+            </div>
+        </div>
+    <!-------------- END OF MODAL EDIT POST FOR MILESTONES AND ACCOMPLISHMENTS -------------->
+
+        <div id="editPostModalOne" class="modal">
+            <div class="modal-content">
+                    <div class="form_section">
+                        <h2>Edit Post</h2>
+                        <form id="postForm" enctype="multipart/form-data">
+                            <input type="text" id="postTitle" placeholder="Update Title" required>
+                            <textarea rows="10" id="postDescription" name="Description" placeholder="Update Description" required></textarea>
+                            <button type="submit" id="submitButton" class="btn">Update Post</button>
+                            <button class="cancelDelete btn">Cancel</button>
+                        </form>
+                    </div>
+            </div>
+        </div>
+    <!-------------- END OF MODAL EDIT POST FOR MILESTONES AND ACCOMPLISHMENTS -------------->
    </main>
 </body>
