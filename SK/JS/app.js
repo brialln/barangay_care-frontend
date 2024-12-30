@@ -15,6 +15,31 @@ document.addEventListener("DOMContentLoaded", () => {
             showPopupMessage("You do not have access to this page.");
             restrictedSection.style.pointerEvents = "none";
         }
+
+        // Disable copy, cut, and paste events
+        mainElement.addEventListener("copy", (e) => {
+            e.preventDefault();
+            alert("Copying is disabled on this page.");
+        });
+
+        mainElement.addEventListener("cut", (e) => {
+            e.preventDefault();
+            alert("Cutting is disabled on this page.");
+        });
+
+        mainElement.addEventListener("paste", (e) => {
+            e.preventDefault();
+            alert("Pasting is disabled on this page.");
+        });
+
+        // Disable text selection
+        mainElement.style.userSelect = "none";
+
+        // Disable right-click context menu
+        mainElement.addEventListener("contextmenu", (e) => {
+            e.preventDefault();
+            alert("Right-click is disabled on this page.");
+        });
     }
 });
 
