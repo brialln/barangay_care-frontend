@@ -13,6 +13,7 @@
     <!-- CSS STYLESHEET LINK -->
      <link rel="stylesheet" href="CSS/style.css">
      <link rel="stylesheet" href="CSS/about.css">
+     <link rel="stylesheet" href="CSS/modal.css">
 
      <!-- ICONSCOUT CDN -->
     <link href="https://unicons.iconscout.com/release/v4.0.8/css/line.css" rel="stylesheet">
@@ -22,8 +23,80 @@
 
 </head>
 <body>
-    <div id="navbar-container"></div>
-    <!------------------------------------ END OF NAV ------------------------------------>
+    <header>
+        <a href="#" class="logo">BarangayCare</a>
+        <div class="menuToggle">
+
+        </div>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="news_updates.html">News & Updates</a></li>
+                <li><a href="#">Services</a>
+                    <ul>
+                        <li><a href="central_request.html">Request Document</a></li>
+                        <li><a href="community_development.html">Community Development</a></li>
+                        <li><a href="disaster_preparedness.html">Disaster Preparedness</a></li>
+                        <li><a href="education.html">Education</a></li>
+                        <li><a href="elderly.html">Elderly</a></li>
+                        <li><a href="health.html">Health</a></li>
+                        <li><a href="justice.html">Justice</a></li>
+                        <li><a href="livelihood_employment.html">Livelihood & Employment</a></li>
+                        <li><a href="social.html">Social Welfare</a></li>
+                        <li><a href="women_welfare.html">Women's Welfare</a></li>
+                        <li><a href="youth_sports.html">Youth & Sports</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Publications</a>
+                    <ul>
+                        <li><a href="barangay_ordinance.html">Barangay Ordinance</a></li>
+                        <li><a href="barangay_resolution.html">Barangay Resolution</a></li>
+                        <li><a href="executive_order.html">Executive Order</a></li>
+                        <li><a href="resource_transparency.html">Resource Transparency</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">About</a>
+                    <ul>
+                        <li><a href="mensahe_punong-barangay.html">Mensahe ng Punong Barangay</a></li>
+                        <li><a href="history_physical.html">Historical & Physical Information</a></li>
+                        <li><a href="vision_mission.html">Vision & Mission</a></li>
+                        <li><a href="sangguniang_barangay.html">Sangguniang Barangay</a></li>
+                        <li><a href="sangguniang_kabataan.html">Sangguniang Kabataan</a></li>
+                    </ul>
+                </li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="#">Profile</a>
+                    <ul>
+                        <li><a href="profile.html">Profile</a></li>
+                        <li><a class="give-feedback">Give Feedback (Ctrl + B)</a></li>
+                        <li><a href="login.html">Logout</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Feedback Modal -->
+    <div class="modal" id="feedback-modal">
+        <div class="modal-content">
+            <h4>Give Feedback</h4>
+            <p>How would you rate your experience?</p>
+            <div class="star-rating">
+                <span data-rating="1">&#9733;</span>
+                <span data-rating="2">&#9733;</span>
+                <span data-rating="3">&#9733;</span>
+                <span data-rating="4">&#9733;</span>
+                <span data-rating="5">&#9733;</span>
+            </div>
+            <textarea placeholder="Type your feedback here..." rows="5" style="width: 100%;"></textarea>
+            <div class="modal_button-container">
+                <button class="btn submit-modal-m">Submit</button>
+                <button class="btn cancel-modal-m">Cancel</button>
+            </div>
+        </div>
+    </div>
+    <!-------------- END OF NAVIGATION BAR -------------->
 
     <div class="container sangguniang_barangay-container">
         <h3>Sangguniang Barangay of Barangay Pamplona Uno</h3>
