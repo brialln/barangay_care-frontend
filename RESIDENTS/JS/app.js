@@ -8,6 +8,15 @@ window.addEventListener('scroll', () => {
 })
 
 
+// * Function for Mobile Menu Toggle -----------------------------------------------------------
+document.addEventListener('DOMContentLoaded', () => {
+    let menuToggle = document.querySelector('.menuToggle');
+    let header = document.querySelector('header');
+    menuToggle.onclick = function() {
+        header.classList.toggle('active');
+    }
+});
+
 // * Back Button Function -----------------------------------------------------------
 document.addEventListener("DOMContentLoaded", () => {
     const backButton = document.getElementById("backButton");
@@ -264,109 +273,60 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-// * Functionality for Centralized Navigation Bar -----------------------------------------------------------
-document.addEventListener("DOMContentLoaded", () => {
-    fetch('navbar.html')
-        .then(response => response.text())
-        .then(html => {
-            document.getElementById('navbar-container').innerHTML = html;
-
-            // Get current page filename
-            const currentPage = location.pathname.split('/').pop();
-
-            // Highlight active links
-            const links = document.querySelectorAll('.nav_items a');
-            links.forEach(link => {
-                if (link.getAttribute('href') === currentPage) {
-                    // Add active class to the current link
-                    link.classList.add('active');
-
-                    // Check if the link is part of a dropdown
-                    const dropdownParent = link.closest('.nav_dropdown');
-                    if (dropdownParent) {
-                        // Highlight the dropdown parent link
-                        const parentLink = dropdownParent.querySelector('a:not([href])');
-                        if (parentLink) {
-                            parentLink.classList.add('active');
-                        }
-                    }
-                }
-            });
-        });
-});
-
-// * Functionality for Feedback Modal -----------------------------------------------------------
 document.addEventListener('DOMContentLoaded', function () {
-    fetch('navbar.html')
-        .then(response => response.text())
-        .then(html => {
-            document.getElementById('navbar-container').innerHTML = html;
-
-            // Define modal configuration
-            const modals = [
-                { id: 'feedback-modal', class: 'give-feedback' }
-            ];
-
-            // Open modal functionality
-            modals.forEach(modalInfo => {
-                const modal = document.getElementById(modalInfo.id);
-                const modalContent = modal ? modal.querySelector('.modal-content') : null;
-
-                if (modal && modalContent) {
-                    document.querySelectorAll(`.${modalInfo.class}`).forEach(button => {
-                        button.addEventListener('click', function () {
-                            modal.style.display = 'block';
-                            modal.classList.remove('fade-out');
-                            modalContent.classList.remove('fade-out');
-                        });
-                    });
-                }
-            });
-
-            // Submit button action
-            document.querySelectorAll('.submit-modal-m').forEach(button => {
-                button.addEventListener('click', function () {
-                    // Perform the desired action on submit
-                    alert('Successfully Submitted!');
-                    const modal = this.closest('.modal');
-                    const modalContent = modal.querySelector('.modal-content');
-                    modal.classList.add('fade-out');
-                    modalContent.classList.add('fade-out');
-                    setTimeout(() => {
-                        modal.style.display = 'none';
-                    }, 300); // Match fade-out animation duration
-                });
-            });
-
-            // Close modal functionality
-            document.querySelectorAll('.cancel-modal-m, .close-button').forEach(button => {
-                button.addEventListener('click', function () {
-                    const modal = this.closest('.modal');
-                    const modalContent = modal.querySelector('.modal-content');
-                    modal.classList.add('fade-out');
-                    modalContent.classList.add('fade-out');
-                    setTimeout(() => {
-                        modal.style.display = 'none';
-                    }, 300); // Match fade-out animation duration
-                });
-            });
-
-            // Close modal when clicking outside
-            window.addEventListener('click', function (event) {
-                modals.forEach(modalInfo => {
-                    const modal = document.getElementById(modalInfo.id);
-                    if (event.target === modal) {
-                        modal.classList.add('fade-out');
-                        const modalContent = modal.querySelector('.modal-content');
-                        modalContent.classList.add('fade-out');
-                        setTimeout(() => {
-                            modal.style.display = 'none';
-                        }, 300); // Match fade-out animation duration
-                    }
-                });
-            });
+    // Open modal functionality
+    document.querySelectorAll('.give-feedback').forEach(button => {
+        button.addEventListener('click', function () {
+            const modal = document.getElementById('feedback-modal');
+            const modalContent = modal.querySelector('.modal-content');
+            modal.style.display = 'block';
+            modal.classList.remove('fade-out');
+            modalContent.classList.remove('fade-out');
         });
+    });
+
+    // Submit button action
+    document.querySelectorAll('.submit-modal-m').forEach(button => {
+        button.addEventListener('click', function () {
+            // Perform the desired action on submit
+            alert('Successfully Submitted!');
+            const modal = this.closest('.modal');
+            const modalContent = modal.querySelector('.modal-content');
+            modal.classList.add('fade-out');
+            modalContent.classList.add('fade-out');
+            setTimeout(() => {
+                modal.style.display = 'none';
+            }, 300); // Match fade-out animation duration
+        });
+    });
+
+    // Close modal functionality
+    document.querySelectorAll('.cancel-modal-m, .close-button').forEach(button => {
+        button.addEventListener('click', function () {
+            const modal = this.closest('.modal');
+            const modalContent = modal.querySelector('.modal-content');
+            modal.classList.add('fade-out');
+            modalContent.classList.add('fade-out');
+            setTimeout(() => {
+                modal.style.display = 'none';
+            }, 300); // Match fade-out animation duration
+        });
+    });
+
+    // Close modal when clicking outside
+    window.addEventListener('click', function (event) {
+        const modal = document.getElementById('feedback-modal');
+        if (event.target === modal) {
+            modal.classList.add('fade-out');
+            const modalContent = modal.querySelector('.modal-content');
+            modalContent.classList.add('fade-out');
+            setTimeout(() => {
+                modal.style.display = 'none';
+            }, 300); // Match fade-out animation duration
+        }
+    });
 });
+
 
 // * Functionality for Ctrl + B to open Feedback Modal -----------------------------------------------------------
 document.addEventListener('keydown', (event) => {
