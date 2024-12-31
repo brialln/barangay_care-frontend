@@ -59,6 +59,8 @@ body {
 .container {
     width: var(--container-width-lg);
     margin: 1rem auto 2rem auto;
+    max-width: 1200px; /* Optional: Set a maximum width */
+    min-width: 1000px; /* Prevent compression below this width */
 }
 
 .forback_container {
@@ -283,6 +285,7 @@ textarea::placeholder {
     transition: var(--transition);
     overflow: hidden;
     text-wrap: nowrap;
+    z-index: 1000;
 }
 
 #sidebar.close {
@@ -376,13 +379,20 @@ textarea::placeholder {
     }
 }
 /* SIDEBAR MEDIA QUERY (SMARTPHONE) */
-@media(max-width: 800px) {
+@media screen and (max-width: 1024px) {
     body{
         grid-template-columns: 1fr;
     }
+    
     main {
-        padding: 2em 1em 60px 1em;
+        padding: 0 1em 60px 1em;
     }
+
+    .remarks_banner-container {
+        border-bottom-right-radius: var(--card-border-radius-3);
+        border-bottom-left-radius: var(--card-border-radius-3);
+    }
+
     .container {
         border: none;
         padding: 0;
@@ -429,7 +439,7 @@ textarea::placeholder {
             box-sizing: border-box;
             height: 60px;
             width: 100%;
-            background-color: var(--color-primary);
+            background-color: var(--color-secondary);
             display: flex;
             justify-content: center;
 
@@ -454,6 +464,7 @@ textarea::placeholder {
 /* ========================== Header ========================== */
 /* REMARKS BANNER SECTION (ADMIN) */
 .remarks_banner-container {
+    position: sticky;
     top: 0;
     background: var(--color-white);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -464,7 +475,10 @@ textarea::placeholder {
     justify-content: center;
     font-weight: 700;
     color: var(--color-secondary);
+    z-index: 100;
+    width: 100%;
 }
+
 
 /* HEADER SECTION STYLE */
 .header_section-container {

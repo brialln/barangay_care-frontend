@@ -22,7 +22,7 @@
     border: 1px solid var(--color-ash);
     width: 30%; /* Adjust to screen size */
     border-radius: var(--card-border-radius-2);
-    max-width: 50%;
+    max-width: 100%;
     max-height: 500px;
     overflow-y: auto;
     animation: scaleIn 0.3s;
