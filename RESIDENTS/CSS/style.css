@@ -292,7 +292,7 @@ header ul li ul::-webkit-scrollbar-track {
 
     header nav {
         position: absolute;
-        width: 50%;
+        width: 60%;
         top: 6rem;
         right: 2rem;
         border-radius: var(--card-border-radius-3);
@@ -300,7 +300,25 @@ header ul li ul::-webkit-scrollbar-track {
         align-items: center;
         background: var(--color-primary);
         display: none;
+        max-height: 500px;
+        overflow-y: auto;
     }
+
+    header nav::-webkit-scrollbar {
+        width: 8px; 
+        border-radius: 12px;
+    }
+    
+    header nav::-webkit-scrollbar-thumb {
+        background-color: var(--color-secondary); 
+        border-radius: 12px; 
+    }
+    
+    header nav::-webkit-scrollbar-track {
+        background-color: var(--color-primary); 
+        border-radius: 12px;
+    }
+    
 
     header nav ul lI a {
         font-size: 1rem;
@@ -328,6 +346,9 @@ header ul li ul::-webkit-scrollbar-track {
         width: 90%;
         right: 0;
         background: var(--color-secondary);
+        max-height: 300px;
+        overflow-y: auto;
+        padding-right: 1rem;
     }
 
     header nav ul li ul:hover {
@@ -1054,6 +1075,10 @@ textarea::placeholder {
         width: 100%;
     }
 
+    .emergency_hotline {
+        padding: 1rem;
+    }
+
     /* ========================== Success Stories ========================== */
     .success_post {
         grid-template-columns: 1fr;
@@ -1208,6 +1233,12 @@ textarea::placeholder {
 
     .health_form-container {
         width: 100%;
+    }
+
+    /* ========================== Emergency Hotline ========================== */
+    .emergency_hotline {
+        grid-template-columns: 1fr;
+        padding: 1rem;
     }
 
     /* ========================== Success Stories ========================== */
