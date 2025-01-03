@@ -1,17 +1,19 @@
 @import url(style.css);
 
+
 /* Form Container */
 .form_container {
     position: relative;
-    width: 500px;
-    height: 620px;
+    width: 100%;
+    max-width: 500px;
+    height: 650px;
     background: var(--color-white);
     border-radius: var(--card-border-radius-3);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    margin: 5% auto;
+    margin: 6% auto;
     overflow: hidden;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
 }
 
 .form_container h1 {
@@ -30,9 +32,9 @@
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding: 0 3rem;
+    padding: 0 2.5rem;
+    margin-top: 1rem;
 }
-
 
 .form_image {
     width: 5rem;
@@ -87,7 +89,54 @@
     text-decoration: underline;
 }
 
-/* Alert Message */
+/* Register Link */
+.register_link {
+    margin: 1rem 0 0;
+}
+
+.register_link a {
+    font-size: 0.9rem;
+    color: var(--color-primary);
+    font-weight: 700;
+    transition: var(--transition);
+    padding-left: 0.3rem;
+}
+
+.register_link a:hover {
+    text-decoration: underline;
+}
+
+/* =============================== Register Form * =============================== */
+.register_form-container {
+    width: var(--form-width);
+    border-radius: 1rem;
+    padding: 2.5rem;
+    background: var(--color-white);
+    border-radius: var(--card-border-radius-3);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 600px;
+    margin: 5% auto;
+}
+
+.register_form-header {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.register_logo {
+    border-radius: 50%;
+    height: 4rem;
+    width: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+}
+
+/* ALERT MESSAGE */
 .alert_message.error {
     background: var(--color-light-red);
     color: var(--color-red);
@@ -100,4 +149,84 @@
 .alert_message.success {
     background: var(--color-light-green);
     color: var(--color-green);
+}
+
+/* Checkbox */
+.checkbox_container {
+    display: flex;
+    align-items: center;
+}
+
+.checkbox_control label {
+    color: var(--color-primary);
+    font-weight: 600;
+}
+
+.checkbox-control input[type="checkbox"] {
+    display: none;
+}
+
+/* Style the label with custom checkbox */
+.checkbox-control{
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+    padding-left: 35px;
+    font-size: 16px;
+    position: relative;
+}
+
+/* The custom checkbox (checkmark) */
+.checkbox-control .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background-color: var(--color-white);
+    border: 1px solid var(--color-primary);
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease;
+}
+
+/* The icon inside the custom checkbox */
+.checkbox-control .checkmark i {
+    font-size: 14px;
+    color: var(--color-white);
+    opacity: 0; /* Initially hidden */
+}
+
+/* On hover */
+.checkbox-control:hover .checkmark {
+    background-color: var(--color-light-primary);
+}
+
+/* When the checkbox is checked */
+.checkbox-control input:checked + .checkmark {
+    background-color: var(--color-primary);
+}
+
+/* Show the icon when checked */
+.checkbox-control input:checked + .checkmark i {
+    opacity: 1;
+}
+
+/* Login Link */
+.login_link {
+    margin: 1rem 0 0;
+}
+
+.login_link a {
+    font-size: 0.9rem;
+    color: var(--color-primary);
+    font-weight: 700;
+    transition: var(--transition);
+    padding-left: 0.3rem;
+}
+
+.login_link a:hover {
+    text-decoration: underline;
 }

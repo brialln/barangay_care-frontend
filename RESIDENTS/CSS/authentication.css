@@ -4,7 +4,8 @@
 /* Form Container */
 .form_container {
     position: relative;
-    width: 500px;
+    width: 100%;
+    max-width: 500px;
     height: 650px;
     background: var(--color-white);
     border-radius: var(--card-border-radius-3);
@@ -31,7 +32,7 @@
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding: 0 3rem;
+    padding: 0 2.5rem;
     margin-top: 1rem;
 }
 
@@ -109,11 +110,12 @@
 .register_form-container {
     width: var(--form-width);
     border-radius: 1rem;
-    padding: 4rem;
+    padding: 2.5rem;
     background: var(--color-white);
     border-radius: var(--card-border-radius-3);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    width: 700px;
+    width: 100%;
+    max-width: 600px;
     margin: 5% auto;
 }
 
