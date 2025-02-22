@@ -116,6 +116,7 @@ img {
     font-weight: 500;
     transition: var(--transition);
     cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .btn:hover {
